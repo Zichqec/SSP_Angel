@@ -1,2 +1,0 @@
-onlinemarker.x,112
-onlinemarker.y,0

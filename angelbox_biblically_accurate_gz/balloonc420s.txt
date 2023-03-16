@@ -1,3 +1,0 @@
-communicatebox.font.color.r,255
-communicatebox.font.color.g,255
-communicatebox.font.color.b,255

@@ -1,3 +1,0 @@
-anchor.font.color.r,57
-anchor.font.color.g,57
-anchor.font.color.b,114
