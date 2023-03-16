@@ -2,7 +2,7 @@ This ghost serves as a guide to SSP, and also a fun companion! They primarily fo
 
 If you're new to ghosts: double click on the characters to open their menus. They'll explain from there!
 
-To download the alternate balloons that go with the ghost, visit their repository on Github, here:
+To download the alternate balloons that go with the ghost, visit the balloon repository on Github, here: https://github.com/Zichqec/SSP_Angel_Balloons
 (Or, ask them to do it for you in the Balloon Settings menu!)
 
 This ghost, and its associated balloons, were a collaborative effort by the Angel Team. The Angel Team is:

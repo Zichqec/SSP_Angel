@@ -1,12 +1,12 @@
 ghost/master/aitalk.dic9d3fa0f5cf14630b93ee73faa2f8424esize=120217date=2023-03-15T21:30:12charset=OSNative
-ghost/master/bootend.dic45065ef94357a5ff2e42ba5f210e9873size=10832date=2023-03-15T17:47:50
+ghost/master/bootend.dic248a850be228d1c3913c3877c3d33554size=10874date=2023-03-15T23:45:08
 ghost/master/descript.txt0d07ba356981c446b2f16d1ec27c4f10size=303date=2023-03-15T22:42:36
-ghost/master/etc.dicef64c9e87451b1615cad0987bb98ce80size=21579date=2023-03-15T15:30:07
+ghost/master/etc.dica2532a00976b1eecdd394b1401584fd6size=21579date=2023-03-15T23:49:54
 ghost/master/icon.ico2b2a65d072786a2a70b97f0d30d5e7b7size=10462date=2023-01-16T22:39:30
-ghost/master/kero_menu.dic051f6f4b2149057864d047fa98870cefsize=38891date=2023-03-15T17:47:34
+ghost/master/kero_menu.dicc481adc0ffeecef44116ee95289c1210size=38890date=2023-03-15T23:54:09
 ghost/master/main.dicee8db99005200b248f95b820b30934a3size=7112date=2023-03-15T23:24:48
 ghost/master/mouse.dic8090b6bc35019ffd065fc349cea11482size=4396date=2023-03-15T15:29:09
-ghost/master/sakura_menu.dic95a46a2e4a0fbd84932d4c96ec472121size=65667date=2023-03-15T23:33:01
+ghost/master/sakura_menu.dicd0e305893a5df20b12c1d26ab7748bd0size=67405date=2023-03-16T00:00:33
 ghost/master/utility.dice25475c298f709307fe798b285a6405dsize=11121date=2023-03-15T17:47:02
 ghost/master/word.dic1aa80136cb9c13373a1def412a4be264size=31600date=2023-03-15T20:32:09
 ghost/master/yaya.dll56e3af56c88e696cea1f39d53b239cefsize=880640date=2022-09-10T19:18:59
@@ -17,7 +17,7 @@ ghost/master/yaya_base/config.dicacc9b7c3f25c4e564abdac847f103cddsize=2648dat
 ghost/master/yaya_base/optional.dicff4da728a656a8aa6a38939e654c51f2size=9953date=2022-07-10T06:50:34
 ghost/master/yaya_base/shiori3.dic701b1c5854dff058339c7f9d7a6d79d7size=51253date=2022-08-31T05:20:40
 install.txtf2124dd17804e14fbc02163c7b8ecf05size=97date=2023-03-15T23:25:19
-readme.txt12336dd76659cdca128e5a97bb3a3b1fsize=991date=2023-03-15T17:50:44
+readme.txt9d1a4b99d5cf80afbf88bc34c2a00253size=1043date=2023-03-15T23:43:57
 shell/master/descript.txtb1aeff357cdeda6a60bea5d2edd4600esize=1529date=2023-03-15T22:42:43
 shell/master/menu_background.png33bf5c103fdd4bacb6e3a4831fc9dc30size=866date=2023-01-26T22:34:40
 shell/master/menu_foreground.png8431d3438b7646bb831bcae0d496b030size=865date=2023-01-26T22:42:34

@@ -243,7 +243,7 @@ OnInstallRefuse
 
 OnInstallReroute
 {
-	"\0\b[0]\1\\b[0]s[k_thinking]Ah,\w4 this %(reference1) is for %(reference0).\w8\w8 we cannot install it.\w8\w8\0\s[star_struck]\i[31]Hey %(reference0)!\w8\w8 Catch~!"
+	"\0\b[0]\1\b[0]s[k_thinking]Ah,\w4 this %(reference1) is for %(reference0).\w8\w8 we cannot install it.\w8\w8\0\s[star_struck]\i[31]Hey %(reference0)!\w8\w8 Catch~!"
 }
 
 
@@ -251,7 +251,7 @@ OnInstallReroute
 //————— Uninstalling —————
 OnVanishSelecting
 {
-	"\1\b[0]\s[neutral_face]\0\b[0]\s[scream]Oh!\w8\w8\s[worried] Did we do something wrong?\w8\w8\n\n\1\s[unamused]No guilting.\w8\w8\s[teach] You may uninstall us if you wish,\w4 %(username),\w4 just mind that this will only install us and not SSP in its entirety.\w8\w8\n\n\0\s[sweat_smile]Yeah.\w8\w8 If you were hoping to uninstall SSP,\w4 you can just delete the whole SSP folder and it'll be gone.\w8\w8 The entire program is contained to that one directory.\w8\w8\1\s[neutral_face]So,\w4 what will it be?"
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[scream]Oh!\w8\w8\s[worried] Did we do something wrong?\w8\w8\n\n\1\s[unamused]No guilting.\w8\w8\s[teach] You may uninstall us if you wish,\w4 %(username),\w4 just mind that this will only uninstall us and not SSP in its entirety.\w8\w8\n\n\0\s[sweat_smile]Yeah.\w8\w8 If you were hoping to uninstall SSP,\w4 you can just delete the whole SSP folder and it'll be gone.\w8\w8 The entire program is contained to that one directory.\w8\w8\1\s[neutral_face]So,\w4 what will it be?"
 }
 
 OnVanishSelected
@@ -517,7 +517,7 @@ OnSNTPCompare
 	}
  	else //if your clock doesn't match
 	{
-		"\\b[0]1\s[k_thinking]\0\b[0]\s[astonished]Your clock doesn't match.\w8\w8 Should I fix it?"
+		"\b[0]1\s[k_thinking]\0\b[0]\s[astonished]Your clock doesn't match.\w8\w8 Should I fix it?"
 		--
 		all:/
 		{

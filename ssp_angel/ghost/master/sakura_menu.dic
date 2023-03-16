@@ -389,6 +389,7 @@ OnFunctionMenu : all
 	"\0\b[2]\_q\![set,autoscroll,disable]"
 	"\![*]\q[Call another ghost,OnCallGhostMenu]\n"
 	"\![*]\q[Fix the clock,script:""\![execute,sntp]""]\n"
+	"\![*]\q[Empty the recycle bin,OnRecycleBin]\n"
 	"\![*]\q[Read RSS/Headlines,OnRSSMenu]\n"
 	"\![*]\q[Check for emails,OnEmailMenu]\n"
 	"\![*]\q[Check for updates,script:""\![updatebymyself]""]\n\n"
@@ -707,6 +708,49 @@ OnCallAnotherGhost
 	}
 }
 
+OnRecycleBin
+{
+	_s = "s"; _theyre = "They're"
+	if RecycleBin[0] == 1; {_s = ""; _theyre = "It's"}
+	_bytes = "bytes"; if RecycleBin[1] == 1; _bytes = "byte"
+	
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
+	if RecycleBin[0] == 0
+	{
+		"\0\s[blush]\i[22]Your recycle bin is empty!\w8\w8 Squeaky clean!\w8\w8\n\n\1\s[neutral_face]Very tidy indeed.\w8\w8\n\n\0\s[smiling_face_with_3_hearts]\i[23]\Sparkling!\w8\w8 Spotless!\w8\w8\1\s[unamused]\0 So clean you could eat out of it!\w8\w8\s[star_struck]\i[31] Not a speck in it!\w8\w8 Good as new!\w8\w8\1\s[rolling_eyes]\0\s[star_struck]\i[26]\i[36] Mint condition!\w8\w8 You've%(br)never seen a recycle bin so clean!\w8\w8\n\n\1Will you cut it out already.\w8\w8\n\n\0\s[sweat_smile]\i[24]Aww..."
+		--
+		"\_q\n\n\![*]\__q[OnFunctionMenu]Back\__q  \![*]\__q[OnBlank]Close\__q"
+	}
+	else
+	{
+		"\0\s[slight_smile]\i[21]Your recycle bin has %(RecycleBin[0]) file%(_s) in it.\w8\w8\n\n\1\s[k_thinking]%(_theyre) taking up %(RecycleBin[1]) %(_bytes).\w8\w8\n\n\0\s[blush]\i[24]Shall I empty it for you?\n\n"
+		--
+		"\_q\n\n\![*]\__q[OnRecycleBinClear]Yes, empty the recycle bin\__q  \![*]\__q[OnRecycleBinCancel]No thanks\__q"
+	}
+}
+
+OnRecycleBinClear
+{
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[21]Away,\w4 trash!\w8\w8 Begone~!\![execute,emptyrecyclebin]"
+}
+
+OnRecycleBinEmpty
+{
+	RecycleBin[0] = TOINT(reference0)
+	RecycleBin[1] = TOINT(reference1)
+	
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]And done!\w8\w8 Should be totally empty now~!"
+	--
+	"\_q\n\n\![*]\__q[OnFunctionMenu]Back\__q  \![*]\__q[OnBlank]Close\__q"
+}
+
+OnRecycleBinStatusUpdate
+{
+	RecycleBin[0] = TOINT(reference0)
+	RecycleBin[1] = TOINT(reference1)
+}
+
 OnRSSMenu : all
 {
 	"\0\b[2]\_q\![set,autoscroll,disable]"
@@ -937,7 +981,7 @@ OnToggleUninstallEnabled
 OnBalloonMenu : all
 {
 	"\1\s[10]\0\b[2]\s[0]\_q\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]"
-	"\f[align,center]%(emdash) Balloon Settings %(emdash)\n\n"
+	"\f[align,center]%(emdash) Balloon Settings %(emdash)\n\n\f[align,left]"
 	"Current balloon: \f[color,default.anchor]%(SHIORI3FW.BalloonName)\f[color,default]\n\n"
 	//Need to set these up so that if they are not installed, it will offer to do so... could handle that in the OnBalloonMenu.Switch function tbh, add a little check and jump to another function if needed
 	if SHIORI3FW.BalloonName == "Angelbox"; "\![*]"; "\__q[OnBalloonMenu.Switch,Angelbox]Angelbox\__q\n"

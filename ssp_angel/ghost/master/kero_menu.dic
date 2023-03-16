@@ -77,7 +77,7 @@ OnGlossary : all
 
 OnGlossaryWord : all
 {
-	"\1\b[0]\s[10]\0\\b[0]s[0]"
+	"\1\b[0]\s[10]\0\b[0]s[0]"
 	if reference0 == "AYA"
 	{
 		"\1\s[teach]AYA is a #ghost programming language based on the C language.\w8\w8 It has very simplified syntax,\w4 but is still capable of very complicated functions.\w8\w8\n\n"
@@ -121,7 +121,7 @@ OnGlossaryWord : all
 		"\1\s[teach]CROW is an old #baseware.\w8\w8 The acronym stands for Character Requested Operation Ware.\w8\w8 It has not updated since 2005.\w8\w8\n\n"
 		"\0\s[pensive]The downloads for it on the official site don't work anymore,\w4 either.\w8\w8\n\n"
 		"\1\s[k_thinking]But if you want to look at the old information for yourself,\w4 the homepage is \_a[http://crow.aqrs.jp/]here\_a.\w8\w8"
-		"\0\s[s_thinking]You might also be able to find it bundled with some old #ghosts.\w8\w8\s[pensive] But it's Japanese only,\w4 there are no english translations for the menus like there are for%(br)#SSP."
+		"\0\s[s_thinking]You might also be able to find it bundled with some old #ghosts.\w8\w8\s[pensive] But it's Japanese only,\w4 there are no English translations for the menus like there are for%(br)#SSP."
 	}
 	elseif reference0 == "Dressup"
 	{
