@@ -1,0 +1,7 @@
+marker.filename,sstp60
+sstpmarker.filename,sstp60
+onlinemarker.filename,online60_
+
+anchor.font.color.r,130
+anchor.font.color.g,70
+anchor.font.color.b,24
