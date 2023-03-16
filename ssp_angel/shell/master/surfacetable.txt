@@ -1,0 +1,49 @@
+charset,UTF-8
+version,1
+option,DisableNoDefineSurfaces
+
+//A group defined as __disabled will not show up in surface test. __parts means it's mainly used as an animation or piece of something, and won't be assigned a name.
+group,__disabled
+{
+	12,__parts
+}
+
+
+group,Angel
+{
+	scope,0
+	//Scope is the character this group of surfaces belongs to, in this case the Sakura
+	
+	0,Neutral
+	1,Happy (Blush)
+	2,Upset
+	3,Pensive
+	4,Content
+	5,Starry-eyed
+	6,Hearts
+	7,Thinking
+	8,Gasp
+	9,Sweatdrop
+	11,Scared
+	12,Sob
+	13,Pleading_Face
+	14,Confounded
+
+}
+
+group,Pilot
+{
+	scope,1
+	10,Neutral
+	1011,Unamused
+	1012,Eyeroll
+	1013,Thinking
+	1014,Neutral, Hand up
+	1015,Expressionless
+	1016,Embarrassed
+	1017,Sigh
+	1018,Raised Eyebrow
+	1019,Concern
+	1020,Concern Think
+
+}

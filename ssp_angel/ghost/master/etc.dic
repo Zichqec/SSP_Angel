@@ -1,0 +1,602 @@
+//————— Drag and Drop (Wallpaper function) —————
+
+//When you drop a file on the ghost that isn't something it can install
+//reference0 is the file path, which is split up amongst the local variables below
+OnFileDrop2 : nonoverlap_pool
+{
+	_filepath = SPLITPATH(reference0)
+	_filename = _filepath[2]
+	_fileext = TOLOWER(_filepath[3])
+	case _fileext
+	{
+		when ".jpg", ".jpeg", ".bmp", ".png" //These are file types that they can set to wallpapers. png works for me, but if it doesn't work for you let us know please, I'm curious about this.
+		{
+			_file = REPLACE(reference0,"]","\]")
+			
+			
+			"\1\b[0]\s[k_thinking]\0\b[0]\s[blush]Oh,\w4 an image!\w8\w8 I can set this as your wallpaper if you like.\w8\w8 how do you want it set?"
+			--
+			all:/
+			{
+				"\n\n\_q"
+				"\![*]\__q[OnWallpaper,%(_file),center]Centered\__q"
+				"  \![*]\__q[OnWallpaper,%(_file),tile]Tiled\__q"
+				"  \![*]\__q[OnWallpaper,%(_file),stretch]Stretched\__q"
+				if "Windows 7" || "Windows 10" _in_ NotifyOS //These are the 'fit' and 'fill' options available from win 7 on. NotifyOS is set just below, to check what OS you're on
+				{
+					"\n\![*]\__q[OnWallpaper,%(_file),stretch-x]Fill\__q"
+					"  \![*]\__q[OnWallpaper,%(_file),stretch-y]Fit\__q"
+				}
+				if "Windows 10" _in_ NotifyOS; "  \![*]\__q[OnWallpaper,%(_file),span]Spanned\__q" //Same as above, but for the span option since that's win10 and above
+				
+				"\n\n\![*]\__q[OnWallpaperCancel]No thanks\__q"
+			}
+		}
+		when ".mid", ".wav", ".mp3", ".wma", ".au", ".ogg", ".flac"
+		{
+			"\1\b[0]\s[10]\0\b[0]\s[astonished]A music file!\w8\w8\n\n\1\s[teach]Playing music is outside our capabilities.\w8\w8\s[neutral_face] My apologies.\w8\w8\n\n\0\s[pensive]Aww...\w8\w8\s[blush] But,\w4 you could give some other ghosts a try.\w8\w8 \_a[http://navy.nm.land.to/ukgk/flele/]FLELE\_a is an old Japanese music player ghost,\w4 and there's an \_a[http://www.ashido.com/huntersmoker/flele.html]English patch\_a for it that you can install.\w8\w8%(raised_hand) There is also \_a[https://zichqec.github.io/s-the-skeleton/flux]FLUX\_a, a spiritual successor to FLELE that supports a variety of languages.\w8\w8\n\n\1\s[teach]There are also a number of other individual ghosts that have music players as part of their functions.\w8\w8 You can try browsing the \_a[https://ukagakadreamteam.com/wiki/tag/music_player?do=showtag&tag=Music_Player]Music Player tag\_a on the #Ukagaka Dream Team Wiki."
+		}
+		others
+		{
+			if reference1 == 0
+			{
+				"\1\b[0]\s[10]\0\b[0]\s[sweat_smile]Sorry,\w4 we can't do anything with that file.\w8\w8\1\s[neutral_face]Try giving us an image instead."
+			}
+			elseif reference1 == 1
+			{
+				"\0\b[0]\s[sweat_smile]\1\b[0]\s[neutral_face]Apologies,\w4 we are not set up to handle %(_fileext) files.\w8\w8\0\s[sweat_smile]Sorry!"
+			}
+		}
+	}
+}
+
+OnWallpaper
+{
+	"\![set,wallpaper,%(REPLACE(reference0,']','\]')),%(reference1)]"
+	--
+	"\1\b[0]\s[10]\0\b[0]\s[blush]%(raised_hand)Ta-da~!\w8\w8 How's it look?\w8\w8 Did I do a great job or what~?\w8\w8\n\n\1\s[neutral_face]Hm.\w8\w8\n\n\0\s[scream]You don't like it.\w8\w8\n\n\1\s[expressionless]It's not my job to like it.\w8\w8\0\s[pensive]Well.\w8\w8 I hope %(username) likes it,\w4 anyways."
+}
+
+OnWallpaperCancel
+{
+	"\1\b[0]\s[10]\0\b[0]\s[relieved]Alright,\w4 let me know if you change your mind!\w8\w8"
+}
+
+//Just for funsies
+OnDirectoryDrop
+{
+	if reference1 == 0
+	{
+		"\0\s[astonished]A folder...\w8\w8\s[blush]\i[22] What kind of goodies are in here~?\w8\w8\n\n\1\s[unamused]Keep your thieving hands out of there.\w8\w8\n\n\0\s[worried]\i[24]But %(username) gave it to me!\w8\w8\n\n\1\s[rolling_eyes]Probably not with the intention of you taking the files.\w8\w8\0\s[pensive]\i[24]Aww..."
+	}
+	elseif reference1 == 1
+	{
+		"\0\b[0]\s[0]\1\b[0]\s[neutral_face]I cannot do anything with this,\w4 my apologies.\w8\w8 We're not set up to do anything with folders.\w8\w8\n\n\0\s[s_thinking]Gosh,\w4 imagine if we \f[italic,1]did\f[italic,default] have a music player though,\w4 how cool would that be...\w8\w8\1\s[unamused]Who says there is music in this directory?\w8\w8 It's probably something else."
+	}
+}
+
+
+
+//————— Installing —————
+
+OnInstallBegin
+{
+	"\1\b[0]\s[k_thinking]\0\b[0]\s[star_struck]\i[22]Ooh,\w4 something to install!\w8\w8\s[blush]\i[22] Let's see here~\w8\w8\1\s[k_thinking]What could it be?"
+	--
+	"\w8"
+}
+
+//reference0 is the type of thing that was installed, reference1 is the name of what was installed
+//I skipped the calendar plugin and package types, because I don't know what they are exactly and I'm lazy
+OnInstallComplete
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
+	"\0\s[blush]\i[22]Ta-da~!\w8\w8 I've installed %(reference1) for you~!\w8\w8\n\n"
+	--
+	if reference0 == "ghost" || reference0 == "ghost with shell" || reference0 == "ghost with balloon"
+	{
+		"\1\s[k_thinking]Looks like another ghost.\w8\w8\0\s[slight_smile]Do you want us to bring them here for you?"
+		--
+		all :/
+		{
+			"\n\n\_q"
+			"\![*]\q[""Call %(reference1)"",OnCallInstalledGhost,""%(reference1)""]\n"
+			"\![*]\q[""Change to %(reference1)"",OnChangeInstalledGhost,""%(reference1)""]\n\n"
+			"\![*]\q[No thanks,OnBlank]"
+		}
+	}
+	elseif reference0 == "shell"
+	{
+		"\1\s[k_thinking]Looks like a new shell.\w8\w8\0\s[scream]Someone made a new shell for us!?\w8\w8\s[smiling_face_with_3_hearts] Wow!\w8\w8 Should we try it out,\w4 %(username)?"
+		--
+		all :/
+		{
+			"\n\n\_q"
+			"\![*]\q[""Change to %(reference1)"",OnChangeInstalledShell]\n\n"
+			"\![*]\q[No thanks,OnBlank]"
+		}
+	}
+	elseif reference0 == "balloon"
+	{
+		"\1\s[k_thinking]It appears to be a new balloon.\w8\w8\0\s[blush]So cool!\w8\w8 %(username),\w4 do you want us to try this on?"
+		--
+		all :/
+		{
+			"\n\n\_q"
+			"\![*]\q[""Change to %(reference1)"",OnChangeInstalledBalloon]\n\n"
+			"\![*]\q[No thanks,OnBlank]"
+		}
+	}
+	elseif reference0 == "plugin"
+	{
+		"\1\s[k_thinking]It's a new plugin.\w8\w8\0\s[star_struck]Ooh,\w4 fancy!"
+	}
+	elseif reference0 == "calendar skin"
+	{
+		"\1\s[k_thinking]Ah,\w4 a calendar skin.\w8\w8\0\s[smiling_face_with_3_hearts]Oh good!\w8\w8 I love cute calendars!\w8\w8 %(username),\w4 want me to open the calendar for you so you can try it out?"
+		--
+		all :/
+		{
+			"\n\n\_q"
+			"\![*]\q[Open the calendar,OnOpenInstalledCalendar]\n\n"
+			"\![*]\q[No thanks,OnBlank]"
+		}
+	}
+	elseif reference0 == "headline"
+	{
+		"\1\s[k_thinking]Looks like a new headline.\w8\w8\0\s[thinking_sakura]Huh.\w8\w8\s[blush] How about that.\w8\w8 Where'd you even find one of these?"
+	}
+	elseif reference0 == "rss"
+	{
+		"\1\s[k_thinking]It's a new RSS feed.\w8\w8\0\s[blush]Ohh cool!\w8\w8 Keeping up with something neat,\w4 %(username)?"
+	}
+	elseif reference0 == "language"
+	{
+		"\1\s[k_thinking]Looks like it's a new language for SSP.\w8\w8\0\s[astonished]Oh wow,\w4 do you know multiple languages,\w4 %(username)?\w8\w8\s[thinking_sakura] Or,\w4 are you using SSP to help you as you learn a new language?\w8\w8\s[blush]\i[22] So cool!"
+	}
+	elseif reference0 == "supplement"
+	{
+		"\1\s[k_thinking]It appears to be...\w8\w8 a supplement file?\w8\w8\n\n\0\s[scream]Huh?\w8\w8 A supplement!?\w8\w8\n\n\1\s[neutral_face]%(username),\w4 are you sure about that?\w8\w8 Unless something has gone terribly wrong,\w4 we should get updates via network update,\w4 not supplement files.\w8\w8\n\n\0\s[sweat_smile]I mean,\w4 if you got instruction from an official source to do this,\w4 then fine,\w4 but...\w8\w8 Seems unlikely.\w8\w8\1\s[k_thinking]Hmm..."
+	}
+	else //Even if you get rid of some of the ifs above, you should keep this else as a catch-all.
+	{
+		"\1\s[k_thinking]It says...\w8\w8 ""%(reference0)"".\w8\w8\n\n\0\s[astonished]Oh wow,\w4 what does that mean?\w8\w8\n\n\1\s[neutral_face]I'm not sure.\w8\w8\0\s[sweat_smile]Oh."
+	}
+}
+
+OnChangeInstalledGhost
+{
+	"\1\b[0]\s[10]\0\b[0]\s[astonished]Oh,\w4 alright.\w8\w8\s[blush] Have a fun time with your new friend!\w8\w8\1\s[neutral_face]Later.\w8\w8"
+	--
+	"\![call,ghost,lastinstalled]"
+}
+
+OnCallInstalledGhost
+{
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Calling %(reference0)~!"
+	--
+	"\![change,ghost,lastinstalled]"
+}
+
+OnChangeInstalledShell : all
+{
+	"\1\b[0]\s[k_thinking]\0\b[0]\s[star_struck]Ohh fun,\w4 lets do it!\w8\s[-1]\w8\1\s[rolling_eyes]Fine,\w4 if only because I have no choice.\w8\w8"
+	--
+	"\![change,shell,lastinstalled]"
+}
+
+OnChangeInstalledBalloon : all
+{
+	"\1\b[0]\s[k_thinking]\0\b[0]\s[blush]Ooh alrighty,\w4 here goes!\w8\w8"
+	--
+	"\![change,balloon,lastinstalled]"
+}
+
+OnOpenInstalledCalendar : all
+{
+	"\![open,calendar]"
+	--
+	"\1\b[0]\s[k_thinking]\0\b[0]\s[blush]There you go~!\w8\w8\s[relieved] You can right click on the calendar and go to the ""Skin"" tab to try out your new look."
+}
+
+//If the install fails
+//reference0 is the reason the install failed
+OnInstallFailure
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
+	if reference0 == "artificial" //If the user cancels by double clicking the balloon
+	{
+		"\0\s[astonished]Oh,\w4 nevermind?\w8\w8\s[sweat_smile] Okay.\w8\w8\1\s[neutral_face]Close call."
+	}
+	else
+	{
+		"\0\s[sweat_smile]Oh dear,\w4 I can't install this.\w8\w8\n\n"
+		--
+		if reference0 == "unsupported" //File is not supported
+		{
+			"\1\s[k_thinking]Looks like it's a file type that isn't supported."
+		}
+		elseif reference0 == "extraction" //Couldn't extract
+		{
+			"\1\s[k_thinking]We're not able to extract it properly."
+		}
+		elseif reference0 == "invalid type" //install.txt isn't set up properly
+		{
+			"\1\s[k_thinking]The install.txt isn't set up right."
+		}
+		else
+		{
+			"\1\s[k_thinking]Looks like the error is...\w8\w8 ""%(reference0)""."
+		}
+		--
+		"\0\s[pensive]Sorry about that."
+	}
+}
+
+//reference0 is the Sakura name of the ghost the item was meant for, reference1 (since SSP 2.4.85) is the type of item you tried to install
+OnInstallRefuse
+{
+	"\0\b[0]\1\b[0]\s[k_thinking]Oh,\w4 we can't install this %(reference0).\w8\w8 It's meant for %(reference0),\w4 not us.\w8\w8\0\s[astonished]Oh,\w4 it is?\w8\w8\s[pensive] Aw..."
+}
+
+OnInstallReroute
+{
+	"\0\b[0]\1\\b[0]s[k_thinking]Ah,\w4 this %(reference1) is for %(reference0).\w8\w8 we cannot install it.\w8\w8\0\s[star_struck]\i[31]Hey %(reference0)!\w8\w8 Catch~!"
+}
+
+
+
+//————— Uninstalling —————
+OnVanishSelecting
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[scream]Oh!\w8\w8\s[worried] Did we do something wrong?\w8\w8\n\n\1\s[unamused]No guilting.\w8\w8\s[teach] You may uninstall us if you wish,\w4 %(username),\w4 just mind that this will only install us and not SSP in its entirety.\w8\w8\n\n\0\s[sweat_smile]Yeah.\w8\w8 If you were hoping to uninstall SSP,\w4 you can just delete the whole SSP folder and it'll be gone.\w8\w8 The entire program is contained to that one directory.\w8\w8\1\s[neutral_face]So,\w4 what will it be?"
+}
+
+OnVanishSelected
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[pensive]Aww...\w8\w8 Alright.\w8\w8\n\n\1\s[neutral_face]Farewell,\w4 %(username).\w8\w8 If you have need of our services in the future,\w4 you may reinstall us at any time.\w8\w8 We will not hold it against you.\w8\w8\n\n\0\s[blush]\i[31]Take care!\w8\w8\w8"
+}
+
+OnVanishCancel
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[sweat_smile]Phew!\w8\w8 Don't scare us like that,\w4 %(username)!\w8\w8\n\n\1\s[rolling_eyes]Leaving if %(username) wants us gone is part of the job,\w4 it's not something to be scared of."
+}
+
+OnVanishButtonHold
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[scream]Oh,\w4 you changed your mind?\w8\w8 Oh thank goodness—\w8\w8\n\n\1\s[expressionless]Very well,\w4 then.\w8\w8\s[neutral_face] We shall stay and assist for as long as you desire."
+}
+
+OnOtherGhostVanished
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[pensive]\i[24]Farewell,\w4 %(reference0).\w8\w8 You will be missed.\w8\w8\1\s[unamused]Perhaps."
+}
+
+
+//————— Creating files —————
+OnNarCreating
+{
+	_type = reference2
+	if _type == "rss"; _type = "an RSS feed"
+	elseif _type == "supplement"; _type = "a supplement file"
+	elseif _type == "language"; _type = "a language file"
+	else; _type = "a %(reference2)"
+	
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[astonished]Ooooh,\w4 what'd you make,\w4 what'd you make?\w8\w8\n\n\1\s[teach]Looks like %(_type).\w8\w8\0\s[star_struck]Oh,\w4 so cool!!\w8\w8 Wow!\w8"
+}
+
+OnNarCreated
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[star_struck]Done!\w8\w8%(raised_hand) You can view it right \_a[OnNarLocation,%(reference1)]here!\_a\w8\w8\1\s[neutral_face]Happy to be of assistance."
+}
+
+OnNarLocation
+{
+	_path = SPLITPATH(reference0)[0] + SPLITPATH(reference0)[1]
+	
+	"\C\![open,file,""%(_path)""]"
+}
+
+OnUpdatedataCreating
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[star_struck]\i[22]Ooh,\w4 update files!\w8\w8 Yeah,\w4 we can do that!"
+}
+
+OnUpdatedataCreated
+{
+	"\0\b[0]\s[blush]\i[22]\1\b[0]\s[neutral_face]Update files complete.\w8\w8\0\s[blush]\i[31]All ready to go!"
+}
+
+
+//————— BIFF (email checking function) —————
+OnBIFFBegin
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[blush]Checking for emails!\w8"
+}
+
+OnBIFFComplete
+{
+	reference0 = TOINT(reference0)
+	
+	emailheaders = ""
+	if reference0 == 0
+	{
+		"\1\b[0]\s[neutral_face]\0\b[0]\s[pensive]Nothing new...\w8\w8\n\n\1\s[neutral_face]Perhaps %(username) is simply very organized.\w8\w8\0\s[s_thinking]True.\w8\w8 Are you super organized,\w4 %(username)?"
+	}
+	elseif reference0 <= 500
+	{
+		emailheaders = reference7
+		
+		_s = ""; if reference0 != 1; _s = "s"
+		
+		"\1\b[0]\s[neutral_face]\0\b[0]\s[blush]%(reference0) new email%(_s)!\w8\w8"
+		
+		if reference7 != ""
+		{
+			" Do you want to see the header%(_s)?"
+			--
+			"\n\n\![*]\q[Yes,OnSeeHeaders,yes]\n\*\![*]\q[No,OnSeeHeaders,no]"
+		}
+	}
+	else
+	{
+		"\1\b[0]\s[teach]You have %(reference0) new emails.\w8\w8\0\b[0]\s[astonished] Wow,\w4 that's so many!\w8\w8\s[sweat_smile] My inbox piles up too,\w4 honestly..."
+	}
+	
+	
+}
+
+OnSeeHeaders
+{
+	if reference0 == "yes"
+	{
+		_display = ""
+		foreach emailheaders; _header
+		{
+			_display += "\![*]"
+			_display += SHIORI3FW.EscapeAllTags(_header)
+			_display += "\n\n"
+		}
+		
+		"\1\b[0]\s[neutral_face]\0\b[2]\s[blush]%(raised_hand)\![set,autoscroll,disable]\*Here they are!\w8\n\n\![*]\q[Close,]\n\n"
+		--
+		"%(display)"
+		--
+		"\n\n\![*]\q[Close,]"
+	}
+	else
+	{
+		"\1\b[0]\s[neutral_face]\0\b[0]\s[slight_smile]Ok,\w4 gotcha!"
+	}
+	ERASEVAR("emailheaders")
+}
+
+OnBIFFFailure
+{
+	"\1\b[0]\0\b[0]"
+	--
+	if reference0 == "timeout"
+	{
+		"\1\s[k_thinking]\0\s[pensive]Oh,\w4 the connection timed out.\w8\w8\s[sweat_smile] Sorry,\w4 maybe try again in a few minutes?"
+	}
+	elseif reference0 == "kick"
+	{
+		"\1\s[k_thinking]Hmm,\w4 I got kicked out of the account.\w8\w8\n\n\0\s[astonished]Oh,\w4 what?\w8\w8 Why would that be?\w8\w8\1\s[neutral_face]I can't be sure exactly.\w8\w8 %(username),\w4 you should check your POP settings on your email provider's side,\w4 and make sure it's all set up correctly.\w8\w8 If you're using Gmail,\w4 don't forget you'll also need to set up an app password to let us in."
+	}
+	elseif reference0 == "defect"
+	{
+		"\1\s[k_thinking]Hmm,\w4 the POP settings are wrong,\w4 I can't get the emails.\w8\w8\0\s[astonished]Oh!\w8\w8\s[slight_smile]%(raised_hand)\![open,configurationdialog,biff] Here,\w4 %(username).\w8\w8 On this page are the POP settings,\w4 please double check them and then ask us again~!"
+	}
+	elseif reference0 == "artificial"
+	{
+		"\1\s[neutral_face]\0\s[astonished]Oh,\w4 you changed your mind?\w8\w8\s[sweat_smile] Ok then."
+	}
+	else
+	{
+		"\0\s[sweat_smile]\1\s[k_thinking]Hmm,\w4 something's gone wrong,\w4 I can't get in.\w8\w8 The error is ""%(reference0)"".\w8\w8\0Sorry about that!\w8\w8 If you can figure it out,\w4 let us know and we'll try again for you."
+	}
+}
+
+
+//————— Network update —————
+OnUpdateBegin
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[star_struck]Ooh,\w4 hoping for something new?\w8\w8 Let's see...\w8"
+}
+
+OnUpdateReady
+{
+	reference0 = TOINT(reference0) + 1
+	_s = ""; if reference0 != 1; _s = "s"
+	
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[astonished]Wow,\w4 look at that!\w8\w8\s[star_struck] %(reference0) new file%(_s)!\w8\w8\1I'll start downloading the new data.\w8"
+}
+
+OnUpdateComplete
+{
+	"\1\b[0]\0\b[0]"
+	--
+	if reference0 == "none"
+	{
+		"\1\s[neutral_face]\0\s[pensive]Aww,\w4 there's nothing new..."
+	}
+	else
+	{
+		"\1\s[neutral_face]Update complete.\w8\w8\n\n\0\s[star_struck]Wow!\w8\w8 I wonder what's changed!\w8\w8\1Would you like to see the changelog,\w4 %(username)?"
+		--
+		"\n\n\![*]\q[Yes,OnChangeLog,yes]\n\![*]\q[No,OnChangeLog,no]"
+	}
+}
+
+OnChangeLog : all
+{
+	if reference0 == "yes"
+	{
+		"\1\s[k_thinking]\0\b[2]\s[blush]%(raised_hand)"
+		"\![set,autoscroll,disable]\_q\*"
+		"\f[align,center]— SSP Angel Version 1.0.0 —\n\n\f[align,left]"
+		"• Initial release\n\n"
+		
+		"\n"
+		if reference1 == "menu"; "\![*]\q[Back,OnFunctionMenu]  " 
+		"\![*]\q[Close,]"
+	}
+	else
+	{
+		"\1\b[0]\s[neutral_face]\0\b[0]\s[blush]Alright,\w4 if you want to see it later on just let me know!"
+	}
+}
+
+
+//————— RSS —————
+OnHeadlinesenseBegin
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[blush]Checking the feed for %(reference0)~!\w8\w8 Anything new here?"
+}
+
+OnHeadlinesense.OnFind
+{
+	_display = REPLACE(reference3,"\_a[","\![*]\_a[")
+	
+	"\1\b[0]\s[k_thinking]\0\b[2]\s[blush]%(raised_hand)"
+	--
+	"%(reference0):\n\n%(_display)\n"
+ 	--
+ 	if reference2 == "First" || reference2 == "Next"; "\![*]\q[Next,]"
+	--
+	"\![*]\q[Stop,OnHeadlineCancel]\e"
+}
+
+OnHeadlinesenseComplete
+{
+	"\1\b[0]\s[k_thinking]\0\b[0]\s[relieved]There's no update."
+}
+
+OnHeadlinesenseFailure
+{
+	"\1\b[0]\s[k_thinking]\0\b[0]\s[sweat_smile]Oh,\w4 uh,\w4 something went wrong,\w4 I can't get the feed.\w8\w8"
+	--
+	if reference0 == "can't download"
+	{
+		"\1We aren't able to download it."
+	}
+	elseif reference0 == "can't analyze"
+	{
+		"We can't analyze it."
+	}
+	else
+	{
+		"The error says ""%(reference0)""."
+	}
+}
+
+OnHeadlineCancel
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[blush]Done!\w8\w8 Hope that helps!"
+}
+
+
+
+
+//————— SNTP (clock fixing function) —————
+
+//reference0 is the name of the server it's connecting to
+OnSNTPBegin
+{
+	"\1\b[0]\s[10]\0\b[0]\s[slight_smile]Ok,\w4 I'll check the time using %(reference0).\w8"
+}
+
+//reference0 is the name of the server it's connecting to, reference1 is the server's time, reference2 is the computer's time, reference3 is the difference (in seconds)
+OnSNTPCompare
+{
+ 	if reference3 == 0 //if your clock is already accurate.
+	{
+		"\1\b[0]\s[k_thinking]\0\b[0]\s[blush]Your clock is already accurate!"
+	}
+ 	else //if your clock doesn't match
+	{
+		"\\b[0]1\s[k_thinking]\0\b[0]\s[astonished]Your clock doesn't match.\w8\w8 Should I fix it?"
+		--
+		all:/
+		{
+			"\n\n"
+			"\![*]\q[Fix it,OnSNTPExecute]\n"
+			"\![*]\q[Leave it alone,OnSNTPCancel]\e"
+		}
+	}
+}
+
+//The \6 is what actually changes the clock
+OnSNTPExecute
+{
+	"\6"
+	--
+	"\1\b[0]\s[10]\0\b[0]\s[blush]%(raised_hand)Ta-da~!\w8\w8 Fixed!"
+}
+
+OnSNTPCancel
+{
+	"\1\b[0]\s[10]\0\b[0]\s[pensive]Aw,\w4 alright,\w4 I'll leave it be."
+}
+
+//reference0 is the name of the SNTP server - Note that this may happen before any other STNP dialogue is said! Keep in mind when writing your dialogue that the user will not necessarily have clicked the yes button.
+OnSNTPFailure
+{
+	"\1\b[0]\s[k_thinking]\0\b[0]\s[sweat_smile]Sorry,\w4 something went wrong.\w8\w8 I can't fix the clock."
+}
+
+
+
+//————— Screensaver —————
+OnScreenSaverEnd
+{
+	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Eek--!\w8\w8\1\s[unamused]It's only a screensaver,\w4 calm down."
+}
+
+
+
+
+//————— Low battery —————
+OnBatteryLow
+{
+	"\0\b[0]\1\b[0]\s[k_thinking]%(username),\w4 your battery appears to be getting low.\w8\w8\0\s[astonished]Oh,\w4 that's not good.\w8\w8 You should probably find a charger,\w4 huh?"
+}
+
+OnBatteryCritical
+{
+	"\0\b[0]\1\b[0]\s[neutral_face]%(username),\w4 your battery is critical.\w8\w8 You should be careful not to run it all the way down.\w8\w8\n\n\0\s[scream]Oh my gosh!\w8\w8 What's going to happen to us!?\w8\w8\1\s[rolling_eyes]We'll live."
+}
+
+
+
+
+//————— Shell scaling —————
+OnShellScaling
+{
+	reference0 = TOINT(reference0)
+	
+	"\1\b[0]\0\b[0]"
+	--
+	if reference0 == 100
+	{
+		"\1\s[neutral_face]\0\s[blush]Back to normal size!\w8\w8\1At last."
+	}
+	elseif reference0 <= 33
+	{
+		"\1\s[k_thinking]\0\s[scream]Oh!\w8\w8 %(username) can you still see us?\w8\w8 We're so small!\w8\w8\1Hmmm."
+	}
+	elseif reference0 <= 50
+	{
+		"\1\s[neutral_face]\0\s[sweat_smile]Oh,\w4 were we in your way?\w8\w8\s[blush] It's so handy you can shrink us if you need to,\w4 though.\w8\w8\1Yes.\w8\w8 You can also make us partially transparent in the SSP preferences,\w4 if you'd like."
+	}
+	elseif reference0 <= 150
+	{
+		"\1\s[neutral_face]\0\s[astonished]Oh,\w4 you made us bigger?\w8\w8\s[sweat_smile] Were we too small?\w8\w8\1\s[k_thinking]If we look fuzzy to you,\w4 you can always turn off dithering in the SSP preferences.\w8\w8 But keep in mind that it looks best when you set our shell scaling to round numbers."
+	}
+	else
+	{
+		"\1\s[k_thinking]\0\s[scream]Oh my gosh,\w4 we're giants!!\w8\w8\n\n\1Hmmm.\w8\w8\0Hold still,\w4 don't step on anything by mistake!!"
+	}
+}

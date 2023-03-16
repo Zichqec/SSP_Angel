@@ -1,0 +1,111 @@
+OnMouseMove
+{
+	if reference3 == "0"
+	{
+		if reference4 == "wings" || reference4 == "head" || reference4 == "halo"
+		{
+			stroke++
+			
+			if stroke % 40 == 0
+			{
+				if reference4 == "wings"; PetAngelWings
+				elseif reference4 == "halo"; PetAngelHalo
+				elseif reference4 == "head"; PetAngelHead
+			}
+		}
+	}
+	elseif reference3 == "1"
+	{
+		if reference4 == "wings" || reference4 == "head" || reference4 == "halo" || reference4 == "tail"
+		{
+			stroke++
+			
+			if stroke % 40 == 0
+			{
+				if reference4 == "wings"; PetPilotWings
+				elseif reference4 == "halo"; PetPilotHalo
+				elseif reference4 == "head"; PetPilotHead
+				elseif reference4 == "tail"; PetPilotTail
+			}
+		}
+	}
+}
+
+OnMouseLeaveAll
+{
+	stroke = 0
+}
+
+PetAngelWings
+{
+	"\0\b[0]\1\b[0]\s[neutral_face]"
+	--
+	"\0\s[sweat_smile]Oh,\w4 my wings?\w8\w8\s[blush]\i[5] They're not just for looks,\w4 they're functional!\w8\w8\s[sweat_smile] So uh,\w4 careful with them,\w4 please."
+}
+
+PetAngelHalo
+{
+	"\0\b[0]\1\b[0]\s[neutral_face]"
+	--
+	"\0\s[blush]My halo!\w8\w8 Do you like it?\w8\w8\s[relieved] They only give you one if you graduate,\w4 it's sort of like a degree,\w8\s[star_struck] but way cooler."
+}
+
+PetAngelHead
+{
+	"\1\b[0]\0\b[0]"
+	--
+	"\1\s[rolling_eyes]"
+	"\1\s[unamused]"
+	"\1\s[expressionless]"
+	--
+	nonoverlap :/
+	{
+		"\0\s[smiling_face_with_3_hearts]Heehee,\w4 this gig was totally worth it~!"
+		"\0\s[smiling_face_with_3_hearts]All of my training was worth it for this moment."
+		"\0\s[smiling_face_with_3_hearts]Yessss keep doing that."
+		"\0\s[smiling_face_with_3_hearts]Am I doing a good job?\w8\w8 I must be doing a good job~!"
+		"\0\s[relieved]Oh yeah,\w4 it's all coming together now.\w8\w8\n\n\1\s[unamused]This was your plan all along?\w8\w8\0\s[star_struck]Yup!\w8\w8\1\s[face_exhaling]"
+		"\0\s[star_struck]Wow,\w4 they were right,\w4 this job has great benefits!\w8\w8\1\s[rolling_eyes]I'm pretty sure when they said benefits,\w4 they meant the dental..."
+		"\0\s[blush]\i[5]\i[22]My hair's soft,\w4 right?\w8\w8 I use special fancy shampoo%(br)that's supposed to make it super soft~\w8\w8\n\n\1\s[unamused]Why,\w4 to entice people to pet you?\w8\w8\n\n\0\s[astonished]Yeah,\w4 how'd you know?\w8\w8\1\s[expressionless]Call it an educated guess."
+		"\0\s[blush]\i[5]\i[22]Heehee!\w8\w8 Thanks!"
+		"\0\s[blush]\i[5]\i[33]Gosh,\w4 I'm glad we ended up working for %(username),\w4 %(username) knows what's up.\w8\w8\1\s[rolling_eyes]%(username) doesn't seem to mind that this isn't in your job description."
+		"\0\s[star_struck]\i[22]Wow,\w4 you're good at this %(username)!\w8\w8 Can I hire you to do this like,\w4 all the time?\w8\w8\1\s[expressionless] We work for %(username),\w4 not the other way around..."
+		"\0\s[relieved]\i[22]Yes yes yes.\w8\w8 Keep doing this."
+	}
+}
+
+PetPilotWings : nonoverlap
+{
+	"\0\b[0]\1\b[0]"
+	--
+	"\0\s[sweat_smile]\1\s[neutral_face]Please do not touch my wings,\w4 they are sensitive."
+	"\0\s[sweat_smile]\1\s[teach]My wings are functional,\w4 please do not touch them as you may disturb their function."
+}
+
+PetPilotHalo
+{
+	"\0\s[0]\1\s[teach]My halo,\w4 a symbol of the knowledge and skill I gained through my training.\w8\w8\s[neutral_face] Please do not touch it."
+}
+
+PetPilotHead : nonoverlap
+{
+	"\0\b[0]\1\b[0]"
+	--
+	"\0\s[sweat_smile]\1\s[teach]Please do not touch me.\w8\w8 If you want to pet someone,\w4%(br)Angel may be more receptive to that."
+	"\0\s[sweat_smile]\1\s[neutral_face]I am not for petting.\w8\w8 Please refrain from doing so."
+	"\0\s[sweat_smile]\1\s[neutral_face]Please do not touch me.\w8\w8\0%(raised_hand)He's not a fan of that,\w4 %(username).\w8\w8\s[blush]\i[22] But I am,\w4 you can pet me if you like~"
+	"\0\s[sweat_smile]\1\s[neutral_face]No touching,\w4 please.\w8\w8\0Yeah,\w4 he's not fond of that.\w8\w8\s[slight_smile] You should try asking him about some of the stuff he knows instead,\w4 he likes talking about these things!\w8\w8\1\s[rolling_eyes]\0\s[blush]\i[33] Even if he won't admit it."
+	"\0\s[sweat_smile]\1\s[neutral_face]Please do not touch me,\w4 I am not a fan."
+}
+
+PetPilotTail : nonoverlap
+{
+	"\0\b[0]\1\b[0]"
+	--
+	"\0\s[sweat_smile]"
+	--
+	"\1\s[unamused]... Do not touch my tail."
+	"\1\s[unamused]... Please do not touch."
+	"\1\s[unamused]... No,\w4 do not touch my tail."
+	"\1\s[unamused]... No,\w4 thank you."
+}

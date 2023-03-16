@@ -1,0 +1,449 @@
+//————— Display Elements —————
+
+ghostver
+{
+	"1.0.0"
+}
+
+hour24
+{
+	if hour < 10; "0"
+	--
+	"%(hour)"
+}
+
+nowmin
+{
+	if minute < 10; "0"
+	--
+	"%(minute)"
+}
+
+ap
+{
+	if ampm; "PM"
+	else; "AM"
+}
+
+//Because not all balloons use a font that has endashes/emdashes...
+endash
+{
+	"\f[name,Candara]–\f[name,default]"
+}
+
+emdash
+{
+	"\f[name,Candara]—\f[name,default]"
+}
+
+they
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"he"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"she"
+	}
+	else
+	{
+		"they"
+	}
+}
+
+them
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"him"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"her"
+	}
+	else
+	{
+		"them"
+	}
+}
+
+their
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"his"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"her"
+	}
+	else
+	{
+		"their"
+	}
+}
+
+theirs
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"his"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"hers"
+	}
+	else
+	{
+		"theirs"
+	}
+}
+
+themself
+{
+	if SHIORI3FW.UserSex == "male"
+	{
+		"himself"
+	}
+	elseif SHIORI3FW.UserSex == "female"
+	{
+		"herself"
+	}
+	else
+	{
+		"themself"
+	}
+}
+
+//%(they) %(p('are','is'))
+p
+{
+	if SHIORI3FW.UserSex == "undef"; _argv[0] //they are
+	else; _argv[1] //he is/she is
+}
+
+sb0
+{
+	//I'll probably redo these if I add more balloons with settings... set it up to automatically put in the index number there or something. I dunno
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"
+	{
+		"\b[%(Balloon.Angel[0])0]"
+	}
+	elseif SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		"\b[%(Balloon.Angel[1])0]"
+	}
+	else
+	{
+		"\b[0]"
+	}
+}
+
+kb0
+{
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"
+	{
+		"\b[%(Balloon.Pilot[0])0]"
+	}
+	elseif SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		"\b[%(Balloon.Pilot[1])0]"
+	}
+	else
+	{
+		"\b[0]"
+	}
+}
+
+sb2
+{
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"
+	{
+		"\b[%(Balloon.Angel[0])2]"
+	}
+	elseif SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		"\b[%(Balloon.Angel[1])2]"
+	}
+	else
+	{
+		"\b[2]"
+	}
+}
+
+kb2
+{
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"
+	{
+		"\b[%(Balloon.Pilot[0])2]"
+	}
+	elseif SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		"\b[%(Balloon.Pilot[1])2]"
+	}
+	else
+	{
+		"\b[2]"
+	}
+}
+
+sb4
+{
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"
+	{
+		"\b[%(Balloon.Angel[0])4]"
+	}
+	elseif SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		"\b[%(Balloon.Angel[1])4]"
+	}
+	else
+	{
+		"\b[4,--fallback=2]"
+	}
+}
+
+kb4
+{
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"
+	{
+		"\b[%(Balloon.Pilot[0])4]"
+	}
+	elseif SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		"\b[%(Balloon.Pilot[1])4]"
+	}
+	else
+	{
+		"\b[4,--fallback=2]"
+	}
+}
+
+sb6
+{
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"
+	{
+		"\b[%(Balloon.Angel[0])6]"
+	}
+	else
+	{
+		"\b[0]"
+	}
+}
+
+kb6
+{
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"
+	{
+		"\b[%(Balloon.Pilot[0])6]"
+	}
+	else
+	{
+		"\b[0]"
+	}
+}
+
+h
+{
+	"\f[color,default.anchor]"
+}
+
+g
+{
+	"\f[color,disable]"
+}
+
+dc
+{
+	"\f[color,default]"
+}
+
+br
+{
+	if SHIORI3FW.BalloonName == "Angelbox" || SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"; "\n"
+	else; " "
+}
+
+newline
+{
+	"\n \n[-100]"
+}
+
+//If you write all your envelopes as lowercase, you can send them through this function whenever you need the first letter capitalized! It'd look something like this: "%(Capitalize(exampleenvelope))"
+Capitalize
+{
+	_first = SUBSTR(_argv[0],0,1)
+	_rest = ERASE(_argv[0],0,1) //Erase the first character and store everything else in _rest
+	TOUPPER(_first) + _rest
+}
+
+
+
+//————— Info functions —————
+
+On_basewareversion : void
+{
+	basewareversion = reference0
+}
+
+On_installedheadlinename
+{
+	RSSFeedList = reference
+}
+
+On_vanishbutton.visible
+{
+ 	if UninstallEnabled == "On"; 1
+	else; 0
+}
+
+OnNotifyOSInfo
+{
+	NotifyOS = reference0
+}
+
+//Copied from the base SHIORI files, but with the username variable added
+OnNotifyUserInfo : void
+{
+	SHIORI3FW.UserName = reference[0]
+	username = reference[0]
+	SHIORI3FW.UserNameFull = reference[1]
+	SHIORI3FW.UserBirthday = SPLIT(reference[2],',',3)
+	for _i = 0 ; _i < 3 ; _i++ {
+		SHIORI3FW.UserBirthday[_i] = TOINT(SHIORI3FW.UserBirthday[_i])
+	}
+	SHIORI3FW.UserSex = reference[3]
+}
+
+
+//————— Pure Functions —————
+
+FormatLinks
+{
+	_display = ""
+	for _i = 0; _i < ARRAYSIZE(_argv); _i++
+	{
+		_display += _argv[_i]
+		if _i % 2 == 0; _display += "%ASC(1)"
+		else; _display += "%ASC(2)"
+	}
+	_display
+}
+
+
+
+//————— Right click menu —————
+
+On_sakura.recommendsites
+{
+	FormatLinks(recommendlinks)
+}
+
+recommendlinks : array
+{
+	"Ayakamtka"; 	 "https://github.com/Ayakamtka"
+	"GallaTheGalla"; "https://gallathegalla.github.io/gtg-ghosts/"
+	"Yuyudev";          "https://twitter.com/yuyudev"
+	"Zichqec";       "https://zichqec.github.io/s-the-skeleton/index.html"
+}
+
+On_sakura.portalsites
+{
+	FormatLinks(portallinks)
+}
+
+portallinks : array
+{
+	
+	"SSP"; 						                      "http://ssp.shillest.net/"
+	"Ukagaka Dream Team Wiki";                        "https://ukagakadreamteam.com/wiki/home"
+	"Ukagaka/Ghost Development and Download Webring"; "https://ukagakawebring.netlify.app/"
+	/*
+	
+	webring
+	other fun ghost stuff?? balloontown?? dream team??
+	
+	*/
+	
+}
+
+On_kero.recommendsites
+{
+	FormatLinks(kerorecommendlinks)
+}
+
+kerorecommendlinks : array
+{
+	"Ukadoc (Sakura Script page)";     "https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html"
+	"Ukadoc (SHIORI Events page)";     "https://ukagakadreamteam.github.io/ukadoc/manual/list_shiori_event.html"
+	"AYAYA Wiki (Function list page)"; "https://emily.shillest.net/ayaya/index.php?%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB/%E9%96%A2%E6%95%B0%E7%94%A8%E9%80%94%E5%88%A5%E4%B8%80%E8%A6%A7"
+	"Ghost Template Walkthrough";      "http://www.ashido.com/ukagaka/walkthrough.html"
+	"YAYA Fundamentals Guide";         "https://zichqec.github.io/YAYA_Fundamentals/"
+}
+
+//Kero can have links to technical documentation, maybe.....
+
+OnRecommendsiteChoice
+{
+	//Sakura - Recommend
+	if reference0 == "Ayakamtka"
+	{
+		"\0\s[blush]\i[31]Ayaka is one of our writers!\w8\w8 He wrote some of our random dialogues,\w4 the fun ones that aren't usage tips.\w8\w8\s[blush]\i[23] (Don't tell anyone,\w4 but his are all my favorites!)" //:relieved:
+	}
+	elseif reference0 == "GallaTheGalla"
+	{
+		"\0\s[star_struck]\i[21]Galla's Ghosts and other goodies!\w8\w8 There's lots of cool stuff here!\w8\w8\s[blush]\i[22] Galla did all the pretty alternate color versions of our Angelbox balloon,\w4 and helped with some of the writing,\w4 including our word lists.\w8\w8 You should check out what other stuff they have!"
+	}
+	elseif reference0 == "Yuyudev"
+	{
+		"\0\s[blush]\i[31]This is our artist;\w4 Yuyudev drew our #shell!\w8\w8 You might be able to find other #ghost things here too!"
+	}
+	elseif reference0 == "Zichqec"
+	{
+		"\1\s[10]\0\s[slight_smile]\i[31]This is the website of one of our developers,\w4 Zichqec!\w8\w8%(br)You can find all sorts of #ukagaka stuff here,\w4 from%(br)#ghosts,\w4 to #balloons,\w8\s[scream] to #ghosts named Balloons!?\w8\w8\s[blush] There's a pretty sizable selection."
+	}
+	
+	//Sakura - Portal
+	elseif reference0 == "SSP"
+	{
+		"\1\s[10]\0\s[slight_smile]\i[31]This is the homepage for #SSP!\w8\w8 Most of it is in Japanese,\w4 but you can still find all kinds of resources here.\w8\w8 If you need to download a fresh copy of #SSP,\w4 this is the official source.\w8\w8 You can also find links to things like the changelog,\w4 bug tracker,\w4 and other related websites!"
+	}
+	elseif reference0 == "Ukagaka Dream Team Wiki"
+	{
+		"\1\s[10]\0\s[slight_smile]\i[31]This is the #Ukagaka Dream Team's wiki!\w8\w8 It's a large English wiki that describes many English #ghosts and links to where you can download them!\w8\w8 It also covers things like #balloons,\w4 #freeshells,\w4 guides,\w4 and other information.\w8\w8\s[blush]\i[22] And best of all,\w4 you're totally welcome to edit it and make it even better!"
+	}
+	elseif reference0 == "Ukagaka/Ghost Development and Download Webring"
+	{
+		"\0\s[star_struck]\i[31]The webring is a fun way to explore and find new%(br)#ghost content!\w8\w8 Several #ghost developers have their own little personal websites to host their #ghost related stuff on,\w4 and you can find several of them linked on the webring!\w8\w8\s[pensive] Sadly,\w4 the back and forward buttons don't work anymore,\w4 so you'll get a random page each time.\w8\w8\s[blush]\i[22] But it can still be lots of fun to peek through!"
+	}
+	
+	//Kero
+	elseif "Ukadoc" _in_ reference0
+	{
+		"\0\s[0]\1\s[teach]This is #Ukadoc,\w4 a resource for #baseware specifications,\w4%(br)and the official documentation for #SSP.\w8\w8\s[neutral_face] Here you will find information about things such as how to write install.txt,\w4 descript.txt,\w4 #SERIKO,\w4 and more.\w8\w8\s[k_thinking]\n\n"
+		--
+		if reference0 == "Ukadoc (Sakura Script page)"
+		{
+			"This page specifically is the #SakuraScript page,\w4 where you will find a listing of all the #SakuraScript tags available,\w4 and usage examples for them."
+		}
+		else
+		{
+			"This page specifically is the #SHIORI Events page,\w4 where you will find a listing of all the #SHIORI events available,\w4 and what reference information they give for you to work with."
+		}
+		--
+		"\w8\w8\0\s[blush]\1\s[teach]\n\nThis version of #Ukadoc has been translated by the%(br)#Ukagaka Dream Team.\w8\w8 Some of it is in English,\w4 but some pages may still be in the original Japanese."
+	}
+	elseif reference0 == "AYAYA Wiki (Function list page)"
+	{
+		"\0\s[0]\1\s[teach]This is #AYAYA,\w4 the wiki for all things #YAYA.\w8\w8 You can find specifications for the language here,\w4 as well as some guides and tips.\w8\w8 It is in Japanese,\w4 so you may need a translator to read it.\w8\w8 This page is specifically the list of inbuilt functions,\w4 grouped by purpose."
+	}
+	elseif reference0 == "Ghost Template Walkthrough"
+	{
+		"\0\s[0]\1\s[teach]This is the first English walkthrough on how to make a #ghost.\w8\w8 Many English #ghost developers started their journeys here.\w8\w8\s[neutral_face] The walkthrough is thorough,\w4 covering all aspects from making a #shell to basic #YAYA coding.\w8\w8 Keep in mind that when it was first written,\w4 there was almost no #ghost information available in English at all,\w4 so much of it was made by trial and error.\w8\w8 It has had multiple updates over the years to correct information and add new sections."
+	}
+	elseif reference0 == "YAYA Fundamentals Guide"
+	{
+		"\0\s[0]\1\s[teach]This is a guide to the #YAYA programming language,\w4 the first of its kind in English.\w8\w8\s[neutral_face] It explores #YAYA from the ground up,\w4 teaching computer science concepts to help build a proper understanding of programming."
+	}
+}

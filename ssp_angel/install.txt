@@ -1,0 +1,7 @@
+charset,UTF-8
+type,ghost
+
+name,SSP Angel
+directory,ssp_angel
+
+balloon.directory,angelbox_gz

@@ -1,0 +1,1136 @@
+OnSakuraMenu : all
+{
+	random :/
+	{
+		"\0\b[2]\s[slight_smile]"
+		"\0\b[2]\s[blush]"
+	}
+	
+	nonoverlap_pool :/
+	{
+		"What's up?"
+		"Hey!"
+		"Need some help?"
+		"\i[25]Yo, what can I help you with?"
+		"\i[31]What're you looking for?"
+		"Can I help with something?"
+		"\i[22]Always happy to assist!"
+		"\i[36]Hey %(username)!"
+		"Wanna do something?"
+		"Yeah, what do you need?"
+		"Hm?"
+		"Something you need?"
+		"\i[22]Anything I can help with?"
+		"Hey! How's it going?"
+		"\i[22]Hey, it's my favorite %(username)!"
+		"Heya! What's up?"
+		"\i[36]Hey hey, what did you wanna do?"
+	}
+	"\_q\n\n\![set,autoscroll,disable]"
+	
+	"\![*]\__q[OnAiTalk]Talk to me\__q  \![*]\__q[OnGiveTip]Give me a tip\__q\n"
+	if lastTalk != ""; "\![*]\__q[OnLastTalk]Say that again?\__q\n"
+	"\n"
+	
+	"\![*]\__q[OnQuestionMenu]I have some questions\__q\n"
+	"\![*]\__q[OnHowDoI]How do I...\__q\n"
+	
+	"\n"
+	
+	"\![*]\__q[OnFunctionMenu]Can you do something for me?\__q\n"
+	"\![*]\__q[OnConfigMenu]Settings\__q\n"
+	
+	"\n"
+	"\![*]\__q[OnSakuraMenuCancel]Nevermind\__q  \![*]\__q[OnGoodbye]Goodbye!\__q"
+	
+	"\n\n\f[color,disable]SSP Angel v%(ghostver)     %(basewarename) %(basewareversion)     %(LICENSE[0])"
+}
+
+OnGiveTip
+{
+	lastTalk = TipTalk
+	lastTalk
+}
+
+OnLastTalk
+{
+	lastTalk
+}
+
+OnQuestionMenu : all
+{
+	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"\f[align,center]%(emdash) Questions %(emdash)\n\n\f[align,left]" //"How do I...\n\n"
+	
+	"\![*]\__q[OnQuestions,WhatAreYou]What are you?\__q\n"
+	"\![*]\__q[OnQuestions,GhostPurpose]What are ghosts for?\__q\n"
+	"\![*]\__q[OnQuestions,GetGhosts]Can I get more ghosts?\__q\n"
+	"\![*]\__q[OnQuestions,GetBalloons]Can I get different speech balloons?\__q\n"
+	"\![*]\__q[OnQuestions,MakeAGhost]Can I make my own ghost?\__q\n"
+	"\![*]\__q[OnQuestions,TranslateGhost]A ghost I like is in another language\, what can I do?\__q\n"
+	
+	"\n"
+	"\![*]\__q[OnSakuraMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+OnQuestions : all
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	if reference0 == "WhatAreYou"
+	{
+		"\0\s[blush]\i[21]We're #ghosts!\w8\w8\n\n"
+		"\1\s[unamused]What she means to say is that we are what is called%(br)#ukagaka,\w4  or #ghosts.\w8\w8\s[teach] Those are programs that you can run on your desktop,\w4 most often to display characters,\w4 or mascots,\w4 that you can interact with.\w8\w8\n\n"
+		"\0\s[star_struck]\i[22]Desktop friends!!\w8\w8\s[smiling_face_with_3_hearts]\i[22] It's desktop friends,\w4 basically.\w8\w8\n\n"
+		"\1\s[neutral_face]Yes,\w4 that is the shortest way of putting it.\w8\w8\s[teach] Not all%(br)#ghosts are friendly,\w4 though.\w8\w8 Some may be irritable,\w4 and some are purely functional without much personality to speak of.\w8\w8"
+		"\0\s[slight_smile]\i[21]It's true,\w4 #ghosts can do%(emdash)and be%(emdash)lots of things!\w8\w8\s[blush]Ask us about it!"
+	}
+	elseif reference0 == "GhostPurpose"
+	{
+		"\1\s[neutral_face]Strictly speaking,\w4 we're not all that useful and are primarily for entertainment.\w8\w8\n\n"
+		"\0\s[pensive]Aw,\w4 don't put it that way.\w8\w8\s[blush] #Ghosts can do lots of useful things!\w8\w8 For example,\w4 #SSP has built in functionality to read RSS feeds,\w4 check your email,\w4 fix your system time,\w4 and more!\w8\w8\s[star_struck]Some advanced #ghosts are also able to do things like check the weather,\w4 play music,\w4 take notes,\w4 remind you to take medication or drink water...\w8\w8\n\n"
+		"\1\s[k_thinking]How useful we are to you depends on what your needs are and what #ghost you're using.\w8\w8\s[neutral_face] But my point still stands,\w4 the primary function of #ghosts is entertainment.\w8\w8\n\n"
+		"\0\s[blush]Yeah,\w4 and there's lots of #ghosts with fun content!\w8\w8 Most #ghosts will talk every couple of minutes,\w4 either to you,\w4 or to any other partner characters they may have.\w8\w8\s[slight_smile] Many will also have questions you can ask them in their menus,\w4 like we do.\w8\w8 Others will have whole story progressions you can follow,\w4 and stuff to discover and unlock.\w8\w8\s[star_struck]Some have entire minigames you can play!\w8\w8\s[relieved]It all varies per-ghost,\w4 depending on what their developer wanted them to be.\w8\w8\s[blush] The sky is the limit!\w8\w8"
+		"\1\s[teach]The limits of #SSP and the #ghost's chosen coding language are the limit."
+	}
+	elseif reference0 == "GetGhosts"
+	{
+		"\0\s[smiling_face_with_3_hearts]\i[22]Of course!\w8\w8 There are hundreds of #ghosts available!\w8\w8\n\n"
+		"\1\s[neutral_face]Most of them are in Japanese,\w4 so if you can't understand Japanese your selection will be a lot more limited.\w8\w8\n\n"
+		"\0\s[relieved]That's true,\w4 but there is also a growing selection of english #ghosts.\w8\w8 There are over 100 available publicly at the time of writing,\w4 and more all the time.\w8\w8"
+		"\1\s[k_thinking]The time of writing is March of 2023.\w8\w8 "
+		if year > 2023; "\s[neutral_face]I guess you'll probably know better than us if that number is accurate,\w4 %(username).\w8\w8"
+		else; "\s[neutral_face]I guess we'll see what happens in the future.\w8\w8\n\n"
+		"\0\s[blush]\i[22]The best place to find new English ghosts is on the%(br)\_a[https://ukagakadreamteam.com/wiki/ghost_list]Ukagaka Dream Team's wiki!\_a\w8\w8 They've got a whole list of ghosts,\w4 with information and download links for each one.\w8\w8"
+		"\1\s[neutral_face]You may also find ghosts scattered about in various corners of the internet.\w8\w8 It's not a centralized hobby."
+	}
+	elseif reference0 == "GetBalloons"
+	{
+		"\0\s[blush]Sure can!\w8\w8 You can download lots of #balloons,\w4 and use them for any #ghost you like!\w8\w8\n\n"
+		"\1\s[neutral_face]But many #ghosts will have planned for their text area to be a specific size,\w4 so using a different #balloon may cause some minor visual issues.\w8\w8\n\n"
+		"\0\s[relieved]You should try out the default #balloon for #SSP with us,\w4 to see an example.\w8\w8 You can do that by right clicking on me,\w4 and going to the ""Balloon"" tab.\w8\w8\s[blush] We actually have 3 #balloons made specifically for us,\w4 you can install them and check out special options for them in our settings menu.\w8\w8"
+		"\1\s[teach]If you want to download more #balloons,\w4 you can find them on resources like \_a[http://ghosttown.mikage.jp/cgi-bin/tdb/tdbbln.cgi]BalloonTown\_a,\w4 or the \_a[https://ukagakadreamteam.com/wiki/balloon_list]Ukagaka Dream Team's wiki\_a."
+	}
+	elseif reference0 == "MakeAGhost"
+	{
+		"\0\s[star_struck]\i[22]Hell yeah you can make a #ghost!\w8\w8\n\n"
+		"\1\s[unamused]Language.\w8\w8\n\n"
+		"\0\s[star_struck]\i[22]Heck yeah you can make a #ghost!\w8\w8\n\n"
+		"\1\s[teach]You do not need any fancy software to make a #ghost.\w8\w8 At the very least,\w4 you need to be able to edit text files.\w8\w8 If you want to draw your own art for the #ghost,\w4 you'll also need to be able to edit image files.\w8\w8\n\n"
+		"\0\s[blush]You can also use a #freeshell instead of drawing your own,\w4 if you want!\w8\w8\n\n"
+		"\1\s[neutral_face]Coding knowledge is helpful,\w4 but not strictly necessary.\w8\w8 You can get by and make a simple #ghost with minimal coding.\w8\w8\n\n"
+		"\0\s[blush]%(raised_hand)You can check out \_a[http://ashido.com/ukagaka/]Zarla's ghost walkthrough\_a to get you started,\w4 it's got everything you need to know to make a basic #ghost,\w4 including a template you can use.\w8\w8\s[slight_smile]%(br)Though,\w4 it's not the only template available!\w8\w8%(raised_hand) You can also check out \_a[https://ukagakadreamteam.com/wiki/tag/template?do=showtag&tag=Template]this list of templates\_a and browse to see what might fit your needs!\w8\w8\n\n"
+		"\1\s[teach]You can also take a look through our files to get an idea of what #ghost coding is like.\w8\w8 All of the files ending in the extension .dic contain code and dialogue for us.\w8\w8\n\n"
+		"\0\s[smiling_face_with_3_hearts]There is also a tumblr blog,\w4 wiki,\w4 and Discord server for the #Ukagaka Dream Team,\w4 which is an%(br)English-speaking community that can help you one-on-one with #ghost dev!\w8\w8\n\n"
+		"\1\s[k_thinking]Yes.\w8\w8 Making a #ghost is a lot of effort,\w4 and having other developers to ask for advice when you're stumped is very beneficial.\w8\w8"
+		"\0\s[slight_smile]\i[31]If you'd like,\w4 we can also give you some developer tips now and then!\w8\w8\1\s[10]\0 Check out the option in the%(br)""Talk about"" section of my settings menu!\w8\w8\s[blush]\i[24] Best of luck,\w4 %(username)!\w8\w8 Go on and make something great!"
+	}
+	elseif reference0 == "TranslateGhost"
+	{
+		"\0\s[s_thinking]Well,\w4 it depends on what you're looking for and how much work you want to put into it,\w4 really.\w8\w8\s[sweat_smile] Translating ghosts is no easy task,\w4 especially because some ghosts make obscure references,\w4 or have concepts that don't translate easily.\w8\w8\s[blush] But,\w4 if you want to give it a try,\w4 there are a few routes open to you.\w8\w8\n\n"
+		"\1\s[teach]The more in-depth way is to go into the ghost's files,\w4 and translate the text yourself,\w4 whether by knowledge of the language,\w4 or by working with machine translation.\w8\w8 There is a guide on how to translate ghosts \_a[https://ashido.com/ukagaka/translation.html]here\_a that may be of help to you,\w4 should you wish to try it.\w8\w8\s[neutral_face] Results may vary,\w4 depending on how much of the language you know,\w4 what coding language the ghost is in,\w4 and how easily translatable the concepts of the ghost are.\w8\w8"
+		"\0\s[relieved]\i[31]If that's not what you're looking for,\w4 you can try ghosts like \_a[https://zichqec.github.io/s-the-skeleton/ukatranslator]Ukatranslator\_a or \_a[https://twitter.com/Nikola_T/status/1526746677423796224]Simultaneous Translator\_a.\w8\w8 These ghosts aid in running ghost dialogue through machine translation,\w4 but they take different approaches.\w8\w8\s[blush] They're far from perfect,\w4 but they can sometimes give you the gist of what a ghost is saying,\w4%(br)so they're worth a shot!"
+	}
+	--
+	"\0\w8\w8\n\n\_q\![*]\__q[OnQuestionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+
+
+OnHowDoI : all
+{
+	"\0\b[4]\_q\![set,autoscroll,disable]"
+	"\f[align,center]%(emdash) How do I... %(emdash)\n\n\f[align,left]" //"How do I...\n\n"
+	
+	"\f[align,center]\f[bold,1]Basics\f[bold,default]\n\f[align,left]"
+	"\![*]\__q[OnHowTo,Pet]Pet a ghost?\__q\n"
+	"\![*]\__q[OnHowTo,StayOnTop]Make ghosts stay on top?\__q\n"
+	"\![*]\__q[OnHowTo,OpenMultiple]Open multiple ghosts?\__q\n"
+	"\![*]\__q[OnHowTo,ChangeName]Change my name?\__q\n"
+	"\![*]\__q[OnHowTo,Install]Install a ghost?\__q\n"
+	"\![*]\__q[OnHowTo,Uninstall]Uninstall a ghost?\__q\n"
+	"\![*]\__q[OnHowTo,Minimize]Minimize a ghost?\__q\n"
+	"\![*]\__q[OnHowTo,SaveProgress]Save my progress?\__q\n"
+	"\![*]\__q[OnHowTo,CloseSSP]Close SSP?\__q\n"
+	"\n"
+	"\f[align,center]\f[bold,1]Advanced\f[bold,default]\n\f[align,left]"
+	"\![*]\__q[OnHowTo,Email]Set up email checking?\__q\n"
+	"\![*]\__q[OnHowTo,UseAPlugin]Use a plugin?\__q\n"
+	"\![*]\__q[OnHowTo,BootOnStartup]Make SSP start automatically?\__q\n"
+	"\![*]\__q[OnHowTo,ChooseOnBoot]Choose which ghosts to boot when SSP starts?\__q\n"
+	"\![*]\__q[OnHowTo,CreateFolders]Create folders in my ghost list?\__q\n"
+	"\n"
+	"\f[align,center]\f[bold,1]Accessibility\f[bold,default]\n\f[align,left]"
+	"\![*]\__q[OnHowTo,ChangeSizeGhost]Change the size of a ghost?\__q\n"
+	"\![*]\__q[OnHowTo,ChangeSizeBalloon]Change the size of the balloon?\__q\n"
+	"\![*]\__q[OnHowTo,FontSize]Change the font size?\__q\n"
+	"\![*]\__q[OnHowTo,ReadTextOutLoud]Have your text read out loud?\__q\n"
+	"\![*]\__q[OnHowTo,SpeechRecognition]Use speech recognition?\__q\n"
+	"\![*]\__q[OnHowTo,ChangeSSPLang]Change the language of SSP?\__q\n"
+	"\n"
+	"\f[align,center]\f[bold,1]Updating and Bugs\f[bold,default]\n\f[align,left]"
+	"\![*]\__q[OnHowTo,UpdateGhost]Update a ghost?\__q\n"
+	"\![*]\__q[OnHowTo,UpdateSSP]Update SSP?\__q\n"
+	"\![*]\__q[OnHowTo,BugReportSSP]Report a bug in SSP?\__q\n"
+	"\![*]\__q[OnHowTo,BugReportSSPAngel]Report a bug in this ghost?\__q\n"
+	"\![*]\__q[OnHowTo,BugReportAnotherGhost]Report a bug in another ghost?\__q\n"
+	"\n"
+	"\![*]\__q[OnSakuraMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+OnHowTo : all
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	if reference0 == "Pet"
+	{
+		"\0\s[smiling_face_with_3_hearts]\i[22]Yes!\w8\w8 Good question!\w8\w8\n\n"
+		"\1\s[rolling_eyes]Not all #ghosts can be pet,\w4 it will vary from #ghost to%(br)#ghost.\w8\w8 But for #ghosts that have petting,\w4 you can simply move your mouse cursor back and forth over their head without clicking.\w8\w8\n\n"
+		"\0\s[relieved]It will usually take a short while of moving your mouse before they will comment about you petting them.\w8\w8 It can also take some practice to keep your mouse cursor within their hotspot.\w8\w8\s[blush]%(raised_hand) Do you see,\w4 if you move your mouse over my head,\w4 how the cursor changes?\w8\w8 That means you're on my petting hotspot and that's where you should move your mouse around.\w8\w8\s[smiling_face_with_3_hearts] Try it!\w8\w8\n\n"
+		"\1\s[teach]Not all #ghosts have the hotspot on the head,\w4 either.\w8\w8 Some have different hotspots for different interactions,\w4 like for tails,\w4 ears,\w4 faces,\w4 etc.\w8\w8 Some don't have petting at all,\w4 but may allow you to double click hotspots for other types of interactions,\w4 like poking or punching.\w8\w8\n\n"
+		"\0\s[blush]Pet me pet me pet me pet me\w8\w8"
+		"\1\s[face_exhaling]"
+	}
+	elseif reference0 == "StayOnTop"
+	{
+		"\0\s[blush]That's an easy one!\w8\w8\s[relieved]%(raised_hand)\![open,configurationdialog,ghost2] Here's the preferences menu,\w4 under the Ghost(2) tab you'll see an option called Always Show Foreground.\w8\w8 Tick that option,\w4 and%(br)#ghosts will stay on top of all your other windows.\w8\w8\n\n"
+		"\1\s[neutral_face]This feature is sometimes a bit buggy,\w4 and your%(br)#ghosts may disappear behind other windows now and then.\w8\w8 To bring them back on top,\w4 you can simply click them,\w4 or their icons in the system tray.\w8\w8\n\n"
+		"\0\s[astonished]You can also change this setting per-ghost!\w8\w8\s[relieved] Anything in the Ghost(2) tab can also be edited individually per-ghost by right clicking the #ghost you want,\w4 going to the Options tab,\w4 and clicking on ""Ghost Preferences...""\w8\w8"
+		"\1\s[teach]Indeed.\w8\w8 If a ghost doesn't seem to be following the preferences you set in the main SSP preferences,\w4 then it would be wise to also double check their individual settings and make sure that they aren't being overwritten for that ghost."
+	}
+	elseif reference0 == "OpenMultiple"
+	{
+		"\0\s[blush]\i[22]Having multiple #ghosts open is easy!\w8\w8 "
+		if ARRAYSIZE(installedghostlist) <= 1; "\s[sweat_smile]But first,\w4 you'll need to get some other #ghosts to open.\w8\w8"
+		"\n\n"
+		"\1\s[teach]Angel can open more #ghosts for you,\w4 or you can right click her and go to the ""Call #ghost"" tab,\w4 and click a ghost on that list.\w8\w8"
+		"\0\s[astonished]Make sure you go to Call Ghost and not Change Ghost!\w8\w8 Change Ghost will switch us out for them,\w8\s[relieved]\i[24] but Call Ghost will bring them here without closing us."
+	}
+	elseif reference0 == "ChangeName"
+	{
+		"\0\s[blush]%(raised_hand)\![open,configurationdialog,setup]You can change your name and other info in the SSP preferences,\w4 here!\w8\w8\s[sweat_smile] A lot of #ghosts will ask for your name individually though,\w4 and for those ones you'll usually have to go into their config menus to change it.\w8\w8 It can vary from #ghost to #ghost."
+	}
+	elseif reference0 == "Install"
+	{
+		"\0\s[blush]Installing a #ghost is easy!\w8\w8 Most #ghosts are distributed as #.nar files,\w4 or .zip files.\w8\w8 You can simply drag and drop the downloaded #.nar or .zip file onto any running #ghost to install it!\w8\w8 Ta-da~!\w8\w8\n\n"
+		"\1\s[teach]If the #ghost is packaged differently,\w4 or you have an error,\w4 you may need to install it manually.\w8\w8\n\n"
+		"\0\s[sweat_smile]Yeah,\w4 that happens sometimes.\w8\w8 A key thing to remember is that #.nar files are actually just .zip files with a different extension,\w4 so you can unzip them if you need to!\w8\w8 Though you may need to change the extension to .zip manually first.\w8\w8\n\n"
+		"\1\s[teach]You will need to copy the #ghost's folder into the%(br)%(h)SSP/ghost/%(dc) directory.\w8\w8\n\n"
+		"\0\s[blush]%(raised_hand)\![open,explorer,../../../]This one here!\w8\w8\s[sweat_smile] (If you haven't set up subfolders for your ghosts,\w4 or anything.)\w8\w8\n\n"
+		"\1\s[k_thinking]Take a look at how our files are set up.\w8\w8 We're the%(br)ssp_angel folder.\w8\w8 You'll see if you double click on it that all our files are contained in there and not spilling into the %(h)SSP/ghost/%(dc) directory,\w4 but also there are files on the top level.\w8\w8 Your new #ghost needs to be set up much the same way,\w4 make sure it isn't nested into an extra folder.\w8\w8\n\n"
+		"\0\s[relieved]Once you've done that,\w4 you'll need to let #SSP know to look for the new #ghost.\w8\w8\s[blush] %(raised_hand)\![open,configurationdialog,folder]Here's the preferences menu for you.\w8\w8 You should be on the Folder tab.\w8\w8 Do you see at the top,\w4 the bit that says #ghost and has Edit and Reload buttons?\w8\w8 The number of Recognized Elements is the number of #ghosts you have installed,\w4 and if you've done this correctly,\w4 when you click Reload you should see that number go up.\w8\w8\n\n"
+		"\1\s[neutral_face]Try right clicking on us once you've finished with that,\w4 and check to see if your new #ghost shows up in the menu.\w8\w8"
+		"\0\s[blush]\i[22]I hope you get lots of fun friends to join us on your desktop!"
+	}
+	elseif reference0 == "Uninstall"
+	{
+		"\0\s[worried]Aw,\w4 is someone giving you trouble?\w8\w8\s[scream] It's not us,\w4 is it!?\w8\w8\n\n"
+		"\1\s[unamused]Hush,\w4 no guilting.\w8\w8\s[teach] To uninstall a #ghost,\w4 you need only right click on the #ghost,\w4 and select the Uninstall option near the top.\w8\w8\n\n"
+		"\0\s[relieved]Some #ghosts will disable this option,\w4 so that it's harder to uninstall by accident.\w8\w8 In these cases,\w4 you can usually go into that #ghost's config menu,\w4 and toggle the option on from there.\w8\w8\i[31] You can also use the ghost explorer;\w4 if you right click on their entry in the ghost explorer while they are closed,\w4 you can click on the Delete option to uninstall them.\w8\w8\n\n"
+		"\1\s[neutral_face]If all that fails,\w4 you can go into the %(h)SSP/ghost/%(dc) folder and just delete their whole folder.\w8\w8\n\n"
+		"\0\s[scream]Make sure you're deleting the right one!\w8\w8"
+		"\1\s[rolling_eyes]Once you've done that,\w4 the #ghost will still be in your list of #ghosts until you restart #SSP,\w4 or refresh the%(br)#ghost list as we explain in the how to install a #ghost section."
+	}
+	elseif reference0 == "Minimize"
+	{
+		"\1\s[teach]There are a variety of ways to minimize a #ghost.\w8\w8 You can press the Ctrl + I key combination to minimize all open ghosts,\w4 you can click their icon on the taskbar,\w4 or you can right click them and click the ""Iconify"" button which is third up from the bottom.\w8\w8 Note that this option may have a different label,\w4 such as ""Minimize"".\w8\w8\n\n"
+		"\0\s[astonished]You can also double click their tiny icon in the system tray!\w8\w8\n\n"
+		"\1\s[k_thinking]That icon can also be right clicked to get the #SSP menu,\w4 and minimize them from there.\w8\w8"
+		"\0\s[relieved]The system tray is also a way to bring them back when they're minimized.\w8\w8 Double clicking their icon again will bring them back,\w4 or you can right click it and uncheck the ""Iconify"" option."
+	}
+	elseif reference0 == "SaveProgress"
+	{
+		"\0\s[blush]There's no need to save progress,\w4 #ghosts will save their progress automatically!\w8\w8\s[astonished] Unless the developer specifies otherwise for some reason,\w4 \s[blush]but no need to worry about it unless the #ghost you're using has specific instructions about it.\w8\w8\n\n"
+		"\1\s[teach]If your #SSP crashes,\w4 you might notice that some%(br)#ghosts will be in the wrong position when you boot them again,\w4 and may have lost some of your progress.\w8\w8 But this is a result of #SSP closing improperly,\w4 before your progress could be saved.\w8\w8"
+		"\0\s[relieved]This is usually not something you will need to worry about.\w8\w8 But if you are experiencing issues,\w4 you may want to contact the developer of the #ghost to find out if there is a problem."
+	}
+	elseif reference0 == "CloseSSP"
+	{
+		"\0\s[worried]Aw,\w4 done already?\w8\w8\n\n"
+		"\1\s[unamused]Hush,\w4 no guilting.\w8\w8\s[teach] We can be closed by right clicking us and choosing the ""Close"" option.\w8\w8 It's the second button from the bottom.\w8\w8\n\n"
+		"\0\s[blush]If you have more than one #ghost open,\w4 you can close everyone at once by choosing the bottom ""Quit"" button!\w8\w8"
+		"\1\s[k_thinking]Some #ghosts may also have a hotkey or menu option for closing them,\w4 but this will vary per-ghost.\w8\w8\s[teach] SSP itself has built in key combinations for closing ghosts,\w4 which are Ctrl + W to close the selected ghost,\w4 and Ctrl + Q to close all ghosts at once and quit SSP."
+	}
+	elseif reference0 == "Email"
+	{
+		"\1\s[teach]First,\w4 you will need to find the POP settings for your email provider.\w8\w8\n\n"
+		"\0\s[slight_smile]You can likely find this in your email's settings.\w8\w8\i[31] But if not,\w4 you can also try searching for the name of your provider,\w4 along with ""POP"".\w8\w8 So if you use hotmail,\w4 you would search ""hotmail POP"".\w8\w8\n\n"
+		"\1\s[neutral_face]Once you have found the POP information,\w4 you'll need to put it into #SSP through the preferences menu.\w8\w8\n\n"
+		"\0\s[blush]%(raised_hand)\![open,configurationdialog,biff]Right here!\w8\w8 On the POP tab!\w8\w8\n\n"
+		"\1\s[neutral_face]Near the bottom you'll see a list of accounts,\w4 which will be empty if you haven't added any accounts yet.\w8\w8 Click the button that says Add,\w4 and input the POP information from your email provider.\w8\w8\n\n"
+		"\0\s[pensive]If you're using Gmail,\w4 unfortunately you will have to take one more step before this will work.\w8\w8\s[sweat_smile] You will need to get what's called an ""App Password"",\w4 a unique password specifically for #SSP to use to access your email information.\w8\w8\i[31] You can do that \_a[https://support.google.com/accounts/answer/185833?hl=en]here\_a.\w8\w8\n\n"
+		"\1\s[teach]Once you've set all that up,\w4 you can test it's working by right clicking on us,\w4 and going to the Check Mail tab.\w8\w8 From there you can simply click on the email account you want to check.\w8\w8\n\n"
+		"\0\s[blush]We can tell you how many emails you've received,\w4 and even display the headers for you!\w8\w8\n\n"
+		"\1\s[k_thinking]You may wish to adjust some settings in the preferences window.\w8\w8 Fetching the email headers takes a lot of extra time,\w4 but you can toggle that off.\w8\w8 You can also choose between having us show all the emails currently in the account,\w4 or having us only show emails that are new since we last checked.\w8\w8"
+		"\0\s[blush]We can also check automatically at regular intervals for you!"
+	}
+	elseif reference0 == "UseAPlugin"
+	{
+		"\0\s[relieved]That will vary depending on the plugin.\w8\w8 Some plugins don't have any menus for you the user at all.\w8\w8\s[blush] But some do!\w8\w8 And you can access them by right clicking a%(br)#ghost,\w4 going to the Plugins tab,\w4 and clicking on the Plugin you want.\w8\w8"
+		"\1\s[teach]#SSP comes with the SwissArmyKnife plugin by default,\w4 which has a few functions in it.\w8\w8 Try it out with that one."
+	}
+	elseif reference0 == "BootOnStartup"
+	{
+		"\0\s[smiling_face_with_3_hearts]\i[22]Wow,\w4 you must really love #ghosts!\w8\w8 Yes,\w4 you can absolutely set up #SSP to boot when your computer starts!\w8\w8\n\n"
+		"\1\s[teach]There are two ways to do it.\w8\w8 You can select a specific%(br)#ghost to boot when your computer starts through the #ghost explorer,\w4 or you can setup #SSP to boot in general,\w4 in which case it will boot using the same ghosts it was last closed with,\w4 unless you've specified otherwise.\w8\w8\n\n"
+		"\0\s[slight_smile]\i[21]To do it through the #ghost explorer,\w4 all you have to do is right click on the #ghost in the list that you want,\w4%(br)and click on ""Make This Ghost Start Automatically at OS Startup"".\w8\w8\s[astonished] You can only have one #ghost set to boot at startup,\w4 if you choose another #ghost it'll use that one instead!\w8\w8\n\n"
+		"\1\s[neutral_face]If instead you wish for #SSP to boot on startup without specifying a #ghost,\w4 such that it boots with the #ghosts you had open last,\w4 you can try this method.\w8\w8 Press the Windows key + R,\w4 and type%(br)""shell:startup"".\w8\w8 Create a shortcut to your SSP.exe,\w4 and place it in this folder.\w8\w8 Now #SSP should start when Windows starts.\w8\w8"
+		"\0\s[astonished]If you ever want to stop #SSP from booting when your computer starts,\w4 you can just remove the shortcut from that folder.\w8\w8 It works with the method using the #ghost explorer,\w4 too!"
+	}
+	elseif reference0 == "ChooseOnBoot"
+	{
+		"\0\s[blush]That's an easy one!\w8\w8\s[blush] %(raised_hand)\![open,configurationdialog,ghost]Here's the preferences,\w4 and in the Ghost(1) tab,\w4 just tick the box for ""Display Ghost Choosing Dialog When Booting SSP"".\w8\w8\s[scream]Handy if you close #SSP with a lot of #ghosts still running,\w4 and don't want to boot all of them again!"
+	}
+	elseif reference0 == "CreateFolders"
+	{
+		"\0\s[blush]\i[22]Ooh,\w4 organized!\w8\w8 I like it!\w8\w8\n\n"
+		"\1\s[unamused]Focus.\w8\w8\n\n"
+		"\0\s[blush]%(raised_hand)\![open,configurationdialog,folder]Here's the preferences.\w8\w8 In the Folder tab,\w4 you can see different sections for #Ghost,\w4 #Balloon,\w4 Headline,\w4 and #Plugin.\w8\w8 You can set up folders for any of these.\w8\w8 All you need to do is click the ""Edit..."" button for the one you want,\w4 and in the window that pops up,\w4 click the ""Add..."" button in the bottom left corner.\w8\w8 Then,\w4 you can choose any folder on your computer,\w4 and #SSP will search for #ghosts in there!\w8\w8\n\n"
+		"\1\s[teach]You can move #ghosts between folders using the%(br)#ghost explorer.\w8\w8 Right click their entry,\w4 go to the ""Move to"" tab,\w4 and click the folder you want to move them to.\w8\w8\n\n"
+		"\0\s[blush]%(raised_hand)\![open,ghostexplorer]Here's the #ghost explorer!\w8\w8 You can only move #ghosts that are not currently open.\w8\w8"
+		"\1\s[k_thinking]You can also just move around #ghosts using file explorer,\w4 but you might skew your usage stats,\w4 because #SSP won't know that they were moved around."
+	}
+	elseif reference0 == "ChangeSizeGhost"
+	{
+		"\0\s[relieved]Changing the size of a #ghost can be done by right clicking them,\w4 and selecting the Shell Scaling option.\w8\w8\n\n"
+		"\1\s[teach]If you don't like the fuzzy look of the dithering,\w4 you can turn the ""Dither Scaling (Slower)"" option off in the SSP preferences,\w4 under the Ghost(2) tab.\w8\w8 This can also be adjusted per-ghost,\w4 by right clicking that%(br)#ghost,\w4 going to the Options tab,\w4 and clicking ""Ghost Preferences..."".\w8\w8 From there,\w4 you can turn off the%(br)""Dither Scaling (Slower)"" option and it will apply to only that #ghost.\w8\w8\n\n"
+		"\0\s[scream]If you turn the dithering off,\w4 make sure you only pick round numbers in the Shell Scaling tab,\w4 or it'll look even worse!\w8\w8\n\n"
+		"\1\s[k_thinking]You can also set a #ghost to custom sizes,\w4 by going to the Shell Scaling tab and choosing ""Other Percentage"".\w8\w8 You can put in any percentage that you want,\w4 and even turn off the X=Y option if you want to set the width and height separately.\w8\w8"
+		"\0\s[astonished]You can even set them to negative numbers if you want to make a #ghost face the opposite direction!"
+	}
+	elseif reference0 == "ChangeSizeBalloon"
+	{
+		"\0\s[astonished]The #balloon size will change along with the #shell size by default,\w4 so you can simply change the size of the%(br)#ghost if you want.\w8\w8\s[relieved] But if you want them to change separately,\w4 that is also possible.\w8\w8 In the SSP preferences,\w4 under the Ghost(2) tab,\w4 you can turn off the ""Balloon Scaling Linkage"" option,\w4 and that will make it so you can change their sizes independently.\w8\w8"
+		"\1\s[teach]After you've unlinked the scaling%(emdash)which can be done per-#ghost if you want%(emdash)you can right click the%(br)#ghost in question and go to the Balloon Scaling tab.\w8\w8 From there,\w4 pick a percentage,\w4 and the #balloon should change accordingly.\w8\w8 All of our notes from the section about changing a #ghost's size apply to #balloon scaling as well."
+	}
+	elseif reference0 == "FontSize"
+	{
+		"\0\s[astonished]If you need to change the font size,\w4 that is possible.\w8\w8\s[sweat_smile] Unfortunately,\w4 this may cause some visual issues in the #balloon,\w4 especially if the developer of a #ghost has planned for a certain text area.\w8\w8 So,\w4 you might consider changing the #balloon's scaling instead,\w4 which would keep the text area the same while making the whole #balloon bigger.\w8\w8 We cover that in the section about how to change the size of the%(br)#balloon.\w8\w8\n\n"
+		"\1\s[teach]If you need to adjust the font size,\w4 though,\w4 you can find the option in the SSP preferences.\w8\w8\n\n"
+		"\0\s[blush]%(raised_hand)\![open,configurationdialog,international]Right here,\w4 on the I18N page!\w8\w8"
+		"\1\s[teach]In the ""Override Balloon Font Config"" section,\w4 click on the ""Select..."" button,\w4 then choose the font and the size that you want."
+	}
+	elseif reference0 == "ReadTextOutLoud"
+	{
+		"\0\s[blush]Oh,\w4 you want to give voice synthesis a try?\w8\w8 That's easy!\w8\w8 Just right click us,\w4 go to the Utilities tab,\w4 and click on ""Voice Synthesis""!\w8\w8\n\n"
+		"\1\s[teach]You can also change what voices we use and what pitch we speak at by going to the Speech tab of the SSP preferences.\w8\w8\n\n"
+		"\0\s[blush]%(raised_hand)\![open,configurationdialog,dictation]Right here!\w8\w8\n\n"
+		"\1\s[teach]\\0 refers to the main character,\w4 and \\1 refers to the side character.\w8\w8 You can pick voices and pitches for each individually.\w8\w8 \\2~ will be used for any additional characters,\w4 which we don't have,\w4 but other #ghosts may.\w8\w8\n\n"
+		"\0\s[scream]Don't set us to a Japanese voice,\w4 we're not made for that!\w8\w8"
+		"\1\s[neutral_face]Also note that with voice synthesis on,\w4 all open ghosts will make use of it.\w8\w8"
+	}
+	elseif reference0 == "SpeechRecognition"
+	{
+		"\0\s[blush]Oh,\w4 speech recognition is fun!\w8\w8 You should try it with us!\w8\w8\n\n"
+		"\1\s[teach]To turn on speech recognition,\w4 right click on Angel,\w4 go to the utilities menu,\w4 and click the Speech Recognition button.\w8\w8 You should see a small window open.\w8\w8\n\n"
+		"\0\s[astonished]Who?\w8 What?\w8 How?\w8\w8\n\n"
+		"\1\s[rolling_eyes]Yes,\w4 that's the one.\w8\w8\s[neutral_face] If that window is open,\w4 that means speech recognition is running.\w8\w8 You can close the window when you want to turn it off.\w8\w8\n\n"
+		"\0\s[blush]\i[31]Once it's running,\w4 you can say our names to open our menus!\w8\w8 You can also say the label of any menu choice or anchor to select that option!\w8\w8\n\n"
+		"\1\s[teach]The speech recognition window will display what it thinks you said.\w8\w8 There is also a bar at the bottom,\w4 which will fill based on the volume of the input it is receiving.\w8\w8\s[neutral_face] You can use these things to try and adjust how you're speaking until it works.\w8\w8"
+		"\0\s[star_struck]Give it a try,\w4 give it a try!"
+	}
+	elseif reference0 == "ChangeSSPLang"
+	{
+		"\0\s[blush]\i[22]Oh!\w8\w8 Yes,\w4 you can change #SSP into a few languages.\w8\w8 It comes with Japanese and English by default,\w4 and you can download more language packs from the \_a[http://ssp.shillest.net/]SSP homepage\_a.\w8\w8 These come as #.nar files,\w4 and can be dragged and dropped onto any running #ghost to install them.\w8\w8\n\n"
+		"\1\s[teach]Once you've got the language you want,\w4 you can right click any running #ghost,\w4 and go to the Language tab.\w8\w8 It's the 4th one up from the bottom.\w8\w8 Simply choose the language you want,\w4 and #SSP should switch over.\w8\w8"
+		"\0\s[sweat_smile]This won't affect the language your #ghosts speak in,\w4 just the language of #SSP's menus."
+	}
+	elseif reference0 == "UpdateGhost"
+	{
+		"\0\s[relieved]If a #ghost has network updates enabled,\w4 all you need to do is click that #ghost and press Ctrl + U.\w8\w8 This should start the update process.\w8\w8\n\n"
+		"\1\s[neutral_face]You can also right click the #ghost and select the%(br)""Network Update"" option near the top.\w8\w8 This may be listed with a different label,\w4 often ""Check for Updates"".\w8\w8\n\n"
+		"\0\s[pensive]Not all #ghosts can do network updates.\w8\w8 If the option is grayed out,\w4 then you won't be able to update this way.\w8\w8\n\n"
+		"\1\s[teach]It is possible that the #ghost's developer has released updates as new #.nar files.\w8\w8 You can install newer versions of #ghosts overtop of old ones to update them.\w8\w8 I would recommend doing this while the #ghost in question is closed.\w8\w8\n\n"
+		"\0\s[astonished]Rarely,\w4 you may see a ""supplement"" file.\w8\w8 This is also a%(br)#.nar file that has updated or optional content,\w4 but you have to drag and drop it onto the #ghost that%(br)you're updating.\w8\w8\n\n"
+		"\1\s[k_thinking]It is also possible that a developer has released individual files that must be manually copied into the%(br)#ghost's folder to update the content.\w8\w8 Check the developer's instructions carefully if this is the case.\w8\w8 The only thing we can tell you is that all the files for your #ghosts are in the %(h)SSP/ghost/%(dc) directory by default.\w8\w8"
+		"\0\s[relieved]And of course,\w4 there will only be updates if the developer has released new content.\w8\w8\s[blush] But it's worth checking once in a while to see!"
+	}
+	elseif reference0 == "UpdateSSP"
+	{
+		"\0\s[relieved]#SSP should automatically notify you whenever there is a new update.\w8\w8 But if it doesn't,\w4 you can check manually too.\w8\w8\n\n"
+		"\1\s[teach]Right click us,\w4 go to the Utilities tab,\w4 and click on Check SSP Updates.\w8\w8 That will perform the check and tell you if a new version is available.\w8\w8\n\n"
+		"\0\s[sweat_smile]Sometimes,\w4 there have been issues with the automatic updater.\w8\w8 If this is the case,\w4 you can still do a manual update.\w8\w8 First,\w4 you'll need to go to the \_a[http://ssp.shillest.net/]SSP homepage\_a.\w8\w8 \n\n"
+		"\1\s[neutral_face]Once you're there,\w4 look for the big pink buttons on the left.\w8\w8 The top one is for a brand new installation of #SSP,\w4 which you don't want if you're just updating.\w8\w8 Instead,\w4 the second button should say ""Update Package"".\w8\w8 Click the top half of the button to download it as an executable file,\w4 or if you'd prefer,\w4 click the bottom half of the button to download it as a zip file.\w8\w8\n\n"
+		"\0\s[blush]Once you have the file downloaded,\w4 move it into your #SSP folder.\w8\w8 Then close #SSP,\w4 and run the file,\w4 or unzip it if you got the zip version.\w8\w8 Make sure to say yes if it asks you about overwriting old files!\w8\w8 Ta-da~!\w8\w8 Once it's done,\w4 your #SSP should be up to date!\w8\w8"
+		"\1\s[teach]If you want to look at the changelog to see what's different,\w4 you can see it \_a[https://ponapalt.hatenablog.com/ ]here\_a.\w8\w8 But it is in Japanese,\w4 so if you don't understand Japanese,\w4 you'll need to run it through a translator."
+	}
+	elseif reference0 == "BugReportSSP"
+	{
+		"\0\s[worried]Oh no!\w8\w8 Did you find a bug?\w8\w8\n\n"
+		"\1\s[k_thinking]It's only natural in a program with this many functions.\w8\w8\n\n"
+		"\0\s[blush]%(raised_hand)Thankfully,\w4 there is a bug report website called the%(br)\_a[http://ssp.shillest.net/bts/my_view_page.php]BTS\_a!\w8\w8\n\n"
+		"\1\s[neutral_face]Make sure you read the instructions.\w8\w8 All of the instructions have an English translation.\w8\w8\n\n"
+		"\0\s[relieved]You will have to input a password to submit a bug report,\w4 but this is just a measure to prevent spam.\w8\w8 The username and password are listed in the instructions,\w4 so do read them carefully.\w8\w8\n\n"
+		"\1\s[teach]You will also need to make sure you submit your bug report to the right category.\w8\w8 To report bugs in #SSP,\w4 you will want to select the ""SSPBT：本体(SSP)"" category.\w8\w8\n\n"
+		"\0\s[astonished]Also,\w4 it's a good idea to include what version of #SSP and what OS you're running!\w8\w8\s[relieved] You can easily copy and paste this information by right clicking us,\w4 going to the Information tab,\w4 and clicking ""About SSP..."".\w8\w8\s[blush]The information will be on the top line of the text box,\w4 and you can simply select and copy it from there.\w8\w8\n\n"
+		"\1\s[k_thinking]Also note that sometimes the maintainer of #SSP will respond to bug reports asking for more information,\w4 clarification,\w4 etc.\w8\w8 Make sure to keep an eye on your report to see if anything's happened.\w8\w8"
+		"\0\s[blush]Good luck,\w4 and thanks for helping to keep #SSP running smoothly!"
+	}
+	elseif reference0 == "BugReportSSPAngel"
+	{
+		"\0\s[scream]Oh my gosh,\w4 a bug?\w8\w8 Where!?\w8\w8\n\n"
+		"\1\s[unamused]A bug in the code,\w4 no doubt,\w4 not a real insect...\w8\w8\s[teach] #Zichqec is our programmer and maintainer,\w4 and can be contacted in a variety of places.\w8\w8 Try the links at the bottom of \_a[https://zichqec.github.io/s-the-skeleton/]Zichqec's website\_a,\w4 or you can try the%(br)#Ukagaka Dream Team's \_a[https://ukagakadreamteam.tumblr.com/discord]Discord server\_a.\w8\w8"
+		"\0\s[blush]If that doesn't work,\w4 you may also try contacting #Yuyudev,\w4%(br)who did the #shell art for us!"
+	}
+	elseif reference0 == "BugReportAnotherGhost"
+	{
+		"\0\s[worried]Oh no,\w4 someone else's #ghost has a bug?\w8\w8\n\n"
+		"\1\s[k_thinking]It's not that unusual,\w4 bugs happen all the time.\w8\w8 What's%(br)important is fixing them.\w8\w8\n\n"
+		"\0\s[s_thinking]Hmm...\w8\w8 The issue is,\w4 because #ghosts are so varied,\w4 how you can report a bug will vary from #ghost to%(br)#ghost.\w8\w8\n\n"
+		"\1\s[teach]First,\w4 check that #ghost's menu for a bug report option.\w8\w8 Some #ghosts will instruct you where you can report bugs.\w8\w8 If there is no option,\w4 try checking the readme file for the #ghost and see if there is contact information.\w8\w8 For many #ghosts,\w4 you can access this by pressing F1.\w8\w8 If F1 doesn't work,\w4 you can right click the%(br)#ghost in question,\w4 go to the Information tab,\w4 and%(br)""About This Ghost..."" (sometimes labelled as%(br)""readme"".)\w8\w8\n\n"
+		"\0\s[relieved]If you don't have any luck with that,\w4 try right clicking the #ghost and checking the top 2 tabs.\w8\w8 Sometimes,\w4 the developer will put links to their own%(br)website/social media accounts there,\w4 which you can use to contact them.\w8\w8\n\n"
+		"\1\s[k_thinking]If all of that fails,\w4 then unfortunately you are on your own.\w8\w8 If you remember where you downloaded the%(br)#ghost from,\w4 you might try checking there to see if you can contact them.\w8\w8 But some #ghost developers are simply out of reach.\w8\w8"
+		"\0\s[pensive]Unfortunately true."
+	}
+	--
+	"\0\n\n\_q\![*]\q[Back,OnHowDoI]  \![*]\q[Close,OnCancel]"
+}
+
+OnFunctionMenu : all
+{
+	"\0\b[2]\_q\![set,autoscroll,disable]"
+	"\![*]\q[Call another ghost,OnCallGhostMenu]\n"
+	"\![*]\q[Fix the clock,script:""\![execute,sntp]""]\n"
+	"\![*]\q[Read RSS/Headlines,OnRSSMenu]\n"
+	"\![*]\q[Check for emails,OnEmailMenu]\n"
+	"\![*]\q[Check for updates,script:""\![updatebymyself]""]\n\n"
+	
+	"Open the...\n"
+	"\![*]\__q[OnOpen,ghostexplorer]Ghost Explorer\__q  \![*]\__q[OnOpen,configurationdialog]SSP Preferences\__q  \![*]\__q[OnOpen,calendar]Calendar\__q\n"
+	"\![*]\__q[OnOpen,rateofusegraph]Rate of Use Graph\__q  \![*]\__q[OnOpen,help]SSP Help (J)\__q  \![*]\__q[OnChangeLog,yes,menu]Changelog\__q"
+	"\n\n"
+	"\![*]\__q[OnSakuraMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+OnCallGhostMenu : all
+{
+	if !ISVAR("listmode.ghost"); listmode.ghost = "Paginate"
+	
+	_count = ARRAYSIZE(installedghostlist)
+	_page = reference0
+	
+	_entries = 25
+	_total_pages = (_count / _entries)
+	if _count % _entries > 0; _total_pages++
+	if reference2 == "setpage"
+	{
+		_page--
+		if _page < 0; _page = 0
+		if _page > _total_pages - 1; _page = _total_pages - 1
+	}
+	
+	_letter = reference0; if _letter == ""; _letter = "#"
+	_folder = reference0; if _folder == ""; _folder = ghostfolders[0]
+	
+	LOGGING("====================================================================")
+	LOGGING("_count: %(_count)")
+	LOGGING("_entries: %(_entries)")
+	LOGGING("_count / _entries: %(_count / _entries)")
+	LOGGING("_count % _entries: %(_count % _entries)")
+	
+	_back = "\![*]\__q[OnFunctionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+	
+	_nextprev = ""
+	_nextprev += "\f[align,left]"
+	if _page > 0; _nextprev += "\__q[OnCallGhostMenu,%(_page - 1)]<<<\__q"
+	else; _nextprev += "\f[color,disable]<<<\f[color,default]"
+	
+	_nextprev += "\n \n[-100]\f[align,center]"
+	_nextprev += " \q[""(%(_page + 1)/%(_total_pages))"",OnCallGhostMenu.ChoosePage] "
+	_nextprev += "\n \n[-100]\f[align,right]"
+	if _page < _total_pages - 1; _nextprev += "\__q[OnCallGhostMenu,%(_page + 1)]>>>\__q"
+	else; _nextprev += "\f[color,disable]>>>\f[color,default]"
+	_nextprev += "\n \n[-100]\f[align,left]"
+	
+	if _count == 1
+	{
+		"\1\b[0]\0\b[0]\s[sweat_smile]Oh,\w4 well...\w8\w8 If you want me to call another ghost for you,\w4 you'll have to install some first!\w8\w8 We're your only ghost,\w4 and we're already here,\w4 so...\w8\w8\n\n"
+		_back
+		return
+	}
+	elseif _count == ARRAYSIZE(ghostexlist)
+	{
+		"\1\b[0]\0\b[0]\s[sweat_smile]Everyone's already out!\w8\w8 If you want me to call another ghost,\w4 you'll have to install some more.\w8\w8\n\n"
+		_back
+		return
+	}
+	
+	"\C\![lock,balloonrepaint]\c"
+	"\0\b[2]\_q\![set,autoscroll,disable]\![close,inputbox,OnCallGhostMenu]"
+	"\![*]\__q[OnFunctionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q\n"
+	"\![*]List mode: \f[color,default.anchor]\__q[OnChangeListMode.ghost]%(listmode.ghost)\__q\f[color,default]\n"
+	"\![*]\q[Open Random,OnCallAnotherGhost,random]  \![*]\q[Open All,OnCallAllGhosts]\n"
+	
+	"\n"
+	
+	if listmode.ghost == "Show All"
+	{
+		foreach installedghostlist; _ghost
+		{
+			if _ghost != "SSP Angel"; "\![*]\__q[OnCallAnotherGhost,""%(_ghost)""]%(_ghost)\__q\n"
+		}
+	}
+	elseif listmode.ghost == "Filter By Letter"
+	{
+		_opts = ("#","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Other")
+		"\f[color,disable]"
+		foreach _opts; _opt
+		{
+			if _opt == _letter; "\f[color,default]\__q[OnCallGhostMenu,%(_opt)]%(_opt)\__q\f[color,disable]  "
+			else; "\__q[OnCallGhostMenu,%(_opt)]%(_opt)\__q  "
+		}
+		"\f[color,default]\n\n"
+		
+		if _letter == "Other" //anything that is not a standard alphanumeric character. sorry, i am not getting any more complex than this, please and thank you
+		{
+			_lets = ("0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z")
+			foreach installedghostlist; _ghost
+			{
+				_firstlet = TOUPPER(SUBSTR(_ghost,0,1))
+				if ASEARCH(_firstlet,_lets) == -1; "\![*]\__q[OnCallAnotherGhost,""%(_ghost)""]%(_ghost)\__q\n"
+			}
+		}
+		elseif _letter == "#" //all numbers
+		{
+			_nums = ("0","1","2","3","4","5","6","7","8","9")
+			foreach installedghostlist; _ghost
+			{
+				_firstlet = TOUPPER(SUBSTR(_ghost,0,1))
+				if ASEARCH(_firstlet,_nums) != -1; "\![*]\__q[OnCallAnotherGhost,""%(_ghost)""]%(_ghost)\__q\n"
+			}
+		}
+		else //individual letters
+		{
+			foreach installedghostlist; _ghost
+			{
+				_firstlet = TOUPPER(SUBSTR(_ghost,0,1))
+				if _firstlet == _letter; "\![*]\__q[OnCallAnotherGhost,""%(_ghost)""]%(_ghost)\__q\n"
+			}
+		}
+	}
+	elseif listmode.ghost == "Filter By Folder"
+	{
+		_curfolder = SPLIT(_folder,"\")
+		_curfolder = _curfolder[ARRAYSIZE(_curfolder) - 2]
+		"\f[color,disable]"
+		foreach ghostfolders; _dir
+		{
+			_dir_short = SPLIT(_dir,"\")
+			
+			_dir_short = _dir_short[ARRAYSIZE(_dir_short) - 2]
+			
+			
+			if _dir_short == _curfolder; "\f[color,default]\__q[OnCallGhostMenu,""%(_dir)""]%(_dir_short)\__q  \f[color,disable]"
+			else; "\__q[OnCallGhostMenu,""%(_dir)""]%(_dir_short)\__q  "
+		}
+		"\f[color,default]"
+		"\n\n"
+		
+		_list = FENUM(_folder,"|")
+		_list = SPLIT(_list,"|")
+		
+		foreach _list; _ghost_folder
+		{
+			_ghost = SHIORI3FW.GetGhostNameFromDescriptTxt(_folder + _ghost_folder)[0]
+			if _ghost != "SSP Angel" && _ghost != ""; "\![*]\__q[OnCallAnotherGhost,""%(_ghost)""]%(_ghost)\__q\n"
+		}
+	}
+	else
+	{
+		_nextprev
+		"\n\n"
+		_start = _page * _entries
+		for _i = _start; _i < _start + _entries; _i++
+		{
+			_ghost = installedghostlist[_i]
+			if _ghost != "SSP Angel" && _ghost != ""; "\![*]\__q[OnCallAnotherGhost,""%(_ghost)""]%(_ghost)\__q\n"
+		}
+	}
+	
+	"\n"
+	_back
+	"\![unlock,balloonrepaint]"
+}
+
+OnChangeListMode.ghost : all
+{
+	if reference0 == ""
+	{
+		"\C\![lock,balloonrepaint]\c\0\b[2]\_q\![set,autoscroll,disable]"
+		"\__q[OnChangeListMode.ghost,Paginate]Paginate\__q\n"
+		"\__q[OnChangeListMode.ghost,Filter By Letter]Filter By Letter\__q\n"
+		"\__q[OnChangeListMode.ghost,Show All]Show All\__q (Will cause lag if you have a lot of ghosts!)\n"
+		if ARRAYSIZE(ghostfolders) > 1; "\__q[OnChangeListMode.ghost,Filter By Folder]Filter By Folder\__q (Will cause lag in large folders!)\n"
+		"\n\_q"
+		"\![*]\__q[OnCallGhostMenu]Back\__q  \![*]\q[Close,OnBlank]"
+	}
+	else
+	{
+		EVAL("listmode.ghost = '%(reference0)'")
+		"\C\![raise,OnCallGhostMenu]"
+	}
+}
+
+OnCallGhostMenu.ChoosePage : all
+{
+	_count = ARRAYSIZE(installedghostlist)
+	_entries = 25
+	_total_pages = (_count / _entries) + 1
+	
+	"\0\b[2]\![set,autoscroll,disable]\![open,inputbox,OnCallGhostMenu,--reference=setpage,__INPUT_BOX_COLOR_0__]\_q"
+	"Write a page number from 1 to %(_total_pages) to jump there instantly."
+	"\n\n"
+	"\![*]\__q[OnCallGhostMenu]Back\__q  \![*]\__q[OnBlank]Close\__q"
+}
+
+On_ghostpathlist
+{
+	ghostfolders = reference
+}
+
+OnCallAllGhosts
+{
+	_count = ARRAYSIZE(installedghostlist)
+	
+	"\1\b[0]\0\b[0]"
+	--
+	if _count == 2
+	{
+		OnCallOnlyOtherGhost
+	}
+	elseif _count >= 100
+	{
+		"\0\s[scream]Huh!?\w8\w8 You can't be serious %(username),\w4 that would be %(_count) ghosts at once!\w8\w8\n\n\1\s[k_thinking]Sounds like a recipe for lag to me.\w8\w8\0\s[sweat_smile]%(username),\w4 are you sure about this?\w8\w8 You're just messing with me,\w4 right?\w8\w8 You don't actually want your whole desktop filled with \f[bold,1]%(_count) ghosts...\f[bold,default]"
+	}
+	elseif _count >= 50
+	{
+		"\0\s[astonished]Uh,\w4 you know you have %(_count) ghosts installed,\w4 right?\w8\w8\s[sweat_smile] That's a lot...\w8\w8 It'll be really hard to use that many.\w8\w8 Are you sure about this?"
+	}
+	elseif _count >= 20
+	{
+		"\0\s[astonized]Oh wow,\w4 uh,\w4 that'll be %(_count) ghosts at once.\w8\w8 Are you sure about that?\w8\w8 Your desktop will be pretty crowded."
+	}
+	else
+	{
+		"\0\s[astonished]Oh,\w4 you want everyone?\w8\w8 Are you sure?\w8\w8 That'll be %(_count) ghosts at once."
+	}
+	--
+	"\0\w8\w8\n\n\_q"
+	--
+	"\![*]\__q[OnCallAllGhostsConfirm]Yes,\w4 really open all %(_count) ghosts\__q\n\n\![*]\__q[OnCallAllGhostsCancel]Nevermind\__q"
+}
+
+OnCallAllGhostsConfirm
+{
+	_count = ARRAYSIZE(installedghostlist)
+	
+	"\1\b[0]\0\b[0]"
+	--
+	if _count >= 100
+	{
+		"\0\s[scream]You're for real!?\w8\w8\w8\s[sweat_smile] Alright,\w4 I'll uh...\w8\w8 I'll try.\w8\w8\s[relieved] Here goes.\w8\w8\n\n1\s[unamused]See you on the other side."
+	}
+	elseif _count >= 50
+	{
+		"\0\s[sweat_smile]If you say so,\w4 I'll give it a go.\w8\w8 But this is gonna take a while,\w4 and we might crash.\w8\w8\n\n\1\s[unamused]Fun.\w8\w8"
+	}
+	elseif _count >= 20
+	{
+		"\0\s[sweat_smile]Alright,\w4 bear with me for a minute here,\w4 this might take a bit.\w8\w8 "
+	}
+	else
+	{
+		"\0\s[relieved]Alright,\w4 here goes.\w8\w8 "
+	}
+	--
+	"\0\s[relieved]\i[31]Come on out,\w4 everyone~!\w8\w8\w8\w8"
+	--
+	all :/
+	{
+		foreach installedghostlist; _ghost
+		{
+			if _ghost != "SSP Angel"; "\![call,ghost,""%(_ghost)""]"
+		}
+	}
+}
+
+OnCallAllGhostsCancel : all
+{
+	_count = ARRAYSIZE(installedghostlist)
+	
+	"\1\b[0]\0\b[0]"
+	--
+	if _count >= 100
+	{
+		"\1\s[rolling_eyes]\0\s[sweat_smile]Oh,\w4 thank god.\w8\w8 Don't scare me like that!\w8\w8\n\n\1\s[unamused]As if %(username) would have really done it.\w8\w8\0\s[slight_smile]Want me to call someone else for you?"
+	}
+	elseif _count >= 50
+	{
+		"\0\s[sweat_smile]Yeah,\w4 %(_count) is a lot of ghosts to have open at once...\w8\w8 I don't blame you.\w8\w8\n\n\1\s[unamused]Glad I don't have to put up with all that noise.\w8\w8\0\s[slight_smile]Do you want me to call someone else for you?"
+	}
+	elseif _count >= 20
+	{
+		"\0\s[sweat_smile]Yeah,\w4 I understand,\w4 that's a lot.\w8\w8\s[blush] But hey,\w4 maybe I can just call a couple of them for you,\w4 huh?\w8\w8 Do you want me to?"
+	}
+	else
+	{
+		"\0\s[blush]Oh,\w4 alright!\w8\w8 Not a problem!\w8\w8 Want me to call someone else?"
+	}
+	--
+	"\0\w8\w8\n\n"
+	--
+	"\![*]\__q[OnCallGhostMenu]Back to ghost list\__q  \__q[OnBlank]Nevermind\__q"
+}
+
+OnCallOnlyOtherGhost : all
+{
+	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[sweat_smile]You know,\w4 since we're your only two ghosts,\w4 you could just click on their name in the menu and it'd do the same thing...\w8\w8"
+	--
+	all :/
+	{
+		foreach installedghostlist; _ghost
+		{
+			if _ghost != "SSP Angel"; "\![call,ghost,""%(_ghost)""]"
+		}
+	}
+}
+
+OnCallAnotherGhost
+{
+	"\![call,ghost,""%(reference0)""]"
+	--
+	if reference0 == "random"
+	{
+		"\0\b[0]\s[star_struck]\i[33]Ooh,\w4 a mystery~!\w8\w8 Let's see...!"
+	}
+	else
+	{
+		"\0\b[0]\s[blush]%(raised_hand)Calling %(reference0)~!"
+	}
+}
+
+OnRSSMenu : all
+{
+	"\0\b[2]\_q\![set,autoscroll,disable]"
+	foreach RSSFeedList; _feed
+	{
+		"\![*]\__q[OnStartRSS,""%(_feed)""]%(_feed)\__q\n"
+	}
+	"\n"
+	"\![*]\__q[OnFunctionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+OnStartRSS
+{
+	"\![execute,headline,""%(reference0)""]"
+}
+
+OnEmailMenu : all
+{
+	"\0\b[2]\_q\![set,autoscroll,disable]"
+	foreach EmailAddressList; _email
+	{
+		"\![*]\__q[OnStartEmail,""%(_email)""]%(_email)\__q\n"
+	}
+	"\n"
+	"\![*]\__q[OnFunctionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+OnStartEmail
+{
+	"\![biff,""%(reference0)""]"
+}
+
+OnOpen
+{
+	"\![open,%(reference0)]"
+	--
+	"\0\b[0]"
+	--
+	"\s[blush]"
+	"\s[slight_smile]"
+	"\s[relieved]"
+	--
+	"%(raised_hand)"
+	--
+	"Here you go!"
+	"There it is!"
+	"Ta-da~!"
+	"Not a problem!"
+	"Done and done!"
+}
+
+OnConfigMenu : all
+{
+	/*
+	
+	Talkrate
+	Hour notifications
+	uninstall toggle?
+	
+	*/
+	if !ISVAR("Talkrate")
+	{
+		Talkrate = "every 3 minutes"
+		aitalkinterval = 180
+	}
+	if !ISVAR("HourNotifs"); HourNotifs = "Off"
+	if !ISVAR("UninstallEnabled"); UninstallEnabled = "On"
+	if !ISVAR("SSP_Tips"); SSP_Tips = 1
+	if !ISVAR("MiscDialogue"); MiscDialogue = 1
+	
+	_talkabout = "Anything"
+	if SSP_Tips && !MiscDialogue; _talkabout = "Usage tips"
+	elseif !SSP_Tips && MiscDialogue; _talkabout = "No tips"
+	
+	_h = "\f[color,default.anchor]"
+	_d = "\f[color,default]"
+	
+	"\C\![lock,balloonrepaint]\c\0\b[0]\_q\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]"
+	"\f[align,center]%(emdash) Settings %(emdash)\n\n\f[align,left]"
+	
+	"Talkrate:  \![*]\_a[OnChangeTalkrate]%(Talkrate)\_a\n"
+	"Talk about: \![*]\_a[OnOpenTalkAboutMenu]%(_talkabout)\_a\n"
+	"Hour notifications:  \![*]\_a[OnToggleHourNotifs]%(HourNotifs)\_a\n"
+	"Enable uninstall option:  \![*]\_a[OnToggleUninstallEnabled]%(UninstallEnabled)\_a%(_d)\n"
+	"\![*]\q[Balloon Settings,OnBalloonMenu]\n"
+	
+	"\n"
+	"\![*]\__q[OnSakuraMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+	"\![unlock,balloonrepaint]"
+}
+
+OnChangeTalkrate : all
+{
+	"\0\b[2]\s[slight_smile]How often should we talk?"
+	"\_q\n\n"
+	"\![*]\q[Every 30 seconds,OnTalkrate,30]\n"
+	"\![*]\q[Every minute,OnTalkrate,60]\n"
+	"\![*]\q[Every 3 minutes,OnTalkrate,180]\n"
+	"\![*]\q[Every 5 minutes,OnTalkrate,300]\n"
+	"\![*]\q[Every 10 minutes,OnTalkrate,600]\n"
+	"\![*]\q[Never,OnTalkrate,0]\n"
+	"\n"
+	"\![*]\__q[OnConfigMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+OnTalkrate
+{
+	aitalkinterval = TOINT(reference0)
+	
+	"\0\b[0]\1\b[0]"
+	--
+	if reference0 == "30"
+	{
+		Talkrate = "every 30 seconds"
+		
+		"\0\s[scream]Oh,\w4 wow,\w4 that's a lot!\w8\w8 I dunno if I have that much to say!\w8\w8\1\s[unamused]I'm sure you'll find something to yammer about."
+	}
+	elseif reference0 == "60"
+	{
+		Talkrate = "every minute"
+		
+		"\0\s[astonished]Oh,\w4 alright,\w4\s[s_thinking] I'll have to come up with a lot of things to talk about...\w8\w8\1\s[rolling_eyes]That'll be easy for you."
+	}
+	elseif reference0 == "180"
+	{
+		Talkrate = "every 3 minutes"
+		
+		"\0\s[blush]\i[22]Back to the default it is!\w8\w8\1\s[neutral_face]At last."
+	}
+	elseif reference0 == "300"
+	{
+		Talkrate = "every 5 minutes"
+		
+		"\0\s[blush]Alright,\w4 every 5 minutes!\w8\w8\s[relieved] Most English #ghosts actually use 5 minutes as their default talkrate,\w4 compared to Japanese ghosts which typically use 3 minutes.\w8\w8\n\n\1\s[unamused]Maybe we should use 5 minutes as our default talkrate, then.\w8\w8\0\s[scream]Hey,\w4 I had nothing to do with that decision!"
+	}
+	elseif reference0 == "600"
+	{
+		Talkrate = "every 10 minutes"
+		
+		"\0\s[sweat_smile]Oh,\w4 don't wanna hear much from us,\w4 huh?\w8\w8 Okay.\w8\w8\1\s[neutral_face]Fine by me."
+	}
+	else
+	{
+		Talkrate = "Never"
+		
+		"\0\s[worried]Oh,\w4 was I talking too much?\w8\w8\n\n\1\s[unamused]%(username) said to stop talking.\w8\w8 So,\w4 stop talking.\w8\w8\n\n\0\s[scream]Already!?\w8\w8 But we're in the menu!\w8\w8 Surely I can talk here!\w8\w8\1\s[rolling_eyes]..."
+	}
+	00
+	"\0\w8\w8\n\n\_q\![*]\__q[OnConfigMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+OnOpenTalkAboutMenu
+{
+	OnTalkAboutBlurb
+	--
+	OnChangeTalkAbout
+}
+
+OnTalkAboutBlurb
+{
+	"\1\s[neutral_face]\0\b[2]\s[slight_smile]What do you want us to talk about?\w8 We can keep it to just usage tips if you don't want to hear about us,\w4 or if you know all the tips and you don't want to hear them anymore we can just talk about ourselves.\w8 Or we can do a mix of both!"
+}
+
+OnChangeTalkAbout : all
+{
+	_devtips = "Off"; if DevTips; _devtips = "On"
+	_blurb = REPLACE(OnTalkAboutBlurb,'\w8','')
+	_blurb = REPLACE(_blurb,'\w4','')
+	
+	"\![lock,balloonrepaint]"
+	"\c\_q%(_blurb)\f[anchorvisitedfontcolor,default.anchor]"
+	
+	"\n\n"
+	"\![*]\q[Both,OnTalkAbout,Anything,1,1]    \n"
+	"\![*]\q[Just usage tips,OnTalkAbout,Usage tips,1,0]\n"
+	"\![*]\q[No tips,OnTalkAbout,No tips,0,1]\n\n"
+	
+	"Include tips for developers? \![*]\_a[OnToggleDevTips]%(_devtips)\_a\n\n"
+	
+	"\![*]\__q[OnConfigMenu]Back\__q  \![*]\__q[OnCancel]Close\__q\![unlock,balloonrepaint]"
+}
+
+OnTalkAbout
+{
+	SSP_Tips = TOINT(reference1)
+	MiscDialogue = TOINT(reference2)
+	
+	"\0\b[0]\1\b[0]"
+	--
+	if reference0 == "Usage tips"
+	{
+		"\0\s[relieved]Got it,\w4 we'll keep it strictly to business,\w4 then.\w8\w8\1\s[rolling_eyes]A welcome relief."
+	}
+	elseif reference0 == "No tips"
+	{
+		"\0\s[sweat_smile]Yeah,\w4 I hear you.\w8 Tips can get annoying after a while,\w4 huh?\w8\w8\1\s[neutral_face]If you wish to hear the information again in the future,\w4 let us know."
+	}
+	else //Anything
+	{
+		"\0\s[blush]Got it,\w4 we'll talk freely about whatever.\w8\w8\1\s[rolling_eyes]Don't get too loose with the rules."
+	}
+	--
+	"\0\w8\w8\n\n\_q\![*]\__q[OnConfigMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+OnToggleDevTips
+{
+	if DevTips == 0; DevTips = 1
+	else; DevTips = 0
+	OnChangeTalkAbout
+}
+
+OnToggleHourNotifs
+{
+	if HourNotifs == "Off"; HourNotifs = "On"
+	else; HourNotifs = "Off"
+	OnConfigMenu
+}
+
+OnToggleUninstallEnabled
+{
+	if UninstallEnabled == "On"; UninstallEnabled = "Off"
+	else; UninstallEnabled = "On"
+	OnConfigMenu
+}
+
+
+OnBalloonMenu : all
+{
+	"\1\s[10]\0\b[2]\s[0]\_q\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]"
+	"\f[align,center]%(emdash) Balloon Settings %(emdash)\n\n"
+	"Current balloon: \f[color,default.anchor]%(SHIORI3FW.BalloonName)\f[color,default]\n\n"
+	//Need to set these up so that if they are not installed, it will offer to do so... could handle that in the OnBalloonMenu.Switch function tbh, add a little check and jump to another function if needed
+	if SHIORI3FW.BalloonName == "Angelbox"; "\![*]"; "\__q[OnBalloonMenu.Switch,Angelbox]Angelbox\__q\n"
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"; "\![*]"; "\__q[OnBalloonMenu.Switch,Angelbox (Biblically Accurate)]Angelbox (Biblically Accurate)\__q\n"
+	if SHIORI3FW.BalloonName == "Cotton Candy"; "\![*]"; "\__q[OnBalloonMenu.Switch,Cotton Candy]Cotton Candy\__q\n"
+	"\n"
+	"\![*]"
+	if SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)" || SHIORI3FW.BalloonName == "Cotton Candy"; "\__q[OnBalloonMenu.Customize]Customize\__q"
+	else; "\f[color,disable]Customize\f[color,default]"
+	"  \![*]\q[About,OnBalloonMenu.About]"
+	"\n\n\![*]\q[Back,OnConfigMenu]  \![*]\__q[OnBlank]Close\__q"
+}
+
+//Need to add text explaining the different balloons and how you can install them, how to use balloons that are not these, and also how some of them let you customize colors
+
+OnBalloonMenu.Switch
+{
+	if !HasBalloon(reference0)
+	{
+		OnBalloonMenu.Install
+	}
+	else //Installed
+	{
+		"\![change,balloon,""%(reference0)""]\e __BALLOON_CHANGE_MENU__"
+	}
+}
+
+OnBalloonMenu.Install
+{
+	if reference0 == "Cotton Candy"
+	{
+		"\1\b[0]\0\b[0]\s[smiling_face_with_3_hearts]\i[31]This #balloon is cotton candy themed!\w8\w8 It comes in a variety of different flavors!\w8\w8\n\n\1\s[rolling_eyes]Don't you mean colors?\w8\w8\n\n\0\s[relieved]\i[24]I meant what I said.\w8\w8\n\n\1\s[neutral_face]If you would like to preview the #balloon,\w4 or download it yourself,\w4 you can view it \_a[https://github.com/Zichqec/SSP_Angel_Balloons]here.\_a\w8\w8\n\n"
+	}
+	else //Angelbox (Biblically Accurate)
+	{
+		"\1\b[0]\0\b[0]\s[star_struck]\i[21]Ooh,\w4 this is the deluxe version of our default Angelbox #balloon!\w8\w8\s[smiling_face_with_3_hearts]\i[22] It's got lots and lots of color options,\w4 including some special galaxy patterns!\w8\w8\n\n\1\s[neutral_face]If you would like to preview the #balloon,\w4 or download it yourself,\w4 you can view it \_a[https://github.com/Zichqec/SSP_Angel_Balloons]here.\_a\w8\w8\n\n"
+	}
+	--
+	"\0\s[blush]\i[22]Should I download and install it for you?\w8\w8\n\n"
+	--
+	"\![*]\__q[OnBalloonMenu.Download,""%(reference0)""]Yes please\__q  \__q[OnBalloonMenu]No thanks\__q"
+}
+
+OnBalloonMenu.Download
+{
+	if reference0 == "Cotton Candy"; "\![execute,install,url,https://github.com/Zichqec/SSP_Angel_Balloons/releases/latest/download/cotton_candy.nar]"
+	else; "\![execute,install,url,https://github.com/Zichqec/SSP_Angel_Balloons/releases/latest/download/angelbox_biblically_accurate.nar]" 
+}
+
+OnBalloonMenu.Customize : all
+{
+	if !ISVAR("Balloon.Angel"); Balloon.Angel = ("1")
+	if !ISVAR("Balloon.Pilot"); Balloon.Pilot = ("2")
+	
+	_colors = IARRAY
+	if SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		_colors = ("Blue Raspberry,0","Pink Vanilla,1","Raspberry Vanilla,2","Banana,3","Grape,4","Bananagrape,5","Watermelon,6","Sour Apple,7","Sour Melon,8","Mint,9","Dreamsicle,10","Mintdream,11","Sugar,12","Charcoal,13","Mystery,14")
+	}
+	else //Angelbox (Biblically Accurate)
+	{
+		_colors = ("Wings,0","Halo,3","Angel,1","Pilot,2",/
+		"Red,4","Orange,5","Gold,6","Yellow,7","Chartreuse,8","Green,9","Teal,10","Cyan,11","Sky,12","Blue,13","Indigo,14","Violet,15","Purple,16","Lilac,17","Magenta,18","Pink,19","Tawny,20","Brown,21","Black,22","Gray,23","White,24",/
+		"Unicorn Fangs,25","Pirate Lich,26","Endless Dawn,27","Cat-tastrophe,28",/
+		"Cursed,29","Therapy,30","Shortcake,31","Medicine,32",/
+		"Butterfly,33","Catwitch,34","Ladybug,35","Bridge,36",/
+		"Spiral Galaxy,37","Purple Nebula,38","Red Nebula,39","Blue Nebula,40","Green Nebula,41","Gray Nebula,42")
+	}
+	
+	"\C\0\![lock,balloonrepaint]\c\![set,autoscroll,disable]\1\![lock,balloonrepaint]\c\![set,autoscroll,disable]\_q\*"
+	
+	if SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		"\0\b[4]\1\b[4]"
+		for _char = 0; _char < 2; _char++
+		{
+			"\%(_char)\f[align,center]\f[bold,1]Flavor Selection\f[bold,default]\n"
+			_i = 0
+			foreach _colors; _color
+			{
+				_item = "\__q[OnBalloonMenu.ChangeColor,%(_color[1]),%(_char)]%(_color[0])\__q"
+				if _char == 0 && Balloon.Angel[1] == _color[1]; "\![*]"
+				if _char == 1 && Balloon.Pilot[1] == _color[1]; "\![*]"
+				
+				if _i == 1
+				{
+					"\f[align,right]%(_item)\n"
+				}
+				elseif _i == 2
+				{
+					"\f[align,center]%(_item)\n\n"
+				}
+				else //0
+				{
+					"\f[align,left]%(_item)%(newline)"
+				}
+				
+				_i++
+				if _i > 2; _i = 0
+			}
+		}
+	}
+	else //Angelbox (Biblically Accurate)
+	{
+		"\0\b[4]\1\b[4]"
+		for _char = 0; _char < 2; _char++
+		{
+			"\%(_char)"
+			_i = 0
+			foreach _colors; _color
+			{
+				
+				if _color[1] == "0"; "\f[align,center]\f[bold,1] Defaults\f[bold,default]\n\f[align,left]"
+				elseif _color[1] == "4"; {"\n\f[align,center]\f[bold,1]Basic\f[bold,default]\n\f[align,left]"; _i = 0}
+				elseif _color[1] == "25"; {"\n\n\f[align,center]\f[bold,1]Unique\f[bold,default]\n\f[align,left]"; _i = 0}
+				elseif _color[1] == "37"; "\n\f[align,center]\f[bold,1]Galaxy\f[bold,default]\n\f[align,left]"
+				
+				if _char == 0 && Balloon.Angel[0] == _color[1]; "\![*]"
+				if _char == 1 && Balloon.Pilot[0] == _color[1]; "\![*]"
+				"\__q[OnBalloonMenu.ChangeColor,%(_color[1]),%(_char)]%(_color[0])\__q"
+				
+				if TOINT(_color[1]) > 3 && TOINT(_color[1]) < 25 //Basics
+				{
+					if _i % 3 == 2; "\n\f[align,left]"
+					elseif _i % 3 == 1; "%(newline)\f[align,right]"
+					else; "%(newline)\f[align,center]"
+				}
+				else
+				{
+					if _i % 2 == 1; "\n\f[align,left]"
+					else; "%(newline)\f[align,right]"
+				}
+				_i++
+			}
+		}
+	}
+	"\1\n\f[align,center]\![*]\__q[OnBalloonMenu.RandomColor,1]Random\__q\n"
+	"\f[align,center]\f[color,default.anchor]Highlighted text\f[color,disable]  Dimmed text\f[color,default]"
+	"\0\n\f[align,center]\![*]\__q[OnBalloonMenu.RandomColor,0]Random\__q\n"
+	"\f[align,center]\f[color,default.anchor]Highlighted text\f[color,disable]  Dimmed text\f[color,default]\n\n\f[align,center]"
+	
+	"\![*]\__q[OnBalloonMenu]Back\__q  \![*]\__q[OnBlank]Close\__q\0\![unlock,balloonrepaint]\1\![unlock,balloonrepaint]"
+}
+
+OnBalloonMenu.ChangeColor
+{
+	if SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		if reference1 == "0"; Balloon.Angel[1] = reference0
+		else; Balloon.Pilot[1] = reference0
+	}
+	else //Angelbox (Biblically Accurate)
+	{
+		if reference1 == "0"; Balloon.Angel[0] = reference0
+		else; Balloon.Pilot[0] = reference0
+	}
+	
+	"\C\![raise,OnBalloonMenu.Customize]"
+}
+
+OnBalloonMenu.RandomColor
+{
+	_num = 0
+	if SHIORI3FW.BalloonName == "Cotton Candy"
+	{
+		_num = RAND(15)
+		if reference0 == "0"; Balloon.Angel[1] = _num
+		else; Balloon.Pilot[1] = _num
+	}
+	else //Angelbox (Biblically Accurate)
+	{
+		_num = RAND(43)
+		if reference0 == "0"; Balloon.Angel[0] = _num
+		else; Balloon.Pilot[0] = _num
+	}
+	
+	
+	"\C\![raise,OnBalloonMenu.Customize]"
+}
+
+OnBalloonMenu.About
+{
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]We have a super special #balloon setup!\w8\w8\s[blush]\i[21] The #balloon we come with,\w4 Angelbox,\w4 is very simple.\w8\w8\s[star_struck]\i[22] But if you download one of our other #balloons,\w4 you can customize which #balloon color each of us uses!\w8\w8\n\n\1\s[teach]Our balloons were made with this purpose specifically%(br)in mind,\w4 it is not a typical ghost feature.\w8\w8\s[neutral_face] A lot of work went into making this possible.\w8\w8 If you would like to try it,\w4 you will need to ensure that you download and install the appropriate #balloons.\w8\w8\n\n\0\s[slight_smile]\i[21]We can install them for you if you want!\w8\w8 Just click on their names in the menu and we'll get you started!\w8\w8\n\n\1\s[neutral_face]If you would like to use a different #balloon with us,\w4 right click on Angel and go to the ""Balloon"" tab in the menu.\w8\w8 You can use any balloon with us that you like,\w4 though we won't have special settings for them.\x\![raise,OnBalloonMenu]"
+}
+
+OnSakuraMenuCancel : nonoverlap_pool
+{
+	"\0\b[0]\s[slight_smile]"
+	--
+	"Alright,\w4 let me know if you change your mind!"
+	"Ok,\w4 let me know if you need something else!"
+	"Ok,\w4 no problem!"
+	"Alrighty,\w4 talk to you later then!"
+	"Oh,\w4 ok!"
+	"Sure,\w4 I'll be right here if you change your mind!"
+}

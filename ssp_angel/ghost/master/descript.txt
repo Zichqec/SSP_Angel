@@ -1,0 +1,20 @@
+charset,UTF-8
+
+name,SSP Angel
+type,ghost
+
+shiori,yaya.dll
+
+craftman,Angel Team
+craftmanurl,https://github.com/Zichqec/SSP_Angel
+
+sakura.name,Angel
+kero.name,Pilot
+
+sstp.allowunspecifiedsend,0
+
+icon,icon.ico
+
+balloon,Angelbox
+balloon,Angelbox (Biblically Accurate)
+balloon,Cotton Candy

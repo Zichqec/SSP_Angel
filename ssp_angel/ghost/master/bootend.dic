@@ -1,0 +1,285 @@
+OnInitialize
+{
+	if !ISVAR("Talkrate")
+	{
+		Talkrate = "every 3 minutes"
+		aitalkinterval = 180
+	}
+	if !ISVAR("HourNotifs"); HourNotifs = "Off"
+	if !ISVAR("UninstallEnabled"); UninstallEnabled = "On"
+	stroke = 0
+	if !ISVAR("SSP_Tips"); SSP_Tips = 1
+	if !ISVAR("MiscDialogue"); MiscDialogue = 1
+	lastTalk = ""
+	if !ISVAR("Balloon.Angel"); Balloon.Angel = ("1")
+	if !ISVAR("Balloon.Pilot"); Balloon.Pilot = ("2")
+}
+
+OnFirstBoot
+{
+	Talkrate = "every 3 minutes"
+	aitalkinterval = 180
+	HourNotifs = "Off"
+	UninstallEnabled = "On"
+	stroke = 0
+	SSP_Tips = 1
+	MiscDialogue = 1
+	DevTips = 0
+	lastTalk = ""
+	Balloon.Angel = ("1")
+	Balloon.Pilot = ("2")
+	
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[36]Hello there!\w8\w8 Good to meet you!\w8\w8\s[relieved]\i[21] My name's Angel,\w4 and this is Pilot.\w8\w8\s[blush]\i[22] We're here to get you started with SSP!\w8\w8\n\n\1\s[teach]Greetings.\w8\w8\n\n\0\s[neutral_face]%(raised_hand)\![open,configurationdialog,setup]To start off,\w4 you should fill out your user information at the bottom of the preferences here!\w8\w8 We'll use it to know how to refer to you.\w8\w8 There are other settings in here that you may want to change as well,\w4%(br)but we'll keep it simple for now.\w8\w8\n\n\1\s[neutral_face]You can double click on either of us to open our menus,\w4 or you can right click on Angel to open SSP's menu,\w4 which you can use to close us when you are done.\w8\w8 You can also right click on me,\w4 but my menu has fewer options than Angel's,\w4 since she is the main character.\w8\w8\n\n\0\s[pleading_face]\i[22]Aw,\w4 don't say it like that,\w4 you're important too!\w8\w8\n\n\1\s[rolling_eyes]Stay on topic,\w4 please.\w8\w8\s[neutral_face] We will talk from time to time on our own;\w8 if you need anything,\w4 just let us know through our menus.\w8\w8 We can offer you advice on SSP and ghosts,\w4 and we can also perform a few basic functions.\w8\w8\n\n\0\s[blush]\i[22]It's gonna be fun!"
+}
+
+//Default boot
+OnBoot
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
+	"\0\s[blush]\i[26]Hey %(username)!\w8\w8 What's up?\w8\w8\1How may we assist today?"
+	"\0\s[blush]\i[36]Hey hey,\w4 good to see you today!\w8\w8 What'd you need?\w8\w8\1If we may be of assistance, please let us know."
+	"\1\s[teach]Hello.\w8\w8\0\i[36]Hi hi,\w4 can we help you with something?"
+	"\1\s[teach]Greetings.\w8\w8\0\i[26]What's up?\w8\w8 Did you need something?"
+}
+
+//Default close
+OnClose
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
+	"\0\s[astonished]Oh,\w4 alright.\w8\w8\s[blush]\i[36] See you later,\w4 %(username)!\w8\w8\1Another time."
+	"\0\s[astonished]Oh,\w4 is it time to go already?\w8\w8\n\n\1Yes,\w4 it seems so.\w8\w8\0\s[slight_smile]\i[21]Right,\w4 let's get going then!\w8\w8 See you,\w4 %(username)!"
+	"\1\s[10]Time to go.\w8\w8\n\n\0\s[astonished]Oh,\w4 really?\w8\w8\n\n\1Yep,\w4 let's get moving.\w8\w8\0\s[sweat_smile]Alright.\w8\w8 See you around,\w4 %(username)."
+	"\1\s[10]Off we go,\w4 then.\w8\w8\n\n\0\s[astonished]Oh,\w4 right,\w4 yeah.\w8\w8\n\n\1Farewell,\w4 %(username).\w8\w8\s[-1]\w8\0Oh,\w4 wait for me!\w8\w8\s[blush]\i[26] Bye,\w4 %(username)~!"
+	--
+	"\w8\w8\-"
+}
+
+//Special close for nice people who close them via main menu
+OnGoodbye
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
+	"\0\s[0]\1\s[teach]Farewell.\w8\w8\0\s[blush]\i[26]Bye,\w4 %(username)!\w8\w8 It was nice hanging out,\w4 I hope we see you again sometime~!"
+	"\0\s[0]\1\s[teach]See you another time,\w4 perhaps.\w8\w8\0\s[blush]\i[36]Take care!\w8\w8 We'll be ready any time you need us~!"
+	"\0\s[blush]\i[36]See you around,\w4 %(username)!\w8\w8 Take care!\w8\w8\1\s[teach]Goodbye."
+	"\1\s[10]It has been an interesting visit.\w8\w8 If you have need of our services in the future,\w4 you have but to ask.\w8\w8\0\s[blush]\i[26]Bye for now,\w4 %(username)~!"
+	--
+	"\w8\w8\-"
+}
+
+//SSP closing with multiple ghosts open
+OnCloseAll
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
+	"Alright,\w4 time to pack it in everyone!\w8\w8\s[blush] See you,\w4 %(username)!\w8\w8\1Farewell."
+	"Done for now?\w8\w8 See you another time,\w4 %(username)!\1Goodbye."
+	"Alright,\w4 time to close up,\w4 everyone!\w8\w8\s[blush] See you next time,\w4 %(username)!\w8\w8 We'll be around if you need us!\w8\w8\1Don't hesitate to call."
+	--
+	"\w8\w8\-" //I don't think this is necessary in this event, but... can't hurt, right?
+}
+
+//Switching to another ghost or reloading
+OnGhostChanging
+{
+	if reference2 == ""; reference2 = reference0
+	_path = REPLACE(SHIORI3FW.Path,"\","/")
+	_path = REPLACE(_path,"ghost/master/","")
+	
+	if reference3 == _path //If reloading
+	{
+		"\1\b[0]\s[10]\0\b[0]\s[0]Reloading!\w4"
+	}
+	else
+	{
+		"\1\b[0]\s[10]\0\b[0]\s[0]Alright,\w4 we're off!\w8\w8\s[blush]\i[21] Take it away,\w4 %(reference0)~!\w8\w8\1Later."
+	}
+}
+
+//Switched from another ghost or reloading
+OnGhostChanged
+{
+	if reference2 == ""; reference2 = reference0
+	_path = REPLACE(SHIORI3FW.Path,"\","/")
+	_path = REPLACE(_path,"ghost/master/","")
+	
+	if reference3 == _path //If reloading
+	{
+		"\1\b[0]\s[k_thinking]\0\b[0]\s[blush]\i[22]And we're back!\w8\w8 What's new~?"
+	}
+	else
+	{
+		"\1\b[0]\s[10]\0\b[0]\s[blush]Hey hey,\w4 good to see you %(username)!\w8\w8 Hope you had fun hanging out with %(reference0)~!\w8\w8\1Is there anything we may do for you?"
+	}
+}
+
+//Called by another ghost
+OnGhostCalled
+{
+	if reference2 == ""; reference2 = reference0
+	
+	"\1\b[0]\s[10]\0\b[0]\s[0]\1You rang?\w8\w8\0\s[blush]What's up,\w4 %(username)?\w8\w8 Did you need our help with something?\w8\w8\s[sweat_smile]%(br)%(reference2)'s not giving you trouble or anything,\w4 right?"
+}
+
+//Calling another ghost
+OnGhostCalling
+{
+	if reference2 == ""; reference2 = reference0
+	
+	"\1\b[0]\s[10]\0\b[0]\s[blush]%(raised_hand)Calling %(reference2)~!\w8\w8 %(username)'s looking for you!"
+}
+
+//Other ghost finished booting after being called
+OnGhostCallComplete
+{
+	if reference2 == ""; reference2 = reference0
+	
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[36]Hey hey!\w8\w8 Glad you could make it,\w4 %(reference2)~!"
+}
+
+//When SSP is closing to update
+OnBasewareUpdating
+{
+	_baseware = "an SSP"; if basewarename != "SSP"; _baseware = "a baseware"
+	
+	"\1\b[0]\s[10]\0\b[0]\s[blush]Ooh,\w4 %(_baseware) update!\w8\w8\i[22] We'll be right back!\w8"
+}
+
+//When SSP has finished updating
+OnBasewareUpdated
+{
+	_baseware = "an SSP"; if basewarename != "SSP"; _baseware = "a baseware"
+	
+	"\1\b[0]\s[10]\0\b[0]\s[0]We're back!\w8\w8\n\n\1You're now using %(basewarename) %(reference0).\w8\w8\n\n\0\s[star_struck]I wonder what's new?\w8\w8\n\n\1\s[teach]If you'd like to see the changelog,\w4 it can be viewed%(br)\_a[https://ponapalt.hatenablog.com/]here\_a.\w8\w8 It's in Japanese though,\w4 so you may need a translator.\w8\w8\0\s[blush]\i[22]Thanks for keeping us up to date,\w4 %(username)!\w8\w8 Updating is super important so you get all the latest security patches,\w4 and features that ghost devs might want to make use of."
+}
+
+OnOtherGhostClosed : nonoverlap_pool
+{
+	"\1\b[0]\0\b[0]"
+	--
+	"\s[blush]\i[26]"
+	"\s[blush]\i[36]"
+	--
+	"Thanks, %(reference2)!\w8\w8 See you later~!"
+	"Cya, %(reference2)~!"
+	"Bye, %(reference2)~!"
+	--
+	"\w8\w8\1\s[neutral_face]"
+	--
+	"Ciao."
+	"Cya."
+	"Bye."
+	"Later."
+}
+
+OnOtherGhostBooted : nonoverlap_pool
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[blush]"
+	--
+	"\i[26]"
+	"\i[36]"
+	--
+	"Hi,\w4 %(reference2)~!"
+	"Hey,\w4 it's %(reference2)~!"
+	"More friends!\w8\w8 Hi %(reference2)~!"
+	--
+	"\w8\w8\1"
+	--
+	"\s[teach]"
+	"\s[neutral_face]"
+	--
+	"Greetings."
+	"Welcome."
+	"Salutations."
+	"Hello."
+}
+
+OnShellChanging
+{
+	if reference0 == SHIORI3FW.ShellName
+	{
+		"\0\s[0]\b[0]\1\b[0]\s[neutral_face]Reloading the shell."
+	}
+	elseif reference0 == "Default"
+	{
+		"\1\b[0]\s[10]\0\b[0]\s[slight_smile]Back to the default?\w8\w8 Ok~!\w8\s[-1]\w8\1\s[neutral_face]Good.\w8\w8"
+	}
+	else
+	{
+		"\1\b[0]\s[10]\0\s[blush]Ooh,\w4 a new look~!\w8\w8\s[-1] Be right back!\w8\w8\1\s[face_exhaling]What is it now...\w8\w8"
+	}
+}
+
+OnShellChanged
+{
+	if reference0 == SHIORI3FW.ShellName
+	{
+		"\0\b[0]\s[0]\1\b[0]\s[neutral_face]Reload complete.\w8\w8\0\s[sweat_smile]It's not broken,\w4 is it?"
+	}
+	elseif reference0 == "Default"
+	{
+		"\1\b[0]\s[10]\0\b[0]\s[relieved]The default Angel Look™.\w8\w8\n\n\1\s[unamused]It's not trademarked.\w8\w8\0\s[blush]Drawn by #Yuyudev!"
+	}
+	else
+	{
+		"\1\b[0]\s[10]\0\b[0]\s[star_struck]Wow!\w8\w8 Check us out!\w8\w8\1\s[neutral_face]Interesting."
+	}
+}
+
+OnBalloonChange
+{
+	if "__BALLOON_CHANGE_MENU__" _in_ SHIORI3FW.LastTalk
+	{
+		"\C\![raise,OnBalloonMenu]"
+	}
+	else
+	{
+		"\1\b[0]\s[10]\0\b[0]\s[star_struck]Wow,\w4 look at this neat #balloon!\w8\w8\s[smiling_face_with_3_hearts] So cool!\w8\w8\n\n\1\s[neutral_face]If you can accurately read my words,\w4 it is adequate.\w8\w8\n\n\0\s[blush]\i[22]Here's what \f[color,default.anchor]highlighted text\f[color,default] will look like,\w4 and here's%(br)what \f[color,disable]dimmed text\f[color,default] will look like!\w8\w8\1Here is \f[color,default.anchor]highlighted text\f[color,default] and \f[color,disable]dimmed text\f[color,default] in the #kero%(br)#balloon as well."
+	}
+}
+
+// OnBalloonChange
+// {
+	// "\![raise,OnTestBloon]"
+// }
+
+OnWindowStateMinimize
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]Minimizing!\w8\w8 If you need us again,\w4 open the system tray and right click our icon!\w8\w8"
+}
+
+OnWindowStateRestore
+{
+	"\1\b[0]\s[10]\0\b[0]\s[0]%(raised_hand)And we're back!\w8\w8\1Ready to assist again."
+}
+
+OnDressupChanged
+{
+	if reference0 == "0"
+	{
+		if reference1 == "Bow and bell"
+		{
+			if reference2 == "1" //Putting on
+			{
+				"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Isn't my bow cute?\w8\w8\n\n\1\s[k_thinking]It is inspired by the bell used as SSP's icon,\w4 is it not?\w8\w8\0\s[smiling_face_with_3_hearts]Yep,\w4 sure is!"
+			}
+			else //Taking off
+			{
+				"\1\b[0]\s[10]\0\b[0]\s[relieved]I think I'll go with something more plain today.\w8\w8\1A good choice."
+			}
+		}
+		elseif reference1 == "Skull barette"
+		{
+			if reference2 == "1" //Putting on
+			{
+				"\1\b[0]\s[10]\0\b[0]\s[smiling_face_with_3_hearts]Look look,\w4 isn't this skull barette great?\w8\w8 I thought it'd be a nice touch.\w8\w8\n\n\1\s[k_thinking]In reference to the English community's start?\w8\w8\0\i[22]Yeah!\w8\w8 It's good things have branched out,\w4 but we%(br)can't forget the roots!"
+			}
+			else //Taking off
+			{
+				"\0\b[0]\s[relieved]\1\b[0]\s[k_thinking]No more skull accessory?\w8\w8\n\n\0Well,\w4 I can't wear it \f[italic,1]all\f[italic,default] the time,\w4 can I?\w8\w8\n\n\1You could...\w8\w8\n\n\0\s[blush]\i[33]Aww,\w4 do you like it?\w8\w8\1\s[unamused]I am ambivalent towards it,\w4 it was merely a statement of fact."
+			}
+		}
+	}
+}

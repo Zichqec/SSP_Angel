@@ -1,0 +1,61 @@
+seriko.alignmenttodesktop,free
+seriko.use_self_alpha,1
+
+charset,UTF-8
+type,shell
+
+name,Default Shell
+craftman,Angel Team
+craftmanurl,https://github.com/Zichqec/SSP_Angel
+
+sakura.balloon.offsetx,0
+sakura.balloon.offsety,0
+kero.balloon.offsetx,0
+kero.balloon.offsety,0
+sakura.balloon.alignment,none
+kero.balloon.alignment,none
+
+shiori.logo.filename,resources\niseshiori.png
+shiori.logo.x,16
+shiori.logo.y,256
+
+
+//Menu stuff
+
+//Text color for options that you're not hovering over
+menu.background.font.color.r,29
+menu.background.font.color.g,15
+menu.background.font.color.b,56
+
+//Text color for options that you're hovering over
+menu.foreground.font.color.r,224
+menu.foreground.font.color.g,235
+menu.foreground.font.color.b,244
+
+//Text color for options that are disabled/grayed out
+menu.disable.font.color.r,100
+menu.disable.font.color.g,109
+menu.disable.font.color.b,117
+
+//Color of the separator bars
+menu.separator.color.r,073
+menu.separator.color.g,131
+menu.separator.color.b,181
+
+menu.background.alignment,righttop
+menu.foreground.alignment,righttop
+menu.sidebar.alignment,bottom
+
+menu.background.bitmap.filename,menu_background.png
+menu.foreground.bitmap.filename,menu_foreground.png
+menu.sidebar.bitmap.filename,menu_sidebar.png
+
+sakura.bindoption700.group,Accessories,multiple
+sakura.bindgroup700.name,Accessories,Bow and bell
+sakura.bindgroup701.name,Accessories,Skull barette
+
+sakura.menuitem0,700
+sakura.menuitem1,701
+
+sakura.defaultleft,0
+kero.defaultleft,225

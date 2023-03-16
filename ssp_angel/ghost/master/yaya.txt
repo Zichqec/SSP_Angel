@@ -1,0 +1,25 @@
+charset, UTF-8
+
+dicdir, yaya_base
+
+dic, main.dic
+dic, aitalk.dic
+dic, bootend.dic
+dic, etc.dic
+dic, kero_menu.dic
+dic, mouse.dic
+dic, sakura_menu.dic
+dic, utility.dic
+dic, word.dic
+
+msglang,english
+
+
+
+//------------------------------------------------------------------------------
+//Execution log
+//The execution log is recorded in ayame.log. It is recommended to keep logs during development.
+//------------------------------------------------------------------------------
+// log, ayame.log	
+ignoreiolog, ID: OnSecondChange //Ignores OnSecondChange
+ignoreiolog, ID: OnMouse        //Ignores all OnMouse functions
