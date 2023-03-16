@@ -195,7 +195,7 @@ OnGlossaryWord : all
 	}
 	elseif reference0 == "MAKOTO"
 	{
-		"\1\s[teach]MAKOTO is a special kind of code that #shells can use,\w4 which lets them alter the scripts sent from the #ghost before they are displayed to the user.\w8\w8 This allows for things like changing what #surfaces are called,\w4 or which #intervals are used,\w4 based on the #shell.\w8\w8%(br)It could also be used to swap our certain words or phrases,\w4 but this isn't usually seen in the English community.\w8\w8\n\n"
+		"\1\s[teach]MAKOTO is a special kind of code that #shells can use,\w4 which lets them alter the scripts sent from the #ghost before they are displayed to the user.\w8\w8 This allows for things like changing what #surfaces are called,\w4 or which #intervals are used,\w4 based on the #shell.\w8\w8%(br)It could also be used to swap out certain words or phrases,\w4 but this isn't usually seen in the English community.\w8\w8\n\n"
 		"\0\s[s_thinking]The #SHIORI event OnTranslate has the same functionality.\w8\w8 I think MAKOTO is an older specification.\w8\w8\n\n"
 		"\1\s[neutral_face]Yes,\w4 that is my understanding as well.\w8\w8 But I don't have strong sources for it.\w8\w8\n\n"
 		"\0\s[astonished]So,\w4 is there a reason to use MAKOTO anymore?\w8\w8"
@@ -226,10 +226,8 @@ OnGlossaryWord : all
 	{
 		"\1\s[teach]SHIORI is a set of standards for how #baseware and #ghosts communicate.\w8\w8 It is often used as a term to refer to #ghost coding languages,\w4 like #AYA,\w4 #YAYA,\w4 and%(br)#Satori.\w8\w8\s[k_thinking] But,\w4 they are not exactly interchangeable.\w8\w8 Some languages,\w4 such as #YAYA,\w4 do not have to be used as SHIORI.\w8\w8 I can explain more about that if you ask me about #YAYA.\w8\w8\n\n"
 		"\0\s[s_thinking]Does SHIORI stand for something?\w8\w8\n\n"
-		"\1\s[neutral_face]I'm not sure.\w8\w8\n\n"
-		"\0\s[sweat_smile]Oh.\w8\w8\n\n"
-		"\1\s[neutral_face]A regrettable gap in my knowledge,\w4 for now.\w8\w8\n\n"
-		"\0\s[s_thinking]So what does the SHIORI do exactly?\w8\w8\n\n"
+		"\1\s[neutral_face]No.\w8\w8\n\n"
+		"\0\s[sweat_smile]Oh.\w8\w8\n\n\s[s_thinking] So what does the SHIORI do exactly?\w8\w8\n\n"
 		"\1\s[teach]The #baseware is what the user interacts with,\w4 when they do things such as clicking the mouse or pressing keys.\w8\w8 The #baseware then sends SHIORI events to the #ghost's code,\w4 which determines what response should be given based on the information.\w8\w8 That response is sent back to the #baseware so that the appropriate images and dialogue can be displayed to the user.\w8\w8\n\n"
 		"\0\s[astonished]Ooh wow.\w8\w8 There's a lot that goes into it,\w4 huh?\w8\w8\n\n"
 		"\1\s[neutral_face]Yes,\w4 a lot of moving pieces.\w8\w8 In theory though,\w4 you could use any #baseware,\w4 and any #ghost coding language,\w4 and as long as they are all communicating with the same SHIORI standard,\w4 they will more or less work.\w8\w8"
@@ -251,7 +249,7 @@ OnGlossaryWord : all
 	elseif reference0 == "Sakura Script"
 	{
 		"\1\s[teach]Sakura Script is a system of tags,\w4 used to make things happen during scripts.\w8\w8 For example,\w4 the tag%(br)\\w4 makes our text pause for 200ms,\w4 and the tag \\0 will switch the speaking character back over to Angel.\w8\w8\n\n"
-		"\0\s[blush]The #baseware is responsible for parsing those tags and making things happen based on them,\w4 so just about every #ghost will use them,\w4 regardless of what coding language they're written in.\w8\w8\s[astonished] Though,\w4 I think #ghosts in #satori have an alternate system they can use.\w8\w8\n\n"
+		"\0\s[blush]The #baseware is responsible for parsing those tags and making things happen based on them,\w4 so just about every #ghost will use them,\w4 regardless of what coding language they're written in.\w8\w8\s[astonished] Though,\w4 I think #ghosts in #Satori have an alternate system they can use.\w8\w8\n\n"
 		"\1\s[k_thinking]Yes,\w4 I believe so.\w8\w8 But I am not certain of the details.\w8\w8\n\n"
 		"\0\s[sweat_smile]Too bad.\w8\w8\n\n"
 		"\1\s[teach]If you want to see more Sakura Script tags,\w4 you can see a list of them on \_a[https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html]Ukadoc\_a.\w8\w8 This particular page has been translated from the original Japanese into English by the #Ukagaka Dream Team.\w8\w8"
@@ -260,8 +258,8 @@ OnGlossaryWord : all
 	elseif reference0 == "Satori"
 	{
 		"\1\s[teach]Satori is a ghost coding language,\w4 and is one of the most popular ones in the Japanese community for its simplicity.\w8\w8 It's actually called 里々,\w4 which usually translates as Village or Village People when run through machine translation.\w8\w8\n\n"
-		"\0\s[sweat_smile]Unfortunately,\w4 as it relies on characters not available on most keyboards outside Japan,\w4 it is difficult to use for ghost development if you don't have one of those keyboards.\w8\w8"
-		"\1\s[neutral_face]Still,\w4 it sees a lot of use in Japanese #ghosts,\w4 so it's worth having a look at.\w8\w8 \_a[https://wikiwiki.jp/satolist/]Here's\_a the wiki for it.\w8\w8\s[k_thinking] There is also \_a[https://github.com/ukatech/satoriya-shiori]Satoriya\_a,\w4 which means Yet Another Satori.\w8\w8 I'm not terribly certain of the details around it,\w4 but I believe this version is still being actively maintained.\w8\w8 That link will take you to the GitHub repository for it if you want to have a look.\w8\w8\n\n"
+		"\0\s[sweat_smile]Unfortunately,\w4 as it relies on characters not available on most keyboards outside Japan,\w4 it is difficult to use for ghost development if you don't have one of those keyboards.\w8\w8\n\n"
+		"\1\s[neutral_face]Still,\w4 it sees a lot of use in Japanese #ghosts,\w4 so it's worth having a look at.\w8\w8 \_a[https://wikiwiki.jp/satolist/]Here's\_a the wiki for it.\w8\w8\s[k_thinking] There is also \_a[https://github.com/ukatech/satoriya-shiori]Satoriya\_a,\w4 which means Yet Another Satori.\w8\w8 I'm not terribly certain of the details around it,\w4 but I believe this version is still being actively maintained.\w8\w8 That link will take you to the GitHub repository for it if you want to have a look.\w8\w8"
 		"\0\s[star_struck]There's also an editor specifically for Satori,\w4 called \_a[https://github.com/kanadelab/Satolist2]Satolist!\_a\w8\w8 It's got stuff like a collision editor,\w4 a visual display of your surfaces,\w4 and more!\w8\w8\s[blush]\i[31] Definitely check it out if you're interested in trying out Satori!"
 	}
 	elseif reference0 == "SERIKO"
@@ -286,6 +284,11 @@ OnGlossaryWord : all
 		"\1\s[teach]Surface is a term that refers to the different%(br)images/poses in a #ghost.\w8\w8 You can think of them a bit like sprites,\w4 if you are familiar with video game terminology.\w8\w8\n\n"
 		"\0\s[relieved]Not all images in a #ghost are surfaces,\w4 it depends on how the #shell is set up.\w8\w8 But in general,\w4 the images used to make up a #ghost's character are called surfaces.\w8\w8\s[blush] You'll see if you take a peek in our #shell folder.\w8\w8"
 		"\1\s[neutral_face]Surface may also refer to multiple images composited together into one pose,\w4 and all the animations contained associated with that pose.\w8\w8 It's somewhat of a flexible term."
+	}
+	elseif reference0 == "Ukadoc"
+	{
+		"\1\s[teach]Ukadoc is a very useful resource for #ghost developers.\w8\w8 It is the official documentation for #SSP,\w4 and has information on various standards,\w4 the file structure for #ghosts,\w4 #balloons,\w4 #plugins,\w4 etc.,\w4 and listings of all available #SakuraScript tags and #SHIORI events.\w8\w8\s[neutral_face] It is an invaluable tool if you intend to develop anything #ghost related.\w8\w8 You can find it \_a[https://ukagakadreamteam.github.io/ukadoc/]here\_a,\w4 or it is always available in the top tab of my right click menu.\w8\w8"
+		"\0\s[slight_smile]\i[21]The original version is in Japanese,\w4 but the #Ukagaka Dream Team has translated some of it into English!\w8\w8\s[blush]\i[22] If you're interested in that project,\w4 you should check out the \_a[https://github.com/ukagakadreamteam/ukadoc]repository on GitHub\_a!"
 	}
 	elseif reference0 == "Ukagaka Dream Team"
 	{

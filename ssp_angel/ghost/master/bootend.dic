@@ -67,6 +67,7 @@ OnGoodbye
 	"\0\s[0]\1\s[teach]See you another time,\w4 perhaps.\w8\w8\0\s[blush]\i[36]Take care!\w8\w8 We'll be ready any time you need us~!"
 	"\0\s[blush]\i[36]See you around,\w4 %(username)!\w8\w8 Take care!\w8\w8\1\s[teach]Goodbye."
 	"\1\s[10]It has been an interesting visit.\w8\w8 If you have need of our services in the future,\w4 you have but to ask.\w8\w8\0\s[blush]\i[26]Bye for now,\w4 %(username)~!"
+	"\0\s[pleading_face]\i[24]\i[36]Goodbyeeeeee I'll miss youuuuuuu~\w8\w8\n\n\1\s[rolling_eyes]Until next time,\w4 %(username)."
 	--
 	"\w8\w8\-"
 }
