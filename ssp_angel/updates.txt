@@ -2,12 +2,12 @@ charset,OSNative
 file,ghost/master/aitalk.dic9d3fa0f5cf14630b93ee73faa2f8424esize=120217date=2023-03-15T21:30:12
 file,ghost/master/bootend.dic248a850be228d1c3913c3877c3d33554size=10874date=2023-03-15T23:45:08
 file,ghost/master/descript.txt0d07ba356981c446b2f16d1ec27c4f10size=303date=2023-03-15T22:42:36
-file,ghost/master/etc.dica2532a00976b1eecdd394b1401584fd6size=21579date=2023-03-15T23:49:54
+file,ghost/master/etc.dic4cbf21befc8953051ace1de87f3bb17asize=21580date=2023-03-16T00:28:16
 file,ghost/master/icon.ico2b2a65d072786a2a70b97f0d30d5e7b7size=10462date=2023-01-16T22:39:30
-file,ghost/master/kero_menu.dicc481adc0ffeecef44116ee95289c1210size=38890date=2023-03-15T23:54:09
+file,ghost/master/kero_menu.dic89f7145fd82fea3db5bc774bb75b796csize=38952date=2023-03-16T00:31:58
 file,ghost/master/main.dicee8db99005200b248f95b820b30934a3size=7112date=2023-03-15T23:24:48
 file,ghost/master/mouse.dic8090b6bc35019ffd065fc349cea11482size=4396date=2023-03-15T15:29:09
-file,ghost/master/sakura_menu.dicd0e305893a5df20b12c1d26ab7748bd0size=67405date=2023-03-16T00:00:33
+file,ghost/master/sakura_menu.dicf04bcd9666cf288d29657595fce2f034size=67517date=2023-03-16T00:20:34
 file,ghost/master/utility.dice25475c298f709307fe798b285a6405dsize=11121date=2023-03-15T17:47:02
 file,ghost/master/word.dic1aa80136cb9c13373a1def412a4be264size=31600date=2023-03-15T20:32:09
 file,ghost/master/yaya.dll56e3af56c88e696cea1f39d53b239cefsize=880640date=2022-09-10T19:18:59

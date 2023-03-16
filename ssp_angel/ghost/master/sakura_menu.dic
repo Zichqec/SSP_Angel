@@ -394,9 +394,11 @@ OnFunctionMenu : all
 	"\![*]\q[Check for emails,OnEmailMenu]\n"
 	"\![*]\q[Check for updates,script:""\![updatebymyself]""]\n\n"
 	
+	_cbr = "  "; if SHIORI3FW.BalloonName == "Cotton Candy"; _cbr = "\n"
+	
 	"Open the...\n"
-	"\![*]\__q[OnOpen,ghostexplorer]Ghost Explorer\__q  \![*]\__q[OnOpen,configurationdialog]SSP Preferences\__q  \![*]\__q[OnOpen,calendar]Calendar\__q\n"
-	"\![*]\__q[OnOpen,rateofusegraph]Rate of Use Graph\__q  \![*]\__q[OnOpen,help]SSP Help (J)\__q  \![*]\__q[OnChangeLog,yes,menu]Changelog\__q"
+	"\![*]\__q[OnOpen,ghostexplorer]Ghost Explorer\__q  \![*]\__q[OnOpen,configurationdialog]SSP Preferences\__q%(_cbr)\![*]\__q[OnOpen,calendar]Calendar\__q %(br)"
+	"\![*]\__q[OnOpen,rateofusegraph]Rate of Use Graph\__q%(_cbr)\![*]\__q[OnOpen,help]SSP Help (J)\__q  \![*]\__q[OnChangeLog,yes,menu]Changelog\__q"
 	"\n\n"
 	"\![*]\__q[OnSakuraMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
 }
@@ -1027,6 +1029,8 @@ OnBalloonMenu.Install
 
 OnBalloonMenu.Download
 {
+	"\1\b[0]\0\b[0]"
+	--
 	if reference0 == "Cotton Candy"; "\![execute,install,url,https://github.com/Zichqec/SSP_Angel_Balloons/releases/latest/download/cotton_candy.nar]"
 	else; "\![execute,install,url,https://github.com/Zichqec/SSP_Angel_Balloons/releases/latest/download/angelbox_biblically_accurate.nar]" 
 }
