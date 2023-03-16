@@ -1,2 +1,4 @@
 # SSP_Angel
- English bootstrap ghost/guide to SSP
+ English guide ghost for SSP
+
+readme WIP
