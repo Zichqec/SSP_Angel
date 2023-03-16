@@ -109,3 +109,87 @@ PetPilotTail : nonoverlap
 	"\1\s[unamused]... No,\w4 do not touch my tail."
 	"\1\s[unamused]... No,\w4 thank you."
 }
+
+OnMouseGesture
+{
+	if ARRAYSIZE(MouseGesture) > 1 && reference5 == "end"
+	{
+		if reference0 == 0; OnWaveAngel(ARRAYSIZE(MouseGesture))
+		else; OnWavePilot(ARRAYSIZE(MouseGesture))
+		MouseGesture = IARRAY
+	}
+	else
+	{
+		if reference5 == "left" || reference5 == "right"; MouseGesture ,= reference5
+		else; MouseGesture = IARRAY
+	}
+}
+
+OnWaveAngel
+{
+	"\1\b[0]\s[10]\0\b[0]"
+	--
+	if _argv[0] >= 10
+	{
+		"\s[smiling_face_with_3_hearts]"
+		"\s[star_struck]"
+		--
+		"\i[26]\i[36]"
+		--
+		_hi = ""
+		for _i = 0; _i < _argv[0]; _i++ {_hi += "hi"}
+		"%(Capitalize(_hi))~!!"
+		"Hey hey hey!!\w8\w8 Hehe~"
+		"Heehee~!\w8\w8 Hi %(username)!!"
+		"What are we so excited about~!!\w8\w8\1\s[unamused]You don't know what you're excited about,\w4 but you're excited anyways...?"
+		"Wheeee hi %(username)~!\w8\w8\1\s[face_exhaling]\w8\w8\w8\i[5]Better you than me..."
+		"What's up what's up!!"
+	}
+	else
+	{
+		"\s[blush]"
+		--
+		"\i[26]"
+		"\i[36]"
+		--
+		"Hi %(username)~!"
+		"Hey hey,\w4 what's up!"
+		"\s[blush]\i[23]\i[36]Aw,\w4 hi~!"
+		"Hihihi~!"
+		"Hey~!\w8\w8\w8\s[smiling_face_with_3_hearts] See,\w4 Pilot,\w4 %(username) gets it.\w8\w8\1\s[unamused]Yes,\w4 I can see that."
+		"Heya!\w8\w8 How's it going?"
+		"Hi hi hi!\w8\w8\s[smiling_face_with_3_hearts]\i[23]\i[33] I'm being acknowledged~!"
+	}
+}
+
+OnWavePilot
+{
+	"\0\b[0]\s[blush]\1\b[0]\s[neutral_face]"
+	--
+	if _argv[0] >= 10
+	{
+		nonoverlap :/
+		{
+			"\s[unamused]Please stop waving your hand in my face."
+			"\s[expressionless]Knock it off,\w4 please."
+			"\s[expressionless]Must you do that right in my face?"
+			"\s[unamused]Do you need something?"
+			"\s[unamused]If you need something,\w4 access my menu."
+			"\s[rolling_eyes]Did Angel put you up to this?"
+			"\s[rolling_eyes]Angel is more fond of this sort of thing."
+		}
+	}
+	else
+	{
+		nonoverlap :/
+		{
+			"\s[teach]Greetings."
+			"Do you need assistance?"
+			"Hello."
+			"Yes,\w4 I am paying attention."
+			"Do you have need of my services?"
+			"May I be of assistance?"
+			"Is something the matter?"
+		}
+	}
+}

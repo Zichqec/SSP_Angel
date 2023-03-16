@@ -247,7 +247,7 @@ folderinstall
 
 calling_preferences
 {{CHAIN
-	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Options~\w8\w8 Come out,\w4 come out,\w4 wherever you are~\w8\w8\n\n\1\s[expressionless]%(username),\w4 please ignore her.\w8\w8 You have to open them through the right-click menu.\w8\w8\s[rolling_eyes] Or,\w4 Angel,\w4 you could use the #SakuraScript command.\w8\w8 Talking to them won't help.\w8\w8\n\n\0\s[pensive]\i[6]\i[24]I'm not going to be discouraged by the likes of you!"
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Options~\w8\w8 Come out,\w4 come out,\w4 wherever you are~\w8\w8\n\n\1\s[expressionless]%(username),\w4 please ignore her.\w8\w8 You have to open them through the right click menu.\w8\w8\s[rolling_eyes] Or,\w4 Angel,\w4 you could use the #SakuraScript command.\w8\w8 Talking to them won't help.\w8\w8\n\n\0\s[pensive]\i[6]\i[24]I'm not going to be discouraged by the likes of you!"
 	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[23]\i[33]Pspspspspspsps...\w8\w8\n\n\1\s[unamused]What is that sound supposed to be?\w8\w8\n\n\0\s[blush]\i[23]\i[33]Heeeere Preferences menu,\w4 pspspspsps...\w8\w8\n\n\1\s[expressionless]...\w8\w8 Of course.\w8\w8 How many times do I have to tell you that they are not alive?\w8\w8\n\n\0\s[pensive]Well,\w4 they're alive in my heart!\e:chain=end"
 }}CHAIN
 
@@ -425,7 +425,7 @@ OtherTalk : nonoverlap_pool
 	
 	"\1\b[0]\s[10]\0\b[0]\s[relieved]\i[21]\i[31]I think I can say that I have lived my life so far with no regrets.\w8\w8\n\n\1\s[rolling_eyes]What about that time you %(regrets)?\w8\w8\n\n\0\s[relieved]\i[24]...\w8\w8\s[sweat_smile]\i[6]\i[24]One regret."
 	
-	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]I feel like singing.\w8\w8\n\n\1\s[unamused]Please refrain.\w8\w8\n\n\0\s[blush]\i[21]\i[31]%(angelsongs)\w8\w8 %(angelsongs)\w8\w8\n\n\1\s[expressionless]Please,\w4 we are at work...\w8\w8\n\n\0\s[star_struck]\i[24]\i[31]%(REPLACE(TOUPPER(angelsongs),'\W','\w'))!!"
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]I feel like singing.\w8\w8\n\n\1\s[unamused]Please refrain.\w8\w8\n\n\0\s[blush]\i[21]\i[31]%(angelsongs)\w8\w8 %(angelsongs)\w8\w8\n\n\1\s[expressionless]Please,\w4 we are at work...\w8\w8\n\n\0\s[star_struck]\i[24]\i[31]%(REPLACE(TOUPPER(angelsongs),'\W','\w'))!!\e:chain=refrain"
 	
 	"\0\b[0]\s[0]\1\b[0]\s[face_with_raised_eyebrow]Hm,\w4 for some reason I get the feeling I should check on my personal effects.\w8\w8\n\n\0\s[astonished]Hey,\w4 I wasn't up to anything!\w8\w8\n\n\1\s[rolling_eyes]Suspicious...\w8\w8 I did not accuse you.\w8\w8\n\n\0\s[pensive]\i[6]\i[24]You implied it.\w8\w8\n\n\1\s[expressionless]Am I wrong,\w4 though?\w8\w8\n\n\0.\w8.\w8.\w8\w8\s[sweat_smile]\i[5]\i[24]\w8\w8\n\n\1Mmmhm."
 	
@@ -482,6 +482,11 @@ OtherTalk : nonoverlap_pool
 	
 	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]So!\w8\w8\n\n\1\s[k_thinking]So?\w8\w8\n\n\0\s[blush]\i[22]So today I was playing with a toy that generates a unique magic power for you!\w8\w8\n\n\1\s[k_thinking]What was your result?\w8\w8\n\n\0\s[blush]\i[21]I got the power to %(magicverb) %(magicobject)!\w8\w8\n\n\1\s[unamused]I must profess,\w4 I am extremely grateful that these powers are not real,\w4 because as unlikely as it may be I would not enjoy seeing the consequences of a situation where it came down to you making use of them.\w8\w8\n\n\0\s[astonished]W-what's that supposed to mean?"
 }
+
+refrain
+{{CHAIN
+	"\1\b[0]\s[expressionless]\0\b[0]\s[blush]\i[21]\i[31]%(REPLACE(TOUPPER(angelsongs),'\W','\w'))!!\w8\w8 %(REPLACE(TOUPPER(angelsongs),'\W','\w'))!!!\w8\w8\n\n\1\s[expressionless]PLEASE\w4 Angel,\w4 isn't that enough?\w8\w8\n\n\0\s[pleading_face]\i[24]But you said please refrain!\w8\w8\n\n\1.\w8.\w8.\w8\w8\w8\w8\s[unamused] I see my mistake.\w8\w8 My apologies.\w8\w8\s[rolling_eyes] You win this%(br)round...\w8\w8\n\n\0\s[star_struck]\i[22]Ooh,\w4 I'd love to sing in rounds!\w8\w8\s[star_struck]\i[21] Here,\w4 I'll start~!\w8\w8\n\n\1\s[unamused]No%(endash)\w8\0\s[smiling_face_with_3_hearts]\i[23]\i[31]%(angelsongs)\w8\w8\n\n\1\s[expressionless]\e:chain=end"
+}}CHAIN
 
 dyeing_wings
 {{CHAIN

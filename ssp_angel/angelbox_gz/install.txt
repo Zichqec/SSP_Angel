@@ -1,0 +1,4 @@
+charset,UTF-8
+type,balloon
+name,Angelbox
+directory,angelbox_gz

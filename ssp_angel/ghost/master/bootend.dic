@@ -10,10 +10,11 @@ OnInitialize
 	stroke = 0
 	if !ISVAR("SSP_Tips"); SSP_Tips = 1
 	if !ISVAR("MiscDialogue"); MiscDialogue = 1
-	lastTalk = ""
+	if reference0 != "reload"; lastTalk = ""
 	if !ISVAR("Balloon.Angel"); Balloon.Angel = ("1")
 	if !ISVAR("Balloon.Pilot"); Balloon.Pilot = ("2")
 	RecycleBin = (0,0)
+	MouseGesture = IARRAY
 }
 
 OnFirstBoot
@@ -30,6 +31,7 @@ OnFirstBoot
 	Balloon.Angel = ("1")
 	Balloon.Pilot = ("2")
 	RecycleBin = (0,0)
+	MouseGesture = IARRAY
 	
 	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[36]Hello there!\w8\w8 Good to meet you!\w8\w8\s[relieved]\i[21] My name's Angel,\w4 and this is Pilot.\w8\w8\s[blush]\i[22] We're here to get you started with SSP!\w8\w8\n\n\1\s[teach]Greetings.\w8\w8\n\n\0\s[neutral_face]%(raised_hand)\![open,configurationdialog,setup]To start off,\w4 you should fill out your user information at the bottom of the preferences here!\w8\w8 We'll use it to know how to refer to you.\w8\w8 There are other settings in here that you may want to change as well,\w4%(br)but we'll keep it simple for now.\w8\w8\n\n\1\s[neutral_face]You can double click on either of us to open our menus,\w4 or you can right click on Angel to open SSP's menu,\w4 which you can use to close us when you are done.\w8\w8 You can also right click on me,\w4 but my menu has fewer options than Angel's,\w4 since she is the main character.\w8\w8\n\n\0\s[pleading_face]\i[22]Aw,\w4 don't say it like that,\w4 you're important too!\w8\w8\n\n\1\s[rolling_eyes]Stay on topic,\w4 please.\w8\w8\s[neutral_face] We will talk from time to time on our own;\w8 if you need anything,\w4 just let us know through our menus.\w8\w8 We can offer you advice on SSP and ghosts,\w4 and we can also perform a few basic functions.\w8\w8\n\n\0\s[blush]\i[22]It's gonna be fun!"
 }
@@ -43,6 +45,13 @@ OnBoot
 	"\0\s[blush]\i[36]Hey hey,\w4 good to see you today!\w8\w8 What'd you need?\w8\w8\1If we may be of assistance, please let us know."
 	"\1\s[teach]Hello.\w8\w8\0\i[36]Hi hi,\w4 can we help you with something?"
 	"\1\s[teach]Greetings.\w8\w8\0\i[26]What's up?\w8\w8 Did you need something?"
+	"\0\s[smiling_face_with_3_hearts]\i[36]Hi hi hi hi!\w8\w8 Good to see you!!\w8\w8\1\s[teach]Hello."
+	"\0\s[smiling_face_with_3_hearts]\i[23]\i[36]Hello hello!\w8\w8 So glad to see you today~!\w8\w8\1\s[teach]Greetings,\w4 %(username).\w8\w8 May we be of assistance?"
+	"\0\s[blush]\i[36]Hey hey hey!\w8\w8 How's it going,\w4 %(username)?\w8\w8\1We are here to assist."
+	"\0\s[star_struck]\i[22]I am SO ready for today!\w8\w8\n\n\1\s[face_with_raised_eyebrow]What is special about today?\w8\w8\n\n\0\s[smiling_face_with_3_hearts]\i[22]I've got a new strategy for asking %(username) to give me snacks!\w8\w8\1\s[expressionless]Angel,\w4 how many times have we been over this..."
+	"\0\s[blush]\i[23]\i[33]Hey %(username)!\w8\w8 I'm gonna work so hard today,\w4 just you wait and see!\w8\w8\n\n\1\s[k_thinking]Turning over a new leaf...?\w8\w8\n\n\0\s[star_struck]\i[22]And then you'll HAVE to give me a raise!\w8\w8\n\n\1\s[expressionless]...\w8\w8 %(username) isn't in charge of our pay."
+	"\0\s[star_struck]\i[21]\i[31]We're here!!\w8\w8\n\n\1\s[unamused]Is there something notable about us turning up for our shift?\w8\w8\n\n\0\s[smiling_face_with_3_hearts]\i[24]Now %(username) gets to see us and bask in our presence!\w8\w8\1\s[expressionless]I don't think you entirely understand the etiquette here..."
+	"\1\s[unamused]\0\s[pleading_face]\i[24]Are we there yet?\w8\w8\n\n\1\s[unamused]Yes.\w8\w8 Yes,\w4 Angel,\w4 we have arrived.\w8\w8\n\n\0\s[astonished]Oh yeah,\w4 we have.\w8\w8\s[blush]\i[26]\i[33] Hi %(username)!\w8\w8 How's it going?\w8\w8\1\s[face_exhaling]"
 }
 
 //Default close
@@ -54,6 +63,12 @@ OnClose
 	"\0\s[astonished]Oh,\w4 is it time to go already?\w8\w8\n\n\1Yes,\w4 it seems so.\w8\w8\0\s[slight_smile]\i[21]Right,\w4 let's get going then!\w8\w8 See you,\w4 %(username)!"
 	"\1\s[10]Time to go.\w8\w8\n\n\0\s[astonished]Oh,\w4 really?\w8\w8\n\n\1Yep,\w4 let's get moving.\w8\w8\0\s[sweat_smile]Alright.\w8\w8 See you around,\w4 %(username)."
 	"\1\s[10]Off we go,\w4 then.\w8\w8\n\n\0\s[astonished]Oh,\w4 right,\w4 yeah.\w8\w8\n\n\1Farewell,\w4 %(username).\w8\w8\s[-1]\w8\0Oh,\w4 wait for me!\w8\w8\s[blush]\i[26] Bye,\w4 %(username)~!"
+	"\0\s[astonished]Oh,\w4 yeah,\w4 sure,\w4 we can go.\w8\w8\1\s[teach]Farewell."
+	"\0\s[astonished]Oh,\w4 time's up?\w8\w8 Alright,\w4 then.\w8\w8\s[blush]\i[36] See you!\w8\w8\1\s[neutral_face]Goodbye."
+	"\0\s[astonished]Ah,\w4 the time really flies huh?\w8\w8\s[blush]\i[26] See you later,\w4 then!"
+	"\0\s[astonished]Oh,\w4 alright,\w4 guess we'll pack up.\w8\w8\1\s[neutral_face]\i[6]Yes,\w4 let us be off.\w8\w8\s[teach] Farewell,\w4 %(username)."
+	"\1\s[neutral_face]Goodbye.\w8\w8\s[-1]\0\s[astonished]Oh,\w4 wait up!\w8\w8 Don't go so fast,\w4 I wasn't ready...!\w8\w8\s[blush]\i[26] Bye %(username)~!"
+	"\1\s[neutral_face]Very well.\w8\w8 Until next time,\w4 %(username).\w8\w8\0\s[astonished]Oh,\w4 is it that time already?\w8\w8 Gosh,\w4 I wasn't paying attention...\w8\w8\s[blush]\i[36] See you,\w4 %(username)~!"
 	--
 	"\w8\w8\-"
 }
@@ -67,7 +82,12 @@ OnGoodbye
 	"\0\s[0]\1\s[teach]See you another time,\w4 perhaps.\w8\w8\0\s[blush]\i[36]Take care!\w8\w8 We'll be ready any time you need us~!"
 	"\0\s[blush]\i[36]See you around,\w4 %(username)!\w8\w8 Take care!\w8\w8\1\s[teach]Goodbye."
 	"\1\s[10]It has been an interesting visit.\w8\w8 If you have need of our services in the future,\w4 you have but to ask.\w8\w8\0\s[blush]\i[26]Bye for now,\w4 %(username)~!"
-	"\0\s[pleading_face]\i[24]\i[36]Goodbyeeeeee I'll miss youuuuuuu~\w8\w8\n\n\1\s[rolling_eyes]Until next time,\w4 %(username)."
+	"\0\s[pleading_face]\i[24]\i[36]Goodbyeeeeee I'll miss youuuuuuu~\w8\w8\1\s[rolling_eyes]Until next time,\w4 %(username)."
+	"\0\s[pleading_face]Aw,\w4 does our shift have to be over?\w8\w8 I want to stay here with %(username).\w8\w8\n\n\1\s[unamused]Yes,\w4 we can't get into overtime.\w8\w8 Come on,\w4 let's go.\w8\w8\n\n\0\s[pensive]Aww...\w8\w8\s[pleading_face]\i[24]\i[36] Bye %(username)...!"
+	"\0\s[smiling_face_with_3_hearts]\i[23]\i[33]I had such a great time today!\w8\w8 We should do this again soon~!\w8\w8\1\s[neutral_face]Indeed.\w8\w8 Until next time,\w4 %(username)."
+	"\0\s[blush]\i[23]\i[33]Oh boy,\w4 I can't wait to get home and eat the suspicious mutant oranges I bought just for me yesterday evening~!\w8\w8\n\n\1\s[face_with_raised_eyebrow]The...\w8\w8 the \f[italic,1]what\f[italic,default] that you%(endash)\w8\w8\s[expressionless] You know what,\w4 no,\w4 nevermind.\w8\w8 Let's just leave it at that and go.\w8\w8\0\s[blush]\i[23]\i[36]Bye %(username)!"
+	"\0\s[blush]\i[23]\i[33]Cya,\w4 I'm off to redecorate~!\w8\w8\n\n\1\s[face_with_raised_eyebrow]Redecorate what,\w4 exactly?\w8\w8\n\n\0\s[relieved]\i[24]\i[31]You'll find out~\w8\w8\1\s[expressionless]Hmmmm..."
+	"\0\s[blush]I had fun today~!\w8\w8\i[36] See you next time,\w4 %(username)!\w8\w8\1\s[teach]Until next time."
 	--
 	"\w8\w8\-"
 }
@@ -77,9 +97,16 @@ OnCloseAll
 {
 	"\1\b[0]\s[10]\0\b[0]\s[0]"
 	--
-	"Alright,\w4 time to pack it in everyone!\w8\w8\s[blush] See you,\w4 %(username)!\w8\w8\1Farewell."
-	"Done for now?\w8\w8 See you another time,\w4 %(username)!\1Goodbye."
-	"Alright,\w4 time to close up,\w4 everyone!\w8\w8\s[blush] See you next time,\w4 %(username)!\w8\w8 We'll be around if you need us!\w8\w8\1Don't hesitate to call."
+	"\0\s[slight_smile]\i[31]Alright,\w4 time to pack it in everyone!\w8\w8\s[blush]\i[36] See you,\w4 %(username)!\w8\w8\1Farewell."
+	"Done for now?\w8\w8\s[blush]\i[36] See you another time,\w4 %(username)!\1Goodbye."
+	"\0\s[slight_smile]Alright,\w4 time to close up,\w4 everyone!\w8\w8\s[blush]\i[26] See you next time,\w4 %(username)!\w8\w8 We'll be around if you need us!\w8\w8\1Don't hesitate to call."
+	"\0\s[blush]\i[21]Time to shut it down!\w8\w8 Let's go,\w4 people~\w8\w8\1\s[teach]Until next time."
+	"\0\s[blush]\i[31]Let's get moving,\w4 folks!\w8\w8 Get this place cleaned up,\w4 stat!"
+	"\0\s[blush]\i[22]Alright folks,\w4 %(username) says to go,\w4 so let's go~!\w8\w8\1\s[teach]We will be here if you need us again,\w4 %(username)."
+	"\0\s[blush]\i[22]Alright everyone,\w4 let's move out!\w8\w8 Go go go don't be slow!\w8\w8\1\s[neutral_face]Take care,\w4 %(username)."
+	"\1\s[neutral_face]Looks like it's time to wrap up.\w8\w8\0\s[blush]\i[21]You heard it everyone,\w4 let's go~!\w8\w8\s[slight_smile]\i[36] Bye %(username)~!"
+	"\0\s[blush]\i[22]Time to go,\w4 let's get moving folks!\w8\w8 Quick quick,\w4 close up!\w8\w8\n\n\1\s[rolling_eyes]You don't need to rush them,\w4 you know.\w8\w8 It doesn't make it go any faster.\w8\w8\0\s[smiling_face_with_3_hearts]\i[36]See you next time,\w4 %(username)!"
+	"\0\s[blush]\i[22]Alright,\w4 let's go,\w4 folks!\w8\w8 Don't forget to take all your things when you leave!\w8\w8\1\s[rolling_eyes]Easy enough so long as none of them have been%(br)""misplaced""..."
 	--
 	"\w8\w8\-" //I don't think this is necessary in this event, but... can't hurt, right?
 }
