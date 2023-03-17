@@ -82,14 +82,14 @@ OnQuestions : all
 		"\1\s[unamused]What she means to say is that we are what is called%(br)#ukagaka,\w4  or #ghosts.\w8\w8\s[teach] Those are programs that you can run on your desktop,\w4 most often to display characters,\w4 or mascots,\w4 that you can interact with.\w8\w8\n\n"
 		"\0\s[star_struck]\i[22]Desktop friends!!\w8\w8\s[smiling_face_with_3_hearts]\i[22] It's desktop friends,\w4 basically.\w8\w8\n\n"
 		"\1\s[neutral_face]Yes,\w4 that is the shortest way of putting it.\w8\w8\s[teach] Not all%(br)#ghosts are friendly,\w4 though.\w8\w8 Some may be irritable,\w4 and some are purely functional without much personality to speak of.\w8\w8"
-		"\0\s[slight_smile]\i[21]It's true,\w4 #ghosts can do%(emdash)and be%(emdash)lots of things!\w8\w8\s[blush]Ask us about it!"
+		"\0\s[slight_smile]\i[21]It's true,\w4 #ghosts can do%(emdash)and be%(emdash)lots of things!\w8\w8\s[blush] Ask us about it!"
 	}
 	elseif reference0 == "GhostPurpose"
 	{
 		"\1\s[neutral_face]Strictly speaking,\w4 we're not all that useful and are primarily for entertainment.\w8\w8\n\n"
-		"\0\s[pensive]Aw,\w4 don't put it that way.\w8\w8\s[blush] #Ghosts can do lots of useful things!\w8\w8 For example,\w4 #SSP has built in functionality to read RSS feeds,\w4 check your email,\w4 fix your system time,\w4 and more!\w8\w8\s[star_struck]Some advanced #ghosts are also able to do things like check the weather,\w4 play music,\w4 take notes,\w4 remind you to take medication or drink water...\w8\w8\n\n"
+		"\0\s[pensive]Aw,\w4 don't put it that way.\w8\w8\s[blush] #Ghosts can do lots of useful things!\w8\w8 For example,\w4 #SSP has built in functionality to read RSS feeds,\w4 check your email,\w4 fix your system time,\w4 and more!\w8\w8\s[star_struck] Some advanced #ghosts are also able to do things like check the weather,\w4 play music,\w4 take notes,\w4 remind you to take medication or drink water...\w8\w8\n\n"
 		"\1\s[k_thinking]How useful we are to you depends on what your needs are and what #ghost you're using.\w8\w8\s[neutral_face] But my point still stands,\w4 the primary function of #ghosts is entertainment.\w8\w8\n\n"
-		"\0\s[blush]Yeah,\w4 and there's lots of #ghosts with fun content!\w8\w8 Most #ghosts will talk every couple of minutes,\w4 either to you,\w4 or to any other partner characters they may have.\w8\w8\s[slight_smile] Many will also have questions you can ask them in their menus,\w4 like we do.\w8\w8 Others will have whole story progressions you can follow,\w4 and stuff to discover and unlock.\w8\w8\s[star_struck]Some have entire minigames you can play!\w8\w8\s[relieved]It all varies per-ghost,\w4 depending on what their developer wanted them to be.\w8\w8\s[blush] The sky is the limit!\w8\w8"
+		"\0\s[blush]Yeah,\w4 and there's lots of #ghosts with fun content!\w8\w8 Most #ghosts will talk every couple of minutes,\w4 either to you,\w4 or to any other partner characters they may have.\w8\w8\s[slight_smile] Many will also have questions you can ask them in their menus,\w4 like we do.\w8\w8 Others will have whole story progressions you can follow,\w4 and stuff to discover and unlock.\w8\w8\s[star_struck] Some have entire minigames you can play!\w8\w8\s[relieved] It all varies per-ghost,\w4 depending on what their developer wanted them to be.\w8\w8\s[blush] The sky is the limit!\w8\w8"
 		"\1\s[teach]The limits of #SSP and the #ghost's chosen coding language are the limit."
 	}
 	elseif reference0 == "GetGhosts"
@@ -900,7 +900,7 @@ OnTalkrate
 		
 		"\0\s[worried]Oh,\w4 was I talking too much?\w8\w8\n\n\1\s[unamused]%(username) said to stop talking.\w8\w8 So,\w4 stop talking.\w8\w8\n\n\0\s[scream]Already!?\w8\w8 But we're in the menu!\w8\w8 Surely I can talk here!\w8\w8\1\s[rolling_eyes]..."
 	}
-	00
+	--
 	"\0\w8\w8\n\n\_q\![*]\__q[OnConfigMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
 }
 
@@ -913,7 +913,7 @@ OnOpenTalkAboutMenu
 
 OnTalkAboutBlurb
 {
-	"\1\s[neutral_face]\0\b[2]\s[slight_smile]What do you want us to talk about?\w8 We can keep it to just usage tips if you don't want to hear about us,\w4 or if you know all the tips and you don't want to hear them anymore we can just talk about ourselves.\w8 Or we can do a mix of both!"
+	"\1\s[neutral_face]\0\b[2]\s[slight_smile]What do you want us to talk about?\w8 We can keep it to just usage tips if you don't want to hear about us,\w4 or if you know all the tips and you don't want to hear them anymore,\w4 we can just talk about ourselves.\w8 Or we can do a mix of both!"
 }
 
 OnChangeTalkAbout : all

@@ -583,20 +583,28 @@ OnShellScaling
 	{
 		"\1\s[neutral_face]\0\s[blush]Back to normal size!\w8\w8\1At last."
 	}
-	elseif reference0 <= 33
+	elseif reference0 > reference1 //Getting bigger
 	{
-		"\1\s[k_thinking]\0\s[scream]Oh!\w8\w8 %(username) can you still see us?\w8\w8 We're so small!\w8\w8\1Hmmm."
+		if reference0 > 150
+		{
+			"\1\s[k_thinking]\0\s[scream]Oh my gosh,\w4 we're giants!!\w8\w8\n\n\1Hmmm.\w8\w8\0Hold still,\w4 don't step on anything by mistake!!"
+		}
+		elseif reference0 > 100
+		{
+			"\1\s[neutral_face]\0\s[astonished]Oh,\w4 you made us bigger?\w8\w8\s[sweat_smile] Were we too small?\w8\w8\1\s[k_thinking]If we look fuzzy to you,\w4 you can always turn off dithering in the SSP preferences.\w8\w8 But keep in mind that it looks best when you set our shell scaling to round numbers."
+		}
 	}
-	elseif reference0 <= 50
+	else //Getting smaller
 	{
-		"\1\s[neutral_face]\0\s[sweat_smile]Oh,\w4 were we in your way?\w8\w8\s[blush] It's so handy you can shrink us if you need to,\w4 though.\w8\w8\1Yes.\w8\w8 You can also make us partially transparent in the SSP preferences,\w4 if you'd like."
+		if reference0 < 50
+		{
+			"\1\s[k_thinking]\0\s[scream]Oh!\w8\w8 %(username) can you still see us?\w8\w8 We're so small!\w8\w8\1Hmmm."
+		}
+		elseif reference0 <= 100
+		{
+			"\1\s[neutral_face]\0\s[sweat_smile]Oh,\w4 were we in your way?\w8\w8\s[blush] It's so handy you can shrink us if you need to,\w4 though.\w8\w8\1Yes.\w8\w8 You can also make us partially transparent in the SSP preferences,\w4 if you'd like."
+		}
 	}
-	elseif reference0 <= 150
-	{
-		"\1\s[neutral_face]\0\s[astonished]Oh,\w4 you made us bigger?\w8\w8\s[sweat_smile] Were we too small?\w8\w8\1\s[k_thinking]If we look fuzzy to you,\w4 you can always turn off dithering in the SSP preferences.\w8\w8 But keep in mind that it looks best when you set our shell scaling to round numbers."
-	}
-	else
-	{
-		"\1\s[k_thinking]\0\s[scream]Oh my gosh,\w4 we're giants!!\w8\w8\n\n\1Hmmm.\w8\w8\0Hold still,\w4 don't step on anything by mistake!!"
-	}
+	
+	
 }

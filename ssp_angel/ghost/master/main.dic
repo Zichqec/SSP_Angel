@@ -1,9 +1,3 @@
-OnMouseDoubleClick
-{
-	if reference3 == 0; OnSakuraMenu
-	elseif reference3 == 1; OnKeroMenu
-}
-
 OnTranslate
 {
 	_talk = reference0
@@ -51,6 +45,8 @@ OnTranslate
 		}
 	}
 	
+	_talk = REPLACE(_talk,"#Ayakamtka","\_a[https://github.com/Ayakamtka]Ayakamtka\_a")
+	_talk = REPLACE(_talk,"#GallaTheGalla","\_a[https://gallathegalla.github.io/gtg-ghosts/]GallaTheGalla\_a")
 	_talk = REPLACE(_talk,"#Yuyudev","\_a[https://twitter.com/yuyudev]Yuyudev\_a")
 	_talk = REPLACE(_talk,"#Zichqec","\_a[https://zichqec.github.io/s-the-skeleton/]Zichqec\_a")
 	

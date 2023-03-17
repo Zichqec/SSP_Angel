@@ -125,6 +125,8 @@ OnGhostChanging
 	else
 	{
 		"\1\b[0]\s[10]\0\b[0]\s[0]Alright,\w4 we're off!\w8\w8\s[blush]\i[21] Take it away,\w4 %(reference0)~!\w8\w8\1Later."
+		--
+		"\w8\w8"
 	}
 }
 

@@ -1,3 +1,29 @@
+OnMouseDoubleClick
+{
+	if reference3 == 0
+	{
+		if reference4 == "halo"; ClickAngelHalo
+		else; OnSakuraMenu
+	}
+	elseif reference3 == 1
+	{
+		if reference4 == "halo"; ClickPilotHalo
+		else; OnKeroMenu
+	}
+}
+
+ClickAngelHalo
+{
+	"\0\b[0]\1\b[0]\s[neutral_face]"
+	--
+	"\0\s[blush]My halo!\w8\w8 Do you like it?\w8\w8\s[relieved] They only give you one if you graduate,\w4 it's sort of like a degree,\w8\s[star_struck] but way cooler."
+}
+
+ClickPilotHalo
+{
+	"\0\s[0]\1\s[teach]My halo,\w4 a symbol of the knowledge and skill I gained through my training.\w8\w8\s[neutral_face] Please do not touch it."
+}
+
 OnMouseMove
 {
 	if reference3 == "0"
@@ -9,7 +35,6 @@ OnMouseMove
 			if stroke % 40 == 0
 			{
 				if reference4 == "wings"; PetAngelWings
-				elseif reference4 == "halo"; PetAngelHalo
 				elseif reference4 == "head"; PetAngelHead
 			}
 		}
@@ -23,7 +48,6 @@ OnMouseMove
 			if stroke % 40 == 0
 			{
 				if reference4 == "wings"; PetPilotWings
-				elseif reference4 == "halo"; PetPilotHalo
 				elseif reference4 == "head"; PetPilotHead
 				elseif reference4 == "tail"; PetPilotTail
 			}
@@ -41,13 +65,6 @@ PetAngelWings
 	"\0\b[0]\1\b[0]\s[neutral_face]"
 	--
 	"\0\s[sweat_smile]Oh,\w4 my wings?\w8\w8\s[blush]\i[5] They're not just for looks,\w4 they're functional!\w8\w8\s[sweat_smile] So uh,\w4 careful with them,\w4 please."
-}
-
-PetAngelHalo
-{
-	"\0\b[0]\1\b[0]\s[neutral_face]"
-	--
-	"\0\s[blush]My halo!\w8\w8 Do you like it?\w8\w8\s[relieved] They only give you one if you graduate,\w4 it's sort of like a degree,\w8\s[star_struck] but way cooler."
 }
 
 PetAngelHead
@@ -80,11 +97,6 @@ PetPilotWings : nonoverlap
 	--
 	"\0\s[sweat_smile]\1\s[neutral_face]Please do not touch my wings,\w4 they are sensitive."
 	"\0\s[sweat_smile]\1\s[teach]My wings are functional,\w4 please do not touch them as you may disturb their function."
-}
-
-PetPilotHalo
-{
-	"\0\s[0]\1\s[teach]My halo,\w4 a symbol of the knowledge and skill I gained through my training.\w8\w8\s[neutral_face] Please do not touch it."
 }
 
 PetPilotHead : nonoverlap
@@ -141,7 +153,7 @@ OnWaveAngel
 		"%(Capitalize(_hi))~!!"
 		"Hey hey hey!!\w8\w8 Hehe~"
 		"Heehee~!\w8\w8 Hi %(username)!!"
-		"What are we so excited about~!!\w8\w8\1\s[unamused]You don't know what you're excited about,\w4 but you're excited anyways...?"
+		"What are we so excited about~!!\w8\w8\1\s[unamused]You don't know what you're excited about,\w4 but you're%(br)excited anyways...?"
 		"Wheeee hi %(username)~!\w8\w8\1\s[face_exhaling]\w8\w8\w8\i[5]Better you than me..."
 		"What's up what's up!!"
 	}
@@ -190,6 +202,8 @@ OnWavePilot
 			"Do you have need of my services?"
 			"May I be of assistance?"
 			"Is something the matter?"
+			"Do you require my assistance?"
+			"Is there something I may do for you,\w4 %(username)?"
 		}
 	}
 }

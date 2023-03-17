@@ -306,11 +306,12 @@ OnGlossaryWord : all
 		"\0\s[s_thinking]...\w8\w8 Shouldn't it be YAAYA,\w4 then?\w8\w8\n\n"
 		"\1\s[rolling_eyes]It can be used as a general purpose language for things outside of #ghost coding.\w8\w8 It can also be used to make #SAORI,\w4 #MAKOTO,\w4 and #Plugins.\w8\w8\n\n"
 		"\0\s[s_thinking]YA-AYA?\w8\w8 AYA-YA?\w8\w8\n\n"
-		"\1\s[unamused]It is open source,\w4 and you can find the source code on \_a[https://github.com/YAYA-shiori]GitHub\_a.\w8\w8 You can also read more about it on the%(br)\_a[https://emily.shillest.net/ayaya/index.php]AYAYA wiki\_a.\w8\w8 Additionally,\w4 there is an English guide called \_a[https://zichqec.github.io/YAYA_Fundamentals/]YAYA Fundamentals\_a,\w4 which teaches how to code in YAYA starting with the very basics.\w8\w8\n\n"
+		"\1\s[expressionless]It is open source,\w4 and you can find the source code on \_a[https://github.com/YAYA-shiori]GitHub\_a.\w8\w8 You can also read more about it on the%(br)\_a[https://emily.shillest.net/ayaya/index.php]AYAYA wiki\_a.\w8\w8 Additionally,\w4 there is an English guide called \_a[https://zichqec.github.io/YAYA_Fundamentals/]YAYA Fundamentals\_a,\w4 which teaches how to code in YAYA starting with the very basics.\w8\w8\n\n"
 		"\0\s[astonished]AYAYA!\w8\w8 What does that one mean?\w8\w8\n\n"
-		"\1\s[expressionless]It's probably a combination of #AYA and YAYA.\w8\w8\n\n"
-		"\0\s[s_thinking]Wait,\w4 but wouldn't that be AYAYAYA?\w8\w8"
-		"\1\s[rolling_eyes]..."
+		"\1\s[unamused]It means #AYA Shop.\w8\w8\n\n"
+		"\0\s[sweat_smile]Oh.\w8\w8 I thought maybe it was a combination of #AYA and YAYA.\w8\w8\n\n"
+		"\1\s[rolling_eyes]Wouldn't that be AYAYAYA?\w8\w8"
+		"\0\s[scream]Ah,\w4 you're right!!"
 	}
 	
 	_label = "Back"
@@ -463,27 +464,27 @@ OnCredits : all
 	"\f[align,center]#Yuyudev\n\n"
 	
 	"\f[align,center]\f[bold,1]Writing\f[bold,default]\n"
-	"\f[align,center]\_a[https://github.com/Ayakamtka]Ayakamtka\_a\n"
-	"\f[align,center]\_a[https://gallathegalla.github.io/gtg-ghosts/]GallaTheGalla\_a\n"
+	"\f[align,center]#Ayakamtka\n"
+	"\f[align,center]#GallaTheGalla\n"
 	"\f[align,center]#Zichqec\n\n"
 	
 	"\f[align,center]\f[bold,1]Programming\f[bold,default]\n"
 	"\f[align,center]#Zichqec\n\n"
 	
 	"\f[align,center]\f[bold,1]Angelbox Balloon\f[bold,default]\n"
-	"\f[align,center]\_a[https://gallathegalla.github.io/gtg-ghosts/]GallaTheGalla\_a\n"
+	"\f[align,center]#GallaTheGalla\n"
 	"\f[align,center]#Zichqec\n\n"
 	
 	"\f[align,center]\f[bold,1]Cotton Candy Balloon\f[bold,default]\n"
-	"\f[align,center]\_a[https://gallathegalla.github.io/gtg-ghosts/]GallaTheGalla\_a\n"
-	"\f[align,center]#Yuyudev\n\n"
+	"\f[align,center]#GallaTheGalla\n"
+	"\f[align,center]#Yuyudev\n\n[half]"
 	"\f[align,center]\![*]\q[Back,OnKeroMenu]  \![*]\q[Close,]"
 	"\_q\0\s[slight_smile]\i[24]Look at all the cool folks who helped to make us!\w8\w8\s[blush]\i[22] We wouldn't be here without every single one of them.\w8\w8\n\n\s[smiling_face_with_3_hearts]\i[31]And our thanks go to you,\w4 too.\w8\w8 Users like you keep our developers devving!\w8\w8 I'm sure they'd love to hear your feedback,\w4 if you have any~\w8\w8\w8\n\n\s[slight_smile]\i[24]If you'd like to see credits for #SSP itself,\w4 you can right click on me,\w4 go to the Information tab,\w4 and click on ""About SSP..."".\w8\w8 The information is listed at the bottom!"
 }
 
 OnThankYou : nonoverlap
 {
-	"\0\b[0]\s[0]\1\b[0]\s[flushed]...\w8\w8\n\n\0\s[smiling_face_with_3_hearts]Aww!\w8\w8 %(username),\w4 you got him flustered!\w8\w8\n\n\1\s[teach]Ahem.\w8\w8 It's all part of the job.\w8\w8\0\s[blush]Hehe."
+	"\0\b[0]\s[0]\1\b[0]\s[flushed]...\w8\w8\n\n\0\s[smiling_face_with_3_hearts]\i[22]Aww!\w8\w8 %(username),\w4 you got him flustered!\w8\w8\n\n\1\s[teach]Ahem.\w8\w8 It's all part of the job.\w8\w8\0\s[blush]\i[23]Hehe~"
 }
 
 OnCancelKero : nonoverlap
