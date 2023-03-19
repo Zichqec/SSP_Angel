@@ -5,7 +5,7 @@ OnAiTalk
 	
 	if CHAIN.IDName != ""
 	{
-		lastTalk = ChainTalk
+		LastTalk = ChainTalk
 	}
 	else
 	{
@@ -14,14 +14,14 @@ OnAiTalk
 			_draw = ANY(aitalkdraw)
 			aitalkdraw[LSO] = IARRAY
 			
-			if _draw == "tip"; lastTalk = TipTalk
-			else; lastTalk = OtherTalk
+			if _draw == "tip"; LastTalk = TipTalk
+			else; LastTalk = OtherTalk
 		}
-		elseif SSP_Tips; lastTalk = TipTalk
-		else; lastTalk = OtherTalk
+		elseif SSP_Tips; LastTalk = TipTalk
+		else; LastTalk = OtherTalk
 	}
 	
-	lastTalk
+	LastTalk
 }
 
 MakeAitalkDraw
@@ -33,7 +33,7 @@ MakeAitalkDraw
 	_drawmax = 4
 	
 	for _i = 0; _i < _drawmax; _i++
-	{
+	{ 
 		if _i < _drawnum; aitalkdraw ,= "tip"
 		else; aitalkdraw ,= "other"
 	}
@@ -306,7 +306,7 @@ OtherTalk : nonoverlap_pool
 	
 	"\1\b[0]\s[10]\0\b[0]\s[worried]Pilot,\w4 are you sad?\w8\w8\n\n\1\s[neutral_face]No.\w8\w8\n\n\0\s[sweat_smile]Oh.\w8\w8\w8\i[32] Well,\w4 there goes my whole speech...\w8\w8\n\n\1\s[face_with_raised_eyebrow]Hmm...\w8\w8\w8\w8\w8 Angel.\w8\w8\n\n\0\s[astonished]Yeah?\w8\w8\n\n\1\s[k_thinking]What is it \f[italic,1]you\f[italic,default] are sad about?\w8\w8\n\n\0\s[astonished]\i[20]Huh?\w8\w8 How'd you know?\w8\w8\n\n\1\s[unamused]Don't worry about it,\w4 just tell me what is bothering you.\w8\w8\n\n\0\s[pensive]...\w8\w8\w8\w8 Well,\w4 you know the stickers I have on the back of my phone?\w8\w8\w8\s[sob] My favorite one peeled off last night.\w8\w8\n\n\1\s[neutral_face]I see.\w8\w8 Have you considered finding a new sticker to replace it?\w8\w8\n\n\0\s[pleading_face]\i[24]No,\w4 it's too soon.\w8\w8\n\n\1\s[neutral_face]Very well.\w8\w8 I'll notify you if I happen across anything that seems to suit your interests.\w8\w8\n\n\0\s[pleading_face]\i[22]You're the best,\w4 Pilot."
 	
-	"\0\b[0]\s[0]\1\b[0]\s[expressionless]I swear,\w4 I find bugs in everything I touch...\w8\w8\n\n\0\s[astonished]Oh my god!\w8\w8 That's horrifying!\w8\w8\n\n\1\s[face_with_raised_eyebrow]Eh?\w8\w8 Usually it's only a minor inconvenience.\w8\w8\n\n\0\s[scream]It's like Midas's touch,\w4 but way way worse!!\w8\w8 Don't touch me don't touch me don't touch me%(endash)\w8\w8\n\n\1\s[expressionless]Ah.\w8\w8 Software bugs,\w4 Angel.\w8\w8 I find glitches and oversights in programs that I run,\w4 rather frequently.\w8\w8\0\s[sweat_smile]Oh.\w8\w8\w8 Well,\w4 uh...\w8\w8\i[5] Let me know if you start feeling any,\w4 like...\w8\w8\i[22] Creepy crawly sensations,\w4 alright?\w8\w8 Can't be too careful...\w8\w8\n\n\1\s[face_exhaling]"
+	"\0\b[0]\s[0]\1\b[0]\s[expressionless]I swear,\w4 I find bugs in everything I touch...\w8\w8\n\n\0\s[astonished]Oh my gosh!\w8\w8 That's horrifying!\w8\w8\n\n\1\s[face_with_raised_eyebrow]Eh?\w8\w8 Usually it's only a minor inconvenience.\w8\w8\n\n\0\s[scream]It's like Midas's touch,\w4 but way way worse!!\w8\w8 Don't touch me don't touch me don't touch me%(endash)\w8\w8\n\n\1\s[expressionless]Ah.\w8\w8 Software bugs,\w4 Angel.\w8\w8 I find glitches and oversights in programs that I run,\w4 rather frequently.\w8\w8\0\s[sweat_smile]Oh.\w8\w8\w8 Well,\w4 uh...\w8\w8\i[5] Let me know if you start feeling any,\w4 like...\w8\w8\i[22] Creepy crawly sensations,\w4 alright?\w8\w8 Can't be too careful...\w8\w8\n\n\1\s[face_exhaling]"
 	
 	"\1\b[0]\s[10]\0\b[0]\s[confounded]Ew,\w4 ladybugs.\w8\w8\n\n\1\s[k_thinking]Is there a ladybug nearby?\w8\w8\n\n\0No,\w4 I was just thinking about them.\w8\w8\n\n\1\s[face_with_raised_eyebrow]Have you considered you might have a more pleasant time if you did not dwell on things which you are repulsed by?\w8\w8\n\n\0\i[24]Yeah but then it just gets worse and I'll think about them all night.\w8\w8\n\n\1\s[k_thinking]I see...\w8\w8\w8\w8\s[neutral_face] My condolences."
 	

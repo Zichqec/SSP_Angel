@@ -77,10 +77,10 @@ PetAngelHead
 	--
 	nonoverlap :/
 	{
-		"\0\s[smiling_face_with_3_hearts]Heehee,\w4 this gig was totally worth it~!"
-		"\0\s[smiling_face_with_3_hearts]All of my training was worth it for this moment."
-		"\0\s[smiling_face_with_3_hearts]Yessss keep doing that."
-		"\0\s[smiling_face_with_3_hearts]Am I doing a good job?\w8\w8 I must be doing a good job~!"
+		"\0\s[smiling_face_with_3_hearts]\i[24]\i[35]Heehee,\w4 this gig was totally worth it~!"
+		"\0\s[smiling_face_with_3_hearts]\i[22]All of my training was worth it for this moment."
+		"\0\s[smiling_face_with_3_hearts]\i[24]Yessss keep doing that."
+		"\0\s[smiling_face_with_3_hearts]\i[23]\i[33]Am I doing a good job?\w8\w8 I must be doing a good job~!"
 		"\0\s[relieved]Oh yeah,\w4 it's all coming together now.\w8\w8\n\n\1\s[unamused]This was your plan all along?\w8\w8\0\s[star_struck]Yup!\w8\w8\1\s[face_exhaling]"
 		"\0\s[star_struck]Wow,\w4 they were right,\w4 this job has great benefits!\w8\w8\1\s[rolling_eyes]I'm pretty sure when they said benefits,\w4 they meant the dental..."
 		"\0\s[blush]\i[5]\i[22]My hair's soft,\w4 right?\w8\w8 I use special fancy shampoo%(br)that's supposed to make it super soft~\w8\w8\n\n\1\s[unamused]Why,\w4 to entice people to pet you?\w8\w8\n\n\0\s[astonished]Yeah,\w4 how'd you know?\w8\w8\1\s[expressionless]Call it an educated guess."
@@ -88,6 +88,11 @@ PetAngelHead
 		"\0\s[blush]\i[5]\i[33]Gosh,\w4 I'm glad we ended up working for %(username),\w4 %(username) knows what's up.\w8\w8\1\s[rolling_eyes]%(username) doesn't seem to mind that this isn't in your job description."
 		"\0\s[star_struck]\i[22]Wow,\w4 you're good at this %(username)!\w8\w8 Can I hire you to do this like,\w4 all the time?\w8\w8\1\s[expressionless] We work for %(username),\w4 not the other way around..."
 		"\0\s[relieved]\i[22]Yes yes yes.\w8\w8 Keep doing this."
+		"\0\s[blush]\i[22]Wow,\w4 I could do this all day~\w8\w8\1\s[rolling_eyes]If only you were talking about your actual job..."
+		"\0\s[blush]\i[22]Ahhh,\w4 this is the life~"
+		"\0\s[blush]\i[22]A little more to the left..."
+		"\0\s[relieved]\i[22]Ooooh yeah,\w4 that's the spot..."
+		"\0\s[relieved]\i[24]Mhm,\w4 mhm,\w4 mhm..."
 	}
 }
 
@@ -97,6 +102,7 @@ PetPilotWings : nonoverlap
 	--
 	"\0\s[sweat_smile]\1\s[neutral_face]Please do not touch my wings,\w4 they are sensitive."
 	"\0\s[sweat_smile]\1\s[teach]My wings are functional,\w4 please do not touch them as you may disturb their function."
+	"\0\s[sweat_smile]\1\s[teach]I do not find this contact pleasant,\w4 please do not touch me."
 }
 
 PetPilotHead : nonoverlap
@@ -108,6 +114,7 @@ PetPilotHead : nonoverlap
 	"\0\s[sweat_smile]\1\s[neutral_face]Please do not touch me.\w8\w8\0%(raised_hand)He's not a fan of that,\w4 %(username).\w8\w8\s[blush]\i[22] But I am,\w4 you can pet me if you like~"
 	"\0\s[sweat_smile]\1\s[neutral_face]No touching,\w4 please.\w8\w8\0Yeah,\w4 he's not fond of that.\w8\w8\s[slight_smile] You should try asking him about some of the stuff he knows instead,\w4 he likes talking about these things!\w8\w8\1\s[rolling_eyes]\0\s[blush]\i[33] Even if he won't admit it."
 	"\0\s[sweat_smile]\1\s[neutral_face]Please do not touch me,\w4 I am not a fan."
+	"\0\s[sweat_smile]\1\s[neutral_face]I am not comfortable with this kind of physical interaction."
 }
 
 PetPilotTail : nonoverlap
@@ -156,6 +163,7 @@ OnWaveAngel
 		"What are we so excited about~!!\w8\w8\1\s[unamused]You don't know what you're excited about,\w4 but you're%(br)excited anyways...?"
 		"Wheeee hi %(username)~!\w8\w8\1\s[face_exhaling]\w8\w8\w8\i[5]Better you than me..."
 		"What's up what's up!!"
+		"Hello!!\w8\w8 Waving!!\w8\w8 Hi %(username)!!"
 	}
 	else
 	{
@@ -171,6 +179,8 @@ OnWaveAngel
 		"Hey~!\w8\w8\w8\s[smiling_face_with_3_hearts] See,\w4 Pilot,\w4 %(username) gets it.\w8\w8\1\s[unamused]Yes,\w4 I can see that."
 		"Heya!\w8\w8 How's it going?"
 		"Hi hi hi!\w8\w8\s[smiling_face_with_3_hearts]\i[23]\i[33] I'm being acknowledged~!"
+		"Hi hi!\w8\w8 Did you need something?\w8\w8 No?"
+		"Hello!"
 	}
 }
 
@@ -189,6 +199,8 @@ OnWavePilot
 			"\s[unamused]If you need something,\w4 access my menu."
 			"\s[rolling_eyes]Did Angel put you up to this?"
 			"\s[rolling_eyes]Angel is more fond of this sort of thing."
+			"\s[expressionless]If I close my eyes,\w4 perhaps this will go away..."
+			"\s[expressionless]Don't feed into it..."
 		}
 	}
 	else
@@ -204,6 +216,43 @@ OnWavePilot
 			"Is something the matter?"
 			"Do you require my assistance?"
 			"Is there something I may do for you,\w4 %(username)?"
+			"Hello.\w8\w8 I am glad you've learned how to gesture."
+		}
+	}
+}
+
+//I mean, you *usually* have to move Needle with your mouse for this to happen, so...
+OnNeedlePoke
+{
+	if reference0 == 0 //Sakura
+	{
+		"\0\b[0]"
+		--
+		nonoverlap :/
+		{
+			"\s[scream]Ouchie!!"
+			"\s[scream]Hey!!"
+			"\s[scream]Eek!!"
+			"\s[scream]Hey,\w4 that's not fair!!"
+			"\s[scream]Not the needle!!"
+			"\s[scream]I'm being needled!!"
+			"\s[scream]\i[36]Help,\w4 it got me!!"
+			"\s[scream]\i[26]\i[36]Hey!!\w8\w8 Ow!!"
+		}
+	}
+	elseif reference0 == 1 //Kero
+	{
+		"\1\b[0]"
+		--
+		nonoverlap :/
+		{
+			"\s[expressionless]Must you?"
+			"\s[teach]This is a good example of ways that ghosts may interact when overlapping.\w8\w8\s[unamused] That being said,\w4 cut it out."
+			"\s[unamused]Nag nag yourself."
+			"\s[rolling_eyes]Can I help you?"
+			"\s[expressionless]%(username),\w4 if you would..."
+			"\s[unamused]Cut it out,\w4 will you?"
+			"\s[unamued]Enough of this."
 		}
 	}
 }

@@ -1,22 +1,7 @@
+//This file is a mess... don't look at it. or do, idk. The rest of them I kind of tried to be tidy, but this is my mess file.
 OnTranslate
 {
 	_talk = reference0
-	
-	// if debug != 1
-	// {
-		// _sakura_surfaces = ("slight_smile","blush","worried","pensive","relieved","star_struck","smiling_face_with_3_hearts","s_thinking","astonished","scream","sweat_smile")
-		// _kero_surfaces = ("neutral_face","unamused","rolling_eyes","k_thinking","face_with_raised_eyebrow","face_exhaling","flushed","teach","expressionless")
-		
-		// foreach _sakura_surfaces; _surface
-		// {
-			// _talk = REPLACE(_talk,"\s[" + _surface + "]","\s[0]")
-		// }
-		
-		// foreach _kero_surfaces; _surface
-		// {
-			// _talk = REPLACE(_talk,"\s[" + _surface + "]","\s[10]")
-		// }
-	// }
 	
 	_anchor = "anchor"
 	if "GLOSSARY_DEFINITION" _in_ _talk; _anchor = ""
@@ -106,16 +91,15 @@ OnAnchorSelect
 	if "http://" _in_ reference0 || "https://" _in_ reference0; "\j[%(reference0)]"
 }
 
-
-
-
-
 On_configuredbiffname
 {
 	EmailAddressList = reference
 }
 
-
+OnSurfaceRestore
+{
+	"\1\s[neutral_face]\0\s[slight_smile]"
+}
 
 OnHourTimeSignal : nonoverlap
 {
@@ -138,60 +122,11 @@ OnHourTimeSignal : nonoverlap
 	}
 }
 
-
-
-
-
-
-OnNeedlePoke
-{
-	if reference0 == 0 //Sakura
-	{
-		"\0\b[0]"
-		--
-		nonoverlap :/
-		{
-			"\s[scream]Ouchie!!"
-			"\s[scream]Hey!!"
-			"\s[scream]Eek!!"
-			"\s[scream]Hey,\w4 that's not fair!!"
-			"\s[scream]Not the needle!!"
-			"\s[scream]I'm being needled!!"
-			"\s[scream]\i[36]Help,\w4 it got me!!"
-		}
-	}
-	elseif reference0 == 1 //Kero
-	{
-		"\1\b[0]"
-		--
-		nonoverlap :/
-		{
-			"\s[expressionless]Must you?"
-			"\s[teach]This is a good example of ways that ghosts may interact when overlapping.\w8\w8\s[unamused] That being said,\w4 cut it out."
-			"\s[unamused]Nag nag yourself."
-			"\s[rolling_eyes]Can I help you?"
-		}
-	}
-}
-
-
-
-
-
-
-
 OnDisplayChange
 {
 	displaybpp = reference0
  	displaywidth = reference1
 	displayheight = reference2
-}
-
-//As the name implies, this checks if the balloon is currently open or not.
-//Will be 0 if the balloon is not open, and 1 if the balloon is open
-BalloonIsOpen
-{
-	"balloon" _in_ var.req.value[ASEARCH("Status",var.req.key)]
 }
 
 raised_hand
@@ -216,14 +151,8 @@ OnKeyPress
 {
 	if reference0 == "f1"; "\![open,readme]"
 	elseif reference0 == "t"; OnAiTalk
-	elseif reference0 == "r"; lastTalk
+	elseif reference0 == "r"; LastTalk
 }
-
-OnSurfaceRestore
-{
-	"\1\s[neutral_face]\0\s[slight_smile]"
-}
-
 
 // OnDisplayHandover
 // {
@@ -239,26 +168,9 @@ OnSurfaceRestore
 	// }
 // }
 
-/*
-
-Other things I want dialogue for:
-
-Overlapping
-Offscreen
-Hour notifications? Maybe using the hour timesignal thing
-
-
-*/
-
 On_installedballoonname
 {
 	installedballoonlist = reference.raw
-}
-
-HasBalloon
-{
-	if ASEARCH(_argv[0],installedballoonlist) != -1; 1
-	else; 0
 }
 
 On_homeurl

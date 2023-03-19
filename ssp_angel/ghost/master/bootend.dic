@@ -10,7 +10,7 @@ OnInitialize
 	stroke = 0
 	if !ISVAR("SSP_Tips"); SSP_Tips = 1
 	if !ISVAR("MiscDialogue"); MiscDialogue = 1
-	if reference0 != "reload"; lastTalk = ""
+	if reference0 != "reload"; LastTalk = ""
 	if !ISVAR("Balloon.Angel"); Balloon.Angel = ("1")
 	if !ISVAR("Balloon.Pilot"); Balloon.Pilot = ("2")
 	RecycleBin = (0,0)
@@ -27,7 +27,7 @@ OnFirstBoot
 	SSP_Tips = 1
 	MiscDialogue = 1
 	DevTips = 0
-	lastTalk = ""
+	LastTalk = ""
 	Balloon.Angel = ("1")
 	Balloon.Pilot = ("2")
 	RecycleBin = (0,0)
@@ -44,9 +44,9 @@ OnBoot
 	"\0\s[blush]\i[26]Hey %(username)!\w8\w8 What's up?\w8\w8\1How may we assist today?"
 	"\0\s[blush]\i[36]Hey hey,\w4 good to see you today!\w8\w8 What'd you need?\w8\w8\1If we may be of assistance, please let us know."
 	"\1\s[teach]Hello.\w8\w8\0\i[36]Hi hi,\w4 can we help you with something?"
-	"\1\s[teach]Greetings.\w8\w8\0\i[26]What's up?\w8\w8 Did you need something?"
+	"\1\s[teach]Greetings.\w8\w8\s[neutral_face]\0\i[26]What's up?\w8\w8 Did you need something?"
 	"\0\s[smiling_face_with_3_hearts]\i[36]Hi hi hi hi!\w8\w8 Good to see you!!\w8\w8\1\s[teach]Hello."
-	"\0\s[smiling_face_with_3_hearts]\i[23]\i[36]Hello hello!\w8\w8 So glad to see you today~!\w8\w8\1\s[teach]Greetings,\w4 %(username).\w8\w8 May we be of assistance?"
+	"\0\s[smiling_face_with_3_hearts]\i[23]\i[36]Hello hello!\w8\w8 So glad to see you today~!\w8\w8\1\s[teach]Greetings,\w4 %(username).\w8\w8\s[neutral_face] May we be of assistance?"
 	"\0\s[blush]\i[36]Hey hey hey!\w8\w8 How's it going,\w4 %(username)?\w8\w8\1We are here to assist."
 	"\0\s[star_struck]\i[22]I am SO ready for today!\w8\w8\n\n\1\s[face_with_raised_eyebrow]What is special about today?\w8\w8\n\n\0\s[smiling_face_with_3_hearts]\i[22]I've got a new strategy for asking %(username) to give me snacks!\w8\w8\1\s[expressionless]Angel,\w4 how many times have we been over this..."
 	"\0\s[blush]\i[23]\i[33]Hey %(username)!\w8\w8 I'm gonna work so hard today,\w4 just you wait and see!\w8\w8\n\n\1\s[k_thinking]Turning over a new leaf...?\w8\w8\n\n\0\s[star_struck]\i[22]And then you'll HAVE to give me a raise!\w8\w8\n\n\1\s[expressionless]...\w8\w8 %(username) isn't in charge of our pay."
@@ -118,13 +118,24 @@ OnGhostChanging
 	_path = REPLACE(SHIORI3FW.Path,"\","/")
 	_path = REPLACE(_path,"ghost/master/","")
 	
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
 	if reference3 == _path //If reloading
 	{
-		"\1\b[0]\s[10]\0\b[0]\s[0]Reloading!\w4"
+		"\0\s[blush]\i[31]Reloading!\w4"
 	}
 	else
-	{
-		"\1\b[0]\s[10]\0\b[0]\s[0]Alright,\w4 we're off!\w8\w8\s[blush]\i[21] Take it away,\w4 %(reference0)~!\w8\w8\1Later."
+	{	
+		"\0\s[blush]\i[22]Ok,\w4 we'll be on our way then!\w8\w8\s[relieved]\i[32] Our way to the café for some refreshments,\w4 after a long shift of nothing but hard work...\w8\w8\n\n\1\s[rolling_eyes]Oh,\w4 does this mean you will be treating me today?\w8\w8\n\n\0\s[worried]Hey!\w8\w8 I pull my weight!\w8\w8\1\s[expressionless]Regardless,\w4 let us be on our way."
+		"\1\s[neutral_face]Very well.\w8\w8 We will leave to make room for %(reference2).\w8\w8\n\n\0\s[sweat_smile]Hey,\w4 don't say it like that,\w4 I bet we could all fit...\w8\w8\n\n\1\s[unamused]Yes,\w4 but %(username) wants us to switch out,\w4 so let's go.\w8\w8\0\s[astonished]Ok,\w4 ok,\w4 I'm going.\w8\w8\s[blush]\i[36] Bye %(username)~!"
+		"\0\s[sweat_smile]Oh good,\w4 our relief is here.\w8\w8\i[5] I'm beat.\w8\w8\1\s[rolling_eyes]Perhaps if you would consider getting adequete rest before your shift,\w4 instead of staying awake for hours on end..."
+		"\0\s[swear_smile]\i[5]Oh good,\w4 am I ever glad to see %(reference2).\w8\w8 My dogs are barking!\w8\w8\1\s[rolling_eyes]You aren't even using your feet..."
+		"\1\s[neutral_face]It's time to switch out,\w4 our replacement is here.\w8\w8\n\n\0\s[astonished]Oh,\w4 good.\w8\w8\s[blush]\i[31] See you,\w4 %(username)~!\w8\w8\s[relieved] I am off for a well-deserved break.\w8\w8 Thank you %(reference2) for picking up the slack.\w8\w8\1\s[rolling_eyes]I hope you are not pushing your work off onto others..."
+		"\0\s[blush]\i[22]Oh good,\w4 the next shift is here.\w8\w8 I'm punching out,\w4 see you bye,\w4 got places to be~\w8\s[-1]\w8\1\s[expressionless]But we still have to...\w8\w8\w8 Nevermind.\w8\w8\s[neutral_face] Farewell,\w4 %(username)."
+		"\0\s[blush]\i[32]Hmmm,\w4 off the clock huh?\w8\w8 Now I can get all the snacks I want...\w8\w8\n\n\1\s[unamused]Yes,\w4 I suppose you can.\w8\w8 But let us be on our way first,\w4 %(reference2) is waiting to take our place.\w8\w8\0Mhm,\w4 mhm,\w4 I'm going~"
+		"\0\s[pensive]\i[24]Hmmmm,\w4 I wonder if %(reference2) brought any snacks...\w8\w8\n\n\1\s[rolling_eyes]You can't ask everyone you meet for snacks.\w8\w8 We are leaving now,\w4 you can get a snack on the way home.\w8\w8\0\s[sob]But I'm hungry nowwwww..."
+		"\1\s[neutral_face]Ah,\w4 it is time for %(reference2) to relieve us.\w8\w8 We should be going,\w4 then.\w8\w8\n\n\0\s[pleading_face]\i[24]Aw,\w4 ok.\w8\w8 See you next time,\w4 %(username)!\w8\w8\s[sob]\i[24]\i[36] Don't forget about us!\w8\w8\1\s[rolling_eyes]We are not going to be forgotten just because we are going home for the day..."
+		"\1\s[neutral_face]Let us be on our way,\w4 %(reference2) is here to replace us.\w8\w8\n\n\0\s[scream]Replace us!?\w8\w8 %(username),\w4 you're not getting rid of us,\w4 are you!?\w8\w8\s[sob] I thought we were friends...\w8\w8\n\n\1\s[expressionless]Angel...\w8\w8 Setting aside that this is a \f[italic,1]work relationship,\f[italic,default] I only meant that %(reference2) is taking our place for \f[italic,1]today,\f[italic,default] not forever.\w8\w8\n\n\0\s[pleading_face]\i[24]\i[33]Oh.\w8\w8 Do you really mean it?\w8\w8 We're not being replaced?\w8\w8\n\n\1\s[unamused]Yes.\w8\w8 As far as I know.\w8\w8\0Oh...\w8\w8 Ok.\w8\w8\s[pleading_face]\i[22] Bye %(username),\w4 see you next time!"
 		--
 		"\w8\w8"
 	}
@@ -143,7 +154,7 @@ OnGhostChanged
 	}
 	else
 	{
-		"\1\b[0]\s[10]\0\b[0]\s[blush]Hey hey,\w4 good to see you %(username)!\w8\w8 Hope you had fun hanging out with %(reference0)~!\w8\w8\1Is there anything we may do for you?"
+		//"\1\b[0]\s[10]\0\b[0]\s[blush]Hey hey,\w4 good to see you %(username)!\w8\w8 Hope you had fun hanging out with %(reference0)~!\w8\w8\1Is there anything we may do for you?"
 	}
 }
 
@@ -152,7 +163,7 @@ OnGhostCalled
 {
 	if reference2 == ""; reference2 = reference0
 	
-	"\1\b[0]\s[10]\0\b[0]\s[0]\1You rang?\w8\w8\0\s[blush]What's up,\w4 %(username)?\w8\w8 Did you need our help with something?\w8\w8\s[sweat_smile]%(br)%(reference2)'s not giving you trouble or anything,\w4 right?"
+	//"\1\b[0]\s[10]\0\b[0]\s[0]\1You rang?\w8\w8\0\s[blush]What's up,\w4 %(username)?\w8\w8 Did you need our help with something?\w8\w8\s[sweat_smile]%(br)%(reference2)'s not giving you trouble or anything,\w4 right?"
 }
 
 //Calling another ghost
@@ -160,7 +171,14 @@ OnGhostCalling
 {
 	if reference2 == ""; reference2 = reference0
 	
-	"\1\b[0]\s[10]\0\b[0]\s[blush]%(raised_hand)Calling %(reference2)~!\w8\w8 %(username)'s looking for you!"
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
+	"\0\s[blush]%(raised_hand)Calling %(reference2)~!\w8\w8 %(username)'s looking for you!"
+	"\0\s[blush]%(raised_hand)Come on out,\w4 %(reference2)~!"
+	"\0\s[blush]\i[22]%(reference2),\w4 please report to the front desk!\w8\w8 %(username) is looking for you~!"
+	"\0\s[blush]\i[22]%(reference2),\w4 please report to your station~!"
+	"\0\s[relieved]\i[31]Oh %(reference2)~\w8\w8 Come out,\w4 come out,\w4 wherever you are~"
+	"\0\s[relieved]Sure,\w4 I'll get %(reference2) for you.\w8\w8\i[31] Come on out,\w4 %(reference2)~!"
 }
 
 //Other ghost finished booting after being called
@@ -168,7 +186,13 @@ OnGhostCallComplete
 {
 	if reference2 == ""; reference2 = reference0
 	
-	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[36]Hey hey!\w8\w8 Glad you could make it,\w4 %(reference2)~!"
+	"\1\b[0]\s[10]\0\b[0]\s[0]"
+	--
+	"\0\s[blush]\i[36]Hey hey!\w8\w8 Glad you could make it,\w4 %(reference2)~!"
+	"\0\s[blush]\i[26]Welcome to the party,\w4 %(reference2)!\w8\w8\n\n\1\s[rolling_eyes]It is not a party..."
+	"\0\s[blush]\i[36]Hi %(reference2)!\w8\w8 Hope you brought snacks!\w8\w8\n\n\1\s[rolling_eyes]How many times do I have to tell you%(endash)\w8\0\s[sweat_smile]\i[24]Because I ate all the ones we had stashed,\w4 I got hungry.\w8\w8\1\s[expressionless]"
+	"\0\s[blush]\i[26]Welcome,\w4 welcome!\w8\w8 Hey,\w4 wanna get bubble tea with us later?\w8\w8 Pilot's treat~\w8\w8\1\s[rolling_eyes]I am \f[italic,1]not\f[italic,default] paying for any bubble tea besides my own,\w4 if I get any."
+	"\1\s[teach]Welcome.\w8\w8\s[neutral_face]\0\s[blush]\i[36]Hi!\w8\w8 Glad to have you here!\w8\w8 I was getting kinda bored!\w8\w8\1\s[rolling_eyes]"
 }
 
 //When SSP is closing to update
@@ -195,15 +219,17 @@ OnOtherGhostClosed : nonoverlap_pool
 	"\s[blush]\i[36]"
 	--
 	"Thanks, %(reference2)!\w8\w8 See you later~!"
-	"Cya, %(reference2)~!"
-	"Bye, %(reference2)~!"
+	"Cya,\w4 %(reference2)~!"
+	"Bye,\w4 %(reference2)~!"
+	"Have a good one,\w4 %(reference2)~!"
 	--
 	"\w8\w8\1\s[neutral_face]"
 	--
-	"Ciao."
-	"Cya."
-	"Bye."
-	"Later."
+	"Until next time."
+	"Until we meet again."
+	"Take care."
+	"Goodbye."
+	"Farewell."
 }
 
 OnOtherGhostBooted : nonoverlap_pool
@@ -216,6 +242,12 @@ OnOtherGhostBooted : nonoverlap_pool
 	"Hi,\w4 %(reference2)~!"
 	"Hey,\w4 it's %(reference2)~!"
 	"More friends!\w8\w8 Hi %(reference2)~!"
+	"Hey hey,\w4 welcome!\w8\w8 Always glad to have more folks hanging out~"
+	"Hey hey hey,\w4 good to see you %(reference2)!"
+	"What's up,\w4 %(reference2)?\w8\w8 Bring anything good~?"
+	
+	"Ring ring~\w8\w8\n\n\1\s[k_thinking]Ring ring?\w8\w8\n\n\0\s[relieved]\i[31]Yeah,\w4 like those little bells some shops have on their doors to alert them when someone comes in.\w8\w8\s[blush]\i[31] Because %(reference2) is here!\w8\w8\n\n\1Ah,\w4 I see.\w8\w8\0\s[smiling_face_with_3_hearts]\i[22]Ring ring~!\e"
+	"\s[blush]\i[22]Ooh,\w4 is that our pizza being delivered~?\w8\w8\n\n\1\s[rolling_eyes]No,\w4 Angel.\w8\w8 No it is not.\w8\w8 We are not getting a pizza.\w8\w8 Because we are at work.\w8\w8\0\s[pensive]Aww...\e"
 	--
 	"\w8\w8\1"
 	--

@@ -29,7 +29,7 @@ OnSakuraMenu : all
 	"\_q\n\n\![set,autoscroll,disable]"
 	
 	"\![*]\__q[OnAiTalk]Talk to me\__q  \![*]\__q[OnGiveTip]Give me a tip\__q\n"
-	if lastTalk != ""; "\![*]\__q[OnLastTalk]Say that again?\__q\n"
+	if LastTalk != ""; "\![*]\__q[OnLastTalk]Say that again?\__q\n"
 	"\n"
 	
 	"\![*]\__q[OnQuestionMenu]I have some questions\__q\n"
@@ -48,19 +48,19 @@ OnSakuraMenu : all
 
 OnGiveTip
 {
-	lastTalk = TipTalk
-	lastTalk
+	LastTalk = TipTalk
+	LastTalk
 }
 
 OnLastTalk
 {
-	lastTalk
+	LastTalk
 }
 
 OnQuestionMenu : all
 {
 	"\0\b[2]\_q\![set,autoscroll,disable]"
-	"\f[align,center]%(emdash) Questions %(emdash)\n\n\f[align,left]" //"How do I...\n\n"
+	"\f[align,center]%(emdash) Questions %(emdash)\n\n\f[align,left]"
 	
 	"\![*]\__q[OnQuestions,WhatAreYou]What are you?\__q\n"
 	"\![*]\__q[OnQuestions,GhostPurpose]What are ghosts for?\__q\n"
@@ -609,7 +609,7 @@ OnCallAllGhosts
 	}
 	elseif _count >= 20
 	{
-		"\0\s[astonized]Oh wow,\w4 uh,\w4 that'll be %(_count) ghosts at once.\w8\w8 Are you sure about that?\w8\w8 Your desktop will be pretty crowded."
+		"\0\s[astonioshed]Oh wow,\w4 uh,\w4 that'll be %(_count) ghosts at once.\w8\w8 Are you sure about that?\w8\w8 Your desktop will be pretty crowded."
 	}
 	else
 	{
@@ -633,11 +633,11 @@ OnCallAllGhostsConfirm
 	}
 	elseif _count >= 50
 	{
-		"\0\s[sweat_smile]If you say so,\w4 I'll give it a go.\w8\w8 But this is gonna take a while,\w4 and we might crash.\w8\w8\n\n\1\s[unamused]Fun.\w8\w8"
+		"\0\s[sweat_smile]\i[24]If you say so,\w4 I'll give it a go.\w8\w8 But this is gonna take a while,\w4 and we might crash.\w8\w8\n\n\1\s[unamused]Fun.\w8\w8"
 	}
 	elseif _count >= 20
 	{
-		"\0\s[sweat_smile]Alright,\w4 bear with me for a minute here,\w4 this might take a bit.\w8\w8 "
+		"\0\s[sweat_smile]\i[24]Alright,\w4 bear with me for a minute here,\w4 this might take a bit.\w8\w8 "
 	}
 	else
 	{
