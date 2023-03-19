@@ -457,7 +457,7 @@ OnKeyCombos : all
 
 OnCredits : all
 {
-	"\1\b[2]\s[teach]\0\b[2]\s[0]"
+	"\1\b[2]\s[teach]\0\b[0]\s[0]"
 	"\1\b[2]\_q\*\![set,autoscroll,disable]"
 	"\f[align,center]%(emdash) Credits %(emdash)\n\n"
 	"\f[align,center]\f[bold,1]Shell Art\f[bold,default]\n"

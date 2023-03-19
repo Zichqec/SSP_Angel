@@ -1089,7 +1089,7 @@ surface1018
 	
 	//Blink
 	animation5.interval,random,4
-	animation5.pattern1,overlay,1109,0,0,0
+	animation5.pattern1,overlay,1108,0,0,0
 	animation5.pattern3,overlay,1106,100,0,0
 	animation5.pattern5,overlay,-1,70,0,0
 }

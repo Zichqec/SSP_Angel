@@ -21,6 +21,11 @@ OnTranslate
 	_anchor = "anchor"
 	if "GLOSSARY_DEFINITION" _in_ _talk; _anchor = ""
 	
+	_talk = REPLACE(_talk,"#Ayakamtka","\_a[https://github.com/Ayakamtka]Ayakamtka\_a")
+	_talk = REPLACE(_talk,"#GallaTheGalla","\_a[https://gallathegalla.github.io/gtg-ghosts/]GallaTheGalla\_a")
+	_talk = REPLACE(_talk,"#Yuyudev","\_a[https://twitter.com/yuyudev]Yuyudev\_a")
+	_talk = REPLACE(_talk,"#Zichqec","\_a[https://zichqec.github.io/s-the-skeleton/]Zichqec\_a")
+	
 	_terms = ("AYA:AYA","BTS:BTS","balloons?:Balloon","Baseware:Baseware",/
 	"Calendar skins?:Calendar skin","CROW:CROW","Dressups?:Dressup","Freeshells?:Freeshell",/
 	"Ukagaka Dream Team:Ukagaka Dream Team","Ghost'?s?:Ghost/Ukagaka/Nanika","Ukagakas?:Ghost/Ukagaka/Nanika",/
@@ -45,10 +50,7 @@ OnTranslate
 		}
 	}
 	
-	_talk = REPLACE(_talk,"#Ayakamtka","\_a[https://github.com/Ayakamtka]Ayakamtka\_a")
-	_talk = REPLACE(_talk,"#GallaTheGalla","\_a[https://gallathegalla.github.io/gtg-ghosts/]GallaTheGalla\_a")
-	_talk = REPLACE(_talk,"#Yuyudev","\_a[https://twitter.com/yuyudev]Yuyudev\_a")
-	_talk = REPLACE(_talk,"#Zichqec","\_a[https://zichqec.github.io/s-the-skeleton/]Zichqec\_a")
+	
 	
 	if SHIORI3FW.BalloonName == "Angelbox" || SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"; _talk = REPLACE(_talk,"\f[align,center]","\_l[10]\f[align,center]")
 	
@@ -117,10 +119,10 @@ On_configuredbiffname
 
 OnHourTimeSignal : nonoverlap
 {
-	"\0\b[0]\1\b[0]"
-	--
-	if HourNotifs == "On"
+	if HourNotifs == "On" && minute <= 5
 	{
+		"\0\b[0]\1\b[0]"
+		--
 		if hour == 0
 		{
 			"\0\s[blush]Hey check it out,\w4 it's midnight!\w8\w8\1\s[neutral_face]As happens every night."

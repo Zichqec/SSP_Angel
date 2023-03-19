@@ -169,14 +169,14 @@ OnChangeInstalledGhost
 {
 	"\1\b[0]\s[10]\0\b[0]\s[astonished]Oh,\w4 alright.\w8\w8\s[blush] Have a fun time with your new friend!\w8\w8\1\s[neutral_face]Later.\w8\w8"
 	--
-	"\![call,ghost,lastinstalled]"
+	"\![change,ghost,lastinstalled]"
 }
 
 OnCallInstalledGhost
 {
 	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Calling %(reference0)~!"
 	--
-	"\![change,ghost,lastinstalled]"
+	"\![call,ghost,lastinstalled]"
 }
 
 OnChangeInstalledShell : all
@@ -517,7 +517,7 @@ OnSNTPCompare
 	}
  	else //if your clock doesn't match
 	{
-		"\b[0]1\s[k_thinking]\0\b[0]\s[astonished]Your clock doesn't match.\w8\w8 Should I fix it?"
+		"\1\b[0]\s[k_thinking]\0\b[0]\s[astonished]Your clock doesn't match.\w8\w8 Should I fix it?"
 		--
 		all:/
 		{

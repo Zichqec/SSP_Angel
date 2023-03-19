@@ -227,7 +227,7 @@ OnHowTo : all
 		"\0\s[relieved]Some #ghosts will disable this option,\w4 so that it's harder to uninstall by accident.\w8\w8 In these cases,\w4 you can usually go into that #ghost's config menu,\w4 and toggle the option on from there.\w8\w8\i[31] You can also use the ghost explorer;\w4 if you right click on their entry in the ghost explorer while they are closed,\w4 you can click on the Delete option to uninstall them.\w8\w8\n\n"
 		"\1\s[neutral_face]If all that fails,\w4 you can go into the %(h)SSP/ghost/%(dc) folder and just delete their whole folder.\w8\w8\n\n"
 		"\0\s[scream]Make sure you're deleting the right one!\w8\w8"
-		"\1\s[rolling_eyes]Once you've done that,\w4 the #ghost will still be in your list of #ghosts until you restart #SSP,\w4 or refresh the%(br)#ghost list as we explain in the how to install a #ghost section."
+		"\1\s[rolling_eyes]Once you've done that,\w4 the #ghost will still be in your list of #ghosts until you restart #SSP,\w4 or refresh the%(br)#ghost list as we explain in the section about installing #ghosts."
 	}
 	elseif reference0 == "Minimize"
 	{
@@ -252,7 +252,7 @@ OnHowTo : all
 	elseif reference0 == "Email"
 	{
 		"\1\s[teach]First,\w4 you will need to find the POP settings for your email provider.\w8\w8\n\n"
-		"\0\s[slight_smile]You can likely find this in your email's settings.\w8\w8\i[31] But if not,\w4 you can also try searching for the name of your provider,\w4 along with ""POP"".\w8\w8 So if you use hotmail,\w4 you would search ""hotmail POP"".\w8\w8\n\n"
+		"\0\s[slight_smile]You can likely find this in your email's settings.\w8\w8\i[31] But if not,\w4 you can also try searching for the name of your provider,\w4 along with ""POP"".\w8\w8 So if you use hotmail,\w4 you would search ""Hotmail POP"".\w8\w8\n\n"
 		"\1\s[neutral_face]Once you have found the POP information,\w4 you'll need to put it into #SSP through the preferences menu.\w8\w8\n\n"
 		"\0\s[blush]%(raised_hand)\![open,configurationdialog,biff]Right here!\w8\w8 On the POP tab!\w8\w8\n\n"
 		"\1\s[neutral_face]Near the bottom you'll see a list of accounts,\w4 which will be empty if you haven't added any accounts yet.\w8\w8 Click the button that says Add,\w4 and input the POP information from your email provider.\w8\w8\n\n"
@@ -264,20 +264,20 @@ OnHowTo : all
 	}
 	elseif reference0 == "UseAPlugin"
 	{
-		"\0\s[relieved]That will vary depending on the plugin.\w8\w8 Some plugins don't have any menus for you the user at all.\w8\w8\s[blush] But some do!\w8\w8 And you can access them by right clicking a%(br)#ghost,\w4 going to the Plugins tab,\w4 and clicking on the Plugin you want.\w8\w8"
+		"\0\s[relieved]That will vary depending on the plugin.\w8\w8 Some plugins don't have any menus for you,\w4 the user,\w4 at all.\w8\w8\s[blush] But some do!\w8\w8 And you can access them by right clicking a%(br)#ghost,\w4 going to the Plugins tab,\w4 and clicking on the Plugin you want.\w8\w8"
 		"\1\s[teach]#SSP comes with the SwissArmyKnife plugin by default,\w4 which has a few functions in it.\w8\w8 Try it out with that one."
 	}
 	elseif reference0 == "BootOnStartup"
 	{
 		"\0\s[smiling_face_with_3_hearts]\i[22]Wow,\w4 you must really love #ghosts!\w8\w8 Yes,\w4 you can absolutely set up #SSP to boot when your computer starts!\w8\w8\n\n"
-		"\1\s[teach]There are two ways to do it.\w8\w8 You can select a specific%(br)#ghost to boot when your computer starts through the #ghost explorer,\w4 or you can setup #SSP to boot in general,\w4 in which case it will boot using the same ghosts it was last closed with,\w4 unless you've specified otherwise.\w8\w8\n\n"
+		"\1\s[teach]There are two ways to do it.\w8\w8 You can select a specific%(br)#ghost to boot when your computer starts through the #ghost explorer,\w4 or you can set up #SSP to boot in general,\w4 in which case it will boot using the same ghosts it was last closed with,\w4 unless you've specified otherwise.\w8\w8\n\n"
 		"\0\s[slight_smile]\i[21]To do it through the #ghost explorer,\w4 all you have to do is right click on the #ghost in the list that you want,\w4%(br)and click on ""Make This Ghost Start Automatically at OS Startup"".\w8\w8\s[astonished] You can only have one #ghost set to boot at startup,\w4 if you choose another #ghost it'll use that one instead!\w8\w8\n\n"
 		"\1\s[neutral_face]If instead you wish for #SSP to boot on startup without specifying a #ghost,\w4 such that it boots with the #ghosts you had open last,\w4 you can try this method.\w8\w8 Press the Windows key + R,\w4 and type%(br)""shell:startup"".\w8\w8 Create a shortcut to your SSP.exe,\w4 and place it in this folder.\w8\w8 Now #SSP should start when Windows starts.\w8\w8"
 		"\0\s[astonished]If you ever want to stop #SSP from booting when your computer starts,\w4 you can just remove the shortcut from that folder.\w8\w8 It works with the method using the #ghost explorer,\w4 too!"
 	}
 	elseif reference0 == "ChooseOnBoot"
 	{
-		"\0\s[blush]That's an easy one!\w8\w8\s[blush] %(raised_hand)\![open,configurationdialog,ghost]Here's the preferences,\w4 and in the Ghost(1) tab,\w4 just tick the box for ""Display Ghost Choosing Dialog When Booting SSP"".\w8\w8\s[scream]Handy if you close #SSP with a lot of #ghosts still running,\w4 and don't want to boot all of them again!"
+		"\0\s[blush]That's an easy one!\w8\w8\s[blush] %(raised_hand)\![open,configurationdialog,ghost]Here's the preferences,\w4 and in the Ghost(1) tab,\w4 just tick the box for ""Display Ghost Choosing Dialog When Booting SSP"".\w8\w8\s[scream] Handy if you close #SSP with a lot of #ghosts still running,\w4 and don't want to boot all of them again!"
 	}
 	elseif reference0 == "CreateFolders"
 	{
@@ -320,7 +320,7 @@ OnHowTo : all
 	elseif reference0 == "SpeechRecognition"
 	{
 		"\0\s[blush]Oh,\w4 speech recognition is fun!\w8\w8 You should try it with us!\w8\w8\n\n"
-		"\1\s[teach]To turn on speech recognition,\w4 right click on Angel,\w4 go to the utilities menu,\w4 and click the Speech Recognition button.\w8\w8 You should see a small window open.\w8\w8\n\n"
+		"\1\s[teach]To turn on speech recognition,\w4 right click on Angel,\w4 go to the Utilities menu,\w4 and click the Speech Recognition button.\w8\w8 You should see a small window open.\w8\w8\n\n"
 		"\0\s[astonished]Who?\w8 What?\w8 How?\w8\w8\n\n"
 		"\1\s[rolling_eyes]Yes,\w4 that's the one.\w8\w8\s[neutral_face] If that window is open,\w4 that means speech recognition is running.\w8\w8 You can close the window when you want to turn it off.\w8\w8\n\n"
 		"\0\s[blush]\i[31]Once it's running,\w4 you can say our names to open our menus!\w8\w8 You can also say the label of any menu choice or anchor to select that option!\w8\w8\n\n"
@@ -338,7 +338,7 @@ OnHowTo : all
 		"\0\s[relieved]If a #ghost has network updates enabled,\w4 all you need to do is click that #ghost and press Ctrl + U.\w8\w8 This should start the update process.\w8\w8\n\n"
 		"\1\s[neutral_face]You can also right click the #ghost and select the%(br)""Network Update"" option near the top.\w8\w8 This may be listed with a different label,\w4 often ""Check for Updates"".\w8\w8\n\n"
 		"\0\s[pensive]Not all #ghosts can do network updates.\w8\w8 If the option is grayed out,\w4 then you won't be able to update this way.\w8\w8\n\n"
-		"\1\s[teach]It is possible that the #ghost's developer has released updates as new #.nar files.\w8\w8 You can install newer versions of #ghosts overtop of old ones to update them.\w8\w8 I would recommend doing this while the #ghost in question is closed.\w8\w8\n\n"
+		"\1\s[teach]It is possible that the #ghost's developer has released updates as new #.nar files.\w8\w8 You can install newer versions of #ghosts over top of old ones to update them.\w8\w8 I would recommend doing this while the #ghost in question is closed.\w8\w8\n\n"
 		"\0\s[astonished]Rarely,\w4 you may see a ""supplement"" file.\w8\w8 This is also a%(br)#.nar file that has updated or optional content,\w4 but you have to drag and drop it onto the #ghost that%(br)you're updating.\w8\w8\n\n"
 		"\1\s[k_thinking]It is also possible that a developer has released individual files that must be manually copied into the%(br)#ghost's folder to update the content.\w8\w8 Check the developer's instructions carefully if this is the case.\w8\w8 The only thing we can tell you is that all the files for your #ghosts are in the %(h)SSP/ghost/%(dc) directory by default.\w8\w8"
 		"\0\s[relieved]And of course,\w4 there will only be updates if the developer has released new content.\w8\w8\s[blush] But it's worth checking once in a while to see!"
@@ -360,7 +360,7 @@ OnHowTo : all
 		"\1\s[neutral_face]Make sure you read the instructions.\w8\w8 All of the instructions have an English translation.\w8\w8\n\n"
 		"\0\s[relieved]You will have to input a password to submit a bug report,\w4 but this is just a measure to prevent spam.\w8\w8 The username and password are listed in the instructions,\w4 so do read them carefully.\w8\w8\n\n"
 		"\1\s[teach]You will also need to make sure you submit your bug report to the right category.\w8\w8 To report bugs in #SSP,\w4 you will want to select the ""SSPBT：本体(SSP)"" category.\w8\w8\n\n"
-		"\0\s[astonished]Also,\w4 it's a good idea to include what version of #SSP and what OS you're running!\w8\w8\s[relieved] You can easily copy and paste this information by right clicking us,\w4 going to the Information tab,\w4 and clicking ""About SSP..."".\w8\w8\s[blush]The information will be on the top line of the text box,\w4 and you can simply select and copy it from there.\w8\w8\n\n"
+		"\0\s[astonished]Also,\w4 it's a good idea to include what version of #SSP and what OS you're running!\w8\w8\s[relieved] You can easily copy and paste this information by right clicking us,\w4 going to the Information tab,\w4 and clicking ""About SSP..."".\w8\w8\s[blush] The information will be on the top line of the text box,\w4 and you can simply select and copy it from there.\w8\w8\n\n"
 		"\1\s[k_thinking]Also note that sometimes the maintainer of #SSP will respond to bug reports asking for more information,\w4 clarification,\w4 etc.\w8\w8 Make sure to keep an eye on your report to see if anything's happened.\w8\w8"
 		"\0\s[blush]Good luck,\w4 and thanks for helping to keep #SSP running smoothly!"
 	}
@@ -368,14 +368,14 @@ OnHowTo : all
 	{
 		"\0\s[scream]Oh my gosh,\w4 a bug?\w8\w8 Where!?\w8\w8\n\n"
 		"\1\s[unamused]A bug in the code,\w4 no doubt,\w4 not a real insect...\w8\w8\s[teach] #Zichqec is our programmer and maintainer,\w4 and can be contacted in a variety of places.\w8\w8 Try the links at the bottom of \_a[https://zichqec.github.io/s-the-skeleton/]Zichqec's website\_a,\w4 or you can try the%(br)#Ukagaka Dream Team's \_a[https://ukagakadreamteam.tumblr.com/discord]Discord server\_a.\w8\w8"
-		"\0\s[blush]If that doesn't work,\w4 you may also try contacting #Yuyudev,\w4%(br)who did the #shell art for us!"
+		"\0\s[blush]If that doesn't work,\w4 you may also try contacting other members of the Angel Team!\w8\w8 All of them are linked in our readme,\w4 or in the credits that you can access in Pilot's menu!"
 	}
 	elseif reference0 == "BugReportAnotherGhost"
 	{
 		"\0\s[worried]Oh no,\w4 someone else's #ghost has a bug?\w8\w8\n\n"
 		"\1\s[k_thinking]It's not that unusual,\w4 bugs happen all the time.\w8\w8 What's%(br)important is fixing them.\w8\w8\n\n"
 		"\0\s[s_thinking]Hmm...\w8\w8 The issue is,\w4 because #ghosts are so varied,\w4 how you can report a bug will vary from #ghost to%(br)#ghost.\w8\w8\n\n"
-		"\1\s[teach]First,\w4 check that #ghost's menu for a bug report option.\w8\w8 Some #ghosts will instruct you where you can report bugs.\w8\w8 If there is no option,\w4 try checking the readme file for the #ghost and see if there is contact information.\w8\w8 For many #ghosts,\w4 you can access this by pressing F1.\w8\w8 If F1 doesn't work,\w4 you can right click the%(br)#ghost in question,\w4 go to the Information tab,\w4 and%(br)""About This Ghost..."" (sometimes labelled as%(br)""readme"".)\w8\w8\n\n"
+		"\1\s[teach]First,\w4 check that #ghost's menu for a bug report option.\w8\w8 Some #ghosts will instruct you where you can report bugs.\w8\w8 If there is no option,\w4 try checking the readme file for the #ghost and see if there is contact information.\w8\w8 For many #ghosts,\w4 you can access this by pressing F1.\w8\w8 If F1 doesn't work,\w4 you can right click the%(br)#ghost in question,\w4 go to the Information tab,\w4 and%(br)""About This Ghost..."" (sometimes labelled as%(br)""readme"").\w8\w8\n\n"
 		"\0\s[relieved]If you don't have any luck with that,\w4 try right clicking the #ghost and checking the top 2 tabs.\w8\w8 Sometimes,\w4 the developer will put links to their own%(br)website/social media accounts there,\w4 which you can use to contact them.\w8\w8\n\n"
 		"\1\s[k_thinking]If all of that fails,\w4 then unfortunately you are on your own.\w8\w8 If you remember where you downloaded the%(br)#ghost from,\w4 you might try checking there to see if you can contact them.\w8\w8 But some #ghost developers are simply out of reach.\w8\w8"
 		"\0\s[pensive]Unfortunately true."
