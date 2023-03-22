@@ -1,4 +1,4 @@
-# SSP_Angel
+# SSP Angel
 This ghost is intended to serve as a guide to SSP and how to use ghosts, in English. The are a fairly straightforward ghost, primarily focusing on answering various questions about the program and ukagaka in general through their menu, as well as giving tips in their random dialogue.
 
 They are also made with experienced users in mind, and have the option to turn off random tips, so that they may be used as a normal ghost.
