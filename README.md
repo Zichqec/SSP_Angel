@@ -3,7 +3,7 @@ This ghost is intended to serve as a guide to SSP and how to use ghosts, in Engl
 
 They are also made with experienced users in mind, and have the option to turn off random tips, so that they may be used as a normal ghost.
 
-The ghost comes bundled with one balloon, but there are actually 3 made to go with it. You can find the additional balloons [here](https://github.com/Zichqec/SSP_Angel_Balloons/releases), or have the ghost install them for you in the balloon settings menu.
+The ghost comes bundled with one balloon, but there are actually 3 made to go with it. You can find the additional balloons [here](https://github.com/Zichqec/SSP_Angel_Balloons/), or have the ghost install them for you in the balloon settings menu.
 
 ## Credits
 SSP Angel was a collaborative effort between multiple people, listed collectively as the "Angel Team". This ghost would not have been possible without every person listed here, and the incredible amount of effort they put into it.
