@@ -407,7 +407,7 @@ OnRecommendsiteChoice
 	}
 	elseif reference0 == "GallaTheGalla"
 	{
-		"\1\b[0]\s[10]\0\b[0]\s[star_struck]\i[21]Galla's Ghosts and other goodies!\w8\w8 There's lots of cool stuff here!\w8\w8\s[blush]\i[22] Galla did all the pretty alternate color versions of our Angelbox balloon,\w4 and helped with some of the writing,\w4 including our word lists.\w8\w8 You should check out what other stuff they have!"
+		"\1\b[0]\s[10]\0\b[0]\s[star_struck]\i[21]Galla's Ghosts and other goodies!\w8\w8 There's lots of cool stuff here!\w8\w8\s[blush]\i[22] Galla did all the pretty alternate color versions of our balloons,\w4 and helped with some of the writing,\w4 including our word lists.\w8\w8 You should check out what other stuff they have!"
 	}
 	elseif reference0 == "Yuyudev"
 	{

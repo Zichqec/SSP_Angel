@@ -1,6 +1,6 @@
 charset,OSNative
 file,developer_options.txt6a5eafaed6829b071348ac9a8271c2b9size=21date=2023-03-16T03:39:14
-file,ghost/master/aitalk.dic04628f1609176271f8372b00c0b7e690size=121730date=2023-03-19T00:16:35
+file,ghost/master/aitalk.dicbd4e3adb8690055557c34329abf3f487size=121731date=2023-03-20T21:09:47
 file,ghost/master/bootend.dic1f3148519c653d9b35f5b3a888c88145size=21111date=2023-03-19T04:34:04
 file,ghost/master/descript.txt0d07ba356981c446b2f16d1ec27c4f10size=303date=2023-03-15T22:42:36
 file,ghost/master/etc.dic6d52e9cc9a8222785c3ccb92896f91casize=21704date=2023-03-18T22:42:45
@@ -8,9 +8,9 @@ file,ghost/master/icon.ico2b2a65d072786a2a70b97f0d30d5e7b7size=10462date=2023
 file,ghost/master/kero_menu.dic47d5927ad044feccfb71e217057a09e5size=39760date=2023-03-19T04:15:03
 file,ghost/master/main.dic1c7f50772fb3c1be195b4dae838cd48esize=5599date=2023-03-19T04:25:50
 file,ghost/master/mouse.dic3006bd52eb564f278c9bfc31491de613size=8506date=2023-03-19T04:11:10
-file,ghost/master/sakura_menu.dicf77b84e16205357f3e350802b374e454size=67619date=2023-03-19T04:36:28
-file,ghost/master/utility.dicc89c8c8f58638949f6f113379f009e52size=12285date=2023-03-19T04:22:38
-file,ghost/master/word.dic8e41e25699189da622e956e3b3e65fa3size=31602date=2023-03-19T04:37:29
+file,ghost/master/sakura_menu.dic5f5c3ec7bda9c586a5b2728fdd69731bsize=68382date=2023-03-22T16:41:40
+file,ghost/master/utility.dic03bebd9513d162ec43065278475243f2size=12277date=2023-03-22T02:00:46
+file,ghost/master/word.dic21af3536df38f2922a3c5b409c637951size=31722date=2023-03-22T15:52:41
 file,ghost/master/yaya.dll56e3af56c88e696cea1f39d53b239cefsize=880640date=2022-09-10T19:18:59
 file,ghost/master/yaya.txtd6223a26ca2f659c16956ea8c74b27ccsize=639date=2023-01-22T01:35:56
 file,ghost/master/yaya_base/_loading_order.txt9c350c2c9c08f635bff5eaae149af8c8size=103date=2022-07-10T06:50:34
@@ -19,8 +19,8 @@ file,ghost/master/yaya_base/config.dicacc9b7c3f25c4e564abdac847f103cddsize=264
 file,ghost/master/yaya_base/optional.dicff4da728a656a8aa6a38939e654c51f2size=9953date=2022-07-10T06:50:34
 file,ghost/master/yaya_base/shiori3.dic701b1c5854dff058339c7f9d7a6d79d7size=51253date=2022-08-31T05:20:40
 file,install.txtf2124dd17804e14fbc02163c7b8ecf05size=97date=2023-03-15T23:25:19
-file,readme.txt9d1a4b99d5cf80afbf88bc34c2a00253size=1043date=2023-03-15T23:43:57
-file,shell/master/descript.txtb1aeff357cdeda6a60bea5d2edd4600esize=1529date=2023-03-15T22:42:43
+file,readme.txt2266436a620d7be0f2ff9889a17f84c5size=1057date=2023-03-22T17:17:22
+file,shell/master/descript.txt4c7958e43efbfb368463302fa494950fsize=1539date=2023-03-20T21:07:55
 file,shell/master/menu_background.png33bf5c103fdd4bacb6e3a4831fc9dc30size=866date=2023-01-26T22:34:40
 file,shell/master/menu_foreground.png8431d3438b7646bb831bcae0d496b030size=865date=2023-01-26T22:42:34
 file,shell/master/menu_sidebar.pngfdd4cc817d78b1eaf42c00f3db426a74size=2660date=2023-01-16T21:18:39
@@ -129,3 +129,9 @@ file,shell/master/surface700.png0dc6d155ed45f96d2838f022dfa074e1size=4285date
 file,shell/master/surface701.pngd159ed9f498d4a5eb9983f432c759e8fsize=1632date=2023-03-09T00:11:22
 file,shell/master/surfaces.txtf1cfb158c25cf0900100614e99f519dfsize=32682date=2023-03-18T22:33:14
 file,shell/master/surfacetable.txt2bd4f4c75416ed565b146b5efebf1a18size=797date=2023-02-17T03:03:42
+file,thumbnail.pna357849ce8c36ae3f2b8b6a5d9dced073size=2290date=2023-03-21T01:33:23
+file,thumbnail.png0209c263105f2510539e8f17c70c4b8csize=145143date=2023-03-21T01:30:53
+file,thumbnail2.pna357849ce8c36ae3f2b8b6a5d9dced073size=2290date=2023-03-21T01:33:23
+file,thumbnail2.png9580f69ccee2d2989ddb12ee685bd249size=139498date=2023-03-21T01:31:04
+file,thumbnail3.pna357849ce8c36ae3f2b8b6a5d9dced073size=2290date=2023-03-21T01:33:23
+file,thumbnail3.pngf7e9173fa397ed8fae59ce395566f0c4size=151723date=2023-03-21T01:32:20
