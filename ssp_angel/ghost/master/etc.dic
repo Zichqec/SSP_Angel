@@ -119,7 +119,18 @@ OnInstallComplete
 	}
 	elseif reference0 == "balloon"
 	{
-		"\1\s[k_thinking]It appears to be a new balloon.\w8\w8\0\s[blush]So cool!\w8\w8 %(username),\w4 do you want us to try this on?"
+		if reference1 == "Angelbox (Biblically Accurate)"
+		{
+			"\1\s[k_thinking]\0\s[star_struck]\i[22]Ooh,\w4 ooh,\w4 our special fancy version of Angelbox,\w4 with all the extra colors!\w8\w8\s[smiling_face_with_3_hearts]\i[21] Get yourself over to the balloon settings straight away and start playing with them!\w8\w8 there's lots to choose from~!\w8\w8\1\s[neutral_face]I am personally fond of the grayscale trio.\w8\w8 They are simple and easy on the eyes."
+		}
+		elseif reference1 == "Cotton Candy"
+		{
+			"\1\s[k_thinking]\0\s[star_struck]\i[22]Our Cotton Candy #balloon!\w8\w8 Now we're talking,\w4 let's get some flavor going~!\w8\w8\1\s[expressionless]Please do not eat the #balloon..."
+		}
+		else
+		{
+			"\1\s[k_thinking]It appears to be a new balloon.\w8\w8\0\s[blush]So cool!\w8\w8 %(username),\w4 do you want us to try this on?"
+		}
 		--
 		all :/
 		{

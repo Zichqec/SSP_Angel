@@ -3,7 +3,7 @@ file,developer_options.txt6a5eafaed6829b071348ac9a8271c2b9size=21date=2023-03
 file,ghost/master/aitalk.dicbd4e3adb8690055557c34329abf3f487size=121731date=2023-03-20T21:09:47
 file,ghost/master/bootend.dic1f3148519c653d9b35f5b3a888c88145size=21111date=2023-03-19T04:34:04
 file,ghost/master/descript.txt0d07ba356981c446b2f16d1ec27c4f10size=303date=2023-03-15T22:42:36
-file,ghost/master/etc.dic4cb0d8a891ff0e19018064d1ac661c59size=21631date=2023-03-26T04:47:53
+file,ghost/master/etc.dic8f7157053aad129c14b6895539a753a5size=22355date=2023-03-26T05:18:00
 file,ghost/master/icon.ico2b2a65d072786a2a70b97f0d30d5e7b7size=10462date=2023-01-16T22:39:30
 file,ghost/master/kero_menu.dic1407d7cc89825e35047a16d4a3205e61size=39769date=2023-03-26T04:14:02
 file,ghost/master/main.dic56561e12ef1de3a90d8e9c90f5c35b06size=5639date=2023-03-26T04:36:09
