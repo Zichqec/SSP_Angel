@@ -434,14 +434,7 @@ OnChangeLog : all
 {
 	if reference0 == "yes"
 	{
-		"\1\s[k_thinking]\0\b[2]\s[blush]%(raised_hand)"
-		"\![set,autoscroll,disable]\_q\*"
-		"\f[align,center]— SSP Angel Version 1.0.0 —\n\n\f[align,left]"
-		"• Initial release\n\n"
-		
-		"\n"
-		if reference1 == "menu"; "\![*]\q[Back,OnFunctionMenu]  " 
-		"\![*]\q[Close,]"
+		"\1\s[k_thinking]\0\b[0]\s[blush]%(raised_hand)\j[https://github.com/Zichqec/SSP_Angel/releases/latest/]Here you are!\w8\w8 You should be able to read about all the latest changes on our GitHub repository~!"
 	}
 	else
 	{

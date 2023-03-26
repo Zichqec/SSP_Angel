@@ -276,7 +276,7 @@ OnGlossaryWord : all
 		"\0\s[astonished]So...\w8\w8 are we a \_a[https://en.wikipedia.org/wiki/Ghost_in_the_Shell]ghost in a shell\_a?\w8\w8\n\n"
 		"\1\s[neutral_face]That is the intended reference,\w4 yes.\w8\w8\n\n"
 		"\0\s[smiling_face_with_3_hearts]\i[23]Cool!\w8\w8\n\n"
-		"\1\s[teach]Since shells are separate from the code of the ghost,\w4 they are interchangeable.\w8\w8 Some #ghosts come with multiple shells for different looks,\w4 some people make additional shells for other people's #ghosts,\w4 and some #ghosts are set up intentionally to facilitate many people making a variety of shells.\w8\w8"
+		"\1\s[teach]Since shells are separate from the code of the ghost,\w4 they are interchangeable.\w8\w8 Some #ghosts come with multiple shells for different looks,\w4 some people make additional shells for other people's #ghosts,\w4 and some%(br)#ghosts are set up intentionally to facilitate many people making a variety of shells.\w8\w8"
 		"\0\s[blush]\i[31]Shells can have several poses,\w4 called #surfaces,\w4 and they can have animations,\w4 or optional #dressup items!"
 	}
 	elseif reference0 == "Surface"
@@ -317,7 +317,7 @@ OnGlossaryWord : all
 	_label = "Back"
 	if reference1 == "anchor"; _label = "To Glossary"
 	
-	"\1\n\n\w8\w8\_q\![*]\__q[OnGlossary]%(_label)\__q  \![*]\__q[OnCancel]Close\__q"
+	"\1\n\n\w8\w8\*\_q\![*]\__q[OnGlossary]%(_label)\__q  \![*]\__q[OnCancel]Close\__q"
 	"\e GLOSSARY_DEFINITION"
 }
 
@@ -352,7 +352,7 @@ OnTroubleshooting : all
 	{
 		"\0\s[relieved]That's normal.\w8\w8 The language setting in #SSP is for the menus.\w8\w8 #Ghosts can't change their language on the fly,\w4%(br)they have to be written in a specific language by their developer.\w8\w8\s[blush] But,\w4 there are some \_a[https://ukagakadreamteam.com/wiki/tag/multilingual?do=showtag&tag=Multilingual]multilingual%(br)ghosts\_a out there!\w8\w8 There are also some #ghosts with translated versions,\w4 or you can try translating your favorite #ghosts yourself!\w8\w8\n\n"
 		"\1\s[neutral_face]There's a guide on how to translate #ghosts over \_a[https://ashido.com/ukagaka/translation.html]here\_a.\w8\w8%(br)That'll get you started.\w8\w8"
-		"\0\s[blush]You can also try some translation #ghosts,\w4 like%(br)\_a[https://zichqec.github.io/s-the-skeleton/ukatranslator]Ukatranslator\_a,\w4 which copies ghost dialogue into a browser translator for you,\w4 or the \_a[https://twitter.com/Nikola_T/status/1526746677423796224]Simultaneous Translator\_a which displays the translated dialogues in its own #balloon."
+		"\0\s[blush]You can also try some translation #ghosts,\w4 like%(br)\_a[https://zichqec.github.io/s-the-skeleton/ukatranslator]Ukatranslator\_a,\w4 which copies #ghost dialogue into a browser translator for you,\w4 or the \_a[https://twitter.com/Nikola_T/status/1526746677423796224]Simultaneous Translator\_a which displays the translated dialogues in its own #balloon."
 	}
 	elseif reference0 == "Mojibake"
 	{
@@ -388,7 +388,7 @@ OnTroubleshooting : all
 		"\1\s[k_thinking]You can also contact \_a[https://twitter.com/ponapalt]Ponapalt\_a,\w4 the maintainer of SSP.\w8\w8%(br)Or,\w4 you can file a bug report on the #BTS.\w8\w8"
 		"\0\s[blush]Good luck,\w4 I hope someone can help you figure it out!"
 	}
-	"\1\n\n\w8\w8\_q\![*]\__q[OnTroubleshootingMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+	"\1\n\n\w8\w8\*\_q\![*]\__q[OnTroubleshootingMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
 }
 
 OnKeyCombos : all

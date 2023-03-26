@@ -4,7 +4,7 @@ OnTranslate
 	_talk = reference0
 	
 	_anchor = "anchor"
-	if "GLOSSARY_DEFINITION" _in_ _talk; _anchor = ""
+	if "GLOSSARY_DEFINITION" _in_ _talk && !(reference3[1,C_BYTE1] == "anchor"); _anchor = ""
 	
 	_talk = REPLACE(_talk,"#Ayakamtka","\_a[https://github.com/Ayakamtka]Ayakamtka\_a")
 	_talk = REPLACE(_talk,"#GallaTheGalla","\_a[https://gallathegalla.github.io/gtg-ghosts/]GallaTheGalla\_a")

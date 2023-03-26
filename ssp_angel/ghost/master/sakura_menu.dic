@@ -131,7 +131,7 @@ OnQuestions : all
 		"\0\s[relieved]\i[31]If that's not what you're looking for,\w4 you can try ghosts like \_a[https://zichqec.github.io/s-the-skeleton/ukatranslator]Ukatranslator\_a or \_a[https://twitter.com/Nikola_T/status/1526746677423796224]Simultaneous Translator\_a.\w8\w8 These ghosts aid in running ghost dialogue through machine translation,\w4 but they take different approaches.\w8\w8\s[blush] They're far from perfect,\w4 but they can sometimes give you the gist of what a ghost is saying,\w4%(br)so they're worth a shot!"
 	}
 	--
-	"\0\w8\w8\n\n\_q\![*]\__q[OnQuestionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+	"\0\w8\w8\*\n\n\_q\![*]\__q[OnQuestionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
 }
 
 
@@ -687,7 +687,7 @@ OnCallAllGhostsCancel : all
 	--
 	"\0\w8\w8\n\n"
 	--
-	"\![*]\__q[OnCallGhostMenu]Back to ghost list\__q  \__q[OnBlank]Nevermind\__q"
+	"\![*]\__q[OnCallGhostMenu]Back to ghost list\__q  \![*]\__q[OnBlank]Nevermind\__q"
 }
 
 OnCallOnlyOtherGhost : all
@@ -913,29 +913,27 @@ OnTalkrate
 
 OnOpenTalkAboutMenu
 {
-	OnTalkAboutBlurb
+	"\![quicksection,1]" + OnTalkAboutBlurb
 	--
 	OnChangeTalkAbout
 }
 
 OnTalkAboutBlurb
 {
-	"\1\s[neutral_face]\0\b[2]\s[slight_smile]What do you want us to talk about?\w8 We can keep it to just usage tips if you don't want to hear about us,\w4 or if you know all the tips and you don't want to hear them anymore,\w4 we can just talk about ourselves.\w8 Or we can do a mix of both!"
+	"\1\s[neutral_face]\0\b[2]\s[slight_smile]What do you want us to talk about?"
 }
 
 OnChangeTalkAbout : all
 {
 	_devtips = "Off"; if DevTips; _devtips = "On"
-	_blurb = REPLACE(OnTalkAboutBlurb,'\w8','')
-	_blurb = REPLACE(_blurb,'\w4','')
 	
 	"\![lock,balloonrepaint]"
-	"\c\_q%(_blurb)\f[anchorvisitedfontcolor,default.anchor]"
+	"\c\![quicksection,1]%(OnTalkAboutBlurb)\f[anchorvisitedfontcolor,default.anchor]"
 	
 	"\n\n"
-	"\![*]\q[Both,OnTalkAbout,Anything,1,1]    \n"
-	"\![*]\q[Just usage tips,OnTalkAbout,Usage tips,1,0]\n"
-	"\![*]\q[No tips,OnTalkAbout,No tips,0,1]\n\n"
+	"\![*]\q[Usage tips,OnTalkAbout,Usage tips,1,0]\n"
+	"\![*]\q[Casual conversation,OnTalkAbout,No tips,0,1]\n"
+	"\![*]\q[Both,OnTalkAbout,Anything,1,1]\n\n"
 	
 	"Include tips for developers? \![*]\_a[OnToggleDevTips]%(_devtips)\_a\n\n"
 	
@@ -955,7 +953,7 @@ OnTalkAbout
 	}
 	elseif reference0 == "No tips"
 	{
-		"\0\s[sweat_smile]Yeah,\w4 I hear you.\w8 Tips can get annoying after a while,\w4 huh?\w8\w8\1\s[neutral_face]If you wish to hear the information again in the future,\w4 let us know."
+		"\0\s[sweat_smile]Yeah,\w4 I hear you.\w8 Tips can get annoying after a while,\w4 huh?\w8\w8\n\n\1\s[neutral_face]If you wish to hear the information again in the future,\w4 let us know.\w8\w8\0\s[blush]\i[21]We'll just chat about ourselves instead!"
 	}
 	else //Anything
 	{
@@ -1031,7 +1029,7 @@ OnBalloonMenu.Install
 	--
 	"\0\s[blush]\i[22]Should I download and install it for you?\w8\w8\n\n"
 	--
-	"\![*]\__q[OnBalloonMenu.Download,""%(reference0)""]Yes please\__q  \__q[OnBalloonMenu]No thanks\__q"
+	"\![*]\__q[OnBalloonMenu.Download,""%(reference0)""]Yes please\__q  \![*]\__q[OnBalloonMenu]No thanks\__q"
 }
 
 OnBalloonMenu.Download
@@ -1175,7 +1173,7 @@ OnBalloonMenu.RandomColor
 
 OnBalloonMenu.About
 {
-	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]We have a super special #balloon setup!\w8\w8\s[blush]\i[21] The #balloon we come with,\w4 Angelbox,\w4 is very simple.\w8\w8\s[star_struck]\i[22] But if you download one of our other #balloons,\w4 you can customize which #balloon color each of us uses!\w8\w8\n\n\1\s[teach]Our balloons were made with this purpose specifically%(br)in mind,\w4 it is not a typical ghost feature.\w8\w8\s[neutral_face] A lot of work went into making this possible.\w8\w8 If you would like to try it,\w4 you will need to ensure that you download and install the appropriate #balloons.\w8\w8\n\n\0\s[slight_smile]\i[21]We can install them for you if you want!\w8\w8 Just click on their names in the menu and we'll get you started!\w8\w8\n\n\1\s[neutral_face]If you would like to use a different #balloon with us,\w4 right click on Angel and go to the ""Balloon"" tab in the menu.\w8\w8 You can use any balloon with us that you like,\w4 though we won't have special settings for them.\x\![raise,OnBalloonMenu]"
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]We have a super special #balloon setup!\w8\w8\s[blush]\i[21] The #balloon we come with,\w4 Angelbox,\w4 is very simple.\w8\w8\s[star_struck]\i[22] But if you download one of our other #balloons,\w4 you can customize which #balloon color each of us uses!\w8\w8\n\n\1\s[teach]Our #balloons were made with this purpose specifically%(br)in mind,\w4 it is not a typical #ghost feature.\w8\w8\s[neutral_face] A lot of work went into making this possible.\w8\w8 If you would like to try it,\w4 you will need to ensure that you download and install the appropriate #balloons.\w8\w8\n\n\0\s[slight_smile]\i[21]We can install them for you if you want!\w8\w8 Just click on their names in the menu and we'll get you started!\w8\w8\n\n\1\s[neutral_face]If you would like to use a different #balloon with us,\w4 right click on Angel and go to the ""Balloon"" tab in the menu.\w8\w8 You can use any #balloon with us that you like,\w4 though we won't have special settings for them.\x\![raise,OnBalloonMenu]"
 }
 
 OnSakuraMenuCancel : nonoverlap_pool
