@@ -92,7 +92,10 @@ OnInstallComplete
 {
 	"\1\b[0]\s[10]\0\b[0]\s[0]"
 	--
-	"\0\s[blush]\i[22]Ta-da~!\w8\w8 I've installed %(reference1) for you~!\w8\w8\n\n"
+	if !(reference1 == "Angelbox (Biblically Accurate)" || reference1 == "Cotton Candy")
+	{
+		"\0\s[blush]\i[22]Ta-da~!\w8\w8 I've installed %(reference1) for you~!\w8\w8\n\n"
+	}
 	--
 	if reference0 == "ghost" || reference0 == "ghost with shell" || reference0 == "ghost with balloon"
 	{
@@ -134,7 +137,7 @@ OnInstallComplete
 		--
 		all :/
 		{
-			"\n\n\_q"
+			"\0\n\n\_q"
 			"\![*]\q[""Change to %(reference1)"",OnChangeInstalledBalloon]\n\n"
 			"\![*]\q[No thanks,OnBlank]"
 		}
