@@ -34,7 +34,7 @@ OnFileDrop2 : nonoverlap_pool
 		}
 		when ".mid", ".wav", ".mp3", ".wma", ".au", ".ogg", ".flac"
 		{
-			"\1\b[0]\s[10]\0\b[0]\s[astonished]A music file!\w8\w8\n\n\1\s[teach]Playing music is outside our capabilities.\w8\w8\s[neutral_face] My apologies.\w8\w8\n\n\0\s[pensive]Aww...\w8\w8\s[blush] But,\w4 you could give some other ghosts a try.\w8\w8 \_a[http://navy.nm.land.to/ukgk/flele/]FLELE\_a is an old Japanese music player ghost,\w4 and there's an \_a[http://www.ashido.com/huntersmoker/flele.html]English patch\_a for it that you can install.\w8\w8%(raised_hand) There is also \_a[https://zichqec.github.io/s-the-skeleton/flux]FLUX\_a, a spiritual successor to FLELE that supports a variety of languages.\w8\w8\n\n\1\s[teach]There are also a number of other individual ghosts that have music players as part of their functions.\w8\w8 You can try browsing the \_a[https://ukagakadreamteam.com/wiki/tag/music_player?do=showtag&tag=Music_Player]Music Player tag\_a on the #Ukagaka Dream Team Wiki."
+			"\1\b[0]\s[10]\0\b[0]\s[astonished]A music file!\w8\w8\n\n\1\s[teach]Playing music is outside our capabilities.\w8\w8\s[neutral_face] My apologies.\w8\w8\n\n\0\s[pensive]Aww...\w8\w8\s[blush] But,\w4 you could give some other ghosts a try.\w8\w8 \_a[http://navy.nm.land.to/ukgk/flele/]FLELE\_a is an old Japanese music player ghost,\w4 and there's an \_a[http://www.ashido.com/huntersmoker/flele.html]English patch\_a for it that you can install.\w8\w8%(raised_hand) There is also \_a[https://ukagaka.zichqec.com/ghost/flux]FLUX\_a, a spiritual successor to FLELE that supports a variety of languages.\w8\w8\n\n\1\s[teach]There are also a number of other individual ghosts that have music players as part of their functions.\w8\w8 You can try browsing the \_a[https://ukagakadreamteam.com/wiki/tag/music_player?do=showtag&tag=Music_Player]Music Player tag\_a on the #Ukagaka Dream Team Wiki."
 		}
 		others
 		{
@@ -252,7 +252,7 @@ OnInstallFailure
 //reference0 is the Sakura name of the ghost the item was meant for, reference1 (since SSP 2.4.85) is the type of item you tried to install
 OnInstallRefuse
 {
-	"\0\b[0]\1\b[0]\s[k_thinking]Oh,\w4 we can't install this %(reference0).\w8\w8 It's meant for %(reference0),\w4 not us.\w8\w8\0\s[astonished]Oh,\w4 it is?\w8\w8\s[pensive] Aw..."
+	"\0\b[0]\1\b[0]\s[k_thinking]Oh,\w4 we can't install this %(reference1).\w8\w8 It's meant for %(reference0),\w4 not us.\w8\w8\0\s[astonished]Oh,\w4 it is?\w8\w8\s[pensive] Aw..."
 }
 
 OnInstallReroute
@@ -341,14 +341,13 @@ OnBIFFComplete
 	}
 	elseif reference0 <= 500
 	{
-		emailheaders = reference7
-		
 		_s = ""; if reference0 != 1; _s = "s"
 		
 		"\1\b[0]\s[neutral_face]\0\b[0]\s[blush]%(reference0) new email%(_s)!\w8\w8"
 		
 		if reference7 != ""
 		{
+			emailheaders = reference7
 			" Do you want to see the header%(_s)?"
 			--
 			"\n\n\![*]\q[Yes,OnSeeHeaders,yes]\n\*\![*]\q[No,OnSeeHeaders,no]"
