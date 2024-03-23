@@ -79,7 +79,7 @@ sillyitems
 	"lavender-scented pillows"
 	"party shawls"
 	"cat brushes"
-	"flower-print wallpaper　rolls"
+	"flower-print wallpaper rolls"
 	"slices of ice cream cake"
 	"jigsaw foam floor mats"
 	"bottles of cinnamon-scented hair conditioner"
@@ -102,6 +102,8 @@ sillyitems
 	"laser pointers"
 	"themed watches"
 	"fortune cookies"
+	
+	"plastic barrels full of plastic monkeys"
 }
 
 smellslike
@@ -267,14 +269,14 @@ thriftitem
 	"collection of mislabeled little animals including a lizard titled Penguin"
 	"painting of a rabbit dancing on the moon"
 	"booklet of instructions on how to knit a tiny dragon without using knitting needles"
-	"set of used textbooks with all of the misprints and outdated information outlined in red pen by an irate now ex-student" //ahem. has NOTHING to do with me
+	"set of used textbooks with all of the misprints and outdated information outlined in red pen by an irate now ex-student"
 	"box of ribbons collected over time from present wrappings"
 	"jump rope with a slightly inaccurate jump counter on one handle"
 	"bottled fairy doll"
 	"cloak that smells like marzipan"
 	"necklace made of seaglass that is impractically heavy"
 	"30 year old ""secret recipe"" bubble mix"
-	"supposed hoop and tray set for making bubbles large enough to stand inside of"
+	"hoop and tray set for making bubbles large enough to stand inside of"
 	"book on rules up with which we should not have to put"
 	"bunch of non-enchanted little paper birds"
 	"pencil case like the type you'd have in nursery school"
@@ -341,7 +343,7 @@ favorite
 	"dental procedure"
 	"way to climb the stairs"
 	"pool cleaner bottle shape"
-	"cancelled TV show art style"
+	"canceled TV show art style"
 	"variety of edible bugs"
 	"word that begins with K"
 	"letter of the alphabet"
@@ -571,7 +573,7 @@ mundanereport
 	"employee adherence to current workplace codes of conduct"
 	"the benefits of a looser dress code in the workplace"
 	"optimization of the workplace printer, including optimal font choice and size for minimal paper waste"
-	"report on the conclusion reached at last week's meeting"
+	"the conclusion reached at last week's meeting"
 	"food guidelines in the workplace"
 	"appropriate use of company staplers"
 	"appropriate disposal of shredded paper"
@@ -613,7 +615,7 @@ angelcolors : nonoverlap
 	"hot pink"
 	"sour yellow"
 	"mellow green"
-	"blue blue and more blue"
+	"blue,\w4 blue,\w4 and more blue"
 	"probably-purple"
 	"heat-changing pink"
 	"frosty blue"
@@ -689,7 +691,7 @@ regrets
 	"filled your bathtub with glitter glue"
 }
 
-fortunecookie
+fortunes : array
 {
 	"Your life will soon be disturbed by a friend of feline persuasion"
 	"A retroactive prediction is nothing but talk of an event of the past"
@@ -792,6 +794,11 @@ fortunecookie
 	"Don't have secrets to hide"
 	"You can always walk away"
 	"Nobody is entitled to your time"
+}
+
+fortunecookie
+{
+	parallel fortunes
 }
 
 magicverb
@@ -904,4 +911,203 @@ magicobject
 	"tyrants"
 	"ghosts"
 	"dragons"
+}
+
+cottoncandyflavor
+{
+	"jellybean"
+	"lavender"
+	"milk"
+	"tea"
+	"coffee"
+	"potato"
+	"bread"
+	"french fries"
+	"fried egg"
+	"pinecone"
+	"wool"
+	"marshmallow"
+	"grass"
+	"ranch"
+	"hot sauce"
+	"jalapeño"
+	"corn"
+	"sawdust"
+	"cotton candy"
+	"fish"
+	"cheese"
+	"shrimp"
+	"pickle"
+	"corn chip"
+	"ink"
+	"mustard"
+	"super sour lemon"
+}
+
+ridiculoussituation
+{
+	"%(thriftitem) that got crammed into your lunchbox"
+	"%(sillyitems) that somehow ended up in your locker"
+	"noodles"
+	"incident with the lunch room microwave"
+	"confetti in the vents"
+	"googly eyes all over your reports"
+	"glitter spill in the boss's office"
+	"butterflies that keep mysteriously appearing in the building"
+	"sticky soda spill on the stairs"
+	"fire in the lunch room toaster"
+	"stinky sock in the lunch room sink"
+	"missing utility bills"
+	"important documents that got shredded and then taped back together"
+	"missing pages from that report on %(mundanereport)"
+	"clown"
+}
+
+pilotgames
+{
+	"paperwork"
+	"desk organizing"
+	"report writing"
+	"stapling"
+	"whiteboard"
+	"faxing"
+	"time clock"
+	"meeting"
+	"tie"
+	"inventory"
+	"tax filing"
+	"banking"
+	"calligraphy"
+	"printing"
+	"chore"
+}
+
+pilotpranks
+{
+	"put your unfinished paperwork in your lunchbox"
+	"organize your paperclips by size instead of 'cuteness'"
+	"put a note on your desk reminding you about next week's meeting"
+	"restock your pens when you aren't looking"
+	"wipe down your desk and clear away the crumbs"
+	"tighten the loose screws on your chair"
+	"put oil on the wheels of your office chair so it stops squeaking"
+	"sharpen all your pencils"
+	"peel the stickers off your wall to comply with company policy"
+	"clean that huge smudge off of your computer monitor"
+	"empty the pencil shavings that have been overflowing out of your sharpener for a month"
+	"get the crumbs out of your keyboard so the keys work again"
+	"remove the stickynote from your monitor that has your password clearly displayed on it"
+}
+
+phonenumber
+{
+	"IT"
+	"HR"
+	"the front desk"
+	"your desk"
+	"the lost and found"
+	"the call-off line"
+}
+
+friendactivities
+{
+	"sort my collection of %(sillyitems)"
+	"watch movies"
+	"paint apples"
+	"play the new %(pilotgames) I got"
+	"go to that weird snack shop and get %(cottoncandyflavor) cotton candy"
+	"watch videos of raccoons washing their food"
+	"play ""find my keys"""
+	"light up SO MANY GLOWSTICKS"
+	"plant the onion sprouts i've been growing on the windowsill for the last 3 weeks"
+	"pitch a tent in my livingroom and have a indoors outdoor sleepover"
+	"frame the budget report that I didn't make ONE SINGLE mistake on"
+	"make a bunch of confetti by hand to spice up that work party next week"
+	"plan out the birthday party schedule for the year"
+	"have a scavenger hunt and find all my lost pens"
+	"make finger puppets of all our coworkers"
+	"get SO hydrated"
+	"try on hats"
+	"go shopping for matching pairs of socks"
+	"try out a bunch of different backscratchers"
+	"make a new friend out of popsicle sticks and glue"
+	"go to the animal shelter to see all the cute animals and DEFINITELY not adopt them all"
+	"make 20 boxes of macaroni and cheese all at once just to see what happens"
+	"make the biggest hot chocolate bomb that anyone's ever seen"
+	"count how many toothpicks i have left"
+	"bake brownies so dense they form a chocolate black hole"
+	"make cloth flowers out of old shirts"
+	"try on each other's halos"
+	"pretend we're tigers going around the apartment doing tiger things"
+	"hire a jester for the day"
+	"take clown lessons"
+	"eat a 3 course meal made entirely of chocolate"
+	"set up an indoors sandbox so we can make sandcastles"
+	"open all the ravioli cans in my pantry"
+	"make doll wigs out of yarn"
+	"race to see who can wash the most dishes"
+}
+
+angelingredients
+{
+	"pickle juice"
+	"cinnamon sugar"
+	"fondant"
+	"melted cheese"
+	"fake butter"
+	"maple syrup"
+	"%(angelcolors) food coloring"
+	"bananas"
+	"gravy"
+	"several pounds of sweet corn"
+	"mashed potatoes"
+	"blended pasta"
+	"bean soup"
+	"egg salad"
+	"whipped cream"
+	"squid ink"
+	"yellow mustard"
+	"ketchup"
+	"grape juice"
+	"raw egg"
+}
+
+angelpossession
+{
+	"square bottle"
+	"bag of licorice"
+	"extra glitter lip balm"
+	"popcorn"
+	"scratched up CD"
+	"wrist band shaped like a tiger"
+	"%(angelcolors) hair tie"
+	"remote control"
+	"spool of %(angelcolors) thread"
+}
+
+angelpetition
+{
+	"make clouds feel as fluffy and nice to touch as they look like they should be"
+	"rename oranges to ""peelies"""
+	"cut the price of %(sillyitems) in half the day before my birthday"
+	"make Wednesday into ""hugs day"""
+	"repaint the ceilings at headquarters to look like the sky at different times of day"
+	"ban anchovies from ever touching pizza again"
+	"set up a system of ""coolness points"" at work which will factor into performance reports"
+	"swap the numbers 3 and 9"
+	"make math illegal"
+	"make forwarding chain letters mandatory"
+	"set up a pizza fund which all employees are required to contribute %0.001 of each paycheck to"
+	"fill one of the storage rooms with a bunch of sand and water and sun lamps so that it can be repurposed as a break room"
+}
+
+angelstashplace
+{
+	"in your locker"
+	"under the lunch room table"
+	"on top of the microwave"
+	"by the water fountain"
+	"in the boss's office"
+	"at your desk"
+	"in your desk drawer"
 }
