@@ -221,7 +221,7 @@ OnHowTo : all
 	{
 		"\0\s[blush]Installing a #ghost is easy!\w8\w8 Most #ghosts are distributed as #.nar files,\w4 or .zip files.\w8\w8 You can simply drag and drop the downloaded #.nar or .zip file onto any running #ghost to install it!\w8\w8 Ta-da~!\w8\w8\n\n"
 		"\1\s[teach]If the #ghost is packaged differently,\w4 or you have an error,\w4 you may need to install it manually.\w8\w8"
-		"\0\s[relieved]\i[24]If you need help with manually installing a #ghost,\w4 ask Pilot about it in his Troubleshooting menu."
+		"\0\s[relieved]\i[24]If you need help with manually installing a #ghost,\w4 ask Pilot about it in his Troubleshooting menu.\w8\w8\s[blush]\i[22] I hope you get lots of fun friends to join us on your desktop!"
 	}
 	elseif reference0 == "Uninstall"
 	{

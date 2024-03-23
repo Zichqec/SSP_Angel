@@ -293,7 +293,7 @@ OnGlossaryWord : all
 		"\1\s[teach]Satori is a ghost coding language,\w4 and is one of the most popular ones in the Japanese community for its simplicity.\w8\w8 It's actually called 里々,\w4 which usually translates as Village or Village People when run through machine translation.\w8\w8\n\n"
 		"\0\s[sweat_smile]Unfortunately,\w4 as it relies on characters only available on a Japanese keyboard,\w4 it is difficult to use for ghost development if you don't have one of those keyboards installed.\w8\w8\n\n"
 		"\1\s[neutral_face]Still,\w4 it sees a lot of use in Japanese #ghosts,\w4 so it's worth having a look at.\w8\w8 \_a[https://wikiwiki.jp/satolist/]Here's\_a the wiki for it.\w8\w8\s[k_thinking] There is also \_a[https://github.com/ukatech/satoriya-shiori]Satoriya\_a,\w4 which means Yet Another Satori.\w8\w8 I'm not terribly certain of the details around it,\w4 but I believe this version is still being actively maintained.\w8\w8 That link will take you to the GitHub repository for it if you want to have a look.\w8\w8"
-		"\0\s[star_struck]There's also an editor specifically for Satori,\w4 called%(br)\_a[https://nanachi.sakura.ne.jp/satolist.html]Satolist!\_a\w8\w8 It's got stuff like a collision editor,\w4 a visual display of your surfaces,\w4 and more!\w8\w8\s[blush]\i[31] Definitely check it out if you're interested in trying out Satori!\w8\w8 "
+		"\0\s[star_struck]There's also an editor specifically for Satori,\w4 called%(br)\_a[https://nanachi.sakura.ne.jp/satolist.html]Satolist!\_a\w8\w8 It's got stuff like a collision editor,\w4 a visual display of your surfaces,\w4 and more!\w8\w8\s[blush]\i[31] Definitely check it out if you're interested in trying out Satori!"
 	}
 	elseif reference0 == "SERIKO"
 	{
@@ -368,6 +368,7 @@ OnTroubleshootingMenu : all
 	"\![*]\__q[OnTroubleshooting,GhostsInWrongLang]Ghosts aren't talking in the language I set SSP to.\__q\n"
 	"\![*]\__q[OnTroubleshooting,Mojibake]Some ghosts are talking in mojibake.\__q\n"
 	"\![*]\__q[OnTroubleshooting,NoSounds]No sounds will play.\__q\n"
+	"\![*]\__q[OnTroubleshooting,InstallationIssues]I'm having trouble installing some ghosts.\__q\n"
 	"\![*]\__q[OnTroubleshooting,ComplainOffscreen]Ghosts complain about being offscreen even when they aren't.\__q\n"
 	"\![*]\__q[OnTroubleshooting,PassiveMode]A ghost is stuck doing nothing and its right click menu is grayed out.\__q\n"
 	"\![*]\__q[OnTroubleshooting,SomethingElse]Something else weird is going on.\__q\n"
@@ -408,6 +409,17 @@ OnTroubleshooting : all
 		"\1\s[teach]If that doesn't work,\w4 make sure to check this setting for the specific #ghost you're having trouble with,\w4 as well.\w8\w8 When you set settings in the #SSP preferences,\w4 you're setting the defaults that all ghosts will normally use.\w8\w8 However,\w4 if you right click a #ghost,\w4 hover over Options,\w4 and click on%(br)""Ghost Preferences..."" instead,\w4 you will get a menu that allows you to configure those settings for that%(br)#ghost individually.\w8\w8 That means different #ghosts can have different settings,\w4 so you should check both menus to be sure this option is unchecked.\w8\w8\n\n"
 		"\0\s[s_thinking]If that still doesn't work,\w4 you might try restarting #SSP if you haven't already.\w8\w8 I suppose you could also check your volume mixer in windows,\w4 and make sure #SSP isn't muted in there?\w8\w8"
 		"\1\s[neutral_face]There is also \_a[https://github.com/Nevcairiel/LAVFilters/releases]LAV Filters\_a,\w4 which #SSP requires to play some file types.\w8\w8 You might try installing that.\w8\w8 Once you've installed it,\w4 #SSP should use it immediately without you needing to set anything up,\w4 though you may want to restart #SSP anyways to be sure."
+	}
+	elseif reference0 == "InstallationIssues"
+	{
+		
+		"\1\s[k_thinking]Trouble installing certain #ghosts?\w8\w8 There are several possible causes.\w8\w8\s[teach] The most common issue,\w4 especially if you're installing older English #ghosts,\w4 is that the%(br)#ghost may be packaged differently from normal. If this is the case,\w4 or you have an error,\w4 you may need to install it manually.\w8\w8\n\n"
+		"\0\s[sweat_smile]Yeah,\w4 that happens sometimes.\w8\w8 A key thing to remember is that #.nar files are actually just .zip files with a different extension,\w4 so you can unzip them if you need to!\w8\w8 Though you may need to change the extension to .zip manually first.\w8\w8\n\n"
+		"\1\s[teach]You will need to copy the #ghost's folder into the%(br)%(h)SSP/ghost/%(dc) directory.\w8\w8\n\n"
+		"\0\s[blush]%(raised_hand)\![open,explorer,../../../]This one here!\w8\w8\s[sweat_smile] (If you haven't set up subfolders for your ghosts,\w4 or anything.)\w8\w8\n\n"
+		"\1\s[k_thinking]Take a look at how our files are set up.\w8\w8 We're the%(br)ssp_angel folder.\w8\w8 You'll see if you double click on it that all our files are contained in there and not spilling into the %(h)SSP/ghost/%(dc) directory,\w4 but also there are files on the top level.\w8\w8 Your new #ghost needs to be set up the same way,\w4 make sure it isn't nested into an extra folder.\w8\w8\n\n"
+		"\0\s[relieved]Once you've done that,\w4 you'll need to let #SSP know to look for the new #ghost.\w8\w8\s[blush] %(raised_hand)\![open,configurationdialog,folder]Here's the preferences menu for you.\w8\w8 You should be on the Folder tab.\w8\w8 Do you see at the top,\w4 the bit that says #ghost and has Edit and Reload buttons?\w8\w8 The number of Recognized Elements is the number of #ghosts you have installed,\w4 and if you've done this correctly,\w4 when you click Reload you should see that number go up.\w8\w8\n\n"
+		"\1\s[neutral_face]Try right clicking on us once you've finished with that,\w4 and check to see if your new #ghost shows up in the menu."
 	}
 	elseif reference0 == "ComplainOffscreen"
 	{
