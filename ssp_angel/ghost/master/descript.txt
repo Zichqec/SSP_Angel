@@ -6,6 +6,7 @@ type,ghost
 shiori,yaya.dll
 
 craftman,Angel Team
+craftmanw,Angel Team
 craftmanurl,https://github.com/Zichqec/SSP_Angel
 
 sakura.name,Angel
