@@ -252,7 +252,7 @@ OnNeedlePoke
 			"\s[rolling_eyes]Can I help you?"
 			"\s[expressionless]%(username),\w4 if you would..."
 			"\s[unamused]Cut it out,\w4 will you?"
-			"\s[unamued]Enough of this."
+			"\s[unamused]Enough of this."
 		}
 	}
 }
