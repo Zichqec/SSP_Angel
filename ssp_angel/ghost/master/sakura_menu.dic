@@ -392,7 +392,7 @@ OnHowTo : all
 	elseif reference0 == "BugReportSSPAngel"
 	{
 		"\0\s[scream]Oh my gosh,\w4 a bug?\w8\w8 Where!?\w8\w8\n\n"
-		"\1\s[unamused]A bug in the code,\w4 no doubt,\w4 not a real insect...\w8\w8\s[teach]%(br)#Zichqec is our programmer and maintainer,\w4 and can be contacted in a variety of places.\w8\w8 Try the links at the bottom of \_a[https://ukagaka.zichqec.com/]Zichqec's website\_a,\w4 or you can try the%(br)#Ukagaka Dream Team's \_a[https://ukagakadreamteam.tumblr.com/discord]Discord server\_a.\w8\w8"
+		"\1\s[unamused]A bug in the code,\w4 no doubt,\w4 not a real insect...\w8\w8\s[teach]%(br)#Zichqec is our programmer and maintainer,\w4 and can be contacted in a variety of places.\w8\w8 Try the links at the bottom of \_a[https://ukagaka.zichqec.com/]Zichqec's website\_a,\w4 or you can try the%(br)#Ukagaka Dream Team's \_a[https://ukagakadreamteam.com/wiki/info/ukagaka_dream_team#where_to_find_us]Discord server\_a.\w8\w8"
 		"\0\s[blush]If that doesn't work,\w4 you may also try contacting other members of the Angel Team!\w8\w8 All of them are linked in our readme,\w4 or in the credits that you can access in Pilot's menu!"
 	}
 	elseif reference0 == "BugReportAnotherGhost"
