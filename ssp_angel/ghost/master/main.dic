@@ -8,15 +8,49 @@ OnTranslate
 	
 	_talk = REPLACE(_talk,"#Ayakamtka","\_a[https://github.com/Ayakamtka]Ayakamtka\_a")
 	_talk = REPLACE(_talk,"#GallaTheGalla","\_a[https://gallathegalla.github.io/gtg-ghosts/]GallaTheGalla\_a")
-	_talk = REPLACE(_talk,"#Yuyudev","\_a[https://twitter.com/yuyudev]Yuyudev\_a")
-	_talk = REPLACE(_talk,"#Zichqec","\_a[https://zichqec.github.io/s-the-skeleton/]Zichqec\_a")
+	_talk = REPLACE(_talk,"#Yuyudev","\_a[https://thatoddhaystack.neocities.org/ukagaka/]Yuyudev\_a")
+	_talk = REPLACE(_talk,"#Zichqec's","\_a[https://ukagaka.zichqec.com/]Zichqec's\_a") //I know right below that I have a solution for plural forms... but I don't care
+	_talk = REPLACE(_talk,"#Zichqec","\_a[https://ukagaka.zichqec.com/]Zichqec\_a")
 	
-	_terms = ("AYA:AYA","BTS:BTS","balloons?:Balloon","Baseware:Baseware",/
-	"Calendar skins?:Calendar skin","CROW:CROW","Dressups?:Dressup","Freeshells?:Freeshell",/
-	"Ukagaka Dream Team:Ukagaka Dream Team","Ghost'?s?:Ghost/Ukagaka/Nanika","Ukagakas?:Ghost/Ukagaka/Nanika",/
-	"Nanikas?:Ghost/Ukagaka/Nanika","Intervals?:Interval","Kawari:Kawari","Kero:Kero","\.?nar:nar","Materia:Materia",/
-	"MAKOTO:MAKOTO","MAYUNA:MAYUNA","Plugins?:Plugin","SAORI:SAORI","SHIORIs?:SHIORI","SSP:SSP","Sakura\s?Script:Sakura Script","Sakura:Sakura",/
-	"Satori:Satori","SERIKO:SERIKO","Shells?:Shell","Surfaces?:Surface","Ukadoc:Ukadoc","YAYA:YAYA")
+	//Regex:Link
+	_terms = (/
+	"Animations?:Animation",/
+	"AYA:AYA",/
+	"BTS:BTS",/
+	"balloons?:Balloon",/
+	"Baseware:Baseware",/
+	"Calendar skins?:Calendar skin",/
+	"CROW:CROW",/
+	"Dressups?:Dressup",/
+	"Elements?:Element",/
+	"Freeshells?:Freeshell",/
+	"Ukagaka Dream Team:Ukagaka Dream Team",/
+	"Ghost'?s?:Ghost/Ukagaka/Nanika",/
+	"Ukagaka:Ghost/Ukagaka/Nanika",/
+	"Nanika:Ghost/Ukagaka/Nanika",/
+	"Intervals?:Interval",/
+	"Kawari:Kawari",/
+	"Kero:Kero",/
+	"\.?nar:nar",/
+	"Materia:Materia",/
+	"MAKOTO:MAKOTO",/
+	"MAYUNA:MAYUNA",/
+	"Middleware:Middleware",/
+	"Owner draw menus?:Owner draw menu",/
+	"Plugins?:Plugin",/
+	"SAORI:SAORI",/
+	"SHIORIs?:SHIORI",/
+	"SSP:SSP",/
+	"Sakura\s?Script:Sakura Script",/
+	"Sakura:Sakura",/
+	"Satori:Satori",/
+	"SERIKO:SERIKO",/
+	"Shells?:Shell",/
+	"Supplements?:Supplement",/
+	"Surfaces?:Surface",/
+	"Ukadoc:Ukadoc",/
+	"YAYA:YAYA"/
+	)
 	
 	void RE_OPTION("mi")
 	foreach _terms; _term
@@ -75,7 +109,7 @@ OnTranslate
 		_talk = REPLACE(_talk,"\b[6]","\b[0]")
 	}
 	
-	//This is the bit that runs envelopes in script input
+	//This is the bit that runs embedded elements in script input
 	if reference1 == "" && reference2 == "" //If this is from script input
 	{
 		EVAL('"' + REPLACE(_talk,'"','""') + '"')
@@ -176,4 +210,19 @@ On_installedballoonname
 On_homeurl
 {
 	"https://raw.githubusercontent.com/Zichqec/SSP_Angel/main/ssp_angel/"
+}
+
+On_getaistateex : all
+{
+	switch reference0
+	{	
+		"%(OUTPUTNUM('OtherTalk')),%(OUTPUTNUM('TipTalk')),%(OUTPUTNUM('sillyitems')),%(OUTPUTNUM('smellslike')),%(OUTPUTNUM('thriftitem')),%(OUTPUTNUM('favorite')),%(OUTPUTNUM('lunchboxitem')),%(OUTPUTNUM('fortunecookie')),%(OUTPUTNUM('magicverb')),%(OUTPUTNUM('magicobject'))" + C_BYTE1
+		//"" + C_BYTE1
+	}
+
+	switch reference0
+	{
+		"OtherTalk,TipTalk,sillyitems,smellslike,thriftitem,favorite,lunchboxitem,fortunecookie,magicverb,magicobject"
+	}
+	
 }
