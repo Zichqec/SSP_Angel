@@ -1,6 +1,7 @@
 descript
 {
 	version,1
+	//satolist.palette.frame,100,100
 }
 
 sakura.surface.alias
@@ -57,7 +58,7 @@ kero.surface.alias
 //neutral
 surface0
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface100.png,0,0	
 	element2,overlay,surface400.png,0,0
 	element3,overlay,surface500.png,0,0
@@ -90,7 +91,7 @@ surface0
 //happy/blush
 surface1
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface103.png,0,0	
 	element2,overlay,surface402.png,0,0
 	element3,overlay,surface500.png,0,0
@@ -124,7 +125,7 @@ surface1
 //upset
 surface2
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface100.png,0,0	
 	//element2,overlay,surface401.png,0,0
 	element3,overlay,surface508.png,0,0
@@ -169,7 +170,7 @@ surface2
 //pensive
 surface3
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface104.png,0,0	
 	//element2,overlay,surface401.png,0,0
 	element3,overlay,surface511.png,0,0
@@ -203,7 +204,7 @@ surface3
 //content
 surface4
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface104.png,0,0	
 	element2,overlay,surface402.png,0,0
 	element3,overlay,surface500.png,0,0
@@ -230,7 +231,7 @@ surface4
 //starry eyed
 surface5
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface105.png,0,0	
 	element2,overlay,surface402.png,0,0
 	element3,overlay,surface506.png,0,0
@@ -267,7 +268,7 @@ surface5
 //hearts
 surface6
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface103.png,0,0	
 	element2,overlay,surface402.png,0,0
 	element3,overlay,surface512.png,0,0
@@ -297,7 +298,7 @@ surface6
 //thinking
 surface7
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface100.png,0,0	
 	element2,overlay,surface403.png,0,0
 	element3,overlay,surface511.png,0,0
@@ -372,7 +373,7 @@ surface7
 //gasp
 surface8
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface100.png,0,0
 	element2,overlay,surface402.png,0,0
 	element3,overlay,surface504.png,0,0
@@ -459,7 +460,7 @@ surface8
 //sweatdrop
 surface9
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface100.png,0,0	
 	element2,overlay,surface401.png,0,0
 	element3,overlay,surface501.png,0,0
@@ -499,7 +500,7 @@ surface9
 //scared
 surface11
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface602.png,0,0
 	element2,overlay,surface107.png,0,0	
 	element3,overlay,surface402.png,0,0
@@ -586,7 +587,7 @@ surface11
 //sob
 surface12
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface110.png,0,0	
 	element2,overlay,surface401.png,0,0
 	element3,overlay,surface518.png,0,0
@@ -615,7 +616,7 @@ surface12
 //pleading_face
 surface13
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface111.png,0,0	
 	element2,overlay,surface401.png,0,0
 	element3,overlay,surface516.png,0,0
@@ -670,7 +671,7 @@ surface13
 //confounded
 surface14
 {
-	element0,overlay,surface0.png,0,0
+	element0,overlay,body_angel_0.png,0,0
 	element1,overlay,surface113.png,0,0	
 	element2,overlay,surface401.png,0,0
 	element3,overlay,surface519.png,0,0
@@ -785,6 +786,16 @@ surface.append0-14,!10
 	
 	animation701.interval,bind
 	animation701.pattern0,add,701,0,0,0
+	
+	animation10000.interval,bind+always
+	animation10000.pattern0,move,-1,0,0,0
+	animation10000.pattern1,move,-1,750-1000,0,-1
+	animation10000.pattern2,move,-1,200,0,-2
+	animation10000.pattern3,move,-1,300,0,-3
+	animation10000.pattern4,move,-1,750-1000,0,-2
+	animation10000.pattern5,move,-1,200,0,-1
+	animation10000.pattern6,move,-1,300,0,0
+	animation10000.option,shared-index
 }
 
 
@@ -792,7 +803,7 @@ surface.append0-14,!10
 //kero neutral
 surface10
 {
-	element0,overlay,surface10.png,0,0
+	element0,overlay,body_pilot_0.png,0,0
 	element1,overlay,surface1100.png,0,0
 	element2,overlay,surface1200.png,0,0
 	element3,overlay,surface1400.png,0,0
@@ -826,7 +837,7 @@ surface10
 //kero unamused
 surface1011
 {
-	element0,overlay,surface10.png,0,0
+	element0,overlay,body_pilot_0.png,0,0
 	element1,overlay,surface1105.png,0,0
 	element2,overlay,surface1200.png,0,0
 	element3,overlay,surface1401.png,0,0
@@ -860,7 +871,7 @@ surface1011
 //kero eyeroll
 surface1012
 {
-	element0,overlay,surface10.png,0,0
+	element0,overlay,body_pilot_0.png,0,0
 	element1,overlay,surface1103.png,0,0
 	element2,overlay,surface1200.png,0,0
 	element3,overlay,surface1403.png,0,0
@@ -894,7 +905,7 @@ surface1012
 //kero think
 surface1013
 {
-	element0,overlay,surface11.png,0,0
+	element0,overlay,body_pilot_1.png,0,0
 	element1,overlay,surface1105.png,0,0
 	element2,overlay,surface1202.png,0,0
 	element3,overlay,surface1406.png,0,0
@@ -928,7 +939,7 @@ surface1013
 //kero hand up
 surface1014
 {
-	element0,overlay,surface12.png,0,0
+	element0,overlay,body_pilot_2.png,0,0
 	element1,overlay,surface1100.png,0,0
 	element2,overlay,surface1201.png,0,0
 	element3,overlay,surface1400.png,0,0
@@ -963,7 +974,7 @@ surface1014
 //kero expressionless
 surface1015
 {
-	element0,overlay,surface10.png,0,0
+	element0,overlay,body_pilot_0.png,0,0
 	element1,overlay,surface1107.png,0,0
 	element2,overlay,surface1200.png,0,0
 	element3,overlay,surface1402.png,0,0
@@ -991,7 +1002,7 @@ surface1015
 //kero flushed
 surface1016
 {
-	element0,overlay,surface10.png,0,0
+	element0,overlay,body_pilot_0.png,0,0
 	element1,overlay,surface1100.png,0,0
 	element2,overlay,surface1203.png,0,0
 	element3,overlay,surface1404.png,0,0
@@ -1025,7 +1036,7 @@ surface1016
 //kero sigh
 surface1017
 {
-	element0,overlay,surface10.png,0,0
+	element0,overlay,body_pilot_0.png,0,0
 	element1,overlay,surface1102.png,0,0
 	element2,overlay,surface1200.png,0,0
 	element3,overlay,surface1405.png,0,0
@@ -1063,7 +1074,7 @@ surface1017
 //:face_with_raised_eyebrow:
 surface1018
 {
-	element0,overlay,surface10.png,0,0
+	element0,overlay,body_pilot_0.png,0,0
 	element1,overlay,surface1105.png,0,0
 	element2,overlay,surface1200.png,0,0
 	element3,overlay,surface1406.png,0,0
@@ -1097,7 +1108,7 @@ surface1018
 //kero concern
 surface1019
 {
-	element0,overlay,surface10.png,0,0
+	element0,overlay,body_pilot_0.png,0,0
 	element1,overlay,surface1100.png,0,0
 	element2,overlay,surface1200.png,0,0
 	element3,overlay,surface1404.png,0,0
@@ -1131,7 +1142,7 @@ surface1019
 //kero concern think
 surface1020
 {
-	element0,overlay,surface11.png,0,0
+	element0,overlay,body_pilot_1.png,0,0
 	element1,overlay,surface1100.png,0,0
 	element2,overlay,surface1202.png,0,0
 	element3,overlay,surface1404.png,0,0
@@ -1161,6 +1172,16 @@ surface1020
 	animation5.pattern2,overlay,1101,100,0,0
 	animation5.pattern3,overlay,-1,70,0,0
 }
+
+//kero facepalm - doesn't really read right
+// surface1021
+// {
+	// element0,overlay,body_pilot_1.png,0,0
+	// element1,overlay,surface1102.png,0,0
+	// element2,overlay,surface1202.png,0,0
+	// element3,overlay,surface1402.png,0,0
+	// element4,overlay,surface1504.png,0,0
+// }
 
 surface.append10,1011-1020,!1014
 {
@@ -1197,4 +1218,17 @@ surface.append10,1014
 	animation6.interval,never
 	animation6.pattern0,stop,5
 	animation6.pattern1,overlay,1102,0,0,0
+}
+
+//Satolist settings
+surface.append0-9,11-14
+{
+//satolist.palette.offset,65,45
+//satolist.palette.expand,0.75
+}
+
+surface.append10,1011-1020
+{
+//satolist.palette.offset,68,40
+//satolist.palette.expand,0.75
 }

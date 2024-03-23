@@ -6,6 +6,7 @@ type,shell
 
 name,Default Shell
 craftman,Angel Team
+craftmanw,Angel Team
 craftmanurl,https://github.com/Zichqec/SSP_Angel
 
 sakura.balloon.offsetx,0
@@ -54,8 +55,11 @@ sakura.bindoption700.group,Accessories,multiple
 sakura.bindgroup700.name,Accessories,Bow and bell
 sakura.bindgroup701.name,Accessories,Skull barette
 
-sakura.menuitem0,700
-sakura.menuitem1,701
+sakura.bindgroup10000.name,Floating,On/Off
+
+sakura.menuitem0,10000
+sakura.menuitem1,700
+sakura.menuitem2,701
 
 sakura.defaultleft,0
 kero.defaultleft,225
