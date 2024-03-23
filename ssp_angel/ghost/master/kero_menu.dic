@@ -40,6 +40,7 @@ OnGlossary : all
 	"\1\b[4]\_q\![set,autoscroll,disable]"
 	"\f[align,center]%(emdash) Glossary %(emdash)\n\f[align,left]"
 	
+	"\![*]\__q[OnGlossaryWord,Animation]Animation\__q\n"
 	"\![*]\__q[OnGlossaryWord,AYA]AYA\__q\n"
 	"\![*]\__q[OnGlossaryWord,BTS]BTS\__q\n"
 	"\![*]\__q[OnGlossaryWord,Balloon]Balloon\__q\n"
@@ -47,6 +48,7 @@ OnGlossary : all
 	"\![*]\__q[OnGlossaryWord,Calendar skin]Calendar skin\__q\n"
 	"\![*]\__q[OnGlossaryWord,CROW]CROW\__q\n"
 	"\![*]\__q[OnGlossaryWord,Dressup]Dressup\__q\n"
+	"\![*]\__q[OnGlossaryWord,Element]Element\__q\n"
 	"\![*]\__q[OnGlossaryWord,Freeshell]Freeshell\__q\n"
 	"\![*]\__q[OnGlossaryWord,Ghost/Ukagaka/Nanika]Ghost/Ukagaka/Nanika\__q\n"
 	"\![*]\__q[OnGlossaryWord,Interval]Interval\__q\n"
@@ -57,6 +59,8 @@ OnGlossary : all
 	"\![*]\__q[OnGlossaryWord,Materia]Materia\__q\n"
 	"\![*]\__q[OnGlossaryWord,MAKOTO]MAKOTO\__q\n"
 	"\![*]\__q[OnGlossaryWord,MAYUNA]MAYUNA\__q\n"
+	"\![*]\__q[OnGlossaryWord,Middleware]Middleware\__q\n"
+	"\![*]\__q[OnGlossaryWord,Owner draw menu]Owner draw menu\__q\n"
 	"\![*]\__q[OnGlossaryWord,SAORI]SAORI\__q\n"
 	"\![*]\__q[OnGlossaryWord,SHIORI]SHIORI\__q\n"
 	"\![*]\__q[OnGlossaryWord,SSP]SSP\__q\n"
@@ -65,6 +69,7 @@ OnGlossary : all
 	"\![*]\__q[OnGlossaryWord,Satori]Satori\__q\n"
 	"\![*]\__q[OnGlossaryWord,SERIKO]SERIKO\__q\n"
 	"\![*]\__q[OnGlossaryWord,Shell]Shell\__q\n"
+	"\![*]\__q[OnGlossaryWord,Supplement]Supplement\__q\n"
 	"\![*]\__q[OnGlossaryWord,Surface]Surface\__q\n"
 	"\![*]\__q[OnGlossaryWord,Ukadoc]Ukadoc\__q\n"
 	"\![*]\__q[OnGlossaryWord,Ukagaka Dream Team]Ukagaka Dream Team\__q\n"
@@ -78,16 +83,24 @@ OnGlossary : all
 OnGlossaryWord : all
 {
 	"\1\b[0]\s[10]\0\b[0]\s[0]"
-	if reference0 == "AYA"
+	if reference0 == "Animation"
+	{
+		"\1\s[teach]When referring to the code of #shells,\w4 animation does not always refer to moving images.\w8\w8 Animations may refer to literal animations that are part of the shell,\w4 but they can also refer to static overlays,\w4 such as Angel's arm poses.\w8\w8\n\n"
+		"\0\s[blush]\i[26]\i[36]Like these!\w8\w8\n\n"
+		"\1\s[neutral_face]They also refer to animations such as our blinking and talking animations,\w4 and even #dressups can technically be considered an animation,\w4 if an animation #interval is applied to them.\w8\w8\n\n"
+		"\0\s[astonished]Ooh,\w4 #interval?\w8\w8"
+		"\1\s[teach]#Intervals are the timing settings of animations.\w8\w8 The English community had previously confused the terms #interval and animation,\w4 so please ask me about%(br)#intervals if you'd like to know more."
+	}
+	elseif reference0 == "AYA"
 	{
 		"\1\s[teach]AYA is a #ghost programming language based on the C language.\w8\w8 It has very simplified syntax,\w4 but is still capable of very complicated functions.\w8\w8\n\n"
 		"\0\s[sweat_smile]It also hasn't been updated in a long time.\w8\w8 It has a successor language,\w4 called #YAYA,\w4 that has bugfixes and lots of new features.\w8\w8\n\n"
 		"\1\s[k_thinking]That also means AYA is more stable,\w4 since it's not changing any more.\w8\w8"
-		"\0\s[blush]It's a solid choice for making a #ghost,\w4 and it's one of the languages most well-known by the english community.\w8\w8 In fact,\w4 it was the language they started with,\w4 without even having any documentation for it at the time!"
+		"\0\s[blush]It's a bit outdated at this point,\w4 but still works for making a #ghost.\w8\w8 It's one of the languages most well-known by the English community.\w8\w8\s[astonished] In fact,\w4 it was the language they started with,\w4 without even having any documentation for it at the time!"
 	}
 	elseif reference0 == "BTS"
 	{
-		"\1\s[teach]BTS stands for Bug Tracking System,\w4 and is the place to report bugs in #SSP,\w4 #YAYA,\w4 Ukadoc,\w4 and more.\w8\w8\n\n"
+		"\1\s[teach]BTS stands for Bug Tracking System,\w4 and is the place to report bugs in #SSP,\w4 #YAYA,\w4 #Ukadoc,\w4 and more.\w8\w8\n\n"
 		"\0\s[blush]You can also make feature requests if you have an idea for something cool!\w8\w8"
 		"\1\s[neutral_face]Yes,\w4 just be reasonable with them.\w8\w8 These things are maintained by just a few people."
 	}
@@ -127,16 +140,23 @@ OnGlossaryWord : all
 	{
 		"\1\s[teach]Some #ghosts/#shells come with optional pieces,\w4 called dressups.\w8\w8 This is commonly used for dressing up a character,\w4 such as adding items like hats,\w4 bows,\w4 or glasses.\w8\w8\n\n"
 		"\0\s[blush]You can try it out with me,\w4 I have a couple of dressups!\w8\w8 Right click on me,\w4 and go to the%(br)Clothes/Dressup tab.\w8\w8\n\n"
-		"\1\s[neutral_face]Yes,\w4 trying it is the easiest way to get a grasp on the idea.\w8\w8"
-		"\0\s[relieved]It can be used for all sorts of things.\w8\w8 Some dressups are full outfit swaps,\w4 while some add optional animations.\w8\w8\s[blush] The sky is the limit!"
+		"\1\s[neutral_face]Yes,\w4 trying it is the easiest way to get a grasp of the idea.\w8\w8"
+		"\0\s[relieved]It can be used for all sorts of things.\w8\w8 Some dressups are full outfit swaps,\w4 while some add optional #animations.\w8\w8\s[blush]\i[21] Like how our default shell has a special dressup for me that makes me float up and down!\w8\w8 The sky is the limit."
+	}
+	elseif reference0 == "Element"
+	{
+		"\1\s[teach]Elements,\w4 when referring to coding shells,\w4 are images that are composited together to create the base image of the #surface.\w8\w8 For example,\w4 our shell uses elements so that the layers for our bodies and faces can be kept separate.\w8\w8 If the art for our base images ever needed to be adjusted for some reason,\w4 it would be a simple matter of updating a single file,\w4 instead of all of them.\w8\w8\n\n"
+		"\0\s[astonished]Ooh,\w4 that sounds handy.\w8\w8 I bet you could use that to keep down file size too,\w4 huh?\w8\w8\n\n"
+		"\1\s[neutral_face]Indeed.\w8\w8 Just remember,\w4 you \f[italic,1]only\f[italic,default] need elements if you're planning to use multiple images to construct a base image for your #surface,\w4 and unless you want them to also act as standalone #surfaces,\w4 you should not name the files with the surface*.png naming scheme.\w8\w8 If you do,\w4 #SSP will automatically create%(br)#surfaces for them,\w4 and then you'll have duplicates.\w8\w8"
+		"\0\s[scream]Oh no,\w4 I've got some shells to fix!"
 	}
 	elseif reference0 == "Freeshell"
 	{
-		"\0\s[star_struck]Oh,\w4 freeshells are great!\w8\w8 Sometimes,\w4 artists will create #shells for #ghosts,\w4 and release them for other developers to use for free!\w8\w8\n\n"
+		"\0\s[star_struck]Oh,\w4 freeshells are great!\w8\w8 Sometimes,\w4 artists will create #shells,\w4 and release them for other developers to use for free and make a #ghost with!\w8\w8\n\n"
 		"\1\s[teach]Yes,\w4 they are an important resource for aspiring developers who cannot or do not wish to draw.\w8\w8\n\n"
 		"\0\s[blush]Or just for fun!\w8\w8\s[smiling_face_with_3_hearts] They can be really fun to make,\w4 too,\w4 if you love to draw.\w8\w8\n\n"
-		"\1\s[neutral_face]Technically,\w4 to be a freeshell,\w4 the #shell must also contain at least basic #shell code so that the #shell is ready to run as it is.\w8\w8 If only art is included and no shell code,\w4 such that the developer has to assemble the #shell themselves,\w4 it is called ""Free material"".\w8\w8\n\n"
-		"\0\s[s_thinking]There is a place called the \_a[https://wikiwiki.jp/feeshell/]freeshell wiki\_a where you can find lots of freeshells,\w4 \s[sweat_smile]but be careful on there; some #shells contain nudity,\w4 etc.\w8\w8 It's not exactly SFW.\w8\w8\n\n"
+		"\1\s[neutral_face]You may also see the term ""Free material"" used for some freeshells.\w8\w8 It's an optional term that indicates it is just images with no #shell code.\w8\w8\n\n"
+		"\0\s[s_thinking]There is a place called the \_a[https://wikiwiki.jp/feeshell/]freeshell wiki\_a where you can find lots of freeshells,\w4 \s[sweat_smile]but be careful on there;\w8 some #shells contain nudity,\w4 or other mature content.\w8\w8\s[relieved] Viewer discretion is advised.\w8\w8\n\n"
 		"\1\s[neutral_face]It's also written in Japanese,\w4 so if you don't understand Japanese you'll need a translator.\w8\w8"
 		"\0\s[blush]\i[22]You can also try the \_a[https://ukagakadreamteam.com/wiki/freeshell_list]freeshell listing\_a on the #Ukagaka Dream Team's wiki.\w8\w8 It's a smaller collection,\w4 but hopefully it will continue to grow!"
 	}
@@ -144,19 +164,23 @@ OnGlossaryWord : all
 	{
 		"\1\s[teach]Ghosts,\w4 also known as Ukagaka (伺か) or Nanika (何か),\w4%(br)are all terms for what we are.\w8\w8 Most often,\w4 they take the form of a character or set of characters that appear on your desktop and talk to you,\w4 and that you can interact with.\w8\w8\n\n"
 		"\0\s[blush]Sometimes,\w4 they are also called Nin'i-tan,\w4 or Nise-Haruna!\w8\w8\s[relieved] And they aren't restricted to being characters,\w4 either.\w8\w8 They are incredibly customizable and can take many forms.\w8\w8\n\n"
-		"\1\s[neutral_face]Those terms aren't really meant to apply to ukagaka generally.\w8\w8 Nise-Haruna is a very old term,\w4 which means ""Fake-Haruna"",\w4 in relation to the origin of ukagaka.\w8\w8 Nin'i-tan is a nickname for Sakura Mikage,\w4 the default ghost that comes with the #baseware%(br)#Materia.\w8\w8 The best term to use is ukagaka,\w4 or ghost.\w8\w8\n\n"
+		"\1\s[neutral_face]Those terms aren't really meant to apply to ukagaka generally.\w8\w8 Nise-Haruna is a very old term,\w4 which means ""Fake-Haruna"",\w4 in relation to the origin of ukagaka.\w8\w8 Nin'i-tan is a nickname for Mikage Sakura,\w4 the default ghost that comes with the #baseware%(br)#Materia.\w8\w8 The best term to use is ukagaka,\w4 or ghost.\w8\w8\n\n"
 		"\0\s[star_struck]\i[22]Desktop friends!!\w8\w8 It all just means desktop friends.\w8\w8"
 		"\1\s[rolling_eyes]Yes,\w4 despite there being many names,\w4 they all generally refer to the same thing."
 	}
 	elseif reference0 == "Interval"
 	{
-		"\1\s[teach]Interval refers to animations made in #SERIKO.\w8\w8 For example,\w4 my blinking and talking animations are intervals,\w4 and each of Angel's arm poses is set up as an interval.\w8\w8"
-		"\0\s[blush]\i[31]If you peek in our surfaces.txt file in our shell folder,\w4 you'll see the word interval in there.\w8\w8 Those are the intervals!"
+		"\1\s[teach]Interval refers to the timing setting of #animations in%(br)#SERIKO.\w8\w8\s[neutral_face] For example,\w4 our blinking #animations use the interval ""random"",\w4 our talking #animations use the interval ""talk"",\w4 and Angel's various arm poses are #animations that use the interval ""never"".\w8\w8\n\n"
+		"\0\s[astonished]I could have sworn ""interval"" was the name for arm poses like that.\w8\w8\n\n"
+		"\1\s[teach]It is not,\w4 although this misconception has been widespread in the English community for many years.\w8\w8%(br)With the translation of #Ukadoc,\w4 it has come to light that this was an incorrect use of the term,\w4 and that%(br)""interval"" has a particular meaning.\w8\w8\s[neutral_face] It would be best not to mix the two terms any longer,\w4 as it may cause confusion for developers trying to read various guides and documentation.\w8\w8"
+		"\0\s[sweat_smile]Right,\w4 that makes sense.\w8\w8 I'll keep an eye out for it,\w4 then."
 	}
 	elseif reference0 == "Kawari"
 	{
-		"\1\s[teach]Kawari is an old #ghost coding language,\w4 or #SHIORI.\w8\w8 It's%(br)used by the Japanese community,\w4 though it hasn't really seen use in the English community.\w8\w8 It hasn't been updated for several years.\w8\w8"
-		"\0\s[sweat_smile]We don't know much about this one,\w4 sorry!\w8\w8\i[31] But you can find documentation for it \_a[http://kawari.sourceforge.net/]here\_a."
+		"\1\s[teach]Kawari is an old #ghost coding language,\w4 or #SHIORI.\w8\w8 It has primarily seen use in the Japanese community,\w4 however,\w4 more recently there have been some English ghosts appearing that use Kawari.\w8\w8 There are even \_a[https://ukagakadreamteam.com/wiki/ghost/chips_template]template ghosts\_a and a \_a[https://okuajub-netspace.neocities.org/knk_index]full guide\_a to creating%(br)#ghosts in Kawari.\w8\w8\n\n"
+		"\0\s[astonished]I'm really interested in Kawari now that I know more about it!\w8\w8 Apparently it's a language made for writers,\w4 that makes ghost creation super easy because you don't need to know as much code stuff.\w8\w8\s[s_thinking] Instead you use these ""entry"" things that let you write really varied dialogues.\w8\w8\n\n"
+		"\1\s[neutral_face]Indeed,\w4 it's an exciting prospect that may make ghost creation accessible to many more people.\w8\w8\s[k_thinking] At the time of writing,\w4 it is still a budding field in the English community,\w4 so there are not as many resources for it yet.\w8\w8\s[neutral_face] But,\w4 they will come eventually,\w4 and the best way to help in that endeavor is to make use of the language yourself.\w8\w8"
+		"\0\s[blush]\i[21]There's also a project to translate the \_a[https://okuajub-netspace.neocities.org/Kawari/]Kawari documentation\_a!\w8\w8\s[blush]\i[24] You might find that handy if you want to try Kawari,\w8\s[star_struck]\i[22] and you could even get involved and help the translation effort if you wanted!"
 	}
 	elseif reference0 == "Kero"
 	{
@@ -170,9 +194,9 @@ OnGlossaryWord : all
 	{
 		"\1\s[teach]nar stands for #Nanika ARchive.\w8\w8 It is,\w4 simply,\w4 a .zip file with a different extension.\w8\w8\n\n"
 		"\0\s[blush]\i[31]Most #ghosts and #ghost-related things,\w4 like #balloons and #calendar skins,\w4 will be packaged as .nar files!\w8\w8\n\n"
-		"\1\s[neutral_face].nar files may be dragged onto any running #ghost to install them,\w4 though some will be #ghost-specific and must be dragged on that #ghost in order to be installed.\w8\w8 You may also associate the .nar extension with #SSP in the SSP preferences if you like,\w4 and then you will be able to install .nar files by double clicking on them while #SSP is running.\w8\w8"
+		"\1\s[neutral_face].nar files may be dragged onto any running #ghost to install them,\w4 though some will be #ghost-specific and must be dragged on that particular #ghost in order to be installed.\w8\w8 You may also associate the .nar extension with #SSP in the SSP preferences if you like,\w4%(br)and then you will be able to install .nar files by double clicking on them while #SSP is running.\w8\w8"
 		"\0\s[smiling_face_with_3_hearts]\i[22]And it'll make them have a cute little gift box icon!\w8\w8"
-		"\1\s[rolling_eyes]"
+		"\1\s[rolling_eyes]" 
 	}
 	elseif reference0 == "Plugin"
 	{
@@ -184,7 +208,7 @@ OnGlossaryWord : all
 		"\0\s[s_thinking]...\w8\w8 Opening the CD drive...\w8\w8 And closing it too,\w4 right?\w8\w8\n\n"
 		"\1\s[neutral_face]No.\w8\w8\n\n"
 		"\0\s[astonished]But...\w8\w8 Why would you want that?\w8\w8\n\n"
-		"\1\s[neutral_face]Don't ask me.\w8\w8"
+		"\1\s[neutral_face]I don't know.\w8\w8"
 		"\0\s[s_thinking]..."
 	}
 	elseif reference0 == "Materia"
@@ -195,7 +219,7 @@ OnGlossaryWord : all
 	}
 	elseif reference0 == "MAKOTO"
 	{
-		"\1\s[teach]MAKOTO is a special kind of code that #shells can use,\w4 which lets them alter the scripts sent from the #ghost before they are displayed to the user.\w8\w8 This allows for things like changing what #surfaces are called,\w4 or which #intervals are used,\w4 based on the #shell.\w8\w8%(br)It could also be used to swap out certain words or phrases,\w4 but this isn't usually seen in the English community.\w8\w8\n\n"
+		"\1\s[teach]MAKOTO is a special kind of code that #shells can use,\w4 which lets them alter the scripts sent from the #ghost before they are displayed to the user.\w8\w8 This allows for things like changing what #surfaces are called,\w4 or which #animations are used,\w4 based on the #shell.\w8\w8%(br)It could also be used to swap out certain words or phrases,\w4 but this isn't usually seen in the English community.\w8\w8\n\n"
 		"\0\s[s_thinking]The #SHIORI event OnTranslate has the same functionality.\w8\w8 I think MAKOTO is an older specification.\w8\w8\n\n"
 		"\1\s[neutral_face]Yes,\w4 that is my understanding as well.\w8\w8 But I don't have strong sources for it.\w8\w8\n\n"
 		"\0\s[astonished]So,\w4 is there a reason to use MAKOTO anymore?\w8\w8"
@@ -209,6 +233,17 @@ OnGlossaryWord : all
 		"\0\s[astonished]Is that it?\w8\w8\n\n"
 		"\1\s[neutral_face]That is the extent of my knowledge on the subject,\w4 yes."
 	}
+	elseif reference0 == "Middleware"
+	{
+		"\1\s[teach]Middleware is a concept common in certain #SHIORI,\w4 notably #Kawari.\w8\w8 It is a layer of additional code between the #SHIORI and the developer,\w4 the purpose of which is to make it easier to write #ghosts without needing to know much,\w4 if any,\w4 code.\w8\w8"
+		"\0\s[blush]\i[22]Middleware can be really useful!\w8\w8 You should give it a try if programming's not your thing."
+	}
+	elseif reference0 == "Owner draw menu"
+	{
+		"\1\s[teach]The owner draw menu is the menu that appears when you right click on a ghost.\w8\w8\n\n"
+		"\0\s[slight_smile]\i[21]You may also see it referred to as the right-click menu.\w8\w8"
+		"\1\s[neutral_face]This menu is a part of the #shell,\w4 and can change per-shell.\w8\w8 Sometimes it will have a custom pattern or artwork made by the developer of that #shell,\w4 but not always."
+	}
 	elseif reference0 == "SAORI"
 	{
 		"\1\s[teach]SAORI stands for Supplemental Archive Onto Restricted Intelligence.\w8\w8 They are files that contain code for #ghosts to execute.\w8\w8\n\n"
@@ -219,16 +254,16 @@ OnGlossaryWord : all
 		"\0\s[smiling_face_with_3_hearts]\i[22]Wow,\w4 that's so cool.\w8\w8\n\n"
 		"\1\s[teach]If you're interested in making SAORI,\w4 you should look at the \_a[https://github.com/ukatech/csaori]CSAORI project on GitHub\_a.\w8\w8 You can also look at the \_a[https://emily.shillest.net/ayaya/index.php?cmd=read&page=Tips%2FSAORI%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9]information about SAORI on the AYAYA wiki\_a,\w4 though that is information specific to #AYA and%(br)#YAYA.\w8\w8\n\n"
 		"\0\s[sweat_smile]\i[24]This seems kinda complicated.\w8\w8\n\n"
-		"\1\s[neutral_face]It can be.\w8\w8 But it's also worth the effort if you want to do something complicated with a #ghost.\w8\w8\s[teach] There are two types of SAORI; SAORI-Universal,\w4 which are .dll files,\w4 and SAORI-Basic,\w4 which are .exe files.\w8\w8 Some #ghost languages can handle these both natively,\w4 but languages like #YAYA need a \_a[https://github.com/ukatech/csaori/releases/tag/saori_proxy_ex_v1.0.2]proxy SAORI\_a in order to make use of SAORI-Basic.\w8\w8"
+		"\1\s[neutral_face]It can be.\w8\w8 But it's also worth the effort if you want to do something complicated with a #ghost.\w8\w8\s[teach] There are two types of SAORI; SAORI-Universal,\w4 which are .dll files,\w4 and SAORI-Basic,\w4 which are .exe files.\w8\w8 Some%(br)#ghost languages can handle these both natively,\w4 but languages like #YAYA need a \_a[https://github.com/ukatech/csaori/releases/tag/saori_proxy_ex_v1.0.2]proxy SAORI\_a in order to make use of SAORI-Basic.\w8\w8"
 		"\0\s[sweat_smile]\i[33]Wow..."
 	}
 	elseif reference0 == "SHIORI"
 	{
-		"\1\s[teach]SHIORI is a set of standards for how #baseware and #ghosts communicate.\w8\w8 It is often used as a term to refer to #ghost coding languages,\w4 like #AYA,\w4 #YAYA,\w4 and%(br)#Satori.\w8\w8\s[k_thinking] But,\w4 they are not exactly interchangeable.\w8\w8 Some languages,\w4 such as #YAYA,\w4 do not have to be used as SHIORI.\w8\w8 I can explain more about that if you ask me about #YAYA.\w8\w8\n\n"
+		"\1\s[teach]SHIORI is a standard for how #baseware and #ghosts communicate.\w8\w8 It is often used as a term to refer to%(br)#ghost coding languages,\w4 like #AYA,\w4 #YAYA,\w4 and%(br)#Satori.\w8\w8\s[k_thinking] But,\w4 they are not exactly interchangeable.\w8\w8 Some languages,\w4 such as #YAYA,\w4 do not have to be used as SHIORI.\w8\w8 I can explain more about that if you ask me about #YAYA.\w8\w8\n\n"
 		"\0\s[s_thinking]Does SHIORI stand for something?\w8\w8\n\n"
 		"\1\s[neutral_face]No.\w8\w8\n\n"
-		"\0\s[sweat_smile]Oh.\w8\w8\n\n\s[s_thinking] So what does the SHIORI do exactly?\w8\w8\n\n"
-		"\1\s[teach]The #baseware is what the user interacts with,\w4 when they do things such as clicking the mouse or pressing keys.\w8\w8 The #baseware then sends SHIORI events to the #ghost's code,\w4 which determines what response should be given based on the information.\w8\w8 That response is sent back to the #baseware so that the appropriate images and dialogue can be displayed to the user.\w8\w8\n\n"
+		"\0\s[sweat_smile]Oh.\w8\w8\s[s_thinking] So what does the SHIORI do exactly?\w8\w8\n\n"
+		"\1\s[teach]The #baseware is what the user interacts with,\w4 when they do things such as clicking the mouse or pressing keys.\w8\w8 The #baseware then sends SHIORI events to the %(br)#ghost's code,\w4 which determines what response should be given based on the information.\w8\w8 That response is sent back to the #baseware so that the appropriate images and dialogue can be displayed to the user.\w8\w8\n\n"
 		"\0\s[astonished]Ooh wow.\w8\w8 There's a lot that goes into it,\w4 huh?\w8\w8\n\n"
 		"\1\s[neutral_face]Yes,\w4 a lot of moving pieces.\w8\w8 In theory though,\w4 you could use any #baseware,\w4 and any #ghost coding language,\w4 and as long as they are all communicating with the same SHIORI standard,\w4 they will more or less work.\w8\w8"
 		"\0\s[smiling_face_with_3_hearts]\i[22]That's so cool!"
@@ -243,29 +278,27 @@ OnGlossaryWord : all
 	elseif reference0 == "Sakura"
 	{
 		"\1\s[teach]Sakura is a term used to refer to the main character in a #ghost.\w8\w8 In this #ghost,\w4 that would be Angel.\w8\w8\n\n"
-		"\0\s[blush]\i[31]That's me!\w8\w8"
+		"\0\s[blush]\i[36]That's me!\w8\w8"
 		"\1\s[neutral_face]The name is a reference to the anime Cardcaptor Sakura."
 	}
 	elseif reference0 == "Sakura Script"
 	{
 		"\1\s[teach]Sakura Script is a system of tags,\w4 used to make things happen during scripts.\w8\w8 For example,\w4 the tag%(br)\\w4 makes our text pause for 200ms,\w4 and the tag \\0 will switch the speaking character back over to Angel.\w8\w8\n\n"
-		"\0\s[blush]The #baseware is responsible for parsing those tags and making things happen based on them,\w4 so just about every #ghost will use them,\w4 regardless of what coding language they're written in.\w8\w8\s[astonished] Though,\w4 I think #ghosts in #Satori have an alternate system they can use.\w8\w8\n\n"
-		"\1\s[k_thinking]Yes,\w4 I believe so.\w8\w8 But I am not certain of the details.\w8\w8\n\n"
-		"\0\s[sweat_smile]Too bad.\w8\w8\n\n"
-		"\1\s[teach]If you want to see more Sakura Script tags,\w4 you can see a list of them on \_a[https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html]Ukadoc\_a.\w8\w8 This particular page has been translated from the original Japanese into English by the #Ukagaka Dream Team.\w8\w8"
-		"\0\s[astonished]Ooh,\w4 handy."
+		"\0\s[blush]The #baseware is responsible for parsing those tags and making things happen based on them,\w4 so just about every #ghost will use them,\w4 regardless of what coding language they're written in.\w8\w8\s[astonished] Though,\w4 #ghosts in #Satori have a special shorthand they can use for common tags that's easier to type on a Japanese keyboard.\w8\w8\n\n"
+		"\1\s[teach]If you want to see more Sakura Script tags,\w4 you can see a list of them on \_a[https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html]Ukadoc\_a.\w8\w8"
+		"\0\s[blush]\i[22]Ooh,\w4 handy."
 	}
 	elseif reference0 == "Satori"
 	{
 		"\1\s[teach]Satori is a ghost coding language,\w4 and is one of the most popular ones in the Japanese community for its simplicity.\w8\w8 It's actually called 里々,\w4 which usually translates as Village or Village People when run through machine translation.\w8\w8\n\n"
-		"\0\s[sweat_smile]Unfortunately,\w4 as it relies on characters not available on most keyboards outside Japan,\w4 it is difficult to use for ghost development if you don't have one of those keyboards.\w8\w8\n\n"
+		"\0\s[sweat_smile]Unfortunately,\w4 as it relies on characters only available on a Japanese keyboard,\w4 it is difficult to use for ghost development if you don't have one of those keyboards installed.\w8\w8\n\n"
 		"\1\s[neutral_face]Still,\w4 it sees a lot of use in Japanese #ghosts,\w4 so it's worth having a look at.\w8\w8 \_a[https://wikiwiki.jp/satolist/]Here's\_a the wiki for it.\w8\w8\s[k_thinking] There is also \_a[https://github.com/ukatech/satoriya-shiori]Satoriya\_a,\w4 which means Yet Another Satori.\w8\w8 I'm not terribly certain of the details around it,\w4 but I believe this version is still being actively maintained.\w8\w8 That link will take you to the GitHub repository for it if you want to have a look.\w8\w8"
-		"\0\s[star_struck]There's also an editor specifically for Satori,\w4 called \_a[https://github.com/kanadelab/Satolist2]Satolist!\_a\w8\w8 It's got stuff like a collision editor,\w4 a visual display of your surfaces,\w4 and more!\w8\w8\s[blush]\i[31] Definitely check it out if you're interested in trying out Satori!"
+		"\0\s[star_struck]There's also an editor specifically for Satori,\w4 called%(br)\_a[https://nanachi.sakura.ne.jp/satolist.html]Satolist!\_a\w8\w8 It's got stuff like a collision editor,\w4 a visual display of your surfaces,\w4 and more!\w8\w8\s[blush]\i[31] Definitely check it out if you're interested in trying out Satori!\w8\w8 "
 	}
 	elseif reference0 == "SERIKO"
 	{
-		"\1\s[teach]SERIKO refers to the language used to create #shells.\w8\w8 to see an example of SERIKO code,\w4 you can look in our surfaces.txt file,\w4 which is in our shell folder.\w8\w8\n\n"
-		"\0\s[relieved]It can be a bit tricky to get a grasp on,\w4 but I like it because the error messages can point you right to the problems in your #shell code.\w8\w8\n\n"
+		"\1\s[teach]SERIKO refers to the language used to create #animations in #shells.\w8\w8 to see an example of SERIKO code,\w4 you can look in our surfaces.txt file,\w4 which is in our shell folder.\w8\w8\n\n"
+		"\0\s[relieved]It can be a bit tricky to get a grasp of,\w4 but I like it because the error messages can point you right to where the problem is\w8\w8\n\n"
 		"\1\s[rolling_eyes]Yes,\w4 but it also doesn't stop trying to run if there are errors,\w4 so you get unexpected behaviors,\w4 and #ghosts that are released with error messages still present.\w8\w8\n\n"
 		"\0\s[sweat_smile]Oopsie.\w8\w8"
 		"\1\s[neutral_face]It also doesn't support same-line comments.\w8\w8 If you're%(br)making a #shell,\w4 make sure all comments are on their own lines,\w4 and not placed after code.\w8\w8 This is the source of many confusing #shell errors."
@@ -277,18 +310,23 @@ OnGlossaryWord : all
 		"\1\s[neutral_face]That is the intended reference,\w4 yes.\w8\w8\n\n"
 		"\0\s[smiling_face_with_3_hearts]\i[23]Cool!\w8\w8\n\n"
 		"\1\s[teach]Since shells are separate from the code of the ghost,\w4 they are interchangeable.\w8\w8 Some #ghosts come with multiple shells for different looks,\w4 some people make additional shells for other people's #ghosts,\w4 and some%(br)#ghosts are set up intentionally to facilitate many people making a variety of shells.\w8\w8"
-		"\0\s[blush]\i[31]Shells can have several poses,\w4 called #surfaces,\w4 and they can have animations,\w4 or optional #dressup items!"
+		"\0\s[blush]\i[31]Shells can have several poses,\w4 called #surfaces,\w4 and they can have #animations,\w4 or optional #dressup items!"
+	}
+	elseif reference0 == "Supplement"
+	{
+		"\1\s[teach]Supplement files are #.nar files that you can drag and drop onto a #ghost to install an update or additional content to that #ghost.\w8\w8 They are most often used if a%(br)#ghost's update URL has become unusable,\w4 or if there was no URL added in the first place.\w8\w8"
+		"\0\s[blush]\i[21]Hopefully you won't encounter too many of these,\w4 but do pay attention to them if you see them!"
 	}
 	elseif reference0 == "Surface"
 	{
 		"\1\s[teach]Surface is a term that refers to the different%(br)images/poses in a #ghost.\w8\w8 You can think of them a bit like sprites,\w4 if you are familiar with video game terminology.\w8\w8\n\n"
 		"\0\s[relieved]Not all images in a #ghost are surfaces,\w4 it depends on how the #shell is set up.\w8\w8 But in general,\w4 the images used to make up a #ghost's character are called surfaces.\w8\w8\s[blush] You'll see if you take a peek in our #shell folder.\w8\w8"
-		"\1\s[neutral_face]Surface may also refer to multiple images composited together into one pose,\w4 and all the animations contained associated with that pose.\w8\w8 It's somewhat of a flexible term."
+		"\1\s[neutral_face]Surfaces may be made up of multiple images,\w4 called%(br)#elements,\w4 which are composited together to create the base layer.\w8\w8 They can also contain various #animations,\w4 collisions,\w4 and other such data.\w8\w8 So as you can see,\w4 it is not a 1:1 comparison to a sprite."
 	}
 	elseif reference0 == "Ukadoc"
 	{
-		"\1\s[teach]Ukadoc is a very useful resource for #ghost developers.\w8\w8 It is the official documentation for #SSP,\w4 and has information on various standards,\w4 the file structure for #ghosts,\w4 #balloons,\w4 #plugins,\w4 etc.,\w4 and listings of all available #SakuraScript tags and #SHIORI events.\w8\w8\s[neutral_face] It is an invaluable tool if you intend to develop anything #ghost related.\w8\w8 You can find it \_a[https://ukagakadreamteam.github.io/ukadoc/]here\_a,\w4 or it is always available in the top tab of my right click menu.\w8\w8"
-		"\0\s[slight_smile]\i[21]The original version is in Japanese,\w4 but the #Ukagaka Dream Team has translated some of it into English!\w8\w8\s[blush]\i[22] If you're interested in that project,\w4 you should check out the \_a[https://github.com/ukagakadreamteam/ukadoc]repository on GitHub\_a!"
+		"\1\s[teach]Ukadoc is a very useful resource for #ghost developers.\w8\w8 It is the official documentation for #SSP,\w4 and has information on various standards,\w4 the file structure for #ghosts,\w4 #balloons,\w4 #plugins,\w4 etc.,\w4 and listings of all available #SakuraScript tags and #SHIORI events.\w8\w8\s[neutral_face] It is an invaluable tool if you intend to develop anything #ghost related.\w8\w8 You can find it \_a[https://ukagakadreamteam.github.io/ukadoc/]here\_a,\w4 or you can right click me and find it in the top tab of the menu.\w8\w8"
+		"\0\s[slight_smile]\i[21]The original version is in Japanese,\w4 but the #Ukagaka Dream Team has translated it into English!"
 	}
 	elseif reference0 == "Ukagaka Dream Team"
 	{
@@ -352,7 +390,7 @@ OnTroubleshooting : all
 	{
 		"\0\s[relieved]That's normal.\w8\w8 The language setting in #SSP is for the menus.\w8\w8 #Ghosts can't change their language on the fly,\w4%(br)they have to be written in a specific language by their developer.\w8\w8\s[blush] But,\w4 there are some \_a[https://ukagakadreamteam.com/wiki/tag/multilingual?do=showtag&tag=Multilingual]multilingual%(br)ghosts\_a out there!\w8\w8 There are also some #ghosts with translated versions,\w4 or you can try translating your favorite #ghosts yourself!\w8\w8\n\n"
 		"\1\s[neutral_face]There's a guide on how to translate #ghosts over \_a[https://ashido.com/ukagaka/translation.html]here\_a.\w8\w8%(br)That'll get you started.\w8\w8"
-		"\0\s[blush]You can also try some translation #ghosts,\w4 like%(br)\_a[https://zichqec.github.io/s-the-skeleton/ukatranslator]Ukatranslator\_a,\w4 which copies #ghost dialogue into a browser translator for you,\w4 or the \_a[https://twitter.com/Nikola_T/status/1526746677423796224]Simultaneous Translator\_a which displays the translated dialogues in its own #balloon."
+		"\0\s[blush]You can also try some translation #ghosts,\w4 like%(br)\_a[https://ukagaka.zichqec.com/ghost/ukatranslator]Ukatranslator\_a,\w4 which copies #ghost dialogue into a browser translator for you,\w4 or the \_a[https://twitter.com/Nikola_T/status/1526746677423796224]Simultaneous Translator\_a which displays the translated dialogues in its own #balloon."
 	}
 	elseif reference0 == "Mojibake"
 	{
@@ -366,8 +404,8 @@ OnTroubleshooting : all
 	}
 	elseif reference0 == "NoSounds"
 	{
-		"\0\s[s_thinking]Oh,\w4 that's usually an issue in the preferences.\w8\w8\s[relieved]%(raised_hand)\![open,configurationdialog,ghost2] Check the Ghost(2) tab of the SSP preferences,\w4 and make sure the ""Don't Play Sound"" option is unchecked.\w8\w8\n\n"
-		"\1\s[teach]If that doesn't work,\w4 make sure to check this setting for the specific #ghost you're having trouble with,\w4 as well.\w8\w8 You can right click the ghost,\w4 go to Options,\w4 and click ""Ghost Preferences..."" to get the window for individually configuring a #ghost.\w8\w8 When setting these options in the SSP preferences,\w4 you are setting the defaults that apply to all ghosts.\w8\w8 But with this ghost preferences window,\w4 you can tweak the settings for each #ghost on its own.\w8\w8\n\n"
+		"\0\s[s_thinking]Oh,\w4 that's usually an issue in the preferences.\w8\w8\s[relieved]%(raised_hand)\![open,configurationdialog,ghost2] Check the Ghost(2) tab of the #SSP preferences,\w4 and make sure the ""Don't Play Sound"" option is unchecked.\w8\w8\n\n"
+		"\1\s[teach]If that doesn't work,\w4 make sure to check this setting for the specific #ghost you're having trouble with,\w4 as well.\w8\w8 When you set settings in the #SSP preferences,\w4 you're setting the defaults that all ghosts will normally use.\w8\w8 However,\w4 if you right click a #ghost,\w4 hover over Options,\w4 and click on%(br)""Ghost Preferences..."" instead,\w4 you will get a menu that allows you to configure those settings for that%(br)#ghost individually.\w8\w8 That means different #ghosts can have different settings,\w4 so you should check both menus to be sure this option is unchecked.\w8\w8\n\n"
 		"\0\s[s_thinking]If that still doesn't work,\w4 you might try restarting #SSP if you haven't already.\w8\w8 I suppose you could also check your volume mixer in windows,\w4 and make sure #SSP isn't muted in there?\w8\w8"
 		"\1\s[neutral_face]There is also \_a[https://github.com/Nevcairiel/LAVFilters/releases]LAV Filters\_a,\w4 which #SSP requires to play some file types.\w8\w8 You might try installing that.\w8\w8 Once you've installed it,\w4 #SSP should use it immediately without you needing to set anything up,\w4 though you may want to restart #SSP anyways to be sure."
 	}
@@ -379,7 +417,7 @@ OnTroubleshooting : all
 	}
 	elseif reference0 == "PassiveMode"
 	{
-		"\1\s[k_thinking]It sounds likely that the #ghost is stuck in what is called ""passive mode"".\w8\w8 This could be because the developer forgot to put in a tag to take the #ghost out of that mode,\w4 or because the boot sequence got interrupted somehow.\w8\w8\s[teach] Try right clicking the #ghost in question,\w4 going to the Utilities tab,\w4 and clicking on%(br)""Reset Passive Mode"".\w8\w8 Once this has been done,\w4 the%(br)#ghost should act normally.\w8\w8\s[face_exhaling] Though,\w8\s[neutral_face] if it is a case where the boot sequence was interrupted,\w4 it is possible that some variables may be set improperly,\w4 which could cause strange behaviors.\w8\w8 If it gives you trouble,\w4 contact the ghost's author,\w4 or perhaps try reinstalling the ghost.\w8\w8"
+		"\1\s[k_thinking]It sounds likely that the #ghost is stuck in what is called ""passive mode"".\w8\w8 This could be because the developer forgot to put in a tag to take the #ghost out of that mode,\w4 or because the boot sequence got interrupted somehow.\w8\w8\s[teach] Try right clicking the #ghost in question,\w4 go to the Utilities tab,\w4 and click on ""Reset Passive Mode"".\w8\w8 Once this has been done,\w4 the%(br)#ghost should act normally.\w8\w8\s[face_exhaling] Though,\w8\s[neutral_face] if it is a case where the boot sequence was interrupted,\w4 it is possible that some variables may be set improperly,\w4 which could cause strange behaviors.\w8\w8 If it gives you trouble,\w4 contact the ghost's author,\w4 or perhaps try reinstalling the ghost.\w8\w8"
 		"\0\s[sweat_smile]What a pain.\w8\w8 %(username),\w4 if you ever make a ghost,\w4 be really really careful if you use passive mode!"
 	}
 	elseif reference0 == "SomethingElse"
@@ -479,8 +517,14 @@ OnCredits : all
 	"\f[align,center]#GallaTheGalla\n"
 	"\f[align,center]#Yuyudev\n\n"
 	if SHIORI3FW.BalloonName == "Angelbox" || SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"; "[half]"
-	"\f[align,center]\![*]\q[Back,OnKeroMenu]  \![*]\q[Close,]"
+	"\f[align,center]\![*]\q[Back,OnKeroMenu]  \![*]\q[Close,OnCreditsClose]"
 	"\_q\0\s[slight_smile]\i[24]Look at all the cool folks who helped to make us!\w8\w8\s[blush]\i[22] We wouldn't be here without every single one of them.\w8\w8\n\n\s[smiling_face_with_3_hearts]\i[31]And our thanks go to you,\w4 too.\w8\w8 Users like you keep our developers devving!\w8\w8 I'm sure they'd love to hear your feedback,\w4 if you have any~\w8\w8\w8\n\n\s[slight_smile]\i[24]If you'd like to see credits for #SSP itself,\w4 you can right click on me,\w4 go to the Information tab,\w4 and click on ""About SSP..."".\w8\w8 The information is listed at the bottom!"
+}
+
+//Prevents Angel from continuing to talk if you close the credits early
+OnCreditsClose
+{
+	"\0\b[-1]"
 }
 
 OnThankYou : nonoverlap
