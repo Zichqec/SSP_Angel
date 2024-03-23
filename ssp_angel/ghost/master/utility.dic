@@ -270,7 +270,7 @@ newline
 	"\n \n[-100]"
 }
 
-//If you write all your envelopes as lowercase, you can send them through this function whenever you need the first letter capitalized! It'd look something like this: "%(Capitalize(exampleenvelope))"
+//If you write all your word groups as lowercase, you can send them through this function whenever you need the first letter capitalized! It'd look something like this: "%(Capitalize(examplewordgroup))"
 Capitalize
 {
 	_first = SUBSTR(_argv[0],0,1)
@@ -303,17 +303,9 @@ OnNotifyOSInfo
 	NotifyOS = reference0
 }
 
-//Copied from the base SHIORI files, but with the username variable added
-OnNotifyUserInfo : void
+username
 {
-	SHIORI3FW.UserName = reference[0]
-	username = reference[0]
-	SHIORI3FW.UserNameFull = reference[1]
-	SHIORI3FW.UserBirthday = SPLIT(reference[2],',',3)
-	for _i = 0 ; _i < 3 ; _i++ {
-		SHIORI3FW.UserBirthday[_i] = TOINT(SHIORI3FW.UserBirthday[_i])
-	}
-	SHIORI3FW.UserSex = reference[3]
+	SHIORI3FW.UserName
 }
 
 
@@ -357,8 +349,8 @@ recommendlinks : array
 {
 	"Ayakamtka"; 	 "https://github.com/Ayakamtka"
 	"GallaTheGalla"; "https://gallathegalla.github.io/gtg-ghosts/"
-	"Yuyudev";          "https://twitter.com/yuyudev"
-	"Zichqec";       "https://zichqec.github.io/s-the-skeleton/index.html"
+	"Yuyudev";       "https://thatoddhaystack.neocities.org/ukagaka/"
+	"Zichqec";       "https://ukagaka.zichqec.com/"
 }
 
 On_sakura.portalsites
@@ -388,12 +380,11 @@ On_kero.recommendsites
 
 kerorecommendlinks : array
 {
-	"Ukadoc (Sakura Script page)";     "https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html"
-	"Ukadoc (SHIORI Events page)";     "https://ukagakadreamteam.github.io/ukadoc/manual/list_shiori_event.html"
-	"AYAYA Wiki (Function list page)"; "https://emily.shillest.net/ayaya/index.php?%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB/%E9%96%A2%E6%95%B0%E7%94%A8%E9%80%94%E5%88%A5%E4%B8%80%E8%A6%A7"
-	"Ghost Template Walkthrough";      "http://www.ashido.com/ukagaka/walkthrough.html"
-	"Simplicity Ghost Template";       "https://zichqec.github.io/s-the-skeleton/simplicity_template"
-	"YAYA Fundamentals Guide";         "https://zichqec.github.io/YAYA_Fundamentals/"
+	"Ukadoc";						"https://ukagakadreamteam.github.io/ukadoc/manual/"
+	"AYAYA Wiki (Manual page)";		"https://emily.shillest.net/ayaya/index.php?%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB"
+	"Ghost Template Walkthrough";   "http://www.ashido.com/ukagaka/walkthrough.html"
+	"Simplicity Ghost Template";    "https://ukagaka.zichqec.com/template/simplicity_template"
+	"YAYA Fundamentals Guide";      "https://zichqec.github.io/YAYA_Fundamentals/"
 }
 
 //Kero can have links to technical documentation, maybe.....
@@ -411,7 +402,7 @@ OnRecommendsiteChoice
 	}
 	elseif reference0 == "Yuyudev"
 	{
-		"\1\b[0]\s[10]\0\b[0]\s[blush]\i[31]This is our artist;\w4 Yuyudev drew our #shell!\w8\w8 You might be able to find other #ghost things here too!"
+		"\1\b[0]\s[10]\0\b[0]\s[blush]\i[31]This is our artist;\w4 Yuyudev drew our #shell!\w8\w8 You can find some other #ghost things here too!"
 	}
 	elseif reference0 == "Zichqec"
 	{
@@ -435,22 +426,11 @@ OnRecommendsiteChoice
 	//Kero
 	elseif "Ukadoc" _in_ reference0
 	{
-		"\0\b[0]\s[0]\1\b[0]\s[teach]This is #Ukadoc,\w4 a resource for #baseware specifications,\w4%(br)and the official documentation for #SSP.\w8\w8\s[neutral_face] Here you will find information about things such as how to write install.txt,\w4 descript.txt,\w4 #SERIKO,\w4 and more.\w8\w8\s[k_thinking]\n\n"
-		--
-		if reference0 == "Ukadoc (Sakura Script page)"
-		{
-			"This page specifically is the #SakuraScript page,\w4 where you will find a listing of all the #SakuraScript tags available,\w4 and usage examples for them."
-		}
-		else
-		{
-			"This page specifically is the #SHIORI Events page,\w4 where you will find a listing of all the #SHIORI events available,\w4 and what reference information they give for you to work with."
-		}
-		--
-		"\w8\w8\0\s[blush]\1\s[teach]\n\nThis version of #Ukadoc has been translated by the%(br)#Ukagaka Dream Team.\w8\w8 Some of it is in English,\w4 but some pages may still be in the original Japanese."
+		"\0\b[0]\s[0]\1\b[0]\s[teach]This is #Ukadoc,\w4 a resource for #baseware specifications,\w4%(br)and the official documentation for #SSP.\w8\w8\s[neutral_face] Here you will find information about things such as how to write install.txt,\w4 descript.txt,\w4 #SERIKO,\w4 and more.\w8\w8\n\n\s[k_thinking]Some pages of interest are the #SakuraScript page,\w4 where you can find information about the various%(br)#SakuraScript tags,\w4 and the #SHIORI Events page,\w4 where you will find documentation about all of the SHIORI Events you can implement and what reference information they offer.\w8\w8\n\n\s[neutral_face]You'll also find several guides on things like creating shells,\w4 and how your files should be structured.\w8\w8\0\s[blush]\i[24]This version of #Ukadoc has been translated into English by the #Ukagaka Dream Team.\w8\w8 There may be translation errors,\w4 or out of date information,\w4 so do check the original document linked at the top if something seems strange."
 	}
-	elseif reference0 == "AYAYA Wiki (Function list page)"
+	elseif reference0 == "AYAYA Wiki (Manual page)"
 	{
-		"\0\b[0]\s[0]\1\b[0]\s[teach]This is AYAYA,\w4 the wiki for all things #YAYA.\w8\w8 You can find specifications for the language here,\w4 as well as some guides and tips.\w8\w8 It is in Japanese,\w4 so you may need a translator to read it.\w8\w8 This page is specifically the list of inbuilt functions,\w4 grouped by purpose."
+		"\0\b[0]\s[0]\1\b[0]\s[teach]This is AYAYA,\w4 the wiki for all things #YAYA.\w8\w8 You can find specifications for the language here,\w4 as well as some guides and tips.\w8\w8 It is in Japanese,\w4 so you may need a translator to read it.\w8\w8 This page is specifically the Manual page,\w4 where you will find links to information about the system dictionaries,\w4 a list of all of #YAYA's functions, and guides to writing in #YAYA."
 	}
 	elseif reference0 == "Ghost Template Walkthrough"
 	{
