@@ -262,34 +262,40 @@ OnOtherGhostBooted : nonoverlap_pool
 
 OnShellChanging
 {
+	previousshellname = SHIORI3FW.ShellName
 	if reference0 == SHIORI3FW.ShellName
 	{
 		"\0\s[0]\b[0]\1\b[0]\s[neutral_face]Reloading the shell."
 	}
-	elseif reference0 == "Default"
+	elseif reference0 == "Default Shell"
 	{
 		"\1\b[0]\s[10]\0\b[0]\s[slight_smile]Back to the default?\w8\w8 Ok~!\w8\s[-1]\w8\1\s[neutral_face]Good.\w8\w8"
 	}
 	else
 	{
-		"\1\b[0]\s[10]\0\s[blush]Ooh,\w4 a new look~!\w8\w8\s[-1] Be right back!\w8\w8\1\s[face_exhaling]What is it now...\w8\w8"
+		"\1\b[0]\s[10]\0\s[blush]\i[22]Ooh,\w4 a new look~!\w8\w8\s[-1] Be right back!\w8\w8\1\s[face_exhaling]What is it now...\w8\w8"
 	}
 }
 
 OnShellChanged
 {
-	if reference0 == SHIORI3FW.ShellName
+	if reference0 == previousshellname
 	{
 		"\0\b[0]\s[0]\1\b[0]\s[neutral_face]Reload complete.\w8\w8\0\s[sweat_smile]It's not broken,\w4 is it?"
 	}
-	elseif reference0 == "Default"
+	elseif reference0 == "Default Shell"
 	{
-		"\1\b[0]\s[10]\0\b[0]\s[relieved]The default Angel Look™.\w8\w8\n\n\1\s[unamused]It's not trademarked.\w8\w8\0\s[blush]Drawn by #Yuyudev!"
+		"\1\b[0]\s[10]\0\b[0]\s[relieved]The default Angel Look™.\w8\w8\n\n\1\s[unamused]It's not trademarked.\w8\w8\0\s[blush]\i[21]Drawn by #Yuyudev!"
+	}
+	elseif reference0 == "PH Gijinka"
+	{
+		"\1\s[10]\b[0]\0\b[0]\s[star_struck]\i[22]Ooooh look at us!\w8\w8\s[smiling_face_with_3_hearts]\i[22] We look so cool!\w8\w8\n\n\1\s[k_thinking]Indeed,\w4 this style is quite nice.\w8\w8\n\n\0\s[astonished]Oh!\w8\w8 Pilot,\w4 you've got fingers!\w8\w8\n\n\1\s[face_with_raised_eyebrow]I beg your pardon?\w8\w8\n\n\0\s[astonished]\i[21]You have hands!\w8\w8 With fingers!!\w8\w8\n\n\1\s[rolling_eyes]This is news to you...?\w8\w8\n\n\0\s[scream]Yes!?\w8\w8 You didn't have them before!\w8\w8\n\n\1\s[unamused]I don't know what you're talking about."
 	}
 	else
 	{
 		"\1\b[0]\s[10]\0\b[0]\s[star_struck]Wow!\w8\w8 Check us out!\w8\w8\1\s[neutral_face]Interesting."
 	}
+	ERASEVAR("previousshellname")
 }
 
 OnBalloonChange
@@ -325,24 +331,29 @@ OnDressupChanged
 	{
 		if reference1 == "Bow and bell"
 		{
-			if reference2 == "1" //Putting on
-			{
-				"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Isn't my bow cute?\w8\w8\n\n\1\s[k_thinking]It is inspired by the bell used as SSP's icon,\w4 is it not?\w8\w8\0\s[smiling_face_with_3_hearts]Yep,\w4 sure is!"
-			}
-			else //Taking off
+			switch reference2
 			{
 				"\1\b[0]\s[10]\0\b[0]\s[relieved]I think I'll go with something more plain today.\w8\w8\1A good choice."
+				"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Isn't my bow cute?\w8\w8\n\n\1\s[k_thinking]It is inspired by the bell used as SSP's icon,\w4 is it not?\w8\w8\0\s[smiling_face_with_3_hearts]Yep,\w4 sure is!"
 			}
 		}
 		elseif reference1 == "Skull barette"
 		{
-			if reference2 == "1" //Putting on
-			{
-				"\1\b[0]\s[10]\0\b[0]\s[smiling_face_with_3_hearts]Look look,\w4 isn't this skull barette great?\w8\w8 I thought it'd be a nice touch.\w8\w8\n\n\1\s[k_thinking]In reference to the English community's start?\w8\w8\0\i[22]Yeah!\w8\w8 It's good things have branched out,\w4 but we%(br)can't forget the roots!"
-			}
-			else //Taking off
+			switch reference2
 			{
 				"\0\b[0]\s[relieved]\1\b[0]\s[k_thinking]No more skull accessory?\w8\w8\n\n\0Well,\w4 I can't wear it \f[italic,1]all\f[italic,default] the time,\w4 can I?\w8\w8\n\n\1You could...\w8\w8\n\n\0\s[blush]\i[33]Aww,\w4 do you like it?\w8\w8\1\s[unamused]I am ambivalent towards it,\w4 it was merely a statement of fact."
+				"\1\b[0]\s[10]\0\b[0]\s[smiling_face_with_3_hearts]Look look,\w4 isn't this skull barette great?\w8\w8 I thought it'd be a nice touch.\w8\w8\n\n\1\s[k_thinking]In reference to the English community's start?\w8\w8\0\i[22]Yeah!\w8\w8 It's good things have branched out,\w4 but we%(br)can't forget the roots!"
+			}
+		}
+	}
+	elseif reference0 == "1"
+	{
+		if reference1 == "Pilot hat"
+		{
+			switch reference2
+			{
+				"\1\b[0]\s[10]\0\b[0]\s[worried]Hat time is over?\w8\w8\n\n\1Yes.\w8\w8\0\s[pensive]Aww..."
+				"\1\b[0]\s[10]\0\b[0]\s[astonished]Oooh,\w4 a hat.\w8\w8 You look so fancy!\w8\w8\n\n\1Some variety now and then is good for your well-being.\w8\w8\0\s[blush]I like it!"
 			}
 		}
 	}
