@@ -104,9 +104,9 @@ OnInstallComplete
 		all :/
 		{
 			"\n\n\_q"
-			"\![*]\q[""Call %(reference1)"",OnCallInstalledGhost,""%(reference1)""]\n"
-			"\![*]\q[""Change to %(reference1)"",OnChangeInstalledGhost,""%(reference1)""]\n\n"
-			"\![*]\q[No thanks,OnBlank]"
+			"\![*]\__q[OnCallInstalledGhost,""%(reference1)""]Call %(reference1)\__q\n"
+			"\![*]\__q[OnChangeInstalledGhost,""%(reference1)""]Change to %(reference1)\__q\n\n"
+			"\![*]\__q[OnBlank]No thanks\__q"
 		}
 	}
 	elseif reference0 == "shell"
@@ -116,8 +116,8 @@ OnInstallComplete
 		all :/
 		{
 			"\n\n\_q"
-			"\![*]\q[""Change to %(reference1)"",OnChangeInstalledShell]\n\n"
-			"\![*]\q[No thanks,OnBlank]"
+			"\![*]\__q[OnChangeInstalledShell]Change to %(reference1)\__q\n\n"
+			"\![*]\__q[OnBlank]No thanks\__q"
 		}
 	}
 	elseif reference0 == "balloon"
