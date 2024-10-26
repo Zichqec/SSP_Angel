@@ -245,7 +245,6 @@ OnOtherGhostBooted : nonoverlap_pool
 	"Hey hey,\w4 welcome!\w8\w8 Always glad to have more folks hanging out~"
 	"Hey hey hey,\w4 good to see you %(reference2)!"
 	"What's up,\w4 %(reference2)?\w8\w8 Bring anything good~?"
-	
 	"Ring ring~\w8\w8\n\n\1\s[k_thinking]Ring ring?\w8\w8\n\n\0\s[relieved]\i[31]Yeah,\w4 like those little bells some shops have on their doors to alert them when someone comes in.\w8\w8\s[blush]\i[31] Because %(reference2) is here!\w8\w8\n\n\1Ah,\w4 I see.\w8\w8\0\s[smiling_face_with_3_hearts]\i[22]Ring ring~!\e"
 	"\s[blush]\i[22]Ooh,\w4 is that our pizza being delivered~?\w8\w8\n\n\1\s[rolling_eyes]No,\w4 Angel.\w8\w8 No it is not.\w8\w8 We are not getting a pizza.\w8\w8 Because we are at work.\w8\w8\0\s[pensive]Aww...\e"
 	--
