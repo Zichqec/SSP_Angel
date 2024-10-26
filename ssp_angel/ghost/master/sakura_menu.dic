@@ -44,6 +44,8 @@ OnSakuraMenu : all
 	"\![*]\__q[OnSakuraMenuCancel]Nevermind\__q  \![*]\__q[OnGoodbye]Goodbye!\__q"
 	
 	"\n\n\f[color,disable]SSP Angel v%(ghostver)     %(basewarename) %(basewareversion)     %(LICENSE[0])"
+	//Too long for the display...
+	//marker = "SSP Angel v%(ghostver) - Powered by %(basewarename) %(basewareversion) / %(LICENSE[0])"
 }
 
 OnGiveTip
@@ -290,7 +292,7 @@ OnHowTo : all
 		"\0\s[smiling_face_with_3_hearts]\i[22]Wow,\w4 you must really love #ghosts!\w8\w8 Yes,\w4 you can absolutely set up #SSP to boot when your computer starts!\w8\w8\n\n"
 		"\1\s[teach]There are two ways to do it.\w8\w8 You can select a specific%(br)#ghost to boot when your computer starts through the #ghost explorer,\w4 or you can set up #SSP to boot in general,\w4 in which case it will boot using the same ghosts it was last closed with,\w4 unless you've specified otherwise.\w8\w8\n\n"
 		"\0\s[slight_smile]\i[21]To do it through the #ghost explorer,\w4 all you have to do is right click on the #ghost in the list that you want,\w4%(br)and click on ""Make This Ghost Start Automatically at OS Startup"".\w8\w8\s[astonished] You can only have one #ghost set to boot at startup,\w4 if you choose another #ghost it'll use that one instead!\w8\w8\n\n"
-		"\1\s[neutral_face]If instead you wish for #SSP to boot on startup without specifying a #ghost,\w4 such that it boots with the #ghosts you had open last,\w4 you can try this method.\w8\w8 Press the Windows key + R,\w4 and type%(br)""shell:startup"".\w8\w8 Create a shortcut to your SSP.exe,\w4 and place it in this folder.\w8\w8 Now #SSP should start when Windows starts.\w8\w8"
+		"\1\s[neutral_face]If instead you wish for #SSP to boot on startup without specifying a #ghost,\w4 so that it boots with the%(br)#ghosts you had open last,\w4 you can try this method.\w8\w8 Press the Windows key + R,\w4 and type%(br)""shell:startup"".\w8\w8 Create a shortcut to your SSP.exe,\w4 and place it in this folder.\w8\w8 Now #SSP should start when Windows starts.\w8\w8"
 		"\0\s[blush]\i[24]If you ever want to stop #SSP from booting when your computer starts,\w4 you can just remove the shortcut from that folder.\w8\w8 It works with the method using the #ghost explorer,\w4 too!"
 	}
 	elseif reference0 == "ChooseOnBoot"
