@@ -645,7 +645,7 @@ OnCallAllGhosts
 	--
 	"\0\w8\w8\n\n\_q"
 	--
-	"\![*]\__q[OnCallAllGhostsConfirm]Yes,\w4 really open all %(_count) ghosts\__q\n\n\![*]\__q[OnCallAllGhostsCancel]Nevermind\__q"
+	"\![*]\__q[OnCallAllGhostsConfirm]Yes, really open all %(_count) ghosts\__q\n\n\![*]\__q[OnCallAllGhostsCancel]Nevermind\__q"
 }
 
 OnCallAllGhostsConfirm
@@ -705,7 +705,7 @@ OnCallAllGhostsCancel : all
 		"\0\s[blush]Oh,\w4 alright!\w8\w8 Not a problem!\w8\w8 Want me to call someone else?"
 	}
 	--
-	"\0\w8\w8\n\n"
+	"\0\w8\w8\n\n\_q"
 	--
 	"\![*]\__q[OnCallGhostMenu]Back to ghost list\__q  \![*]\__q[OnBlank]Nevermind\__q"
 }
@@ -1050,7 +1050,7 @@ OnBalloonMenu.Install
 		"\1\b[0]\0\b[0]\s[star_struck]\i[21]Ooh,\w4 this is the deluxe version of our default Angelbox #balloon!\w8\w8\s[smiling_face_with_3_hearts]\i[22] It's got lots and lots of color options,\w4 including some special galaxy patterns!\w8\w8\n\n\1\s[neutral_face]If you would like to preview the #balloon,\w4 or download it yourself,\w4 you can view it \_a[https://github.com/Zichqec/SSP_Angel_Balloons]here.\_a\w8\w8\n\n"
 	}
 	--
-	"\0\s[blush]\i[22]Should I download and install it for you?\w8\w8\n\n"
+	"\0\s[blush]\i[22]Should I download and install it for you?\w8\w8\n\n\_q"
 	--
 	"\![*]\__q[OnBalloonMenu.Download,""%(reference0)""]Yes please\__q  \![*]\__q[OnBalloonMenu]No thanks\__q"
 }
