@@ -287,5 +287,6 @@ OnSpectrePlugin.Possession
 		"\0\s[scream]What was that!?\w8\w8\1\s[neutral_face]What was what...?"
 		"\0\s[scream]\i[26]\i[36]Something touched me!\w8\w8\1\s[expressionless]There's nothing there,\w4 Angel..."
 		"\0\s[scream]\i[26]\i[36]%(username),\w4 this place is haunted!!\w8\w8\1\s[expressionless]It is not haunted,\w4 ghosts are not real."
+		"\1\s[concern_think]Angel?\w8\w8\n\n\0\s[blush]\i[24]What's up,\w4 Pilot?\w8\w8\n\n\1\s[concern]You were mumbling something to yourself just now,\w4 is everything alright?\w8\w8\n\n\0\s[astonished]\i[23]Huh?\w8\w8 I didn't say anything!\w8\w8\n\n\1\s[k_thinking]Hmm..."
 	}
 }
