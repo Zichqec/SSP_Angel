@@ -501,13 +501,13 @@ OnCallGhostMenu : all
 	elseif listmode.ghost == "Filter By Letter"
 	{
 		_opts = ("#","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Other")
-		"\f[color,disable]"
+		"\f[color,disable]\f[height,+2]"
 		foreach _opts; _opt
 		{
-			if _opt == _letter; "\f[color,default]\__q[OnCallGhostMenu,%(_opt)]%(_opt)\__q\f[color,disable]  "
-			else; "\__q[OnCallGhostMenu,%(_opt)]%(_opt)\__q  "
+			if _opt == _letter; "\f[color,default]\__q[OnCallGhostMenu,%(_opt)] %(_opt) \__q\f[color,disable]"
+			else; "\__q[OnCallGhostMenu,%(_opt)] %(_opt) \__q"
 		}
-		"\f[color,default]\n\n"
+		"\f[height,default]\f[color,default]\n\n"
 		
 		if _letter == "Other" //anything that is not a standard alphanumeric character. sorry, i am not getting any more complex than this, please and thank you
 		{
