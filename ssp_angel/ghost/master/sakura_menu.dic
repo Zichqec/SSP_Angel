@@ -725,8 +725,7 @@ OnCallOnlyOtherGhost : all
 
 OnCallAnotherGhost
 {
-	"\![call,ghost,""%(reference0)""]"
-	--
+	
 	if reference0 == "random"
 	{
 		"\0\b[0]\s[star_struck]\i[33]Ooh,\w4 a mystery~!\w8\w8 Let's see...!"
@@ -735,6 +734,8 @@ OnCallAnotherGhost
 	{
 		"\0\b[0]\s[blush]%(raised_hand)Calling %(reference0)~!"
 	}
+	--
+	"\w8\![call,ghost,""%(reference0)""]"
 }
 
 OnRecycleBin
