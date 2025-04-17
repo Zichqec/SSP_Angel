@@ -144,7 +144,7 @@ OnInstallComplete
 	}
 	elseif reference0 == "plugin"
 	{
-		"\1\s[k_thinking]It's a new plugin.\w8\w8\0\s[star_struck]Ooh,\w4 fancy!"
+		"\1\s[k_thinking]It's a new plugin.\w8\w8\0\s[star_struck]\i[22]Ooh,\w4 fancy!"
 	}
 	elseif reference0 == "calendar skin"
 	{
@@ -611,6 +611,4 @@ OnShellScaling
 			"\1\s[neutral_face]\0\s[sweat_smile]Oh,\w4 were we in your way?\w8\w8\s[blush] It's so handy you can shrink us if you need to,\w4 though.\w8\w8\1Yes.\w8\w8 You can also make us partially transparent in the SSP preferences,\w4 if you'd like."
 		}
 	}
-	
-	
 }
