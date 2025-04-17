@@ -15,6 +15,7 @@ OnTranslate
 	//Regex:Link
 	_terms = (/
 	"Animations?:Animation",/
+	"Aosora:Aosora",/
 	"AYA:AYA",/
 	"BTS:BTS",/
 	"balloons?:Balloon",/
