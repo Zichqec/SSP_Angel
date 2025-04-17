@@ -308,9 +308,7 @@ OnNarCreated
 
 OnNarLocation
 {
-	_path = SPLITPATH(reference0)[0] + SPLITPATH(reference0)[1]
-	
-	"\C\![open,file,""%(_path)""]"
+	"\C\![open,explorer,""%(reference0)""]"
 }
 
 OnUpdatedataCreating
