@@ -5,7 +5,7 @@ file,ghost/master/aitalk.dica5290059ad43b9770d9f4faa3b2fd7d0size=178401date=2
 file,ghost/master/bootend.dice0ce044de5e4f714b40e3e2e26dbc72bsize=22083date=2024-06-07T18:03:16
 file,ghost/master/commu.dicda88db92823f103a568bd63436388c3dsize=5766date=2025-04-17T06:16:27
 file,ghost/master/descript.txt8df4d154d668ac93bf8d708f500c4ac8size=325date=2024-03-09T01:23:06
-file,ghost/master/etc.dic301d0e1cf6951fc865f83661120bb114size=22450date=2025-04-09T09:37:58
+file,ghost/master/etc.dicbbe26a685760578fd04b1f442397e545size=22394date=2025-04-17T06:44:16
 file,ghost/master/icon.ico2b2a65d072786a2a70b97f0d30d5e7b7size=10462date=2023-01-16T22:39:30
 file,ghost/master/kero_menu.dic344bb3fab4be4ea779dbe643b203a3ffsize=48581date=2025-04-17T06:30:30
 file,ghost/master/main.dicb7ac03e8dc98adbdc19fb2184847d68fsize=6618date=2025-04-17T06:19:54
