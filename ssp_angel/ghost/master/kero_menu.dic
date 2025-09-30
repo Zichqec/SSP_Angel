@@ -1,7 +1,10 @@
 
 OnKeroMenu : all
 {
-	"\1\b[2]\s[neutral_face]"
+	"\1"
+	if SHIORI3FW.BalloonName == "Angelbox" || SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"; "\b[0]"
+	else; "\b[2]"
+	"\s[neutral_face]"
 	nonoverlap_pool :/
 	{
 		"Hello."
@@ -117,15 +120,14 @@ OnGlossaryWord : all
 	elseif reference0 == "Baseware"
 	{
 		"\1\s[teach]Baseware refers to the program that runs #ghosts.\w8\w8 If you're using us as recommended,\w4 that'll be #SSP.\w8\w8\n\n"
-		"\0\s[relieved]There are other #baseware too,\w4 such as #Materia,\w4 #CROW,\w4%(br)Ukagaka for Android,\w4 ninix-aya,\w4 Ikagaka,\w4 and more.\w8\w8\n\n"
-		"\1\s[k_thinking]Yes.\w8\w8 Though,\w4 at the time of writing,\w4 #SSP is the only%(br)#baseware that is still being maintained and updated.\w8\w8\s[neutral_face] But who knows.\w8\w8 In theory,\w4 anyone could make a new%(br)#baseware and shake things up.\w8\w8\n\n"
+		"\0\s[relieved]There are other #baseware too,\w4 such as #Materia,\w4 #CROW,\w4 ninix-kagari,\w4 Ikagaka,\w4 and more.\w8\w8\n\n"
+		"\1\s[k_thinking]Yes.\w8\w8 Though,\w4 at the time of writing,\w4 #SSP is the only%(br)#baseware that is still being maintained and updated.\w8\w8\s[neutral_face] But who knows.\w8\w8 In theory,\w4 anyone could make a new%(br)#baseware and shake things up.\w8\w8\n\n" //TODO want to adjust this... ninix-kagari is being worked on. maybe indicate that SSP is the standard, but other baseware could theoretically overtake it
 		"\0\s[blush]\i[22]That would be so exciting!\w8\w8"
-		"\1\s[unamused]It would also be a compatibility headache."
 	}
 	elseif reference0 == "Calendar skin"
 	{
 		"\0\s[star_struck]Ooh ooh,\w4 I know this one!\w8\w8\s[blush] %(raised_hand)\![open,calendar]Here,\w4 look,\w4 this is the calendar!\w8\w8 And if you get more calendar skins,\w4 you can change how the calendar looks!\w8\w8\n\n"
-		"\1\s[neutral_face]Yes,\w4 though it's mostly a novelty at the time of writing.\w8\w8 The calendar's functions are in need of an overhaul.\w8\w8\n\n"
+		"\1\s[neutral_face]Yes,\w4 though it's mostly a novelty at the time of writing.\w8\w8 The calendar's functions are in need of an overhaul.\w8\w8\n\n" //TODO not anymore!
 		"\0\s[smiling_face_with_3_hearts]Yeah,\w4 but who wouldn't want to have a cute looking calendar!?\w8\w8"
 		"\1\s[unamused]..."
 	}
@@ -139,7 +141,7 @@ OnGlossaryWord : all
 	elseif reference0 == "Dressup"
 	{
 		"\1\s[teach]Some #ghosts/#shells come with optional pieces,\w4 called dressups.\w8\w8 This is commonly used for dressing up a character,\w4 such as adding items like hats,\w4 bows,\w4 or glasses.\w8\w8\n\n"
-		"\0\s[blush]You can try it out with me,\w4 I have a couple of dressups!\w8\w8 Right click on me,\w4 and go to the%(br)Clothes/Dressup tab.\w8\w8\n\n"
+		"\0\s[blush]You can try it out with me,\w4 I have a couple of dressups!\w8\w8 Right click on me,\w4 and go to the%(br)""Clothes/Dressup"" tab.\w8\w8\n\n"
 		"\1\s[neutral_face]Yes,\w4 trying it is the easiest way to get a grasp of the idea.\w8\w8"
 		"\0\s[relieved]It can be used for all sorts of things.\w8\w8 Some dressups are full outfit swaps,\w4 while some add optional #animations.\w8\w8\s[blush]\i[21] Like how our default shell has a special dressup for me that makes me float up and down!\w8\w8 The sky is the limit."
 	}
@@ -153,7 +155,7 @@ OnGlossaryWord : all
 	elseif reference0 == "Freeshell"
 	{
 		"\0\s[star_struck]Oh,\w4 freeshells are great!\w8\w8 Sometimes,\w4 artists will create #shells,\w4 and release them for other developers to use for free and make a #ghost with!\w8\w8\n\n"
-		"\1\s[teach]Yes,\w4 they are an important resource for aspiring developers who cannot or do not wish to draw.\w8\w8\n\n"
+		"\1\s[teach]Yes,\w4 they are an important resource for developers who cannot or do not wish to draw.\w8\w8\n\n"
 		"\0\s[blush]Or just for fun!\w8\w8\s[smiling_face_with_3_hearts] They can be really fun to make,\w4 too,\w4 if you love to draw.\w8\w8\n\n"
 		"\1\s[neutral_face]You may also see the term ""Free material"" used for some freeshells.\w8\w8 It's an optional term that indicates it is just images with no #shell code.\w8\w8\n\n"
 		"\0\s[s_thinking]There is a place called the \_a[https://wikiwiki.jp/feeshell/]freeshell wiki\_a where you can find lots of freeshells,\w4 \s[sweat_smile]but be careful on there;\w8 some #shells contain nudity,\w4 or other mature content.\w8\w8\s[relieved] Viewer discretion is advised.\w8\w8\n\n"
@@ -172,7 +174,7 @@ OnGlossaryWord : all
 	{
 		"\1\s[teach]Interval refers to the timing setting of #animations in%(br)#SERIKO.\w8\w8\s[neutral_face] For example,\w4 our blinking #animations use the interval ""random"",\w4 our talking #animations use the interval ""talk"",\w4 and Angel's various arm poses are #animations that use the interval ""never"".\w8\w8\n\n"
 		"\0\s[astonished]I could have sworn ""interval"" was the name for arm poses like that.\w8\w8\n\n"
-		"\1\s[teach]It is not,\w4 although this misconception has been widespread in the English community for many years.\w8\w8%(br)With the translation of #Ukadoc,\w4 it has come to light that this was an incorrect use of the term,\w4 and that%(br)""interval"" has a particular meaning.\w8\w8\s[neutral_face] It would be best not to mix the two terms any longer,\w4 as it may cause confusion for developers trying to read various guides and documentation.\w8\w8"
+		"\1\s[teach]It is not,\w4 although this misconception was widespread in the English community for many years.\w8\w8%(br)With the translation of #Ukadoc,\w4 it came to light that this was an incorrect use of the term,\w4 and that %(br)""interval"" has a particular meaning.\w8\w8\s[neutral_face] It is best not to mix the two terms any longer,\w4 as it may cause confusion for developers trying to read various guides and documentation.\w8\w8"
 		"\0\s[sweat_smile]Right,\w4 that makes sense.\w8\w8 I'll keep an eye out for it,\w4 then."
 	}
 	elseif reference0 == "Kawari"
@@ -186,7 +188,7 @@ OnGlossaryWord : all
 	{
 		"\1\s[teach]Kero is a term that refers to the secondary character in a #ghost.\w8\w8 For this #ghost,\w4 that would be me.\w8\w8\n\n"
 		"\0\s[blush]\i[22]The best kero.\w8\w8\n\n"
-		"\1\s[flushed]...\w8\w8\s[teach] Ahem.\w8\w8 It is a reference to the Cardcaptor Sakura anime.\w8\w8\n\n"
+		"\1\s[flushed]...\w8\w8\s[teach] Ahem.\w8\w8 It is a reference to the anime Cardcaptor Sakura.\w8\w8\n\n"
 		"\0\s[smiling_face_with_3_hearts]\i[23]\i[33]The \f[italic,1]best\f[italic,default] kero.\w8\w8"
 		"\1\s[unamused]..."
 	}
@@ -196,7 +198,7 @@ OnGlossaryWord : all
 		"\0\s[blush]\i[31]Most #ghosts and #ghost-related things,\w4 like #balloons and #calendar skins,\w4 will be packaged as .nar files!\w8\w8\n\n"
 		"\1\s[neutral_face].nar files may be dragged onto any running #ghost to install them,\w4 though some will be #ghost-specific and must be dragged on that particular #ghost in order to be installed.\w8\w8 You may also associate the .nar extension with #SSP in the SSP preferences if you like,\w4%(br)and then you will be able to install .nar files by double clicking on them while #SSP is running.\w8\w8"
 		"\0\s[smiling_face_with_3_hearts]\i[22]And it'll make them have a cute little gift box icon!\w8\w8"
-		"\1\s[rolling_eyes]" 
+		"\1\s[rolling_eyes]"
 	}
 	elseif reference0 == "Plugin"
 	{
@@ -205,7 +207,7 @@ OnGlossaryWord : all
 		"\1\s[neutral_face]Yes,\w4 they are sometimes referred to that way.\w8\w8 But plugin specifically refers to #SSP addons,\w4 so it is better to avoid mixing the terms.\w8\w8\n\n"
 		"\0\s[s_thinking]Oh,\w4 I see...\w8\w8\n\n"
 		"\1\s[neutral_face]Plugins are not as common as #ghosts.\w8\w8 But,\w4 they can provide additional functionality,\w4 such as opening the CD drive,\w4 fetching weather data,\w4 creating simple balloons,\w4 and more.\w8\w8\n\n"
-		"\0\s[s_thinking]...\w8\w8 Opening the CD drive...\w8\w8 And closing it too,\w4 right?\w8\w8\n\n"
+		"\0\s[s_thinking]...\w8\w8 Opening the CD drive...\w8\w8 and closing it too,\w4 right?\w8\w8\n\n"
 		"\1\s[neutral_face]No.\w8\w8\n\n"
 		"\0\s[astonished]But...\w8\w8 Why would you want that?\w8\w8\n\n"
 		"\1\s[neutral_face]I don't know.\w8\w8"
@@ -263,7 +265,7 @@ OnGlossaryWord : all
 		"\0\s[s_thinking]Does SHIORI stand for something?\w8\w8\n\n"
 		"\1\s[neutral_face]No.\w8\w8\n\n"
 		"\0\s[sweat_smile]Oh.\w8\w8\s[s_thinking] So what does the SHIORI do exactly?\w8\w8\n\n"
-		"\1\s[teach]The #baseware is what the user interacts with,\w4 when they do things such as clicking the mouse or pressing keys.\w8\w8 The #baseware then sends SHIORI events to the %(br)#ghost's code,\w4 which determines what response should be given based on the information.\w8\w8 That response is sent back to the #baseware so that the appropriate images and dialogue can be displayed to the user.\w8\w8\n\n"
+		"\1\s[teach]The #baseware is what the user interacts with when they do things such as clicking the mouse or pressing keys.\w8\w8 The #baseware then sends SHIORI events to the %(br)#ghost's code,\w4 which determines what response should be given based on the information.\w8\w8 That response is sent back to the #baseware so that the appropriate images and dialogue can be displayed to the user.\w8\w8\n\n"
 		"\0\s[astonished]Ooh wow.\w8\w8 There's a lot that goes into it,\w4 huh?\w8\w8\n\n"
 		"\1\s[neutral_face]Yes,\w4 a lot of moving pieces.\w8\w8 In theory though,\w4 you could use any #baseware,\w4 and any #ghost coding language,\w4 and as long as they are all communicating with the same SHIORI standard,\w4 they will more or less work.\w8\w8"
 		"\0\s[smiling_face_with_3_hearts]\i[22]That's so cool!"
@@ -325,7 +327,7 @@ OnGlossaryWord : all
 	}
 	elseif reference0 == "Ukadoc"
 	{
-		"\1\s[teach]Ukadoc is a very useful resource for #ghost developers.\w8\w8 It is the official documentation for #SSP,\w4 and has information on various standards,\w4 the file structure for #ghosts,\w4 #balloons,\w4 #plugins,\w4 etc.,\w4 and listings of all available #SakuraScript tags and #SHIORI events.\w8\w8\s[neutral_face] It is an invaluable tool if you intend to develop anything #ghost related.\w8\w8 You can find it \_a[https://ukagakadreamteam.github.io/ukadoc/]here\_a,\w4 or you can right click me and find it in the top tab of the menu.\w8\w8"
+		"\1\s[teach]Ukadoc is a very useful resource for #ghost developers.\w8\w8 It is the official documentation for #SSP,\w4 and has information on various standards,\w4 the file structure for #ghosts,\w4 #balloons,\w4 #plugins,\w4 etc.,\w4 and listings of all available #SakuraScript tags and #SHIORI events.\w8\w8\s[neutral_face] It is an invaluable tool if you intend to develop anything #ghost related.\w8\w8 You can find it \_a[https://ukagakadreamteam.github.io/ukadoc/]here\_a,\w4 or you can right click me and find it in the top tab of the menu.\w8\w8" //TODO i should normalize to either Sakura Script or SakuraScript
 		"\0\s[slight_smile]\i[21]The original version is in Japanese,\w4 but the #Ukagaka Dream Team has translated it into English!"
 	}
 	elseif reference0 == "Ukagaka Dream Team"
@@ -344,7 +346,7 @@ OnGlossaryWord : all
 		"\0\s[s_thinking]...\w8\w8 Shouldn't it be YAAYA,\w4 then?\w8\w8\n\n"
 		"\1\s[rolling_eyes]It can be used as a general purpose language for things outside of #ghost coding.\w8\w8 It can also be used to make #SAORI,\w4 #MAKOTO,\w4 and #Plugins.\w8\w8\n\n"
 		"\0\s[s_thinking]YA-AYA?\w8\w8 AYA-YA?\w8\w8\n\n"
-		"\1\s[expressionless]It is open source,\w4 and you can find the source code on \_a[https://github.com/YAYA-shiori]GitHub\_a.\w8\w8 You can also read more about it on the%(br)\_a[https://emily.shillest.net/ayaya/index.php]AYAYA wiki\_a.\w8\w8 Additionally,\w4 there is an English guide called \_a[https://zichqec.github.io/YAYA_Fundamentals/]YAYA Fundamentals\_a,\w4 which teaches how to code in YAYA starting with the very basics.\w8\w8\n\n"
+		"\1\s[expressionless]It is open source,\w4 and you can find the source code on \_a[https://github.com/YAYA-shiori]GitHub\_a.\w8\w8 You can also read more about it on the%(br)\_a[https://emily.shillest.net/ayaya/index.php]AYAYA wiki\_a.\w8\w8 Additionally,\w4 there is an English guide called \_a[https://zichqec.github.io/YAYA_Fundamentals/]YAYA Fundamentals\_a,\w4 which teaches how to code in YAYA starting with the very basics.\w8\w8\n\n" //TODO update link
 		"\0\s[astonished]AYAYA!\w8\w8 What does that one mean?\w8\w8\n\n"
 		"\1\s[unamused]It means #AYA Shop.\w8\w8\n\n"
 		"\0\s[sweat_smile]Oh.\w8\w8 I thought maybe it was a combination of #AYA and YAYA.\w8\w8\n\n"
@@ -391,7 +393,7 @@ OnTroubleshooting : all
 	{
 		"\0\s[relieved]That's normal.\w8\w8 The language setting in #SSP is for the menus.\w8\w8 #Ghosts can't change their language on the fly,\w4%(br)they have to be written in a specific language by their developer.\w8\w8\s[blush] But,\w4 there are some \_a[https://ukagakadreamteam.com/wiki/tag/multilingual?do=showtag&tag=Multilingual]multilingual%(br)ghosts\_a out there!\w8\w8 There are also some #ghosts with translated versions,\w4 or you can try translating your favorite #ghosts yourself!\w8\w8\n\n"
 		"\1\s[neutral_face]There's a guide on how to translate #ghosts over \_a[https://ashido.com/ukagaka/translation.html]here\_a.\w8\w8%(br)That'll get you started.\w8\w8"
-		"\0\s[blush]You can also try some translation #ghosts,\w4 like%(br)\_a[https://ukagaka.zichqec.com/ghost/ukatranslator]Ukatranslator\_a,\w4 which copies #ghost dialogue into a browser translator for you,\w4 or the \_a[https://twitter.com/Nikola_T/status/1526746677423796224]Simultaneous Translator\_a which displays the translated dialogues in its own #balloon."
+		"\0\s[blush]You can also try some translation #ghosts,\w4 like%(br)\_a[https://ukagaka.zichqec.com/ghost/ukatranslator]Ukatranslator\_a,\w4 which copies #ghost dialogue into a browser translator for you,\w4 or the \_a[https://twitter.com/Nikola_T/status/1526746677423796224]simultaneous interpreter\_a which displays the translated dialogues in its own #balloon."
 	}
 	elseif reference0 == "Mojibake"
 	{
@@ -399,42 +401,41 @@ OnTroubleshooting : all
 		"\0\s[s_thinking]What's mojibake?\w8\w8\n\n"
 		"\1\s[neutral_face]ãƒ¢ã‚¸ãƒã‚±ã¨ã¯ï¼Ÿ\w8\w8\n\n"
 		"\0\s[scream]Oh!\w8\w8\s[sweat_smile] Yeah,\w4 that can come up now and then.\w8\w8 There are a couple reasons it can happen.\w8\w8\i[31] One is that the ghost may be using the wrong charset.\w8\w8\n\n"
-		"\1\s[teach]You can specify which charset the #ghost should use by right clicking it,\w4 going to the Options tab,\w4 and clicking ""Set Default Charset"".\w8\w8 You'll want to change the charset for the #SHIORI section,\w4 most likely,\w4 but you can change the other ones as well if you need to.\w8\w8%(br)Most Japanese ghosts use the SHIFT-JIS charset,\w4 while most English ghosts use UTF-8.\w8\w8\n\n"
+		"\1\s[teach]You can specify which charset the #ghost should use by right clicking it,\w4 going to the ""Options"" tab,\w4 and clicking ""Set default charset"".\w8\w8 You'll want to change the charset for the #SHIORI section,\w4 most likely,\w4 but you can change the other ones as well if you need to.\w8\w8%(br)Most Japanese ghosts use the Shift-JIS charset,\w4 while most English ghosts use UTF-8.\w8\w8\n\n"
 		"\0\s[slight_smile]The other reason it can happen is if it's an older ghost using an old version of #Satori.\w8\w8\i[24]\i[31] You can usually fix this by downloading a newer ghost that uses%(br)#Satori,\w4 and copying over the satori.dll file from the new ghost into the old ghost,\w4 overwriting the old file.\w8\w8"
 		"\1\s[neutral_face]If that does not solve the issue,\w4 unfortunately we don't have any further suggestions at this time.\w8\w8\s[k_thinking] You could perhaps try using \_a[http://www.linestarve.com/tools/mojibake/]a tool to decode mojibake\_a on the ghost's files,\w8\s[neutral_face] but we have never had reason to try this,\w4 so we can't say for sure if it will help."
 	}
 	elseif reference0 == "NoSounds"
 	{
-		"\0\s[s_thinking]Oh,\w4 that's usually an issue in the preferences.\w8\w8\s[relieved]%(raised_hand)\![open,configurationdialog,ghost2] Check the Ghost(2) tab of the #SSP preferences,\w4 and make sure the ""Don't Play Sound"" option is unchecked.\w8\w8\n\n"
-		"\1\s[teach]If that doesn't work,\w4 make sure to check this setting for the specific #ghost you're having trouble with,\w4 as well.\w8\w8 When you set settings in the #SSP preferences,\w4 you're setting the defaults that all ghosts will normally use.\w8\w8 However,\w4 if you right click a #ghost,\w4 hover over Options,\w4 and click on%(br)""Ghost Preferences..."" instead,\w4 you will get a menu that allows you to configure those settings for that%(br)#ghost individually.\w8\w8 That means different #ghosts can have different settings,\w4 so you should check both menus to be sure this option is unchecked.\w8\w8\n\n"
+		"\0\s[s_thinking]Oh,\w4 that's usually an issue in the preferences.\w8\w8\s[relieved]%(raised_hand)\![open,configurationdialog,ghost2] Check the ""Ghost (2)"" page of the #SSP preferences,\w4 and make sure the ""Mute sounds"" option is unchecked.\w8\w8\n\n"
+		"\1\s[teach]If that doesn't work,\w4 make sure to check this setting for the specific #ghost you're having trouble with,\w4 as well.\w8\w8 When you set settings in the #SSP preferences,\w4 you're setting the defaults that all ghosts will normally use.\w8\w8 However,\w4 if you right click a #ghost,\w4 hover over ""Options"",\w4 and click on ""Ghost%(br)preferences..."" instead,\w4 you will get a menu that allows you to configure those settings for that%(br)#ghost individually.\w8\w8 That means different #ghosts can have different settings,\w4 so you should check both menus to be sure this option is unchecked.\w8\w8\n\n"
 		"\0\s[s_thinking]If that still doesn't work,\w4 you might try restarting #SSP if you haven't already.\w8\w8 I suppose you could also check your volume mixer in windows,\w4 and make sure #SSP isn't muted in there?\w8\w8"
 		"\1\s[neutral_face]There is also \_a[https://github.com/Nevcairiel/LAVFilters/releases]LAV Filters\_a,\w4 which #SSP requires to play some file types.\w8\w8 You might try installing that.\w8\w8 Once you've installed it,\w4 #SSP should use it immediately without you needing to set anything up,\w4 though you may want to restart #SSP anyways to be sure."
 	}
 	elseif reference0 == "InstallationIssues"
 	{
-		
 		"\1\s[k_thinking]Trouble installing certain #ghosts?\w8\w8 There are several possible causes.\w8\w8\s[teach] The most common issue,\w4 especially if you're installing older English #ghosts,\w4 is that the%(br)#ghost may be packaged differently from normal. If this is the case,\w4 or you have an error,\w4 you may need to install it manually.\w8\w8\n\n"
 		"\0\s[sweat_smile]Yeah,\w4 that happens sometimes.\w8\w8 A key thing to remember is that #.nar files are actually just .zip files with a different extension,\w4 so you can unzip them if you need to!\w8\w8 Though you may need to change the extension to .zip manually first.\w8\w8\n\n"
 		"\1\s[teach]You will need to copy the #ghost's folder into the%(br)%(h)SSP/ghost/%(dc) directory.\w8\w8\n\n"
 		"\0\s[blush]%(raised_hand)\![open,explorer,../../../]This one here!\w8\w8\s[sweat_smile] (If you haven't set up subfolders for your ghosts,\w4 or anything.)\w8\w8\n\n"
 		"\1\s[k_thinking]Take a look at how our files are set up.\w8\w8 We're the%(br)ssp_angel folder.\w8\w8 You'll see if you double click on it that all our files are contained in there and not spilling into the %(h)SSP/ghost/%(dc) directory,\w4 but also there are files on the top level.\w8\w8 Your new #ghost needs to be set up the same way,\w4 make sure it isn't nested into an extra folder.\w8\w8\n\n"
-		"\0\s[relieved]Once you've done that,\w4 you'll need to let #SSP know to look for the new #ghost.\w8\w8\s[blush] %(raised_hand)\![open,configurationdialog,folder]Here's the preferences menu for you.\w8\w8 You should be on the Folder tab.\w8\w8 Do you see at the top,\w4 the bit that says #ghost and has Edit and Reload buttons?\w8\w8 The number of Recognized Elements is the number of #ghosts you have installed,\w4 and if you've done this correctly,\w4 when you click Reload you should see that number go up.\w8\w8\n\n"
+		"\0\s[relieved]Once you've done that,\w4 you'll need to let #SSP know to look for the new #ghost.\w8\w8\s[blush] %(raised_hand)\![open,configurationdialog,folder]Here's the preferences menu for you.\w8\w8 You should be on the ""Folder"" page.\w8\w8 Do you see at the top,\w4 the bit that says #ghost and has%(br)""Edit..."" and ""Reload"" buttons?\w8\w8 The number after%(br)""Total found"" is how many #ghosts you have installed,\w4 and if you've done this correctly,\w4 when you click reload you should see that number go up.\w8\w8\n\n"
 		"\1\s[neutral_face]Try right clicking on us once you've finished with that,\w4 and check to see if your new #ghost shows up in the menu."
 	}
 	elseif reference0 == "ComplainOffscreen"
 	{
 		"\1\s[k_thinking]Ah,\w4 that one.\w8\w8 You might try going into your computer's display settings,\w4 applying a small change,\w4 and then changing it back after.\w8\w8 Sometimes this can clear up the problem.\w8\w8\s[neutral_face] If not,\w4 you should report the issue on the #BTS,\w4 including how many monitors you have and what resolution they are.\w8\w8\n\n"
-		"\0\s[sweat_smile]But in the meantime,\w4 if it's interfering with your ability to use your ghosts,\w4 you can turn those messages off in the %(raised_hand)\![open,configurationdialog,ghost]SSP preferences.\w8\w8 On the Ghost(1) tab,\w4 tick the box for ""Disable Screen Boundary Check"" and those messages will stop.\w8\w8"
+		"\0\s[sweat_smile]But in the meantime,\w4 if it's interfering with your ability to use your ghosts,\w4 you can turn those messages off in the %(raised_hand)\![open,configurationdialog,ghost]SSP preferences.\w8\w8 On the%(br)""Ghost (1)"" page,\w4 tick the box for ""Disable screen boundary check"" and those messages will stop.\w8\w8"
 		"\1\s[neutral_face]That does also mean ghosts won't be able to tell if they actually are off the screen anymore,\w4 but it's worthwhile if it's not functioning properly anyways."
 	}
 	elseif reference0 == "PassiveMode"
 	{
-		"\1\s[k_thinking]It sounds likely that the #ghost is stuck in what is called ""passive mode"".\w8\w8 This could be because the developer forgot to put in a tag to take the #ghost out of that mode,\w4 or because the boot sequence got interrupted somehow.\w8\w8\s[teach] Try right clicking the #ghost in question,\w4 go to the Utilities tab,\w4 and click on ""Reset Passive Mode"".\w8\w8 Once this has been done,\w4 the%(br)#ghost should act normally.\w8\w8\s[face_exhaling] Though,\w8\s[neutral_face] if it is a case where the boot sequence was interrupted,\w4 it is possible that some variables may be set improperly,\w4 which could cause strange behaviors.\w8\w8 If it gives you trouble,\w4 contact the ghost's author,\w4 or perhaps try reinstalling the ghost.\w8\w8"
+		"\1\s[k_thinking]It sounds likely that the #ghost is stuck in what is called ""passive mode"".\w8\w8 This could be because the developer forgot to put in a tag to take the #ghost out of that mode,\w4 or because the boot sequence got interrupted somehow.\w8\w8\s[teach] Try right clicking the #ghost in question,\w4 go to the ""Utilities"" tab,\w4 and click on ""Reset%(br)passive mode"".\w8\w8 Once this has been done,\w4 the%(br)#ghost should act normally.\w8\w8\s[face_exhaling] Though,\w8\s[neutral_face] if it is a case where the boot sequence was interrupted,\w4 it is possible that some variables may be set improperly,\w4 which could cause strange behaviors.\w8\w8 If it gives you trouble,\w4 contact the ghost's author,\w4 or perhaps try reinstalling the ghost.\w8\w8"
 		"\0\s[sweat_smile]What a pain.\w8\w8 %(username),\w4 if you ever make a ghost,\w4 be really really careful if you use passive mode!"
 	}
 	elseif reference0 == "SomethingElse"
 	{
-		"\0\s[pensive]Sorry we can't help you solve your issue.\w8\w8\s[s_thinking] But you might try asking the #Ukagaka Dream Team,\w4 and they may be able to help.\w8\w8\n\n"
+		"\0\s[pensive]Sorry we can't help you solve your issue.\w8\w8\s[s_thinking] But you could try asking the #Ukagaka Dream Team,\w4 and they may be able to help.\w8\w8\n\n"
 		"\1\s[k_thinking]You can also contact \_a[https://twitter.com/ponapalt]Ponapalt\_a,\w4 the maintainer of SSP.\w8\w8%(br)Or,\w4 you can file a bug report on the #BTS.\w8\w8"
 		"\0\s[blush]Good luck,\w4 I hope someone can help you figure it out!"
 	}
@@ -510,7 +511,8 @@ OnCredits : all
 	"\1\b[2]\s[teach]\0\b[0]\s[0]"
 	"\1\b[2]\_q\*\![set,autoscroll,disable]"
 	"\f[align,center]%(emdash) Credits %(emdash)\n\n"
-	"\f[align,center]\f[bold,1]Shell Art\f[bold,default]\n"
+	if SHIORI3FW.BalloonName == "Angelbox" || SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"; "[half]"
+	"\f[align,center]\f[bold,1]Shell Art\f[bold,default]\n" //TODO i tried to get rid of all these extra alignment tags, but it made it become misaligned...? weird
 	"\f[align,center]#Yuyudev\n\n"
 	
 	"\f[align,center]\f[bold,1]Writing\f[bold,default]\n"
@@ -528,9 +530,8 @@ OnCredits : all
 	"\f[align,center]\f[bold,1]Cotton Candy Balloon\f[bold,default]\n"
 	"\f[align,center]#GallaTheGalla\n"
 	"\f[align,center]#Yuyudev\n\n"
-	if SHIORI3FW.BalloonName == "Angelbox" || SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"; "[half]"
 	"\f[align,center]\![*]\q[Back,OnKeroMenu]  \![*]\q[Close,OnCreditsClose]"
-	"\_q\0\s[slight_smile]\i[24]Look at all the cool folks who helped to make us!\w8\w8\s[blush]\i[22] We wouldn't be here without every single one of them.\w8\w8\n\n\s[smiling_face_with_3_hearts]\i[31]And our thanks go to you,\w4 too.\w8\w8 Users like you keep our developers devving!\w8\w8 I'm sure they'd love to hear your feedback,\w4 if you have any~\w8\w8\w8\n\n\s[slight_smile]\i[24]If you'd like to see credits for #SSP itself,\w4 you can right click on me,\w4 go to the Information tab,\w4 and click on ""About SSP..."".\w8\w8 The information is listed at the bottom!"
+	"\_q\0\s[slight_smile]\i[24]Look at all the cool folks who helped to make us!\w8\w8\s[blush]\i[22] We wouldn't be here without every single one of them.\w8\w8\n\n\s[smiling_face_with_3_hearts]\i[31]And our thanks go to you,\w4 too.\w8\w8 Users like you keep our developers devving!\w8\w8 I'm sure they'd love to hear your feedback,\w4 if you have any~\w8\w8\w8\n\n\s[slight_smile]\i[24]If you'd like to see credits for #SSP itself,\w4 you can right click on me,\w4 go to the ""Information"" tab,\w4 and click on ""About SSP..."".\w8\w8 The information is listed at the bottom!"
 }
 
 //Prevents Angel from continuing to talk if you close the credits early

@@ -138,8 +138,8 @@ OnInstallComplete
 		all :/
 		{
 			"\0\n\n\_q"
-			"\![*]\q[""Change to %(reference1)"",OnChangeInstalledBalloon]\n\n"
-			"\![*]\q[No thanks,OnBlank]"
+			"\![*]\__q[OnChangeInstalledBalloon]""Change to %(reference1)""\__q\n\n"
+			"\![*]\__q[OnBlank]No thanks\__q"
 		}
 	}
 	elseif reference0 == "plugin"
@@ -153,8 +153,8 @@ OnInstallComplete
 		all :/
 		{
 			"\n\n\_q"
-			"\![*]\q[Open the calendar,OnOpenInstalledCalendar]\n\n"
-			"\![*]\q[No thanks,OnBlank]"
+			"\![*]\q[OnOpenInstalledCalendar]Open the calendar\__q\n\n"
+			"\![*]\__q[OnBlank]No thanks\__q"
 		}
 	}
 	elseif reference0 == "headline"
@@ -181,14 +181,15 @@ OnInstallComplete
 
 OnChangeInstalledGhost
 {
-	"\1\b[0]\s[10]\0\b[0]\s[astonished]Oh,\w4 alright.\w8\w8\s[blush] Have a fun time with your new friend!\w8\w8\1\s[neutral_face]Later.\w8\w8"
+	"\1\b[0]\s[10]\0\b[0]\s[blush]Have a fun time with your new friend!\w8\w8\1\s[neutral_face]Farewell.\w8\w8"
 	--
 	"\![change,ghost,lastinstalled]"
 }
 
 OnCallInstalledGhost
 {
-	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Calling %(reference0)~!"
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Calling %(reference0)~!" //TODO kinda want more of these...
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[22]Let's all welcome %(reference0)~!"
 	--
 	"\![call,ghost,lastinstalled]"
 }
@@ -280,7 +281,7 @@ OnVanishCancel
 
 OnVanishButtonHold
 {
-	"\1\b[0]\s[neutral_face]\0\b[0]\s[scream]Oh,\w4 you changed your mind?\w8\w8 Oh thank goodness—\w8\w8\n\n\1\s[expressionless]Very well,\w4 then.\w8\w8\s[neutral_face] We shall stay and assist for as long as you desire."
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[scream]Oh,\w4 you changed your mind?\w8\w8 Oh thank goodness%(emdash)\w8\w8\n\n\1\s[expressionless]Very well,\w4 then.\w8\w8\s[neutral_face] We shall stay and assist for as long as you desire."
 }
 
 OnOtherGhostVanished
@@ -482,11 +483,11 @@ OnHeadlinesenseComplete
 
 OnHeadlinesenseFailure
 {
-	"\1\b[0]\s[k_thinking]\0\b[0]\s[sweat_smile]Oh,\w4 uh,\w4 something went wrong,\w4 I can't get the feed.\w8\w8"
+	"\1\b[0]\s[k_thinking]\0\b[0]\s[sweat_smile]Oh,\w4 uh,\w4 something went wrong,\w4 I can't get the feed.\w8\w8\1"
 	--
 	if reference0 == "can't download"
 	{
-		"\1We aren't able to download it."
+		"We aren't able to download it."
 	}
 	elseif reference0 == "can't analyze"
 	{
@@ -528,8 +529,8 @@ OnSNTPCompare
 		all:/
 		{
 			"\n\n"
-			"\![*]\q[Fix it,OnSNTPExecute]\n"
-			"\![*]\q[Leave it alone,OnSNTPCancel]\e"
+			"\![*]\q[OnSNTPExecute]Fix it\__q\n"
+			"\![*]\__q[OnSNTPCancel]Leave it alone\__q"
 		}
 	}
 }
@@ -558,7 +559,7 @@ OnSNTPFailure
 //————— Screensaver —————
 OnScreenSaverEnd
 {
-	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Eek--!\w8\w8\1\s[unamused]It's only a screensaver,\w4 calm down."
+	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Eek--!\w8\w8\1\s[unamused]It's only a screensaver,\w4 calm down." //TODO add more of these
 }
 
 
@@ -597,7 +598,7 @@ OnShellScaling
 		}
 		elseif reference0 > 100
 		{
-			"\1\s[neutral_face]\0\s[astonished]Oh,\w4 you made us bigger?\w8\w8\s[sweat_smile] Were we too small?\w8\w8\1\s[k_thinking]If we look fuzzy to you,\w4 you can always turn off dithering in the SSP preferences.\w8\w8 But keep in mind that it looks best when you set our shell scaling to round numbers."
+			"\1\s[neutral_face]\0\s[astonished]Oh,\w4 you made us bigger?\w8\w8\s[sweat_smile] Were we too small?\w8\w8\1\s[k_thinking]If we look fuzzy to you,\w4 you can always turn off dithering in the SSP preferences, it's the option marked ""High-quality shell scaling (slower)"".\w8\w8 But keep in mind that it looks best when you set our shell scaling to round numbers."
 		}
 	}
 	else //Getting smaller
@@ -611,6 +612,4 @@ OnShellScaling
 			"\1\s[neutral_face]\0\s[sweat_smile]Oh,\w4 were we in your way?\w8\w8\s[blush] It's so handy you can shrink us if you need to,\w4 though.\w8\w8\1Yes.\w8\w8 You can also make us partially transparent in the SSP preferences,\w4 if you'd like."
 		}
 	}
-	
-	
 }

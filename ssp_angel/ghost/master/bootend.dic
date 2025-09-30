@@ -34,6 +34,7 @@ OnFirstBoot
 	MouseGesture = IARRAY
 	
 	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[36]Hello there!\w8\w8 Good to meet you!\w8\w8\s[relieved]\i[21] My name's Angel,\w4 and this is Pilot.\w8\w8\s[blush]\i[22] We're here to get you started with SSP!\w8\w8\n\n\1\s[teach]Greetings.\w8\w8\n\n\0\s[neutral_face]%(raised_hand)\![open,configurationdialog,setup]To start off,\w4 you should fill out your user information at the bottom of the preferences here!\w8\w8 We'll use it to know how to refer to you.\w8\w8 There are other settings in here that you may want to change as well,\w4%(br)but we'll keep it simple for now.\w8\w8\n\n\1\s[neutral_face]You can double click on either of us to open our menus,\w4 or you can right click on Angel to open SSP's menu,\w4 which you can use to close us when you are done.\w8\w8 You can also right click on me,\w4 but my menu has fewer options than Angel's,\w4 since she is the main character.\w8\w8\n\n\0\s[pleading_face]\i[22]Aw,\w4 don't say it like that,\w4 you're important too!\w8\w8\n\n\1\s[rolling_eyes]Stay on topic,\w4 please.\w8\w8\s[neutral_face] We will talk from time to time on our own;\w8 if you need anything,\w4 just let us know through our menus.\w8\w8 We can offer you advice on SSP and ghosts,\w4 and we can also perform a few basic functions.\w8\w8\n\n\0\s[blush]\i[22]It's gonna be fun!"
+	//TODO SSP's menu or owner draw menu... or right click menu! hm
 }
 
 //Default boot
