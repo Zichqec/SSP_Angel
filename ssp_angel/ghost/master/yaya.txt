@@ -5,6 +5,7 @@ dicdir, yaya_base
 dic, main.dic
 dic, aitalk.dic
 dic, bootend.dic
+dic, commu.dic
 dic, etc.dic
 dic, kero_menu.dic
 dic, mouse.dic

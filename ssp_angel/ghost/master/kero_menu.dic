@@ -44,6 +44,7 @@ OnGlossary : all
 	"\f[align,center]%(emdash) Glossary %(emdash)\n\f[align,left]"
 	
 	"\![*]\__q[OnGlossaryWord,Animation]Animation\__q\n"
+	"\![*]\__q[OnGlossaryWord,Aosora]Aosora\__q\n"
 	"\![*]\__q[OnGlossaryWord,AYA]AYA\__q\n"
 	"\![*]\__q[OnGlossaryWord,BTS]BTS\__q\n"
 	"\![*]\__q[OnGlossaryWord,Balloon]Balloon\__q\n"
@@ -93,6 +94,15 @@ OnGlossaryWord : all
 		"\1\s[neutral_face]They also refer to animations such as our blinking and talking animations,\w4 and even #dressups can technically be considered an animation,\w4 if an animation #interval is applied to them.\w8\w8\n\n"
 		"\0\s[astonished]Ooh,\w4 #interval?\w8\w8"
 		"\1\s[teach]#Intervals are the timing settings of animations.\w8\w8 The English community had previously confused the terms #interval and animation,\w4 so please ask me about%(br)#intervals if you'd like to know more."
+	}
+	elseif reference0 == "Aosora"
+	{
+		//TODO: I KNOW, I KNOW THIS IS GOING TO BECOME OUTDATED, don't @ me i'll update it later shshshshshshsh
+		"\0\s[astonished]Ooh,\w4 ooh,\w4 I wanna talk about this one!\w8\w8\s[blush]\i[22] Aosora is a new #SHIORI that began development in late 2024!\w8\w8\s[star_struck]\i[22] It's%(br)a whole new frontier!\w8\w8\n\n"
+		"\1\s[k_thinking]Sort of...\w8\w8\s[teach] But you must keep in mind that it is still in development,\w4 so various details may change greatly over time.\w8\w8\s[neutral_face] A new #SHIORI is an exciting prospect to be sure,\w4 but it must be approached with that understanding.\w8\w8\n\n"
+		"\0\s[star_struck]\i[31]It's so cool though!\w8\w8 It separates dialogues from code so that you get all the benefits of a more technical language like #YAYA,\w8\s[smiling_face_with_3_hearts]\i[22] but writing dialogues and basic event responses is super easy and nice!\w8\w8\n\n"
+		"\1\s[k_thinking]Indeed.\w8\w8 It's an intriguing design,\w4 and in a perfect world,\w4 perhaps both writers and programmers would find it useful...\w8\w8\s[neutral_face] It is something I will be certainly be following the development of.\w8\w8"
+		"\0\s[blush]\i[22]Me too!"
 	}
 	elseif reference0 == "AYA"
 	{

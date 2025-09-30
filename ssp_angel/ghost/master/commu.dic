@@ -1,0 +1,156 @@
+OnNeedlePoke
+{
+	if reference0 == 0 //Sakura
+	{
+		"\0\b[0]"
+		--
+		nonoverlap :/
+		{
+			"\s[scream]Ouchie!!"
+			"\s[scream]Hey!!"
+			"\s[scream]Eek!!"
+			"\s[scream]Hey,\w4 that's not fair!!"
+			"\s[scream]Not the needle!!"
+			"\s[scream]I'm being needled!!"
+			"\s[scream]\i[36]Help,\w4 it got me!!"
+			"\s[scream]\i[26]\i[36]Hey!!\w8\w8 Ow!!"
+		}
+	}
+	elseif reference0 == 1 //Kero
+	{
+		"\1\b[0]"
+		--
+		nonoverlap :/
+		{
+			"\s[expressionless]Must you?"
+			"\s[teach]This is a good example of ways that ghosts may interact when overlapping.\w8\w8\s[unamused] That being said,\w4 cut it out."
+			"\s[unamused]Nag nag yourself."
+			"\s[rolling_eyes]Can I help you?"
+			"\s[expressionless]%(username),\w4 if you would..."
+			"\s[unamused]Cut it out,\w4 will you?"
+			"\s[unamused]Enough of this."
+		}
+	}
+}
+
+OnSpectrePlugin.ConfirmCalibration
+{
+	//Add expression names as references here in any order that should be omitted from the calibration...
+	"\![raiseplugin,Spectre,OnCustomCalibrationConfirm]"
+}
+
+OnSpectrePlugin.Surface
+{
+	if reference0 == "normal"; "\s[0]"
+	elseif reference0 == "embarrassed"; "\s[14]"
+	elseif reference0 == "surprised"; "\s[11]"
+	elseif reference0 == "anxious"; "\s[2]"
+	elseif reference0 == "discouraged"; "\s[3]"
+	elseif reference0 == "smile"; "\s[1]"
+	elseif reference0 == "relieved"; "\s[4]"
+	elseif reference0 == "angry"; "\s[3]\i[6]"
+	elseif reference0 == "sweat"; "\s[9]"
+	elseif reference0 == "indignant"; "\s[3]\i[6]"
+	elseif reference0 == "thinking"; "\s[7]"
+	elseif reference0 == "unamused"; "\s[3]\i[6]"
+}
+
+OnSpectrePlugin.Possession : nonoverlap_pool
+{
+	if RAND(4) == 0
+	{
+		"\0\s[scream]Eeeek!\w8\w8 I think there's a ghost around here!!\w8\w8\1\s[rolling_eyes]There's no such thing as ghosts..."
+		"\0\s[scream]What was that!?\w8\w8\1\s[neutral_face]What was what...?"
+		"\0\s[scream]\i[26]\i[36]Something touched me!\w8\w8\1\s[expressionless]There's nothing there,\w4 Angel..."
+		"\0\s[scream]\i[26]\i[36]%(username),\w4 this place is haunted!!\w8\w8\1\s[expressionless]It is not haunted,\w4 ghosts are not real."
+	}
+}
+
+OnLoboHowl
+{
+	if reference0 == "pain"
+	{
+		nonoverlap :/
+		{
+			"\0\s[pleading_face]\i[23]\i[33]Oh nooooooo...\w8\w8\1\s[face_exhaling]\i[5]Unfortunate."
+			"\0\s[pensive]\i[24]Ouch.\w8\w8\1\s[face_exhaling]\i[5]Indeed."
+		}
+	}
+	elseif reference0 == "sad"
+	{
+		nonoverlap :/
+		{
+			"\0\s[pleading_face]\i[23]\i[33]Oh no,\w4 that's so sad...\w8\w8\s[sob]\i[23]\i[33] I gotta join in.\w8\w8\n\n\1\s[rolling_eyes]You do not need to%(emdash)\w8\0\s[sob]Bawooooooo!!\1\s[expressionless]\0\w8\w8 \f[italic,1]Sniff,\w4 hic.\f[italic,default] Bawooooooooooooo..."
+			"\0\s[pleading_face]\i[24]That's the saddest thing I've ever heard.\w8\w8\n\n\1\s[unamused]Is it really?\w8\w8\n\n\0\s[pensive]\i[24]Well,\w4 maybe it's not as sad as the time I %(spilledsauceonmydress).\w8\w8\1\s[expressionless]I see..."
+		}
+	}
+	elseif reference0 == "hopeful"
+	{
+		nonoverlap :/
+		{
+			"\0\s[pleading_face]\i[22]Wow...\w8\w8 inspirational...\w8\w8\n\n\1\s[k_thinking]It seemed a little nonsensical to me.\w8\w8\0\s[sob]\i[22]It brings a tear to the eye!\w8\w8 Several, even!\w8\w8\1\s[face_exhaling]"
+			"\0\s[pleading_face]\i[22]Such an important message in today's world.\w8\w8\n\n\1\s[k_thinking]Is it?\w8\w8 I thought it seemed a bit like meaningless fluff...\w8\w8\n\n\0\s[sob]\i[22]Exactly,\w4 the world needs more meaningless fluff!!\w8\w8\1\s[expressionless]...\w8\w8 I am not particularly inclined to agree."
+		}
+	}
+	elseif reference0 == "strange"
+	{
+		nonoverlap :/
+		{
+			"\0\s[s_thinking]...\w8\w8 What does that mean?\w8\w8\n\n\1\s[k_thinking]I don't think it means anything..."
+			"\0\s[s_thinking]...\w8\w8 Is this where they get fortune cookies from?\w8\w8\n\n\1\s[k_thinking]Maybe..."
+		}
+	}
+	elseif reference0 == "vulgar"
+	{
+		nonoverlap :/
+		{
+			{
+				"\0\s[scream]Oh my gosh!\w8\w8 Swearing!!\w8\w8\i[26]\i[36] Pilot, cover your ears!!\w8\w8"
+				--
+				"\1\s[unamused]...\w8\w8 I've heard worse."
+				"\1\s[rolling_eyes]...\w8\w8 Please."
+				"\1\s[expressionless]Do I appear that fragile to you?"
+			}
+			"\0\s[scream]Can they broadcast that on TV!?\w8\w8\1\s[expressionless]This is not TV..."
+		}
+	}
+	else //normal
+	{
+		nonoverlap :/
+		{
+			"\0\s[blush]\i[23]\i[33]Awoowoowoowoowoowooooooo!!\w8\w8"
+			"\0\s[blush]\i[23]\i[33]Awoooooooo!\w8\w8\s[star_struck]\i[23]\i[33] Awooooooooooooooo!!\w8\w8"
+			"\0\s[star_struck]\i[22]Awoooooooooooooooooo!!\w8\w8"
+		}
+		--
+		nonoverlap :/
+		{
+			"\1\s[expressionless]You do not have to join in,\w4 Angel..."
+			"\1\s[expressionless]So much noise..."
+			"\1\s[expressionless]So loud..."
+			"\1\s[rolling_eyes]At long last,\w4 you've found your true calling..."
+		}
+	}
+}
+
+OnPhantaEepy
+{
+	if reference0 == 1
+	{
+		nonoverlap :/
+		{
+			"\0\s[sweat_smile]\i[24]\1\s[expressionless]Please do not use me as a pillow."
+			"\0\s[sweat_smile]\i[24]\1\s[expressionless]I am not a cushion."
+			"\0\s[sweat_smile]\i[24]\1\s[expressionless]Please do not nap on me."
+		}
+	}
+	else //0
+	{
+		nonoverlap :/
+		{
+			"\1\s[unamused]\0\s[sweat_smile]\i[24]Oh,\w4 um...\w8\w8\s[blush]\i[24] hi there!\w8\w8 \s[relieved]\i[24]I'm down for a nap...\w8\w8\n\n\1\s[rolling_eyes]You are on the job,\w4 Angel.\w8\w8 Stay alert.\w8\w8\0\s[worried]\i[24]Aw..."
+			"\1\s[unamused]\0\s[blush]\i[22]Yay,\w4 sleepover time!\w8\w8\n\n\1\s[rolling_eyes]Angel,\w4 we are on the job.\w8\w8 Please remain professional.\w8\w8\0\s[pensive]Aw..."
+			"\1\s[unamused]\0\s[astonished]Gasp!\w8\w8\s[pleading_face]\i[23] I can never move again.\w8\w8\n\n\1\s[rolling_eyes]What are you on about...?\w8\w8\0\s[sob]\i[23]If I move I'll disturb her...!"
+		}
+	}
+}

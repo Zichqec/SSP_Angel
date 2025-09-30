@@ -1111,3 +1111,23 @@ angelstashplace
 	"at your desk"
 	"in your desk drawer"
 }
+
+spilledsauceonmydress
+{
+	"spilled %(saucetype) on my favorite dress"
+	"printed out a 200 page report, and then I put the paper back into the printer to print pretty patterns on the other sides of the pages, but I put it the wrong way and didn't realize it until every page was ruined and I had to start all over again"
+	"dropped my keys into a storm drain, losing my favorite keychain in the process"
+	"bought a bunch of cutesy stationary at the store, and then it started pouring down rain on the way home and it all got ruined"
+	"bought a mermaid tail blanket and it didn't turn me into a mermaid"
+}
+
+saucetype
+{
+	"spaghetti sauce"
+	"pizza sauce"
+	"alfredo"
+	"BBQ sauce"
+	"ketchup"
+	"grape juice"
+	"three whole bottles of mustard"
+}
