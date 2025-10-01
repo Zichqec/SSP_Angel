@@ -131,15 +131,17 @@ OnGlossaryWord : all
 	{
 		"\1\s[teach]Baseware refers to the program that runs #ghosts.\w8\w8 If you're using us as recommended,\w4 that'll be #SSP.\w8\w8\n\n"
 		"\0\s[relieved]There are other #baseware too,\w4 such as #Materia,\w4 #CROW,\w4 ninix-kagari,\w4 Ikagaka,\w4 and more.\w8\w8\n\n"
-		"\1\s[k_thinking]Yes.\w8\w8 Though,\w4 at the time of writing,\w4 #SSP is the only%(br)#baseware that is still being maintained and updated.\w8\w8\s[neutral_face] But who knows.\w8\w8 In theory,\w4 anyone could make a new%(br)#baseware and shake things up.\w8\w8\n\n" //TODO want to adjust this... ninix-kagari is being worked on. maybe indicate that SSP is the standard, but other baseware could theoretically overtake it
-		"\0\s[blush]\i[22]That would be so exciting!\w8\w8"
+		"\1\s[k_thinking]Yes.\w8\w8 Though,\w4 many baseware have stopped receiving updates. SSP is used almost ubiquitously."
+		"\0\s[astonished]ninix-kagari is an open source option that has been receiving updates too!\w8\w8 \s[blush]\i[22]If you're good with really technical stuff,\w4 maybe you could contribute to that project.\w8\w8"
+		"\1\s[neutral_face]Indeed.\w8\w8 Baseware are as interchangeable as any other part of ukagaka,\w4 and in theory,\w4 anyone could make a new one at any point in time.\w8\w8\s[k_thinking] In practice,\w4 ukagaka have many functions,\w4 so to create a baseware that would be compatible with all of them is a monumental task...\w8\w8\s[neutral_face] It is not impossible,\w4 but it is a great effort to do so."
 	}
 	elseif reference0 == "Calendar skin"
 	{
 		"\0\s[star_struck]Ooh ooh,\w4 I know this one!\w8\w8\s[blush] %(raised_hand)\![open,calendar]Here,\w4 look,\w4 this is the calendar!\w8\w8 And if you get more calendar skins,\w4 you can change how the calendar looks!\w8\w8\n\n"
-		"\1\s[neutral_face]Yes,\w4 though it's mostly a novelty at the time of writing.\w8\w8 The calendar's functions are in need of an overhaul.\w8\w8\n\n" //TODO not anymore!
-		"\0\s[smiling_face_with_3_hearts]Yeah,\w4 but who wouldn't want to have a cute looking calendar!?\w8\w8"
-		"\1\s[unamused]..."
+		"\1\s[neutral_face]No matter what skin is applied, the calendar itself will continue to function exactly the same.\w8\w8\n\n"
+		"\0\s[smiling_face_with_3_hearts]Yeah,\w4 it's super cool!\w8\w8 \s[astonished]I've heard that #SSP now uses a calendar format that's compatible with other calendars,\w4 too.\w8\w8 What's up with that?\w8\w8\n\n"
+		"\1\s[teach]It was changed to use the iCalendar format,\w4 which many calendar applications use as a shared set of standards.\w8\w8 If you create events in SSP,\w4 you will be able to bring them to other calendars,\w4 and vice versa." //TODO i need to... learn how this works lol
+		"\0\s[star_struck]\i[22]Wow...\w8\w8 that's so cool!"
 	}
 	elseif reference0 == "CROW"
 	{
@@ -253,7 +255,7 @@ OnGlossaryWord : all
 	elseif reference0 == "Owner draw menu"
 	{
 		"\1\s[teach]The owner draw menu is the menu that appears when you right click on a ghost.\w8\w8\n\n"
-		"\0\s[slight_smile]\i[21]You may also see it referred to as the right-click menu.\w8\w8"
+		"\0\s[slight_smile]\i[21]You may also see it referred to as the right click menu.\w8\w8"
 		"\1\s[neutral_face]This menu is a part of the #shell,\w4 and can change per-shell.\w8\w8 Sometimes it will have a custom pattern or artwork made by the developer of that #shell,\w4 but not always."
 	}
 	elseif reference0 == "SAORI"

@@ -235,7 +235,7 @@ OnHowTo : all
 	{
 		"\1\s[teach]There are a variety of ways to minimize a #ghost.\w8\w8 You can press the Ctrl + I key combination to minimize all open ghosts,\w4 you can click their icon on the taskbar,\w4 or you can right click them and click the ""Iconify"" option which is third up from the bottom.\w8\w8 Note that this option may have a different label,\w4 such as%(br)""Minimize"".\w8\w8\n\n"
 		"\0\s[astonished]You can also double click their tiny icon in the system tray!\w8\w8\n\n"
-		"\1\s[k_thinking]That icon can also be right clicked to get the #SSP menu,\w4 and minimize them from there.\w8\w8" //TODO SSP menu, again...
+		"\1\s[k_thinking]That icon can also be right clicked to open the owner draw menu,\w4 and minimize them from there.\w8\w8"
 		"\0\s[relieved]The system tray is also a way to bring them back when they're minimized.\w8\w8 Double clicking their icon again will bring them back,\w4 or you can right click it and uncheck the ""Iconify"" option."
 	}
 	elseif reference0 == "FastForward"
@@ -337,9 +337,9 @@ OnHowTo : all
 		"\0\s[blush]Oh,\w4 you want to give voice synthesis a try?\w8\w8 That's easy!\w8\w8 Just right click us,\w4 go to the ""Utilities"" tab,\w4 and click on ""Voice synthesis""!\w8\w8\n\n"
 		"\1\s[teach]You can also change what voices we use and what pitch we speak at by going to the ""Speech"" page of the SSP preferences.\w8\w8\n\n"
 		"\0\s[blush]%(raised_hand)\![open,configurationdialog,dictation]Right here!\w8\w8\n\n"
-		"\1\s[teach]\\0 refers to the main character,\w4 and \\1 refers to the side character.\w8\w8 You can pick voices and pitches for each individually.\w8\w8 \\2~ will be used for any additional characters,\w4 which we don't have,\w4 but other #ghosts may.\w8\w8\n\n"
+		"\1\s[teach]\\0 refers to the main character,\w4 and \\1 refers to the side character.\w8\w8 You can pick voices and pitches for each individually.\w8\w8 \\2+ will be used for any additional characters,\w4 which we don't have,\w4 but other #ghosts may.\w8\w8\n\n"
 		"\0\s[scream]Don't set us to a Japanese voice,\w4 we're not made for that!\w8\w8"
-		"\1\s[neutral_face]Also note that with voice synthesis on,\w4 all open ghosts will make use of it.\w8\w8" //TODO add a note for the new setting maybe?
+		"\1\s[neutral_face]Also note that with voice synthesis on,\w4 all open ghosts will make use of it.\w8\w8"
 	}
 	elseif reference0 == "SpeechRecognition"
 	{
