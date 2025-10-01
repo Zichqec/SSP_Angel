@@ -1,10 +1,5 @@
 OnInitialize
 {
-	if !ISVAR("Talkrate")
-	{
-		Talkrate = "every 3 minutes"
-		aitalkinterval = 180
-	}
 	if !ISVAR("HourNotifs"); HourNotifs = "Off"
 	if !ISVAR("UninstallEnabled"); UninstallEnabled = "On"
 	stroke = 0
@@ -19,7 +14,6 @@ OnInitialize
 
 OnFirstBoot
 {
-	Talkrate = "every 3 minutes"
 	aitalkinterval = 180
 	HourNotifs = "Off"
 	UninstallEnabled = "On"

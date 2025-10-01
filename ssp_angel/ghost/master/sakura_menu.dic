@@ -834,11 +834,6 @@ OnOpen
 
 OnConfigMenu : all
 {
-	if !ISVAR("Talkrate")
-	{
-		Talkrate = "every 3 minutes"
-		aitalkinterval = 180
-	}
 	if !ISVAR("HourNotifs"); HourNotifs = "Off"
 	if !ISVAR("UninstallEnabled"); UninstallEnabled = "On"
 	if !ISVAR("SSP_Tips"); SSP_Tips = 1
@@ -854,7 +849,18 @@ OnConfigMenu : all
 	"\C\![lock,balloonrepaint]\c\0\b[0]\_q\![set,autoscroll,disable]\f[anchorvisitedfontcolor,default.anchor]"
 	"\f[align,center]%(emdash) Settings %(emdash)\n\n\f[align,left]"
 	
-	"Talkrate:  \![*]\_a[OnChangeTalkrate]%(Talkrate)\_a\n"
+	_times = ("0,Off","30,30s","60,1m","180,3m","300,5m","600,10m","900,15m")
+	"Talk rate:  "
+	foreach _times; _time
+	{
+		switch aitalkinterval == TOINT(_time[0])
+		{
+			"\__q[OnChangeTalkrate,%(_time[0])]%(_time[1])\__q"
+			"\f[underline,1]\_a[OnChangeTalkrate,%(_time[0])]%(_time[1])\_a\f[underline,default]"
+		}
+		"  "
+	}
+	"\c[char,2]\n"
 	"Talk about: \![*]\_a[OnOpenTalkAboutMenu]%(_talkabout)\_a\n"
 	"Hour notifications:  \![*]\_a[OnToggleHourNotifs]%(HourNotifs)\_a\n"
 	"Enable uninstall option:  \![*]\_a[OnToggleUninstallEnabled]%(UninstallEnabled)\_a%(_d)\n"
@@ -865,64 +871,10 @@ OnConfigMenu : all
 	"\![unlock,balloonrepaint]"
 }
 
-OnChangeTalkrate : all
-{
-	"\0\b[2]\s[slight_smile]How often should we talk?"
-	"\_q\n\n"
-	"\![*]\q[Every 30 seconds,OnTalkrate,30]\n"
-	"\![*]\q[Every minute,OnTalkrate,60]\n"
-	"\![*]\q[Every 3 minutes,OnTalkrate,180]\n"
-	"\![*]\q[Every 5 minutes,OnTalkrate,300]\n"
-	"\![*]\q[Every 10 minutes,OnTalkrate,600]\n"
-	"\![*]\q[Never,OnTalkrate,0]\n"
-	"\n"
-	"\![*]\__q[OnConfigMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
-}
-
-OnTalkrate //TODO some of these comments are funny but I wonder if it's best to switch to the quick rate switcher
+OnChangeTalkrate
 {
 	aitalkinterval = TOINT(reference0)
-	
-	"\0\b[0]\1\b[0]"
-	--
-	if reference0 == "30"
-	{
-		Talkrate = "every 30 seconds"
-		
-		"\0\s[scream]Oh,\w4 wow,\w4 that's a lot!\w8\w8 I dunno if I have that much to say!\w8\w8\1\s[unamused]I'm sure you'll find something to yammer about."
-	}
-	elseif reference0 == "60"
-	{
-		Talkrate = "every minute"
-		
-		"\0\s[astonished]Oh,\w4 alright,\w4\s[s_thinking] I'll have to come up with a lot of things to talk about...\w8\w8\1\s[rolling_eyes]That'll be easy for you."
-	}
-	elseif reference0 == "180"
-	{
-		Talkrate = "every 3 minutes"
-		
-		"\0\s[blush]\i[22]Back to the default it is!\w8\w8\1\s[neutral_face]At last."
-	}
-	elseif reference0 == "300"
-	{
-		Talkrate = "every 5 minutes"
-		
-		"\0\s[blush]Alright,\w4 every 5 minutes!\w8\w8\s[relieved] Most English #ghosts actually use 5 minutes as their default talkrate,\w4 compared to Japanese ghosts which typically use 3 minutes.\w8\w8\n\n\1\s[unamused]Maybe we should use 5 minutes as our default talkrate, then.\w8\w8\0\s[scream]Hey,\w4 I had nothing to do with that decision!" //re: the comment up top - this could be changed to a tip dialogue
-	}
-	elseif reference0 == "600"
-	{
-		Talkrate = "every 10 minutes"
-		
-		"\0\s[sweat_smile]Oh,\w4 don't wanna hear much from us,\w4 huh?\w8\w8 Okay.\w8\w8\1\s[neutral_face]Fine by me."
-	}
-	else
-	{
-		Talkrate = "Never"
-		
-		"\0\s[worried]Oh,\w4 was I talking too much?\w8\w8\n\n\1\s[unamused]%(username) said to stop talking.\w8\w8 So,\w4 stop talking.\w8\w8\n\n\0\s[scream]Already!?\w8\w8 But we're in the menu!\w8\w8 Surely I can talk here!\w8\w8\1\s[rolling_eyes]..."
-	}
-	--
-	"\0\w8\w8\n\n\_q\![*]\__q[OnConfigMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+	OnConfigMenu
 }
 
 OnOpenTalkAboutMenu
