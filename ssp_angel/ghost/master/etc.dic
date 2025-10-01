@@ -557,7 +557,9 @@ OnSNTPFailure
 //————— Screensaver —————
 OnScreenSaverEnd
 {
-	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Eek--!\w8\w8\1\s[unamused]It's only a screensaver,\w4 calm down." //TODO add more of these
+	//TODO add more of these
+	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Eek--!\w8\w8\1\s[unamused]It's only a screensaver,\w4 calm down."
+	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Aah!\w8\w8 What was that!?\w8\w8\n\n\1\s[unamused]The screensaver,\w4 as you well know...\w8\w8\0\s[sweat_smile]\i[23]Oh,\w4 right..."
 }
 
 

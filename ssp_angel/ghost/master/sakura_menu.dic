@@ -132,7 +132,7 @@ OnQuestions : all
 	{
 		"\0\s[s_thinking]Well,\w4 it depends on what you're looking for and how much work you want to put into it,\w4 really.\w8\w8\s[sweat_smile] Translating ghosts is no easy task,\w4 especially because of cultural references and concepts that can't be captured in a translation alone.\w8\w8\s[blush] But,\w4 if you want to give it a try,\w4 there are a few routes open to you.\w8\w8\n\n"
 		"\1\s[teach]The more involved way is to go into the ghost's files,\w4 and translate the text yourself,\w4 whether by knowledge of the language,\w4 or by working carefully with machine translation.\w8\w8 There is a guide on how to translate ghosts \_a[https://ashido.com/ukagaka/translation.html]here\_a that may be of help to you,\w4 should you wish to try it.\w8\w8\s[neutral_face] Results may vary,\w4 depending on how much of the language you know,\w4 what coding language the ghost is in,\w4 and how easily translatable the concepts of the ghost are.\w8\w8"
-		"\0\s[relieved]\i[31]If that's not what you're looking for,\w4 you can try ghosts like \_a[https://ukagaka.zichqec.com/ghost/ukatranslator]Ukatranslator\_a or \_a[https://twitter.com/Nikola_T/status/1526746677423796224]simultaneous interpreter\_a.\w8\w8 These ghosts aid in running ghost dialogue through machine translation,\w4 but they take different approaches.\w8\w8\s[blush] They're far from perfect,\w4 but they can sometimes give you the gist of what a ghost is saying,\w4%(br)so they're worth a shot!" //TODO links/my own translator?
+		"\0\s[relieved]\i[31]If that's not what you're looking for,\w4 you can try ghosts like \_a[https://ukagaka.zichqec.com/ghost/ukatranslator]Ukatranslator\_a or \_a[https://twitter.com/Nikola_T/status/1526746677423796224]simultaneous interpreter\_a.\w8\w8 These ghosts aid in running ghost dialogue through machine translation,\w4 but they take different approaches.\w8\w8\s[blush] They're far from perfect,\w4 but they can sometimes give you the gist of what a ghost is saying,\w4%(br)so they're worth a shot!" //TODO links/my own translator? -- I think it would be better/more future proof if I just linked to the wiki's tag for translator ghosts
 	}
 	--
 	"\0\w8\w8\*\n\n\_q\![*]\__q[OnQuestionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
@@ -214,8 +214,7 @@ OnHowTo : all
 	}
 	elseif reference0 == "ChangeName"
 	{
-		"\0\s[blush]%(raised_hand)\![open,configurationdialog,setup]You can change your name and other info in the SSP preferences,\w4 here!\w8\w8\s[sweat_smile] A lot of #ghosts will ask for your name individually though,\w4 and for those ones you'll usually have to go into their config menus to change it.\w8\w8 It can vary from #ghost to #ghost."
-		//TODO it might be nice to describe that you have to double click for that menu...
+		"\0\s[blush]%(raised_hand)\![open,configurationdialog,setup]You can change your name and other info in the SSP preferences,\w4 here!\w8\w8\s[sweat_smile] A lot of #ghosts will ask for your name individually though,\w4 and for those ones you'll usually have to double click them and go into their individual config menus to change it.\w8\w8 It can vary from%(br)#ghost to #ghost."
 	}
 	elseif reference0 == "Install"
 	{
@@ -227,7 +226,7 @@ OnHowTo : all
 	{
 		"\0\s[worried]Aw,\w4 is someone giving you trouble?\w8\w8\s[scream] It's not us,\w4 is it!?\w8\w8\n\n"
 		"\1\s[unamused]Hush,\w4 no guilting.\w8\w8\s[teach] To uninstall a #ghost,\w4 you need only right click on the #ghost,\w4 and select the ""Uninstall"" option near the top.\w8\w8\n\n"
-		"\0\s[relieved]Some #ghosts will disable this option,\w4 so that it's harder to uninstall by accident.\w8\w8 In these cases,\w4 you can usually go into that #ghost's config menu,\w4 and toggle the option on from there.\w8\w8\i[31] You can also use the ghost explorer;\w4 if you right click on their entry in the ghost explorer while they are closed,\w4 you can click on the ""Delete"" option to uninstall them.\w8\w8\n\n" //TODO as above with the config menu...
+		"\0\s[relieved]Some #ghosts will disable this option,\w4 so that it's harder to uninstall by accident.\w8\w8 In these cases,\w4 you can usually double click on that #ghost and find its individual config menu,\w4 and toggle the option on from there.\w8\w8\i[31] You can also use the ghost explorer;\w4 if you right click on their entry in the ghost explorer while they are closed,\w4 you can click on the ""Delete"" option to uninstall them.\w8\w8\n\n"
 		"\1\s[neutral_face]If all that fails,\w4 you can go into the %(h)SSP/ghost/%(dc) folder and just delete their whole folder.\w8\w8\n\n"
 		"\0\s[scream]Make sure you're deleting the right one!\w8\w8"
 		"\1\s[rolling_eyes]Once you've done that,\w4 the #ghost will still be in your list of #ghosts until you restart #SSP,\w4 or refresh the%(br)#ghost list by right clicking a #ghost,\w4 going to the%(br)""Utilities"" tab,\w4 and clicking on ""Reload all folders""."
@@ -257,7 +256,7 @@ OnHowTo : all
 		"\0\s[worried]Aw,\w4 done already?\w8\w8\n\n"
 		"\1\s[unamused]Hush,\w4 no guilting.\w8\w8\s[teach] We can be closed by right clicking us and choosing the ""Close"" option.\w8\w8 It's the second button from the bottom.\w8\w8\n\n"
 		"\0\s[blush]If you have more than one #ghost open,\w4 you can close everyone at once by choosing the bottom ""Quit"" button!\w8\w8"
-		"\1\s[k_thinking]Some #ghosts may also have a hotkey or menu option for closing them,\w4 but this will vary per-ghost.\w8\w8\s[teach] SSP itself has built in key combinations for closing ghosts,\w4 which are Ctrl + W to close the selected ghost,\w4 and Ctrl + Q to close all ghosts at once and quit SSP." //TODO I wonder if there's a better way I can say this than "selected ghost"
+		"\1\s[k_thinking]Some #ghosts may also have a hotkey or menu option for closing them,\w4 but this will vary per-ghost.\w8\w8\s[teach] SSP itself has built in key combinations for closing ghosts,\w4 which are Ctrl + W to close the ghost that is currently in focus,\w4 and Ctrl + Q to close all ghosts at once and quit SSP."
 	}
 	elseif reference0 == "GhostExplorer"
 	{
@@ -274,7 +273,7 @@ OnHowTo : all
 		"\1\s[neutral_face]Once you have found the POP information,\w4 you'll need to put it into #SSP through the preferences menu.\w8\w8\n\n"
 		"\0\s[blush]%(raised_hand)\![open,configurationdialog,biff]Right here!\w8\w8 On the ""POP"" page!\w8\w8\n\n"
 		"\1\s[neutral_face]Near the bottom you'll see a list of accounts,\w4 which will be empty if you haven't added any accounts yet.\w8\w8 Click the button that says Add,\w4 and input the POP information from your email provider.\w8\w8\n\n"
-		"\0\s[pensive]If you're using Gmail,\w4 unfortunately you will have to take one more step before this will work.\w8\w8\s[sweat_smile] You will need to get what's called an ""App Password"",\w4 a unique password specifically for #SSP to use to access your email information.\w8\w8\i[31] You can do that \_a[https://support.google.com/accounts/answer/185833?hl=en]here\_a.\w8\w8\n\n" //TODO check link
+		"\0\s[pensive]If you're using Gmail,\w4 unfortunately you will have to take one more step before this will work.\w8\w8\s[sweat_smile] You will need to get what's called an ""App Password"",\w4 a unique password specifically for #SSP to use to access your email information.\w8\w8\i[31] You can do that \_a[https://support.google.com/accounts/answer/185833?hl=en]here\_a.\w8\w8\n\n"
 		"\1\s[teach]Once you've set all that up,\w4 you can test it's working by right clicking on us,\w4 and going to the ""Check mail"" tab.\w8\w8 From there you can simply click on the email account you want to check.\w8\w8\n\n"
 		"\0\s[blush]We can tell you how many emails you've received,\w4 and even display the headers for you!\w8\w8\n\n"
 		"\1\s[k_thinking]You may wish to adjust some settings in the preferences window.\w8\w8 Fetching the email headers takes a lot of extra time,\w4 but you can toggle that off.\w8\w8 You can also choose between having us show all the emails currently in the account,\w4 or having us only show emails that are new since we last checked.\w8\w8"

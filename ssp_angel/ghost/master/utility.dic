@@ -260,8 +260,8 @@ On_kero.recommendsites
 kerorecommendlinks : array
 {
 	"Ukadoc";						"https://ukagakadreamteam.github.io/ukadoc/manual/"
-	"AYAYA Wiki (Manual page)";		"https://emily.shillest.net/ayaya/index.php?%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB"
-	"Ghost Template Walkthrough";   "http://www.ashido.com/ukagaka/walkthrough.html"
+	"AYAYA Wiki (Manual page)";		"https://emily.shillest.net/ayaya/index.php?%E3%83%9E%E3%83%8B%E3%83%A5%E3%82%A2%E3%83%AB" //TODO update
+	"Ghost Template Walkthrough";   "http://www.ashido.com/ukagaka/walkthrough.html" //TODO hm, would like to update to link to walkthroughs in general at some point...
 	"Simplicity Ghost Template";    "https://ukagaka.zichqec.com/template/simplicity_template"
 	"YAYA Fundamentals Guide";      "https://zichqec.github.io/YAYA_Fundamentals/"
 }
