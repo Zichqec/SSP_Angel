@@ -404,8 +404,11 @@ OnHowTo : all
 		"\1\s[k_thinking]If all of that fails,\w4 then unfortunately you are on your own.\w8\w8 If you remember where you downloaded the%(br)#ghost from,\w4 you might try checking there to see if you can contact them.\w8\w8 But some #ghost developers are simply out of reach.\w8\w8"
 		"\0\s[pensive]Unfortunately true."
 	}
-	--
-	"\0\n\n\_q\![*]\q[Back,OnHowDoI]  \![*]\q[Close,OnCancel]"
+	
+	"\0\n\n\_q"
+	if reference1 == "from email check"; "\![*]\__q[OnFunctionMenu]Back\__q"
+	else; "\![*]\__q[OnHowDoI]Back\__q"
+	"  \![*]\__q[OnCancel]Close\__q"
 }
 
 OnFunctionMenu : all
@@ -796,12 +799,27 @@ OnStartRSS
 
 OnEmailMenu : all
 {
+	if ARRAYSIZE(EmailAddressList) == 0
+	{
+		NoEmailsSet
+		return
+	}
+	
 	"\0\b[2]\_q\![set,autoscroll,disable]"
 	foreach EmailAddressList; _email
 	{
 		"\![*]\__q[OnStartEmail,""%(_email)""]%(_email)\__q\n"
 	}
 	"\n"
+	"\![*]\__q[OnFunctionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+}
+
+NoEmailsSet : all
+{
+	"\1\b[0]\s[neutral_face]\0\b[0]\s[astonished]Oh,\w4 sure.\w8\w8\s[smiling_face_with_3_hearts]\i[22] I would love to check your emails for you!\w8\w8\s[sweat_smile]\i[22] But you don't have any email addresses configured right now.\w8\w8\s[blush]%(raised_hand)\![open,configurationdialog,biff] Here,\w4 these are the POP settings.\w8\w8 If you need any tips on how to configure it,\w4 just let me know!"
+	"\n\n\_q"
+	"\![*]\__q[OnHowTo,Email,from email check]How do I set up email checking?\__q"
+	"\n\n"
 	"\![*]\__q[OnFunctionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
 }
 
