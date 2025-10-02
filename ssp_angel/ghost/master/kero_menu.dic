@@ -180,7 +180,7 @@ OnGlossaryWord : all
 		"\0\s[blush]Sometimes,\w4 they are also called Nin'i-tan,\w4 or Nise-Haruna!\w8\w8\s[relieved] And they aren't restricted to being characters,\w4 either.\w8\w8 They are incredibly customizable and can take many forms.\w8\w8\n\n"
 		"\1\s[neutral_face]Those terms aren't really meant to apply to ukagaka generally.\w8\w8 Nise-Haruna is a very old term,\w4 which means ""Fake-Haruna"",\w4 in relation to the origin of ukagaka.\w8\w8 Nin'i-tan is a nickname for Mikage Sakura,\w4 the default ghost that comes with the #baseware%(br)#Materia.\w8\w8 The best term to use is ukagaka,\w4 or ghost.\w8\w8\n\n"
 		"\0\s[star_struck]\i[22]Desktop friends!!\w8\w8 It all just means desktop friends.\w8\w8"
-		"\1\s[rolling_eyes]Yes,\w4 despite there being many names,\w4 they all generally refer to the same thing."
+		"\1\s[rolling_eyes]Yes,\w4 despite there being many names,\w4 they all generally refer to the same thing." //TODO wonder if i ought to update the bit about nin'i-tan and nise-haruna...
 	}
 	elseif reference0 == "Interval"
 	{
@@ -192,7 +192,7 @@ OnGlossaryWord : all
 	elseif reference0 == "Kawari"
 	{
 		"\1\s[teach]Kawari is an old #ghost coding language,\w4 or #SHIORI.\w8\w8 It has primarily seen use in the Japanese community,\w4 however,\w4 more recently there have been some English ghosts appearing that use Kawari.\w8\w8 There are even \_a[https://ukagakadreamteam.com/wiki/ghost/chips_template]template ghosts\_a and a \_a[https://okuajub-netspace.neocities.org/knk_index]full guide\_a to creating%(br)#ghosts in Kawari.\w8\w8\n\n"
-		"\0\s[astonished]I'm really interested in Kawari now that I know more about it!\w8\w8 Apparently it's a language made for writers,\w4 that makes ghost creation super easy because you don't need to know as much code stuff.\w8\w8\s[s_thinking] Instead you use these ""entry"" things that let you write really varied dialogues.\w8\w8\n\n"
+		"\0\s[astonished]I'm really interested in Kawari now that I know more about it!\w8\w8 Apparently it's a language made for writers that makes ghost creation super easy because you don't need to know as much code stuff.\w8\w8\s[s_thinking] Instead you use these ""entry"" things that let you write really varied dialogues.\w8\w8\n\n"
 		"\1\s[neutral_face]Indeed,\w4 it's an exciting prospect that may make ghost creation accessible to many more people.\w8\w8\s[k_thinking] At the time of writing,\w4 it is still a budding field in the English community,\w4 so there are not as many resources for it yet.\w8\w8\s[neutral_face] But,\w4 they will come eventually,\w4 and the best way to help in that endeavor is to make use of the language yourself.\w8\w8"
 		"\0\s[blush]\i[21]There's also a project to translate the \_a[https://okuajub-netspace.neocities.org/Kawari/]Kawari documentation\_a!\w8\w8\s[blush]\i[24] You might find that handy if you want to try Kawari,\w8\s[star_struck]\i[22] and you could even get involved and help the translation effort if you wanted!"
 	}
@@ -237,7 +237,7 @@ OnGlossaryWord : all
 		"\0\s[s_thinking]The #SHIORI event OnTranslate has the same functionality.\w8\w8 I think MAKOTO is an older specification.\w8\w8\n\n"
 		"\1\s[neutral_face]Yes,\w4 that is my understanding as well.\w8\w8 But I don't have strong sources for it.\w8\w8\n\n"
 		"\0\s[astonished]So,\w4 is there a reason to use MAKOTO anymore?\w8\w8"
-		"\1\s[k_thinking]MAKOTO may still be useful for #shells created by developers who are not the author of the #ghost the shell is for.\w8\w8 It can be written in multiple languages,\w4 including #YAYA.\w8\w8\s[neutral_face] But I'm afraid I don't know much more about it."
+		"\1\s[k_thinking]MAKOTO may still be useful for #shells created by developers who are not the author of the #ghost the shell is for.\w8\w8 It can be written in multiple languages,\w4 including #YAYA.\w8\w8\s[neutral_face] I'm afraid I don't know much more about it than that."
 	}
 	elseif reference0 == "MAYUNA"
 	{
@@ -266,7 +266,7 @@ OnGlossaryWord : all
 		"\0\s[star_struck]\i[33]Oooh!\w8\w8 So,\w4 you could do ANYTHING!\w8\w8\n\n"
 		"\1\s[k_thinking]Effectively,\w4 yes.\w8\w8\n\n"
 		"\0\s[smiling_face_with_3_hearts]\i[22]Wow,\w4 that's so cool.\w8\w8\n\n"
-		"\1\s[teach]If you're interested in making SAORI,\w4 you should look at the \_a[https://github.com/ukatech/csaori]CSAORI project on GitHub\_a.\w8\w8 You can also look at the \_a[https://emily.shillest.net/ayaya/index.php?cmd=read&page=Tips%2FSAORI%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9]information about SAORI on the AYAYA wiki\_a,\w4 though that is information specific to #AYA and%(br)#YAYA.\w8\w8\n\n"
+		"\1\s[teach]If you're interested in making SAORI,\w4 you should look at the \_a[https://github.com/ukatech/csaori]CSAORI project on GitHub\_a.\w8\w8 You can also look at the \_a[https://emily.shillest.net/ayaya/index.php?cmd=read&page=Tips%2FSAORI%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9]information about SAORI on the AYAYA wiki\_a,\w4 though that is information specific to #AYA and%(br)#YAYA.\w8\w8\n\n" //TODO link
 		"\0\s[sweat_smile]\i[24]This seems kinda complicated.\w8\w8\n\n"
 		"\1\s[neutral_face]It can be.\w8\w8 But it's also worth the effort if you want to do something complicated with a #ghost.\w8\w8\s[teach] There are two types of SAORI; SAORI-Universal,\w4 which are .dll files,\w4 and SAORI-Basic,\w4 which are .exe files.\w8\w8 Some%(br)#ghost languages can handle these both natively,\w4 but languages like #YAYA need a \_a[https://github.com/ukatech/csaori/releases/tag/saori_proxy_ex_v1.0.2]proxy SAORI\_a in order to make use of SAORI-Basic.\w8\w8"
 		"\0\s[sweat_smile]\i[33]Wow..."
@@ -414,7 +414,7 @@ OnTroubleshooting : all
 		"\1\s[neutral_face]ãƒ¢ã‚¸ãƒã‚±ã¨ã¯ï¼Ÿ\w8\w8\n\n"
 		"\0\s[scream]Oh!\w8\w8\s[sweat_smile] Yeah,\w4 that can come up now and then.\w8\w8 There are a couple reasons it can happen.\w8\w8\i[31] One is that the ghost may be using the wrong charset.\w8\w8\n\n"
 		"\1\s[teach]You can specify which charset the #ghost should use by right clicking it,\w4 going to the ""Options"" tab,\w4 and clicking ""Set default charset"".\w8\w8 You'll want to change the charset for the #SHIORI section,\w4 most likely,\w4 but you can change the other ones as well if you need to.\w8\w8%(br)Most Japanese ghosts use the Shift-JIS charset,\w4 while most English ghosts use UTF-8.\w8\w8\n\n"
-		"\0\s[slight_smile]The other reason it can happen is if it's an older ghost using an old version of #Satori.\w8\w8\i[24]\i[31] You can usually fix this by downloading a newer ghost that uses%(br)#Satori,\w4 and copying over the satori.dll file from the new ghost into the old ghost,\w4 overwriting the old file.\w8\w8"
+		"\0\s[slight_smile]The other reason it can happen is if it's an older ghost using an old version of #Satori.\w8\w8\i[24]\i[31] You can usually fix this by downloading a newer ghost that uses%(br)#Satori,\w4 and copying over the satori.dll file from the new ghost into the old ghost,\w4 overwriting the old file.\w8\w8" //TODO update to link to satoriya
 		"\1\s[neutral_face]If that does not solve the issue,\w4 unfortunately we don't have any further suggestions at this time.\w8\w8\s[k_thinking] You could perhaps try using \_a[http://www.linestarve.com/tools/mojibake/]a tool to decode mojibake\_a on the ghost's files,\w8\s[neutral_face] but we have never had reason to try this,\w4 so we can't say for sure if it will help."
 	}
 	elseif reference0 == "NoSounds"
@@ -443,7 +443,7 @@ OnTroubleshooting : all
 	elseif reference0 == "PassiveMode"
 	{
 		"\1\s[k_thinking]It sounds likely that the #ghost is stuck in what is called ""passive mode"".\w8\w8 This could be because the developer forgot to put in a tag to take the #ghost out of that mode,\w4 or because the boot sequence got interrupted somehow.\w8\w8\s[teach] Try right clicking the #ghost in question,\w4 go to the ""Utilities"" tab,\w4 and click on ""Reset%(br)passive mode"".\w8\w8 Once this has been done,\w4 the%(br)#ghost should act normally.\w8\w8\s[face_exhaling] Though,\w8\s[neutral_face] if it is a case where the boot sequence was interrupted,\w4 it is possible that some variables may be set improperly,\w4 which could cause strange behaviors.\w8\w8 If it gives you trouble,\w4 contact the ghost's author,\w4 or perhaps try reinstalling the ghost.\w8\w8"
-		"\0\s[sweat_smile]What a pain.\w8\w8 %(username),\w4 if you ever make a ghost,\w4 be really really careful if you use passive mode!"
+		"\0\s[sweat_smile]What a pain.\w8\w8%(raised_hand) %(username),\w4 if you ever make a ghost,\w4 be really really careful if you use passive mode!"
 	}
 	elseif reference0 == "SomethingElse"
 	{
