@@ -358,7 +358,7 @@ OnGlossaryWord : all
 		"\0\s[s_thinking]...\w8\w8 Shouldn't it be YAAYA,\w4 then?\w8\w8\n\n"
 		"\1\s[rolling_eyes]It can be used as a general purpose language for things outside of #ghost coding.\w8\w8 It can also be used to make #SAORI,\w4 #MAKOTO,\w4 and #Plugins.\w8\w8\n\n"
 		"\0\s[s_thinking]YA-AYA?\w8\w8 AYA-YA?\w8\w8\n\n"
-		"\1\s[expressionless]It is open source,\w4 and you can find the source code on \_a[https://github.com/YAYA-shiori]GitHub\_a.\w8\w8 You can also read more about it on the%(br)\_a[https://emily.shillest.net/ayaya/index.php]AYAYA wiki\_a.\w8\w8 Additionally,\w4 there is an English guide called \_a[https://zichqec.github.io/YAYA_Fundamentals/]YAYA Fundamentals\_a,\w4 which teaches how to code in YAYA starting with the very basics.\w8\w8\n\n" //TODO update link
+		"\1\s[expressionless]It is open source,\w4 and you can find the source code on \_a[https://github.com/YAYA-shiori]GitHub\_a.\w8\w8 You can also read more about it on the%(br)\_a[https://ukagakadreamteam.github.io/ayaya/index]AYAYA wiki\_a.\w8\w8 Additionally,\w4 there is an English guide called \_a[https://zichqec.github.io/YAYA_Fundamentals/]YAYA Fundamentals\_a,\w4 which teaches how to code in YAYA starting with the very basics.\w8\w8\n\n"
 		"\0\s[astonished]AYAYA!\w8\w8 What does that one mean?\w8\w8\n\n"
 		"\1\s[unamused]It means #AYA Shop.\w8\w8\n\n"
 		"\0\s[sweat_smile]Oh.\w8\w8 I thought maybe it was a combination of #AYA and YAYA.\w8\w8\n\n"
