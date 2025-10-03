@@ -80,7 +80,7 @@ OnGlossary : all
 	"\![*]\__q[OnGlossaryWord,YAYA]YAYA\__q\n"
 	
 	"\n"
-	"\![*]\__q[OnKeroMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
+	"\![*]\__q[OnKeroMenu]Back\__q  \![*]\__q[OnCancelo]Close\__q"
 	"\e GLOSSARY_MENU"
 }
 
@@ -524,7 +524,7 @@ OnCredits : all
 	"\1\b[2]\_q\*\![set,autoscroll,disable]"
 	"\f[align,center]%(emdash) Credits %(emdash)\n\n"
 	if SHIORI3FW.BalloonName == "Angelbox" || SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"; "[half]"
-	"\f[align,center]\f[bold,1]Shell Art\f[bold,default]\n" //TODO i tried to get rid of all these extra alignment tags, but it made it become misaligned...? weird
+	"\f[align,center]\f[bold,1]Default Shell art\f[bold,default]\n" //TODO i tried to get rid of all these extra alignment tags, but it made it become misaligned...? weird
 	"\f[align,center]#Yuyudev\n\n"
 	
 	"\f[align,center]\f[bold,1]Writing\f[bold,default]\n"
@@ -535,14 +535,14 @@ OnCredits : all
 	"\f[align,center]\f[bold,1]Programming\f[bold,default]\n"
 	"\f[align,center]#Zichqec\n\n"
 	
-	"\f[align,center]\f[bold,1]Angelbox Balloon\f[bold,default]\n"
+	"\f[align,center]\f[bold,1]Angelbox balloon\f[bold,default]\n"
 	"\f[align,center]#GallaTheGalla\n"
 	"\f[align,center]#Zichqec\n\n"
 	
-	"\f[align,center]\f[bold,1]Cotton Candy Balloon\f[bold,default]\n"
+	"\f[align,center]\f[bold,1]Cotton Candy balloon\f[bold,default]\n"
 	"\f[align,center]#GallaTheGalla\n"
 	"\f[align,center]#Yuyudev\n\n"
-	"\f[align,center]\![*]\q[Back,OnKeroMenu]  \![*]\q[Close,OnCreditsClose]"
+	"\f[align,center]\![*]\__q[OnKeroMenu]Back\__q  \![*]\__q[OnCreditsClose]Close\__q"
 	"\_q\0\s[slight_smile]\i[24]Look at all the cool folks who helped to make us!\w8\w8\s[blush]\i[22] We wouldn't be here without every single one of them.\w8\w8\n\n\s[smiling_face_with_3_hearts]\i[31]And our thanks go to you,\w4 too.\w8\w8 Users like you keep our developers devving!\w8\w8 I'm sure they'd love to hear your feedback,\w4 if you have any~\w8\w8\w8\n\n\s[slight_smile]\i[24]If you'd like to see credits for #SSP itself,\w4 you can right click on me,\w4 go to the ""Information"" tab,\w4 and click on ""About SSP..."".\w8\w8 The information is listed at the bottom!"
 }
 
