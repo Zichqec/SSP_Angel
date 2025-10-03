@@ -10,6 +10,7 @@ OnInitialize
 	if !ISVAR("Balloon.Pilot"); Balloon.Pilot = ("2")
 	RecycleBin = (0,0)
 	MouseGesture = IARRAY
+	if !ISVAR("listmode.ghost"); listmode.ghost = "Paginate"
 }
 
 OnFirstBoot

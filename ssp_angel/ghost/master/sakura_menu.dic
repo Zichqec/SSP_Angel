@@ -434,8 +434,6 @@ OnFunctionMenu : all
 
 OnCallGhostMenu : all
 {
-	if !ISVAR("listmode.ghost"); listmode.ghost = "Paginate"
-	
 	_count = ARRAYSIZE(installedghostlist)
 	_page = reference0
 	
@@ -853,11 +851,6 @@ OnOpen
 
 OnConfigMenu : all
 {
-	if !ISVAR("HourNotifs"); HourNotifs = "Off"
-	if !ISVAR("UninstallEnabled"); UninstallEnabled = "On"
-	if !ISVAR("SSP_Tips"); SSP_Tips = 1
-	if !ISVAR("MiscDialogue"); MiscDialogue = 1
-	
 	_talkabout = "Anything"
 	if SSP_Tips && !MiscDialogue; _talkabout = "Usage tips"
 	elseif !SSP_Tips && MiscDialogue; _talkabout = "No tips"
@@ -1027,9 +1020,6 @@ OnBalloonMenu.Download
 
 OnBalloonMenu.Customize : all
 {
-	if !ISVAR("Balloon.Angel"); Balloon.Angel = ("1")
-	if !ISVAR("Balloon.Pilot"); Balloon.Pilot = ("2")
-	
 	_colors = IARRAY
 	if SHIORI3FW.BalloonName == "Cotton Candy"
 	{
