@@ -54,7 +54,7 @@ OnGlossary : all
 	"\![*]\__q[OnGlossaryWord,Dressup]Dressup\__q\n"
 	"\![*]\__q[OnGlossaryWord,Element]Element\__q\n"
 	"\![*]\__q[OnGlossaryWord,Freeshell]Freeshell\__q\n"
-	"\![*]\__q[OnGlossaryWord,Ghost/Ukagaka/Nanika]Ghost/Ukagaka/Nanika\__q\n"
+	"\![*]\__q[OnGlossaryWord,Ghost/Ukagaka/Nanika]Ghost\__q\n"
 	"\![*]\__q[OnGlossaryWord,Interval]Interval\__q\n"
 	"\![*]\__q[OnGlossaryWord,Kawari]Kawari\__q\n"
 	"\![*]\__q[OnGlossaryWord,Kero]Kero\__q\n"
@@ -64,6 +64,7 @@ OnGlossary : all
 	"\![*]\__q[OnGlossaryWord,MAKOTO]MAKOTO\__q\n"
 	"\![*]\__q[OnGlossaryWord,MAYUNA]MAYUNA\__q\n"
 	"\![*]\__q[OnGlossaryWord,Middleware]Middleware\__q\n"
+	"\![*]\__q[OnGlossaryWord,Ghost/Ukagaka/Nanika]Nanika\__q\n"
 	"\![*]\__q[OnGlossaryWord,Owner draw menu]Owner draw menu\__q\n"
 	"\![*]\__q[OnGlossaryWord,SAORI]SAORI\__q\n"
 	"\![*]\__q[OnGlossaryWord,SHIORI]SHIORI\__q\n"
@@ -76,6 +77,7 @@ OnGlossary : all
 	"\![*]\__q[OnGlossaryWord,Supplement]Supplement\__q\n"
 	"\![*]\__q[OnGlossaryWord,Surface]Surface\__q\n"
 	"\![*]\__q[OnGlossaryWord,Ukadoc]Ukadoc\__q\n"
+	"\![*]\__q[OnGlossaryWord,Ghost/Ukagaka/Nanika]Ukagaka\__q\n"
 	"\![*]\__q[OnGlossaryWord,Ukagaka Dream Team]Ukagaka Dream Team\__q\n"
 	"\![*]\__q[OnGlossaryWord,YAYA]YAYA\__q\n"
 	
@@ -176,11 +178,10 @@ OnGlossaryWord : all
 	}
 	elseif reference0 == "Ghost/Ukagaka/Nanika"
 	{
-		"\1\s[teach]Ghosts,\w4 also known as Ukagaka (伺か) or Nanika (何か),\w4%(br)are all terms for what we are.\w8\w8 Most often,\w4 they take the form of a character or set of characters that appear on your desktop and talk to you,\w4 and that you can interact with.\w8\w8\n\n"
-		"\0\s[blush]Sometimes,\w4 they are also called Nin'i-tan,\w4 or Nise-Haruna!\w8\w8\s[relieved] And they aren't restricted to being characters,\w4 either.\w8\w8 They are incredibly customizable and can take many forms.\w8\w8\n\n"
-		"\1\s[neutral_face]Those terms aren't really meant to apply to ukagaka generally.\w8\w8 Nise-Haruna is a very old term,\w4 which means ""Fake-Haruna"",\w4 in relation to the origin of ukagaka.\w8\w8 Nin'i-tan is a nickname for Mikage Sakura,\w4 the default ghost that comes with the #baseware%(br)#Materia.\w8\w8 The best term to use is ukagaka,\w4 or ghost.\w8\w8\n\n"
-		"\0\s[star_struck]\i[22]Desktop friends!!\w8\w8 It all just means desktop friends.\w8\w8"
-		"\1\s[rolling_eyes]Yes,\w4 despite there being many names,\w4 they all generally refer to the same thing." //TODO wonder if i ought to update the bit about nin'i-tan and nise-haruna...
+		"\1\s[teach]Ghost,\w4 Ukagaka (伺か),\w4 and Nanika (何か) are all terms for what we are.\w8\w8 Most often,\w4 ghosts take the form of a character or set of characters that appear on your desktop and talk to you,\w4 and that you can interact with.\w8\w8\n\n"
+		"\0\s[astonished]I've also seen claims that ghosts are called Nin'i-tan or Nise-Haruna,\w4 but these terms actually refer to specific ghosts!\w8\w8\n\n"
+		"\1\s[neutral_face]Nise-Haruna means ""Fake-Haruna"",\w4 and was the name of the very first ghost,\w4 because it was a parody of a character called Haruna.\w8\w8\s[k_thinking] I believe Nin'i-tan is a nickname for Mikage Sakura,\w4 the default ghost of%(br)#Materia,\w4 who evolved from Nise-Haruna.\w8\w8"
+		"\0\s[blush]\i[22]Nanika is a term that can refer to all ghosts,\w4 but it's a bit of an older term,\w4 so the best way to refer to ghosts in general is ""ghosts"" or ""ukagaka""!"
 	}
 	elseif reference0 == "Interval"
 	{
