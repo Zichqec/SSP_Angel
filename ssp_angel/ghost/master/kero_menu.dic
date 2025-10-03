@@ -69,7 +69,7 @@ OnGlossary : all
 	"\![*]\__q[OnGlossaryWord,SHIORI]SHIORI\__q\n"
 	"\![*]\__q[OnGlossaryWord,SSP]SSP\__q\n"
 	"\![*]\__q[OnGlossaryWord,Sakura]Sakura\__q\n"
-	"\![*]\__q[OnGlossaryWord,Sakura Script]Sakura Script\__q\n"
+	"\![*]\__q[OnGlossaryWord,SakuraScript]SakuraScript\__q\n"
 	"\![*]\__q[OnGlossaryWord,Satori]Satori\__q\n"
 	"\![*]\__q[OnGlossaryWord,SERIKO]SERIKO\__q\n"
 	"\![*]\__q[OnGlossaryWord,Shell]Shell\__q\n"
@@ -295,11 +295,11 @@ OnGlossaryWord : all
 		"\0\s[blush]\i[36]That's me!\w8\w8"
 		"\1\s[neutral_face]The name is a reference to the anime Cardcaptor Sakura."
 	}
-	elseif reference0 == "Sakura Script"
+	elseif reference0 == "SakuraScript"
 	{
-		"\1\s[teach]Sakura Script is a system of tags,\w4 used to make things happen during scripts.\w8\w8 For example,\w4 the tag%(br)\\w4 makes our text pause for 200ms,\w4 and the tag \\0 will switch the speaking character back over to Angel.\w8\w8\n\n"
+		"\1\s[teach]SakuraScript is a system of tags,\w4 used to make things happen during scripts.\w8\w8 For example,\w4 the tag%(br)\\w4 makes our text pause for 200ms,\w4 and the tag \\0 will switch the speaking character back over to Angel.\w8\w8\n\n"
 		"\0\s[blush]The #baseware is responsible for parsing those tags and making things happen based on them,\w4 so just about every #ghost will use them,\w4 regardless of what coding language they're written in.\w8\w8\s[astonished] Though,\w4 #ghosts in #Satori have a special shorthand they can use for common tags that's easier to type on a Japanese keyboard.\w8\w8\n\n"
-		"\1\s[teach]If you want to see more Sakura Script tags,\w4 you can see a list of them on \_a[https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html]Ukadoc\_a.\w8\w8"
+		"\1\s[teach]If you want to see more SakuraScript tags,\w4 you can see a list of them on \_a[https://ukagakadreamteam.github.io/ukadoc/manual/list_sakura_script.html]Ukadoc\_a.\w8\w8"
 		"\0\s[blush]\i[22]Ooh,\w4 handy."
 	}
 	elseif reference0 == "Satori"
@@ -339,7 +339,7 @@ OnGlossaryWord : all
 	}
 	elseif reference0 == "Ukadoc"
 	{
-		"\1\s[teach]Ukadoc is a very useful resource for #ghost developers.\w8\w8 It is the official documentation for #SSP,\w4 and has information on various standards,\w4 the file structure for #ghosts,\w4 #balloons,\w4 #plugins,\w4 etc.,\w4 and listings of all available #SakuraScript tags and #SHIORI events.\w8\w8\s[neutral_face] It is an invaluable tool if you intend to develop anything #ghost related.\w8\w8 You can find it \_a[https://ukagakadreamteam.github.io/ukadoc/]here\_a,\w4 or you can right click me and find it in the top tab of the menu.\w8\w8" //TODO i should normalize to either Sakura Script or SakuraScript
+		"\1\s[teach]Ukadoc is a very useful resource for #ghost developers.\w8\w8 It is the official documentation for #SSP,\w4 and has information on various standards,\w4 the file structure for #ghosts,\w4 #balloons,\w4 #plugins,\w4 etc.,\w4 and listings of all available #SakuraScript tags and #SHIORI events.\w8\w8\s[neutral_face] It is an invaluable tool if you intend to develop anything #ghost related.\w8\w8 You can find it \_a[https://ukagakadreamteam.github.io/ukadoc/]here\_a,\w4 or you can right click me and find it in the top tab of the menu.\w8\w8"
 		"\0\s[slight_smile]\i[21]The original version is in Japanese,\w4 but the #Ukagaka Dream Team has translated it into English!"
 	}
 	elseif reference0 == "Ukagaka Dream Team"
@@ -524,7 +524,7 @@ OnCredits : all
 	"\1\b[2]\_q\*\![set,autoscroll,disable]"
 	"\f[align,center]%(emdash) Credits %(emdash)\n\n"
 	if SHIORI3FW.BalloonName == "Angelbox" || SHIORI3FW.BalloonName == "Angelbox (Biblically Accurate)"; "[half]"
-	"\f[align,center]\f[bold,1]Default Shell art\f[bold,default]\n" //TODO i tried to get rid of all these extra alignment tags, but it made it become misaligned...? weird
+	"\f[align,center]\f[bold,1]Default Shell art\f[bold,default]\n" //TODO i tried to get rid of all these extra alignment tags, but it made it become misaligned...? weird. report to pona perhaps... I also tried putting two center alignment tags at the top and it got real weird
 	"\f[align,center]#Yuyudev\n\n"
 	
 	"\f[align,center]\f[bold,1]Writing\f[bold,default]\n"
