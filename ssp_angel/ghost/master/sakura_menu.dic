@@ -70,7 +70,7 @@ OnQuestionMenu : all
 	"\![*]\__q[OnQuestions,GetGhosts]Can I get more ghosts?\__q\n"
 	"\![*]\__q[OnQuestions,GetBalloons]Can I get different speech balloons?\__q\n"
 	"\![*]\__q[OnQuestions,MakeAGhost]Can I make my own ghost?\__q\n"
-	"\![*]\__q[OnQuestions,TranslateGhost]A ghost I like is in another language\, what can I do?\__q\n"
+	"\![*]\__q[OnQuestions,TranslateGhost]A ghost I like is in a language I don't know, what can I do?\__q\n"
 	
 	"\n"
 	"\![*]\__q[OnSakuraMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
@@ -130,10 +130,14 @@ OnQuestions : all
 	}
 	elseif reference0 == "TranslateGhost"
 	{
-		"\0\s[s_thinking]Well,\w4 it depends on what you're looking for and how much work you want to put into it,\w4 really.\w8\w8\s[sweat_smile] Translating ghosts is no easy task,\w4 especially because of cultural references and concepts that can't be captured in a translation alone.\w8\w8\s[blush] But,\w4 if you want to give it a try,\w4 there are a few routes open to you.\w8\w8\n\n"
-		"\1\s[teach]The more involved way is to go into the ghost's files,\w4 and translate the text yourself,\w4 whether by knowledge of the language,\w4 or by working carefully with machine translation.\w8\w8 There is a guide on how to translate ghosts \_a[https://ashido.com/ukagaka/translation.html]here\_a that may be of help to you,\w4 should you wish to try it.\w8\w8\s[neutral_face] Results may vary,\w4 depending on how much of the language you know,\w4 what coding language the ghost is in,\w4 and how easily translatable the concepts of the ghost are.\w8\w8"
-		"\0\s[relieved]\i[31]If that's not what you're looking for,\w4 you can try ghosts like \_a[https://ukagaka.zichqec.com/ghost/ukatranslator]Ukatranslator\_a or \_a[https://twitter.com/Nikola_T/status/1526746677423796224]simultaneous interpreter\_a.\w8\w8 These ghosts aid in running ghost dialogue through machine translation,\w4 but they take different approaches.\w8\w8\s[blush] They're far from perfect,\w4 but they can sometimes give you the gist of what a ghost is saying,\w4%(br)so they're worth a shot!" //TODO links/my own translator? -- I think it would be better/more future proof if I just linked to the wiki's tag for translator ghosts
-		//Further TODO, I should make note of permissions here
+		"\0\s[s_thinking]Well,\w4 it depends what you're looking for.\w8\w8\n\n"
+		"\1\s[teach]The best and only way to get the full experience of a ghost in another language is to learn that language and study the culture it comes from.\w8\w8\n\n"
+		"\0\s[sweat_smile]\i[24]Yeah,\w4 it sounds harsh,\w4 but with works of art it's the truth.\w8\w8\s[pensive] Language isn't a cipher,\w4 so it's impossible for a translation to completely capture the meaning of the original.\w8\w8\n\n"
+		"\1\s[k_thinking]The other major problem is that culture can't be translated.\w8\w8 In order to fully understand a work,\w4 you need to be able to understand the culture it is tied to.\w8\w8\s[neutral_face] This is why localization exists,\w4 and is often done alongside translation.\w8\w8\s[teach] It attempts to remap cultural concepts onto something more familiar to audiences in another culture.\w8\w8\n\n"
+		"\0\s[sweat_smile]It's really unfortunate,\w4 but when it comes to art,\w4 it just isn't possible to convert the entire meaning from one language and culture to another!\w8\w8\s[astonished] That being said,\w4 you don't need to have a perfect understanding to enjoy a ghost.\w8\w8\s[blush]\i[21] There are various%(br)\_a[TODO link wiki translator ghost tag]translator ghosts\_a you can try that will help you to run the dialogue of another ghost through machine translation,\w4 which is helpful for navigating menus,\w4 or getting the gist of what is said.\w8\w8\n\n"
+		"\1\s[k_thinking]These tools are far from perfect,\w4 but they can certainly be useful.\w8\w8\s[neutral_face] Just expect that much of the text output from them will be inaccurate or missing context.\w8\w8\s[k_thinking] It is not ""just grammar mistakes that can be corrected"",\w4 the issues run much deeper,\w4 and it's hard to tell unless you speak some of the language.\w8\w8\n\n"
+		"\0\s[s_thinking]You can also try translating a ghost yourself by editing its files...\w8\w8\s[astonished] but make sure you check for permission to do so first!\w8\w8\s[sweat_smile] Translating someone's work involves transforming it in substantial ways,\w4 so it should be done responsibly and with approval from the author.\w8\w8"
+		"\1\s[neutral_face]Indeed.\w8\w8 Particularly if you intend to distribute your work,\w4 you should be checking for permission to modify and redistribute.\w8\w8\i[6] It's the right thing to do."
 	}
 	--
 	"\0\w8\w8\*\n\n\_q\![*]\__q[OnQuestionMenu]Back\__q  \![*]\__q[OnCancel]Close\__q"
