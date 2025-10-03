@@ -556,9 +556,9 @@ OnSNTPFailure
 
 
 //————— Screensaver —————
-OnScreenSaverEnd
+OnScreenSaverEnd : nonoverlap
 {
-	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Eek--!\w8\w8\1\s[unamused]It's only a screensaver,\w4 calm down."
+	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Eek%(emdash)!\w8\w8\1\s[unamused]It's only a screensaver,\w4 calm down."
 	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Aah!\w8\w8 What was that!?\w8\w8\n\n\1\s[unamused]The screensaver,\w4 as you well know...\w8\w8\0\s[sweat_smile]\i[23]Oh,\w4 right..."
 	"\1\b[0]\s[rolling_eyes]\0\b[0]\s[scream]Who turned the lights out!?\w8\w8\n\n\1\s[unamused]We have been over this,\w4 it is a screensaver..."
 }
