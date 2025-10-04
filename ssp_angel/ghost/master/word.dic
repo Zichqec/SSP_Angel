@@ -1135,3 +1135,72 @@ saucetype
 	"grape juice"
 	"three whole bottles of mustard"
 }
+
+beads
+{
+	"beads"
+	"dried beans"
+	"glitter"
+	"powdered onion"
+}
+
+reorganizemyfiles
+{
+	"reorganize my files"
+	"defragment my computer's hard drive"
+	"clean my computer"
+	"test my file backups and make sure they are still working"
+	"go through my cabinet and discard unneeded items"
+	"deep clean the carpet in my home office"
+	"clean my kitchen"
+	"tidy the entrance to my apartment"
+}
+
+gorollerskating
+{
+	"go rollerskating"
+	"go stargazing"
+	"go to AngelLand"
+	"go and get ice cream"
+	"go bowling"
+	"go to the aquarium"
+	"go sky racing"
+	"go on a day trip to the other side of the world"
+	"go up in a hot air balloon"
+	"come and see a movie"
+}
+
+floralpattern
+{
+	"a floral pattern"
+	"a plaid pattern"
+	"a bubble pattern"
+	"a cat paw pattern"
+	"an autumn leaf pattern"
+	"a heart pattern"
+}
+
+lunchflyers
+{
+	"lunch flyers"
+	"meeting notices"
+	"out-of-order signs"
+	"holiday hour signs"
+	"meeting transcription"
+	"report"
+	"bingo cards"
+	"company word searches"
+	"raffle flyers"
+}
+
+pens
+{
+	"pens"
+	"notepads"
+	"sticky note blocks"
+	"folders"
+	"floppy disks"
+	"cables"
+	"styluses"
+	"to-do lists"
+}

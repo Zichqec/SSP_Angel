@@ -708,11 +708,6 @@ OtherTalk : nonoverlap_pool
 	
 	"\1\b[0]\s[10]\0\b[0]\s[pleading_face]Pilot?\w8\w8\n\n\1\s[neutral_face]Yes?\w8\w8\n\n\0\s[pleading_face]\i[21]What if we stop being friends one day?\w8\w8 Like if one of us left this job?\w8\w8\s[sob]\i[23]\i[33] It makes me really sad to think about it.\w8\w8\n\n\1\s[concern]Angel.\w8\w8 I can't promise what the future will hold,\w4 no one can.\w8\w8\s[neutral_face] But I care very much for our friendship,\w4 and I would not neglect it just because I did not see you at work anymore.\w8\w8\n\n\0\s[worried]\i[22]You really mean it?\w8\w8 You'd be friends with me even if I was just some rando?\w8\w8\n\n\1\s[k_thinking]Well,\w4 we are already coworkers,\w4 so you could never be ""some rando""...\w8\w8\s[neutral_face] You would be a former coworker,\w4 and my friend.\w8\w8\s[concern]\i[11] But yes,\w4 I do mean it.\w8\w8\n\n\0\s[pleading_face]\i[22]...\w8\w8 Thanks,\w4 Pilot.\w8\w8 That makes me feel a lot better."
 	
-	/*
-		"\1\b[0]\s[10]\0\b[0]\s[slight_smile]"
-		"\0\b[0]\s[slight_smile]\1\b[0]\s[10]"
-	*/
-	
 	"\1\b[0]\s[10]\0\b[0]\s[astonished]Oh my gosh,\w4 right,\w4 Pilot do you wanna hear about the new game I'm playing?\w8\w8\n\n\1No.\w8\w8\n\n\0\s[blush]\i[23]What if I told yooouuu...\w8\w8\s[star_struck]\i[22] it's a %(pilotgames) simulator!?\w8\w8\n\n\1\s[unamused]...\w8\w8\w8\w8\w8\w8\w8\w8\s[rolling_eyes] After work.\w8\w8\0\s[blush]\i[22]"
 	
 	"\1\b[0]\s[10]\0\b[0]\s[s_thinking]Pilot,\w4 if you wanted to pull a prank on me,\w4 what would you do?\w8\w8\n\n\1\s[face_with_raised_eyebrow]...\w8\w8 Why would I prank you?\w8\w8\n\n\0\s[blush]\i[21]Because it's fun!\w8\w8\n\n\1\s[k_thinking]Hm...\w8\w8\w8\w8\s[rolling_eyes] I'd %(pilotpranks).\w8\w8\0\s[astonished]Gasp!"
@@ -721,7 +716,32 @@ OtherTalk : nonoverlap_pool
 	_friendactivities2 = friendactivities
 	while _friendactivities1 == _friendactivities2; {_friendactivities2 = friendactivities}
 	"\1\b[0]\s[10]\0\b[0]\s[relieved]\i[24]I'm planning on having a friend over tomorrow.\w8\w8\n\n\1Is that so?\w8\w8\n\n\0\s[blush]\i[21]Yeah!\w8\w8 We're gonna %(_friendactivities1) and %(_friendactivities2).\w8\w8\n\n\1\s[k_thinking]I see.\w8\w8 It sounds like you'll have a good time.\w8\w8\n\n\0\s[slight_smile]\i[21]Right??\w8\w8 So when can you come over?\w8\w8\n\n\1\s[face_with_raised_eyebrow]...\w8\w8 Pardon?\w8\w8\n\n\0\s[blush]\i[22]\w8\w8\w8\w8\1\s[rolling_eyes].\w8.\w8.\w8\w8\w8 I'll be there at 4.\w8\w8\0\s[smiling_face_with_3_hearts]Yay~!"
+	
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[23]I heard they're gonna have the food trucks out in the plaza again,\w4 yum yum yum~!\w8\w8\n\n\1\s[k_thinking]I thought you had told me you were saving up to buy a %(thriftitem), or something of that nature.\w8\w8\n\n\0\s[worried]\i[24]Well,\w4 yeah,\w4 but I have to eat too!\w8\w8\n\n\1\s[neutral_face]Yes,\w4 that is not in question.\w8\w8 However,\w4 the food trucks are much more expensive than packing a lunch.\w8\w8\n\n\0\s[pleading_face]\i[24]Yeah,\w4 but they're SO tasty...\w8\w8\n\n\1\s[unamused]Tasty though they may be,\w4 if you hope to save up for less ephemeral purchases,\w4 you should consider abstaining...\w8\w8\0\s[pensive]Okay,\w4 okay,\w4 I get it...\w8\w8\s[pleading_face]\i[23] Maybe next time I'll save up a little extra so I can splurge."
+	
+	"\1\b[0]\s[10]\0\b[0]\s[worried]\i[23]Hey Pilot,\w4 one of the ceiling tiles above my desk is cracked!\w8\w8\n\n\1\s[k_thinking]Is it?\w8\w8 You should let the boss know,\w4 then.\w8\w8\n\n\0\s[scream]There could be ceiling demons all over my workspace!\w8\w8\i[26]\i[36] It'll need to be thoroughly%(br)decontaminated!!\w8\w8\1\s[expressionless]While it could certainly use some cleanup,\w4 that is not why..."
+	
+	"\1\b[0]\s[10]\0\b[0]\s[worried]\i[23]Hey Pilot?\w8\w8\n\n\1\s[neutral_face]Yes?\w8\w8\n\n\0\s[worried]\i[21]I lost track of you in the fire drill the other day!\w8\w8\s[sob]\i[21] I was SO worried!!\w8\w8\n\n\1\s[concern]Ah,\w4 I see.\w8\w8\s[teach] Worry not,\w4 I am well versed in the fire escape protocols,\w4 and am quite nimble on my feet.\w8\w8\s[neutral_face] You may not have seen me due to the speed at which I exited the building.\w8\w8\n\n\0\s[pleading_face]\i[23]Really?\w8\w8 So if there's ever a real fire you'll be okay?\w8\w8\n\n\1\s[neutral_face]I cannot make guarantees,\w4 but I am as well prepared as anyone could be.\w8\w8\s[concern] Please ensure you look out for your own safety first in such a situation.\w8\w8\0\s[sob]\i[22]Okay,\w4 I will."
+	
+	"\1\b[0]\s[10]\0\b[0]\s[s_thinking]Hey,\w4 so,\w4 how does electricity work?\w8\w8\i[21] If I take off the outlet cover on the wall,\w4 will I see the electricity squirming around under there,\w4 waiting to be used?\w8\w8\n\n\1\s[expressionless]NO.\w8\w8 Angel,\w4 do not even THINK of going near an uncovered wall outlet,\w4 you could get seriously injured or die.\w8\w8\n\n\0\s[scream]Eek!\w8\w8 Electricity is that scary!?\w8\w8\n\n\1\s[unamused]Yes,\w4 please take the utmost caution when you need to interact with a wall outlet.\w8\w8\s[neutral_face] If you have not received training on electrical safety,\w4 I will help you find a class.\w8\w8\0\s[astonished]Alright,\w4 sure,\w4 if you think it's a good idea..." //it's about how frightening electricity actually is, yet it's all around us and a lot of people don't know electrical safety...
+	
+	"\1\b[0]\s[10]\0\b[0]\s[worried]I wish I could bottle up a sunset and take it home with me.\w8\w8\n\n\1\s[k_thinking]Technically speaking,\w4 since sunsets happen everywhere,\w4 you already have a sunset at home...\w8\w8\n\n\0\s[sob]Yeah,\w4 but not on demand!\w8\w8\i[21] I wanna be able to look at the bottle and see the pretty colors any time I want!\w8\w8\n\n\1\s[neutral_face]Perhaps a nice painting would suffice?\w8\w8\n\n\0\s[pensive]Paintings don't cast their own light...\w8\w8\1\s[k_thinking]Hmm..."
+	
+	"\1\b[0]\s[10]\0\b[0]\s[pensive]I spilled a bunch of %(beads) in my apartment.\w8\w8\n\n\1\s[face_with_raised_eyebrow]Again?\w8\w8\n\n\0\s[sob]Again.\w8\w8\n\n\1I see...\w8\w8\n\n\0\s[pensive]\i[24]I guess I know what I'm doing later..."
+	
+	"\1\b[0]\s[10]\0\b[0]\s[s_thinking]Pilot,\w4 have you ever flown through a cloud?\w8\w8\n\n\1\s[neutral_face]No,\w4 it is recommended to avoid doing so.\w8\w8 I recommend that you also follow this guidance.\w8\w8\0\s[pensive]Aw..."
+	
+	"\1\b[0]\s[10]\0\b[0]\s[blush]\i[21]So,\w4 Pilot,\w4 got any fun plans coming up?\w8\w8\n\n\1\s[k_thinking]I am planning to %(reorganizemyfiles).\w8\w8\n\n\0\s[sweat_smile]\i[23]Oh.\w8\w8\i[5] That's kind of boring,\w4 isn't it?\w8\w8\n\n\1\s[expressionless]If one wishes to have an organized space,\w4 certain upkeep tasks must be completed.\w8\w8\n\n\0\s[blush]\i[21]Yeah,\w4 but you could %(gorollerskating) with me instead!\w8\w8\n\n\1\s[unamused]I cannot,\w4 but thank you for the offer.\w8\w8\n\n\0\s[pensive]Aw,\w4 okay.\w8\w8\s[blush]\i[22] I'll bring you back a souvenir or something!\w8\w8\1\s[rolling_eyes]Please do not."
+	
+	"\0\b[0]\s[slight_smile]\1\b[0]\s[k_thinking]Angel,\w4 I believe I was mistakenly given some of your printer paper.\w8\w8\n\n\0\s[astonished]Oh  my gosh,\w4 really?\w8\w8 How can you tell?\w8\w8\n\n\1\s[neutral_face]It has a %(afloralpattern) on it,\w4 the same kind you used for the %(lunchflyers) last month.\w8\w8\n\n\0\s[astonished]\i[21]Ohh,\w4 yeah,\w4 I had run out of that and requested more.\w8\w8\s[sob]\i[22] But then when my new paper came in,\w4 it was blank and boring!\w8\w8\s[pensive] I figured they must be upset with me...\w8\w8\n\n\1\s[teach]I do not believe so.\w8\w8\s[k_thinking] It seems as though our requests got mixed up when they were delivered.\w8\w8 I will be sure to bring the paper to your desk later,\w4 and we can exchange.\w8\w8\0\s[blush]\i[22]Yay!\w8\w8 My printouts can be fun again,\w4 thanks Pilot~!"
+	
+	"\0\b[0]\s[slight_smile]\1\b[0]\s[k_thinking]Angel,\w4 when we return to the office I would like to come by your desk to look for something.\w8\w8\n\n\0\s[astonished]Oh,\w4 sure.\w8\w8\i[21] What are you looking for?\w8\w8\n\n\1\s[neutral_face]One of my %(pens) has gone missing,\w4 and I last remember having it at your desk.\w8\w8\n\n\0\s[s_thinking]Ohh...\w8\w8\i[21] I don't think I've seen anything like that,\w4 unfortunately...\w8\w8\s[blush]\i[22] But you're welcome to look!\w8\w8\s[sweat_smile]\i[23] It might have gotten lost amongst all the %(sillyitems) I brought in the other day.\w8\w8\n\n\1\s[expressionless]Yes,\w4 I think perhaps it may have...\w8\w8\w8\w8\s[neutral_face] Thank you,\w4 I will make sure to visit while you are there.\w8\w8\0\s[blush]\i[21]No problem at all!"
 }
+
+/*
+	"\1\b[0]\s[10]\0\b[0]\s[slight_smile]"
+	"\0\b[0]\s[slight_smile]\1\b[0]\s[10]"
+*/
 
 //For ones with word groups that appear multiple times... and chains... and quotes...
 OnTestDial
