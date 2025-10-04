@@ -293,9 +293,6 @@ time_machine
 
 OtherTalk : nonoverlap_pool
 {
-	_thriftitem = thriftitem
-	_lunchboxitem = lunchboxitem
-
 	"\0\b[0]\s[0]\1\b[0]\s[neutral_face]\0\s[pensive]...\w8\w8\n\n\1\s[k_thinking]What's on your mind,\w4 Angel?\w8\w8\n\n\0Well,\w4 you know alphabet soup?\w8\w8 The kind with the little letter shaped noodles?\w8\w8\n\n\1\s[neutral_face]Yes,\w4 a soup often enjoyed by children.\w8\w8\n\n\0\s[scream]My soup last night didn't have the full alphabet!\w8\w8 What's up with that!!\w8\w8\n\n\1.\w4.\w4.\w8\w8\s[unamused] Is that all?\w8\w8\n\n\0\s[sob]\i[24]The world is a cruel and uncaring place.\w8\w8\1\s[face_exhaling]"
 	
 	"\0\b[0]\s[0]\1\b[0]\s[neutral_face]\0\s[slight_smile]\i[21]Hey,\w4 did you hear?\w8\w8 Angels ""R"" Us is having a big sale!\w8\w8\n\n\1\s[k_thinking]Oh yeah?\w8\w8\n\n\0\s[star_struck]\i[22]Yeah!!\w8\w8 %((RAND(8) + 1) * 10)% off %(sillyitems)!!\w8\w8 I gotta get down there and get some before they're all gone!\w8\w8\n\n\1.\w4.\w4.\w8\w8\s[expressionless] Somehow,\w4 I don't think there's any rush."
@@ -316,6 +313,7 @@ OtherTalk : nonoverlap_pool
 	
 	"\1\b[0]\s[10]\0\b[0]\s[relieved]\i[22]Pilot,\w4 I am sending you good vibes.\w8\w8\n\n\1\s[face_with_raised_eyebrow]...\w8\w8 I'm not feeling anything.\w8\w8\n\n\0\s[relieved]\i[24]\i[31]That means you need to open your heart more,\w4 to receive the vibes.\w8\w8\n\n\1\s[unamused]Does it now.\w8\w8 I think I am good without,\w4 thank you.\w8\w8\n\n\0\s[relieved]\i[32]\i[21]I'll double the strength,\w4 maybe something will get through.\w8\w8\n\n\1\s[rolling_eyes]I do not want your ""vibes"",\w4 please keep them to yourself.\w8\w8\n\n\0\s[relieved]\i[22]%(username),\w4 I am sending you good vibes."
 	
+	_thriftitem = thriftitem
 	"\1\b[0]\s[10]\0\b[0]\s[worried]I want a %(_thriftitem)...\w8\w8\n\n\1\s[face_with_raised_eyebrow]Is this unachievable for you?\w8\w8\n\n\0\s[sob]The one I want was at the thrift store,\w4 and some kid was already buying it.\w8\w8\n\n\1\s[unamused]I'm sure there are others out there...\w8\w8\n\n\0\s[sob]\i[23]\i[33]But it won't be \f[italic,1]that\f[italic,default] one!\w8\w8\n\n\1\s[expressionless]Angel,\w4 I will personally find you a listing for the same %(_thriftitem) if you will stop carrying on.\w8\w8\n\n\0\s[pleading_face]\i[22]Really?\w8\w8 You'd do that for me?\w8\w8\n\n\1\s[unamused]I would not say something I did not mean.\w8\w8\n\n\0\s[sob]\i[22]Ohh thank you thank you thank you,\w4 I was up all night thinking about it!!\w8\w8\n\n\1\s[face_exhaling]" //"The one I want" sometimes causes a grammatical issue, because sometimes this word group outputs something that is a multiple, such as "pair of sparkly light-up unicorn shoes". I went through and replaced those entries to mitigate this... seeing as this is the original dialogue this word group is for lol
 	
 	"\1\b[0]\s[10]\0\b[0]\s[pleading_face]Pilot?\w8\w8\n\n\1\s[neutral_face]Yes?\w8\w8\n\n\0\s[pleading_face]\i[22]Can we go get bubble tea after work?\w8\w8\n\n\1\s[unamused]""We""?\w8\w8 Why ""we""?\w8\w8 Can't you get bubble tea on your own?\w8\w8\n\n\0\s[sob]\i[22]Getting bubble tea is no fun without friends!\w8\w8\s[pleading_face]\i[24]\i[31]%(br)C'moooon,\w4 I'll buy.\w8\w8\n\n\1\s[face_exhaling]\w8\w8\w8\s[neutral_face]Very well,\w4 I will accompany you.\w8\w8\n\n\0\s[blush]\i[23]\i[33]Yaaay~!"
@@ -370,6 +368,7 @@ OtherTalk : nonoverlap_pool
 	
 	"\0\b[0]\s[0]\1\b[0]\s[neutral_face]I will be stopping at the library on my way home.\w8\w8 Would you like to accompany me?\w8\w8\n\n\0\s[blush]\i[22]Ooh,\w4 yes!\w8\w8 I saw they got the next installation of my favorite series!\w8\w8\s[star_struck]\i[22] The last book left off on a cliffhanger,\w4 so I GOTTA know what happens next!\w8\w8\n\n\1Yes.\w8\w8 Don't forget you still owe them a late fee from last time,\w4 as well.\w8\w8\n\n\0\s[sweat_smile]Oh yeah.\w8\w8 Oops."
 	
+	_lunchboxitem = lunchboxitem
 	"\0\b[0]\s[0]\1\b[0]\s[unamused]Angel.\w8\w8\n\n\0\s[sweat_smile]\i[24]Wuh-oh.\w8\w8\n\n\1Would you care to explain why I found %(_lunchboxitem) in my lunchbox today?\w8\w8\n\n\0\i[6]Uhhhhhhhhh is this a trick question?\w8\w8\n\n\1\s[rolling_eyes]No.\w8\w8 Start explaining yourself,\w4 and fast.\w8\w8\n\n\0\s[sweat_smile]\i[6]\i[22]It was uhhh,\w4 not me!\w8\w8 Where would I even get %(_lunchboxitem),\w4 that's crazy,\w4 hahaha!\w8\w8\n\n\1\s[unamused]Is that so.\w8\w8 Who else would have been near my lunchbox today,\w4 then?\w8\w8\n\n\0\s[sweat_smile]\i[32]Maaaaybe...\w8\w8 %(username) did it?\w8\w8\s[scream] While we were both not looking!\w8\w8\n\n\1\s[expressionless]Yes...\w8\w8 I'm sure that definitely happened.\w8\w8\w8\s[rolling_eyes] Stay out of my lunch."
 	
 	"\1\b[0]\s[10]\0\b[0]\s[scream]Oh my gosh,\w4 I forgot to tell you,\w4 I saw they had angel hair pasta at the store the other day!!\w8\w8 Are they gonna come for my hair!?\w8\w8\n\n\1\s[expressionless]It is just a term used to describe the thin and delicate nature of the pasta,\w4 I can assure you nobody wants to eat actual hair..."
