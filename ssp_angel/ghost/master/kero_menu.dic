@@ -267,7 +267,7 @@ OnGlossaryWord : all
 		"\0\s[star_struck]\i[33]Oooh!\w8\w8 So,\w4 you could do ANYTHING!\w8\w8\n\n"
 		"\1\s[k_thinking]Effectively,\w4 yes.\w8\w8\n\n"
 		"\0\s[smiling_face_with_3_hearts]\i[22]Wow,\w4 that's so cool.\w8\w8\n\n"
-		"\1\s[teach]If you're interested in making SAORI,\w4 you should look at the \_a[https://github.com/ukatech/csaori]CSAORI project on GitHub\_a.\w8\w8 You can also look at the \_a[https://emily.shillest.net/ayaya/index.php?cmd=read&page=Tips%2FSAORI%E3%81%AE%E4%BD%BF%E3%81%84%E6%96%B9]information about SAORI on the AYAYA wiki\_a,\w4 though that is information specific to #AYA and%(br)#YAYA.\w8\w8\n\n" //TODO link
+		"\1\s[teach]If you're interested in making SAORI,\w4 you should look at the \_a[https://github.com/ukatech/csaori]CSAORI project on GitHub\_a.\w8\w8 You can also look at the \_a[https://ukagakadreamteam.github.io/ayaya/tips/how_to_use_saori]information about SAORI on the AYAYA wiki\_a,\w4 though that is information specific to #AYA and%(br)#YAYA.\w8\w8\n\n"
 		"\0\s[sweat_smile]\i[24]This seems kinda complicated.\w8\w8\n\n"
 		"\1\s[neutral_face]It can be.\w8\w8 But it's also worth the effort if you want to do something complicated with a #ghost.\w8\w8\s[teach] There are two types of SAORI; SAORI-Universal,\w4 which are .dll files,\w4 and SAORI-Basic,\w4 which are .exe files.\w8\w8 Some%(br)#ghost languages can handle these both natively,\w4 but languages like #YAYA need a \_a[https://github.com/ukatech/csaori/releases/tag/saori_proxy_ex_v1.0.2]proxy SAORI\_a in order to make use of SAORI-Basic.\w8\w8"
 		"\0\s[sweat_smile]\i[33]Wow..."
@@ -415,7 +415,7 @@ OnTroubleshooting : all
 		"\1\s[neutral_face]ãƒ¢ã‚¸ãƒã‚±ã¨ã¯ï¼Ÿ\w8\w8\n\n"
 		"\0\s[scream]Oh!\w8\w8\s[sweat_smile] Yeah,\w4 that can come up now and then.\w8\w8 There are a couple reasons it can happen.\w8\w8\i[31] One is that the ghost may be using the wrong charset.\w8\w8\n\n"
 		"\1\s[teach]You can specify which charset the #ghost should use by right clicking it,\w4 going to the ""Options"" tab,\w4 and clicking ""Set default charset"".\w8\w8 You'll want to change the charset for the #SHIORI section,\w4 most likely,\w4 but you can change the other ones as well if you need to.\w8\w8%(br)Most Japanese ghosts use the Shift-JIS charset,\w4 while most English ghosts use UTF-8.\w8\w8\n\n"
-		"\0\s[slight_smile]The other reason it can happen is if it's an older ghost using an old version of #Satori.\w8\w8\i[24]\i[31] You can usually fix this by downloading a newer ghost that uses%(br)#Satori,\w4 and copying over the satori.dll file from the new ghost into the old ghost,\w4 overwriting the old file.\w8\w8" //TODO update to link to satoriya
+		"\0\s[slight_smile]The other reason it can happen is if it's a ghost using an old version of #Satori.\w8\w8\i[24]\i[31] You can usually fix this by closing the ghost,\w4 downloading the \_a[https://github.com/ukatech/satoriya-shiori/releases/latest]latest version of Satori\_a,\w4 and overwriting the ghost's satori.dll file with the new version.\w8\w8"
 		"\1\s[neutral_face]If that does not solve the issue,\w4 unfortunately we don't have any further suggestions at this time.\w8\w8\s[k_thinking] You could perhaps try using \_a[http://www.linestarve.com/tools/mojibake/]a tool to decode mojibake\_a on the ghost's files,\w8\s[neutral_face] but we have never had reason to try this,\w4 so we can't say for sure if it will help."
 	}
 	elseif reference0 == "NoSounds"

@@ -259,11 +259,9 @@ On_kero.recommendsites
 
 kerorecommendlinks : array
 {
-	"Ukadoc";						"https://ukagakadreamteam.github.io/ukadoc/manual/"
-	"AYAYA Wiki";		"https://ukagakadreamteam.github.io/ayaya/index"
-	"Ghost Template Walkthrough";   "http://www.ashido.com/ukagaka/walkthrough.html" //TODO hm, would like to update to link to walkthroughs in general at some point...
-	"Simplicity Ghost Template";    "https://ukagaka.zichqec.com/template/simplicity_template"
-	"YAYA Fundamentals Guide";      "https://zichqec.github.io/YAYA_Fundamentals/"
+	"Ukadoc";		"https://ukagakadreamteam.github.io/ukadoc/manual/"
+	"AYAYA Wiki";	"https://ukagakadreamteam.github.io/ayaya/index"
+	//TODO add in more links here eventually once we have more SHIORI-agnostic ones... tutorials and stuff
 }
 
 //Kero can have links to technical documentation, maybe.....
