@@ -141,9 +141,7 @@ OnGlossaryWord : all
 	{
 		"\0\s[star_struck]Ooh ooh,\w4 I know this one!\w8\w8\s[blush] %(raised_hand)\![open,calendar]Here,\w4 look,\w4 this is the calendar!\w8\w8 And if you get more calendar skins,\w4 you can change how the calendar looks!\w8\w8\n\n"
 		"\1\s[neutral_face]No matter what skin is applied, the calendar itself will continue to function exactly the same.\w8\w8\n\n"
-		"\0\s[smiling_face_with_3_hearts]Yeah,\w4 it's super cool!\w8\w8 \s[astonished]I've heard that #SSP now uses a calendar format that's compatible with other calendars,\w4 too.\w8\w8 What's up with that?\w8\w8\n\n"
-		"\1\s[teach]It was changed to use the iCalendar format,\w4 which many calendar applications use as a shared set of standards.\w8\w8 If you create events in SSP,\w4 you will be able to bring them to other calendars,\w4 and vice versa." //TODO i need to... learn how this works lol
-		"\0\s[star_struck]\i[22]Wow...\w8\w8 that's so cool!"
+		"\0\s[smiling_face_with_3_hearts]Yeah,\w4 it's super cool!"
 	}
 	elseif reference0 == "CROW"
 	{
