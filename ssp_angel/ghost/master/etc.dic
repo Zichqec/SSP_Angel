@@ -455,6 +455,28 @@ OnChangeLog : all
 	}
 }
 
+OnUpdateFailure
+{	
+	_file = SPLITPATH(reference1)[2] + SPLITPATH(reference1)[3] //For MD5 errors, this gets the name and extension of the offending file
+	
+	if reference0 == "artificial"
+	{
+		"\1\b[0]\s[10]\0\b[0]\s[astonished]Oh,\w4 nevermind?\w8\w8\s[blush]\i[22] Alright,\w4 no worries!\w8\w8 Let us know if you change your mind!"
+	}
+	elseif reference0 == "timeout"
+	{
+		"\1\b[0]\s[10]\0\b[0]\s[sweat_smile]\i[24]Uh oh,\w4 looks like the connection timed out.\w8\w8\n\n\1\s[neutral_face]Perhaps try again in a few minutes."
+	}
+	elseif reference0 == "md5 miss"
+	{
+		"\1\b[0]\s[k_thinking]\0\b[0]\s[scream]Oh my gosh,\w4 an error!\w8\w8\i[26]\i[36] Pilot,\w4 what does it mean!?\w8\w8\n\n\1\s[k_thinking]There is a problem with the files in our repository.\w8\w8 Specifically,\w4 the file ""%(_file)"".\w8\w8\s[teach] Please inform #Zichqec of this at your earliest convenience.\w8\w8\s[neutral_face] Or,\w4 if Zichqec is out of reach,\w4 another member of the Angel Team indicated in our readme file.\w8\w8\0\s[pleading_face]\i[22]I hope it gets fixed soon!"
+	}
+	else
+	{
+		"\1\b[0]\s[k_thinking]\0\b[0]\s[sweat_smile]Uh oh,\w4 something went wrong.\w8\w8\s[s_thinking] I'm not sure what,\w4 though...\w8\w8\n\n\1\s[k_thinking]Strange...\w8\w8 The error given is ""%(reference0)"".\w8\w8\s[teach] Please inform #Zichqec at your earliest convenience,\w4 and pass along this error message as well.\w8\w8\s[neutral_face] If Zichqec is out of reach,\w4 you may contact another member of the Angel Team indicated in our readme file."
+	}
+}
+
 
 //————— RSS —————
 OnHeadlinesenseBegin
