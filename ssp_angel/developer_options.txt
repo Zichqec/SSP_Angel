@@ -1,2 +1,2 @@
 angelbox_gz/,noupdate
-shell/ph_apgijinka,noupdate,nonar
+shell/ph_apgijinka/,noupdate,nonar
