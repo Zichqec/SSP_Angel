@@ -806,7 +806,7 @@ OnEmailMenu : all
 	}
 	
 	"\0\b[2]\_q\![set,autoscroll,disable]"
-	if ARRAYSIZE(EmailAddressList) > 1; "\![*]\__q[OnStartEmail]All accounts\__q\n\n" //TODO this needs tested lol. uhm, uh, going to be annoying... i'll figure it out when i have internet
+	if ARRAYSIZE(EmailAddressList) > 1; "\![*]\__q[script:""\![biff]""]All accounts\__q\n\n"
 	foreach EmailAddressList; _email
 	{
 		"\![*]\__q[OnStartEmail,""%(_email)""]%(_email)\__q\n"
