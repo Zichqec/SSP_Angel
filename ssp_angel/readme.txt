@@ -10,4 +10,4 @@ This ghost, and its associated balloons, were a collaborative effort by the Ange
 Ayakamtka: https://github.com/Ayakamtka - Writing, feedback, and bug testing
 GallaTheGalla: https://gallathegalla.github.io/gtg-ghosts/ - Writing help and balloon details (including all the pretty colors)
 Yuyudev: https://twitter.com/yuyudev - Shell art and Cotton Candy balloon base
-Zichqec: https://zichqec.github.io/s-the-skeleton/ - Writing, programming, and Angelbox balloon base
+Zichqec: https://ukagaka.zichqec.com/ - Writing, programming, and Angelbox balloon base
